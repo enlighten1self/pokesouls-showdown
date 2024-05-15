@@ -4661,7 +4661,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	melmetal: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	melmetalgmax: {
 		isNonstandard: "Past",
