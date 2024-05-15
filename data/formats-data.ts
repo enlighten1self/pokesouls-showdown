@@ -1176,7 +1176,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	moltres: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	moltresgalar: {
 		tier: "UU",
@@ -2381,7 +2381,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	metagrossmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	regirock: {
 		tier: "PU",
@@ -3690,7 +3690,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	keldeo: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	meloetta: {
 		tier: "NU",
@@ -4051,7 +4051,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "Uber",
 	},
 	xerneasneutral: {
-		isNonstandard: "Custom", // can't be used in battle
+		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
 	yveltal: {
@@ -5402,7 +5402,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	garganacl: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "OU",
+		natDexTier: "RU",
 	},
 	glimmet: {
 		tier: "LC",
@@ -5592,7 +5592,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kingambit: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	clodsire: {
 		tier: "OU",
@@ -6116,7 +6116,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	flareshroom: {
-		isNonstandard: "LC",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
@@ -6125,12 +6124,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	serfen: {
-		isNonstandard: "LC",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
 	squiyore: {
-		isNonstandard: "RU",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
@@ -6138,17 +6135,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
-	vremantis: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "UUBL",
-	},
 	caimanrago: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
 	gemix: {
-		isNonstandard: "LC",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
