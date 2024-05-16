@@ -19799,7 +19799,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Chocopert",
 		types: ["Ground", "Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 100, atk: 110, def: 90, spa: 75, spd: 90, spe: 60},
+		baseStats: {hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60},
 		abilities: {0: "Water Absorb", H: "Sand Stream"},
 		heightm: 1.5,
 		weightkg: 81.9,
