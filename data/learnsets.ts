@@ -101228,7 +101228,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	crystalix: {
 		learnset: {
 			metalburst: ["8M"],
+			spikes: ["8M"],
+			rapidspin: ["8M"],
+			dracometeor: ["9M"],
 			diamondstorm: ["8M"],
+			dragonhammer: ["9M"],
+			scaleshot: ["9M"],
+			outrage: ["9M"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -104257,6 +104263,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	boarbaque: {
 		learnset: {
+			sulphuricdownpour: ["9M"],
 			scorchingsands: ["9M"],
 			flamethrower: ["9M"],
 			mysticalfire: ["9M"],

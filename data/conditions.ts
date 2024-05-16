@@ -469,6 +469,10 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (move.id === 'sulphuricdownpour' && !attacker.hasItem('utilityumbrella')) {
+				this.debug('Rain Dance Sulphuric Downpour boost');
+				return this.chainModify(1.5);
+			}
 			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Water') {
 				this.debug('rain water boost');

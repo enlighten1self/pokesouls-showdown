@@ -22071,5 +22071,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: {},
 		target: "normal",
 		type: "Steel"
-	}
+	},
+	sulphuricdownpour: {
+		num: 1003,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Sulphuric Downpour",
+		pp: 15,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, defrost: 1, metronome: 1 },
+		// Damage boost in Rain applied in conditions.ts
+		thawsTarget: true,
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+	},
 };

@@ -7550,5 +7550,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	stainlessslash: {
 		name: "Stainless Slash",
 		shortDesc: "Sets Steel Surge on the target's side.",
-	}
+	},
+	sulphuricdownpour: {
+		name: "Sulphuric Downpour",
+		desc: "If the current weather is Rain Dance and the user is not holding Utility Umbrella, this move's damage is multiplied by 1.5 instead of halved for being Fire type.",
+		shortDesc: "During Rain Dance: 1.5x damage instead of half.",
+	},
 };

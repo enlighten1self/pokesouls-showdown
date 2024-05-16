@@ -6229,7 +6229,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	champeon: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "RU",
 	},
 	dungeon: {
 		isNonstandard: "Past",
@@ -6316,7 +6316,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	zeranheit: {
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	tempervian: {
 		tier: "OU",
