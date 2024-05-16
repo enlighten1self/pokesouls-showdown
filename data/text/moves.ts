@@ -4202,8 +4202,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mist: {
 		name: "Mist",
-		desc: "For 5 turns, the user and its party members are protected from having their stat stages lowered by other Pokemon. Fails if the effect is already active on the user's side.",
-		shortDesc: "For 5 turns, protects user's party from stat drops.",
+		desc: "Gives the Target Frostbite.",
+		shortDesc: "Gives the Target Frostbite.",
 		gen2: {
 			desc: "While the user remains active, it is protected from having its stat stages lowered by other Pokemon. Fails if the user already has the effect. Baton Pass can be used to transfer this effect to an ally.",
 			shortDesc: "While active, user is protected from stat drops.",
@@ -4214,11 +4214,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "While the user remains active, it is protected from having its stat stages lowered by other Pokemon, unless caused by the secondary effect of a move. Fails if the user already has the effect. If any Pokemon uses Haze, this effect ends.",
 			start: "  [POKEMON]'s shrouded in mist!",
 			block: "  But, it failed!",
-		},
-
-		start: "  [TEAM] became shrouded in mist!",
-		end: "  [TEAM] is no longer protected by mist!",
-		block: "  [POKEMON] is protected by the mist!",
+		}
 	},
 	mistball: {
 		name: "Mist Ball",

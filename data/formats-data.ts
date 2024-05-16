@@ -551,10 +551,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	geodude: {
 		tier: "LC",
 	},
+	geodudenether: {
+		tier: "LC",
+	},
+	geodudeend: {
+		tier: "LC",
+	},
 	geodudealola: {
 		tier: "LC",
 	},
 	graveler: {
+		tier: "NFE",
+	},
+	gravelernether: {
+		tier: "NFE",
+	},
+	gravelerend: {
 		tier: "NFE",
 	},
 	graveleralola: {
@@ -563,6 +575,14 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	golem: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
+		natDexTier: "RU",
+	},
+	golemnether: {
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	golemend: {
+		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	golemalola: {
