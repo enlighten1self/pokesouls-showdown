@@ -100570,6 +100570,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	flareloom: {
 		learnset: {
+			knockoff: ["9L1"],
 			firepunch: ["9L1"],
 			solarblade: ["9L1"],
 			leafblade: ["9L1"],
@@ -102055,6 +102056,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	bloodtales: {
 		learnset: {
+			psychocut: ["9M"],
 			knockoff: ["9M"],
 			suckerpunch: ["9M"],
 			nightslash: ["9M"],
@@ -102150,6 +102152,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	kringuin: {
 		learnset: {
+			taunt: ["9M"],
 			mist: ["9M"],
 			moonblast: ["9M"],
 			dazzlinggleam: ["9M"],
