@@ -2471,7 +2471,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	deoxysspeed: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	turtwig: {
 		tier: "LC",
