@@ -22023,13 +22023,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { mirror: 1 },
 		pseudoWeather: "trickroom",
 		condition: {
-			duration: 3,
+			duration: 2,
 			durationCallback(source, effect) {
 				if (source?.hasAbility("persistent")) {
 					this.add("-activate", source, "ability: Persistent", "[move] Trick Room");
-					return 6;
+					return 4;
 				}
-				return 3;
+				return 2;
 			},
 			onFieldStart(target, source) {
 				if (source?.hasAbility("persistent")) {
@@ -22086,5 +22086,45 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		target: "normal",
 		type: "Fire",
+	},
+	altitude: {
+		num: 1001,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Altitude",
+		pp: 10,
+		priority: -7,
+		flags: { snatch: 1, metronome: 1, wind: 1 },
+		sideCondition: 'tailwind',
+		condition: {
+			duration: 2,
+			durationCallback(target, source, effect) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
+					return 3;
+				}
+				return 2;
+			},
+			onSideStart(side, source) {
+				if (source?.hasAbility('persistent')) {
+					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+				} else {
+					this.add('-sidestart', side, 'move: Tailwind');
+				}
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(2);
+			},
+			onSideResidualOrder: 26,
+			onSideResidualSubOrder: 5,
+			onSideEnd(side) {
+				this.add('-sideend', side, 'move: Tailwind');
+			},
+		},
+		secondary: null,
+		target: "allySide",
+		type: "Flying",
+		zMove: { effect: 'crit2' }
 	},
 };

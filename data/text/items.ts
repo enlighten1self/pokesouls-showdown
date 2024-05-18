@@ -937,7 +937,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	leek: {
 		name: "Leek",
-		desc: "If held by a Farfetch’d or Sirfetch’d, its critical hit ratio is raised by 2 stages.",
+		desc: "If held by a Farfetch’d or Sirfetch’d, its critical hit ratio is raised by 2 stages. If held by Lordfetch’d It gets only 1 Critical stage risen",
 	},
 	leftovers: {
 		name: "Leftovers",
@@ -1752,7 +1752,7 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	stick: {
 		name: "Stick",
-		desc: "If held by a Farfetch’d, its critical hit ratio is raised by 2 stages.",
+		desc: "If held by a Farfetch’d or Sirfetch’d, its critical hit ratio is raised by 2 stages. If held by Lordfetch’d It gets only 1 Critical stage risen",
 		gen2: {
 			desc: "If held by a Farfetch’d, its critical hit ratio is always at stage 2. (25% crit rate)",
 		},

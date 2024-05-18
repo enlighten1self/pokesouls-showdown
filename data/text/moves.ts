@@ -7545,7 +7545,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	trickyreception: {
 		name: "Tricky Reception",
-		shortDesc: "Goes last. For 4 turns, turn order is reversed. And User switches out",
+		shortDesc: "Goes last. For 3 turns, turn order is reversed. And User switches out",
 	},
 	stainlessslash: {
 		name: "Stainless Slash",
@@ -7555,5 +7555,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Sulphuric Downpour",
 		desc: "If the current weather is Rain Dance and the user is not holding Utility Umbrella, this move's damage is multiplied by 1.5 instead of halved for being Fire type.",
 		shortDesc: "During Rain Dance: 1.5x damage instead of half.",
+	},
+	altitude: {
+		name: "Altitude",
+		shortDesc: "Goes last. For 3 turns, Tailwind is up. And User switches out",
 	},
 };

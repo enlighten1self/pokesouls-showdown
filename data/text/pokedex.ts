@@ -3932,4 +3932,34 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	zytias: {
 		name: "Zytias",
 	},
+	cereblaze: {
+		name: "Cereblaze",
+	},
+	wyrmperior: {
+		name: "Wyrmperior",
+	},
+	zeranheit: {
+		name: "Zeranheit",
+	},
+	tempervian: {
+		name: "Tempervian",
+	},
+	boarbaque: {
+		name: "Boarbaque",
+	},
+	lordfetchd: {
+		name: "Lordfetch\u2019d",
+	},
+	stratozone: {
+		name: "Stratozone",
+	},
+	scoundrowl: {
+		name: "Scoundrowl",
+	},
+	blimplord: {
+		name: "Blimplord",
+	},
+	ophadol: {
+		name: "Ophadol",
+	},
 };

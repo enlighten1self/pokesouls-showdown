@@ -5634,16 +5634,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	icyhot: {
 		onModifyMove(move) {
-		  if (!move.secondaries) {
-			if(move.type === "Ice" || move.type === "Fire"){
-			  move.secondaries = [];
+			if (move.type === "Ice" || move.type === "Fire") {
+				if (!move.secondaries) move.secondaries = [];
+				for (const secondary of move.secondaries) {
+					if (secondary.status === 'brn') return;
+				}
+				move.secondaries.push({
+					chance: 10,
+					status: "brn"
+				});
 			}
-		  }
-		  move.secondaries.push({
-			chance: 10,
-			status: "brn",
-			ability: this.dex.abilities.get("icyhot")
-		  });
 		},
 		name: "Icy Hot",
 		rating: 2,

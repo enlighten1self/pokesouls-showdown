@@ -3028,9 +3028,11 @@ export const Items: {[itemid: string]: ItemData} = {
 		onModifyCritRatio(critRatio, user) {
 			if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
 				return critRatio + 2;
+			} else if (["lordfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
+				return critRatio + 1;
 			}
 		},
-		itemUser: ["Farfetch\u2019d", "Farfetch\u2019d-Galar", "Sirfetch\u2019d"],
+		itemUser: ["Farfetch\u2019d", "Farfetch\u2019d-Galar", "Sirfetch\u2019d", "Lordfetch\u2019d"],
 		num: 259,
 		gen: 8,
 		isNonstandard: "Past",
@@ -5619,11 +5621,13 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		spritenum: 475,
 		onModifyCritRatio(critRatio, user) {
-			if (this.toID(user.baseSpecies.baseSpecies) === 'farfetchd') {
+			if (["farfetchd", "sirfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
 				return critRatio + 2;
+			} else if (["lordfetchd"].includes(this.toID(user.baseSpecies.baseSpecies))) {
+				return critRatio + 1;
 			}
 		},
-		itemUser: ["Farfetch\u2019d"],
+		itemUser: ["Farfetch\u2019d", "Farfetch\u2019d-Galar", "Sirfetch\u2019d", "Lordfetch\u2019d"],
 		num: 259,
 		gen: 2,
 		isNonstandard: "Past",
