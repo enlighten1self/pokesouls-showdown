@@ -22122,6 +22122,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				this.add('-sideend', side, 'move: Tailwind');
 			},
 		},
+		selfSwitch: true,
 		secondary: null,
 		target: "allySide",
 		type: "Flying",
