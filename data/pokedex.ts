@@ -20567,7 +20567,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Blimplord",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 150, atk: 60, def: 75, spa: 90, spd: 100, spe: 35},
-		abilities: {0: "Wind Rider", H: "Pressure"},
+		abilities: {0: "Wind Rider", 1: "Marvel Scale", H: "Pressure"},
 		heightm: 14.5,
 		weightkg: 398,
 		color: "Blue",

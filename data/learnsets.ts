@@ -104931,6 +104931,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	lordfetchd: {
 		learnset: {
+			victorydance: ["9L0"],
 			meteormash: ["8M", "7M", "7L37", "6M", "6L37", "5M", "5L37"],
 			ironhead: ["8M", "7M", "7L37", "6M", "6L37", "5M", "5L37"],
 			acrobatics: ["8M", "7M", "7L37", "6M", "6L37", "5M", "5L37"],
@@ -105215,6 +105216,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	blimplord: {
 		learnset: {
+			flipturn : ["9M"],
 			hurricane : ["9M"],
 			airslash: ["9M"],
 			bleakwindstorm: ["9M"],
