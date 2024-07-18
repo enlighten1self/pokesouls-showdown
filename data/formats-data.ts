@@ -6332,7 +6332,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	stratozone: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	scoundrowl: {
 		tier: "Illegal",

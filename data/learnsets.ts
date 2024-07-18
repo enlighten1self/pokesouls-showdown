@@ -102517,6 +102517,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	frostiken: {
 		learnset: {
+			iceshard: ["9M"],
 			iciclecrash: ["9M"],
 			icepunch: ["9M"],
 			tripleaxel: ["9M"],
@@ -104194,6 +104195,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	tempervian: {
 		learnset: {
+			irondefense: ["9M", "9L1", "8M", "8L1"],
 			fireblast: ["9M"],
 			flamethrower: ["9M"],
 			willowisp: ["9M"],
@@ -104266,6 +104268,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	boarbaque: {
 		learnset: {
+			lavaplume: ["9M"],
 			sulphuricdownpour: ["9M"],
 			scorchingsands: ["9M"],
 			flamethrower: ["9M"],
