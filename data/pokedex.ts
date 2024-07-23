@@ -20543,7 +20543,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Stratozone",
 		types: ["Electric","Flying"],
 		baseStats: {hp: 80, atk: 100, def: 80, spa: 135, spd: 80, spe: 60},
-		abilities: {0: "Wind Power", 1: "Cloud Nine"},
+		abilities: {0: "Drizzle", 1: "Cloud Nine"},
 		heightm: 1.2,
 		weightkg: 180,
 		color: "White",

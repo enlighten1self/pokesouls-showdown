@@ -5700,7 +5700,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironboulder: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	ironcrown: {
 		tier: "OU",

@@ -105038,6 +105038,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	stratozone: {
 		learnset: {
+			recover : ["8M", "7T"],
 			hurricane : ["8M", "7T"],
 			airslash: ["8M", "7T"],
 			acrobatics: ["8M", "7T"],
