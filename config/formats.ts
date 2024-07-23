@@ -25,7 +25,7 @@ export const Formats: FormatList = [
 		section: "Souls",
 	},
 	{
-		name: "[Gen 9] Souls OU",
+		name: "[Gen 9] National Dex",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">National Dex Viability Rankings</a>`,
@@ -40,7 +40,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Souls Ubers",
+		name: "[Gen 9] National Dex Ubers",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">National Dex Ubers Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">National Dex Ubers Sample Teams</a>`,
@@ -52,7 +52,7 @@ export const Formats: FormatList = [
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 9] Souls UU",
+		name: "[Gen 9] National Dex UU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">National Dex UU Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3719079/">National Dex UU Viability Rankings</a>`,
@@ -60,11 +60,11 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		ruleset: ['[Gen 9] Souls OU'],
+		ruleset: ['[Gen 9] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'Battle Bond', 'Drizzle', 'Drought', 'Light Clay'],
 	},
 	{
-		name: "[Gen 9] Souls RU",
+		name: "[Gen 9] National Dex RU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
@@ -72,11 +72,11 @@ export const Formats: FormatList = [
 
 		mod: 'gen9',
 		searchShow: false,
-		ruleset: ['[Gen 9] Souls UU'],
+		ruleset: ['[Gen 9] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL', 'Slowbro-Base + Slowbronite', 'Heat Rock'],
 	},
 	{
-		name: "[Gen 9] Souls Monotype",
+		name: "[Gen 9] National Dex Monotype",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710738/">National Dex Monotype Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3716842/">National Dex Monotype Sample Teams</a>`,
@@ -98,7 +98,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Souls Doubles",
+		name: "[Gen 9] National Dex Doubles",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3720802/">National Dex Doubles Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3726341/">National Dex Doubles Resources</a>`,
@@ -115,7 +115,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Souls AG",
+		name: "[Gen 9] National Dex AG",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
 		],
@@ -125,7 +125,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex'],
 	},
 	{
-		name: "[Gen 9] Souls BH",
+		name: "[Gen 9] National Dex BH",
 		desc: `Balanced Hackmons with National Dex elements mixed in.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3711099/">National Dex BH</a>`,
