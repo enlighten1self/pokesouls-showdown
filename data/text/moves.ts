@@ -7560,4 +7560,13 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Altitude",
 		shortDesc: "Goes last. For 3 turns, Tailwind is up. And User switches out",
 	},
+	dragonfangs: {
+		name: "Dragon Fangs",
+		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "20% chance to lower the target's Defense by 1.",
+		gen3: {
+			desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
+			shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+		},
+	},
 };

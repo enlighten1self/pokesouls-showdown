@@ -22088,7 +22088,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fire",
 	},
 	altitude: {
-		num: 1001,
+		num: 1004,
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
@@ -22128,4 +22128,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Flying",
 		zMove: { effect: 'crit2' }
 	},
+	dragonfangs: {
+		num: 1005,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Dragon Fangs",
+		pp: 15,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bite: 1 },
+		secondary: {
+			chance: 20,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Dragon",
+		contestType: "Tough",
+	}
 };

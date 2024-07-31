@@ -101021,6 +101021,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	caimanrago: {
 		learnset: {
+			dragonfangs: ["9M"],
 			waterfall: ["9M"],
 			icefang: ["9M"],
 			dragondance: ["9M"],
@@ -103657,7 +103658,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ultigigas: {
 		learnset: {
-			playrough: ["9M"],
+			fakeout: ["9M"],
+			bulletpunch: ["9M"],
+			feint: ["9M"],
+			machpunch: ["9M"],
+			flamethrower: ["9M"],
+			icebeam: ["9M"],
+			bulkup: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M"],
 			ancientpower: ["4T"],
 			avalanche: ["9M", "8M", "4M"],
