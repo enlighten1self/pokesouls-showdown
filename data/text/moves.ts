@@ -7569,4 +7569,9 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "20% chance to lower the target's Sp. Def by 1.",
 		},
 	},
+	spectraltail: {
+		name: "Spectral Tail",
+		desc: "Lowers the user's Attack by 2 stages.",
+		shortDesc: "Lowers the user's Atk by 2.",
+	},
 };

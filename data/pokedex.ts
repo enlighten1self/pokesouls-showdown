@@ -20080,14 +20080,13 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	bloodtales: {
 		num: -10024,
 		name: "Bloodtales",
-		types: ["Ice", "Dark"],
+		types: ["Ghost", "Dark"],
 		genderRatio: {M: 0.25, F: 0.75},
-		baseStats: {hp: 80, atk: 102, def: 70, spa: 70, spd: 80, spe: 103},
-		abilities: {0: "Pressure", 1: "Sharpness", H: "Snow Warning"},
+		baseStats: {hp: 80, atk: 122, def: 80, spa: 40, spd: 80, spe: 133},
+		abilities: {0: "Intimidate", 1: "Infiltrator", H: "Long Reach"},
 		heightm: 1.1,
 		weightkg: 19.9,
 		color: "Black",
-		prevo: "Vulpix-Alola",
 		eggGroups: ["Undiscovered"],
 	},
 	kringuin: {

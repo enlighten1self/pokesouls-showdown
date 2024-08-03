@@ -22146,5 +22146,24 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Dragon",
 		contestType: "Tough",
-	}
+	},
+	spectraltail: {
+		num: 1006,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Spectral Tail",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			boosts: {
+				atk: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+		contestType: "Beautiful",
+	},
 };

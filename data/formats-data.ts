@@ -5267,7 +5267,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	espathra: {
 		tier: "Uber",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	wiglett: {
 		tier: "LC",
@@ -6193,7 +6193,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	bloodtales: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	kringuin: {
 		tier: "Illegal",
