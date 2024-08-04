@@ -5150,7 +5150,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			sleeptalk: ["9M", "8M", "7M", "7V", "6M", "5T", "4M", "3T"],
 			snatch: ["7T", "6T", "5T", "4M", "3M"],
 			snore: ["8M", "7T", "7V", "6T", "5T", "4T", "3T"],
-			softboiled: ["3T"],
+			softboiled: ["9M","3T"],
 			solarbeam: ["9M", "8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
 			splash: ["9L1", "8L1"],
 			spotlight: ["7L1"],
