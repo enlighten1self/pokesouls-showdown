@@ -2267,4 +2267,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Icy Hot",
 		shortDesc: "This Pokemon's Ice and Fire type moves have a 10% chance of Burning.",
 	},
+	sweetinsulation: {
+		name: "Sweet Insulation",
+		shortDesc: "This Pokemon's Immune to Steel-Moves.",
+	},
+	pureflux: {
+		name: "Pure Flux",
+		shortDesc: "This Pokemon's Immune to Electric Moves and heals 1/4 of HP and Gives a +1 to SPA. Adds a 10% Electric Dmg Boost.",
+	},
 };

@@ -2425,4 +2425,20 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Vile Vial",
 		desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
 	},
+	chocopertite: {
+		name: "Chocopertite",
+		desc: "If held by a Chocopert, this item allows it to Mega Evolve in battle.",
+	},
+	typhteslatite: {
+		name: "Typhteslatite",
+		desc: "If held by a Typhtesla, this item allows it to Mega Evolve in battle.",
+	},
+	dorderrite: {
+		name: "Dorderrite",
+		desc: "If held by a Dorderra, this item allows it to Mega Evolve in battle.",
+	},
+	withordite: {
+		name: "Withordite",
+		desc: "If held by a Withorde, this item allows it to Mega Evolve in battle.",
+	},
 };

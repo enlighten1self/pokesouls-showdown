@@ -3962,4 +3962,16 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	ophadol: {
 		name: "Ophadol",
 	},
+	chocopertmega: {
+		name: "Chocopert-Mega",
+	},
+	dorderramega: {
+		name: "Dorderra-Mega",
+	},
+	typhteslamega: {
+		name: "Typhtesla-Mega",
+	},
+	withordemega: {
+		name: "Withorde-Mega",
+	},
 };
