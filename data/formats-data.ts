@@ -6107,6 +6107,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
+	chocopertmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	turtaya: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -6121,6 +6125,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
+	dorderramega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	elequil: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -6132,6 +6140,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "NFE",
 	},
 	typhtesla: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	typhteslamega: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
@@ -6154,6 +6166,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	withorde: {
 		tier: "Illegal",
 		natDexTier: "OU",
+	},
+	withordemega: {
+		tier: "Illegal",
+		natDexTier: "(OU)",
 	},
 	caimanrago: {
 		tier: "Illegal",

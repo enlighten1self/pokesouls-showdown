@@ -100097,6 +100097,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dorderra: {
 		learnset: {
+			playrough: ["9L9"],
 			scaleshot: ["9L9"],
 			dragondance: ["9L9"],
 			firefang: ["9L9"],

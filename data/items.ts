@@ -7631,4 +7631,64 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	chocopertite: {
+		name: "Chocopertite",
+		spritenum: 762,
+		megaStone: "Chocopert-Mega",
+		megaEvolves: "Chocopert",
+		itemUser: ["Chocopert"],
+		onTakeItem(item, source) {
+		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
+			return false;
+		  return true;
+		},
+		num: 10000,
+		gen: 6,
+		isNonstandard: "Past"
+	  },
+	  typhteslatite: {
+		name: "Typhteslatite",
+		spritenum: 763,
+		megaStone: "Typhtesla-Mega",
+		megaEvolves: "Typhtesla",
+		itemUser: ["Typhtesla"],
+		onTakeItem(item, source) {
+		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
+			return false;
+		  return true;
+		},
+		num: 10001,
+		gen: 6,
+		isNonstandard: "Past"
+	  },
+	  dorderrite: {
+		name: "Dorderrite",
+		spritenum: 764,
+		megaStone: "Dorderra-Mega",
+		megaEvolves: "Dorderra",
+		itemUser: ["Dorderra"],
+		onTakeItem(item, source) {
+		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
+			return false;
+		  return true;
+		},
+		num: 10002,
+		gen: 6,
+		isNonstandard: "Past"
+	  },
+	  withordite: {
+		name: "Withordite",
+		spritenum: 765,
+		megaStone: "Withorde-Mega",
+		megaEvolves: "Withorde",
+		itemUser: ["Withorde"],
+		onTakeItem(item, source) {
+		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
+			return false;
+		  return true;
+		},
+		num: 10003,
+		gen: 6,
+		isNonstandard: "Past"
+	  },
 };

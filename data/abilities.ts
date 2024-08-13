@@ -5648,5 +5648,56 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Icy Hot",
 		rating: 2,
 		num: -5
-	}
+	},
+	sweetinsulation: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Steel') {
+				this.add('-immune', target, '[from] ability: Sweet Insulation');
+				return null;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Sweet Insulation",
+		rating: 3,
+		num: -6,
+	},
+	pureflux: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.heal(target.baseMaxhp / 4) && !this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Pure Flux');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Lightning Rod');
+				}
+				return this.effectState.target;
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([4506, 4096]);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Transistor boost');
+				return this.chainModify([4506, 4096]);
+			}
+		},
+		flags: {breakable: 1},
+		name: "Pure Flux",
+		rating: 3.5,
+		num: -7,
+	},
 };
