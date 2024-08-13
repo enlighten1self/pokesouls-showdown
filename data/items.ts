@@ -7643,8 +7643,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		  return true;
 		},
 		num: 10000,
-		gen: 6,
-		isNonstandard: "Past"
+		gen: 9
 	  },
 	  typhteslatite: {
 		name: "Typhteslatite",
@@ -7658,8 +7657,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		  return true;
 		},
 		num: 10001,
-		gen: 6,
-		isNonstandard: "Past"
+		gen: 9
 	  },
 	  dorderrite: {
 		name: "Dorderrite",
@@ -7673,8 +7671,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		  return true;
 		},
 		num: 10002,
-		gen: 6,
-		isNonstandard: "Past"
+		gen: 9
 	  },
 	  withordite: {
 		name: "Withordite",
@@ -7688,7 +7685,6 @@ export const Items: {[itemid: string]: ItemData} = {
 		  return true;
 		},
 		num: 10003,
-		gen: 6,
-		isNonstandard: "Past"
+		gen: 9
 	  },
 };
