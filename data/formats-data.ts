@@ -4698,7 +4698,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rillaboom: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UUBL",
 	},
 	rillaboomgmax: {
 		isNonstandard: "Past",
@@ -6094,12 +6094,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	chocokip: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
 	chocotomp: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
@@ -6112,12 +6110,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	turtaya: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
 	grotum: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "NFE",
 	},
@@ -6130,12 +6126,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	elequil: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
 	quilzap: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "NFE",
 	},
@@ -6228,97 +6222,79 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	acideon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	aereon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
 	automeon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
 	champeon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	dungeon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RUBL",
 	},
 	eeveeon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	hiveon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RUBL",
 	},
 	minereon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
 	spectreon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
 	wyveon: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
 	arkidna: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	spiritran: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	titanios: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	togo: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	togeo: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	togeru: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	ultigigas: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
 	voltago: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "OU",
 	},
 	zytias: {
-		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
@@ -6335,7 +6311,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	tempervian: {
-		tier: "OU",
+		tier: "Illegal",
 		natDexTier: "OU",
 	},
 	boarbaque: {
