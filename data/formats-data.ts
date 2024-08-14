@@ -6287,12 +6287,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	ultigigas: {
 		tier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "OU",
 	},
 	voltago: {
-		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Illegal",
 	},
 	zytias: {
 		tier: "Illegal",
