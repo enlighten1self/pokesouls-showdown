@@ -5712,6 +5712,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUber",
 		natDexTier: "OU",
 	},
+	terapagosstellar: {
+		tier: "Illegal",
+		doublesTier: "Illegal",
+		natDexTier: "Illegal",
+	},
 	pecharunt: {
 		tier: "OU",
 		doublesTier: "DOU",
