@@ -22060,7 +22060,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Stainless Slash",
 		pp: 15,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1, slicing: 1 },
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
 		self: {
 			onHit(source) {
 				for (const side of source.side.foeSidesWithConditions()) {

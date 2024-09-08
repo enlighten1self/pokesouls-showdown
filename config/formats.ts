@@ -419,8 +419,7 @@ export const Formats: FormatList = [
 				if (count > 1) {
 					return [
 						`You are limited to one ${baseSpecies} forme.`,
-						`(You have ${count} ${baseSpecies} forme${
-							count === 1 ? "" : "s"
+						`(You have ${count} ${baseSpecies} forme${count === 1 ? "" : "s"
 						}.)`,
 					];
 				}
