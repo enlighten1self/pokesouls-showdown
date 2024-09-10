@@ -1,0 +1,5 @@
+{
+    "mod": "cobblesouls",
+    "ruleSet": ["Standard NatDex", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause"],
+    "gen": 9
+}
