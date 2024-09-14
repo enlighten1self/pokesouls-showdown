@@ -2446,7 +2446,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kyogreprimal: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	groudon: {
 		tier: "Uber",
@@ -2456,7 +2456,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	groudonprimal: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	rayquaza: {
 		tier: "Uber",
@@ -2851,7 +2851,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dialgaorigin: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	palkia: {
 		tier: "Uber",
@@ -2861,7 +2861,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	palkiaorigin: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	heatran: {
 		tier: "OU",
@@ -2881,7 +2881,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	giratinaorigin: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	cresselia: {
 		tier: "UU",
@@ -2917,91 +2917,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Uber",
 		doublesTier: "DUber",
 		natDexTier: "Uber",
-	},
-	arceusbug: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusdark: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusdragon: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceuselectric: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusfairy: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusfighting: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusfire: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusflying: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusghost: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusgrass: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusground: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusice: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceuspoison: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceuspsychic: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceusrock: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceussteel: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	arceuswater: {
-		tier: "Illegal",
-		doublesTier: "Illegal",
-		natDexTier: "Illegal",
 	},
 	victini: {
 		isNonstandard: "Past",
@@ -4481,91 +4396,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
-	silvallybug: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallydark: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallydragon: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyelectric: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyfairy: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyfighting: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyfire: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyflying: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyghost: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallygrass: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyground: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyice: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallypoison: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallypsychic: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallyrock: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallysteel: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	silvallywater: {
-		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
 	minior: {
 		tier: "UU",
 		doublesTier: "DUU",
@@ -5175,7 +5005,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	zaciancrowned: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	zamazenta: {
 		tier: "OU",
@@ -5185,7 +5015,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	zamazentacrowned: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	eternatus: {
 		tier: "Uber",
@@ -5746,22 +5576,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ogerpon: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	ogerponwellspring: {
 		tier: "OU",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "OU",
 	},
 	ogerponhearthflame: {
 		tier: "Uber",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "Uber",
 	},
 	ogerponcornerstone: {
 		tier: "UU",
 		doublesTier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "UU",
 	},
 	archaludon: {
 		tier: "OU",
