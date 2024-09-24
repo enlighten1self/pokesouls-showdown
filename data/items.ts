@@ -7687,4 +7687,44 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10003,
 		gen: 9
 	  },
+	  atlascrossite: {
+		name: "Atlascrossite",
+		spritenum: 766,
+		megaStone: "Atlascross-Mega",
+		megaEvolves: "Atlascross",
+		itemUser: ["Atlascross"],
+		onTakeItem(item, source) {
+		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
+			return false;
+		  return true;
+		},
+		num: 10004,
+		gen: 9
+	  },
+	  taurosite: {
+		name: "Taurosite",
+		spritenum: 767,
+		megaStone: "Tauros-Mega",
+		megaEvolves: "Tauros",
+		itemUser: ["Tauros"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10005,
+		gen: 9
+	},
+	despharosite: {
+		name: "Despharosite",
+		spritenum: 768,
+		megaStone: "Despharos-Mega",
+		megaEvolves: "Despharos",
+		itemUser: ["Despharos"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10006,
+		gen: 9
+	},
 };

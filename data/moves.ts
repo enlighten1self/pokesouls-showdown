@@ -10635,7 +10635,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		accuracy: 90,
 		basePower: 140,
 		category: "Special",
-		isNonstandard: "Past",
 		name: "Light of Ruin",
 		pp: 5,
 		priority: 0,
@@ -15120,6 +15119,15 @@ export const Moves: { [moveid: string]: MoveData } = {
 					move.type = 'Fire';
 					break;
 				case 'Tauros-Paldea-Aqua':
+					move.type = 'Water';
+					break;
+				case 'Tauros-Combat-Mega':
+					move.type = 'Fighting';
+					break;
+				case 'Tauros-Blaze-Mega':
+					move.type = 'Fire';
+					break;
+				case 'Tauros-Aqua-Mega':
 					move.type = 'Water';
 					break;
 			}
@@ -22165,5 +22173,29 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Ghost",
 		contestType: "Beautiful",
+	},
+	tremorturn: {
+		num: 1007,
+		accuracy: 100,
+		basePower: 130,
+		category: "Physical",
+		name: "Tremor Turn",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 1.33), pokemon, pokemon, this.dex.conditions.get('Tremor Turn'), true);
+				if (pokemon.hp <= pokemon.maxhp / 1.33 && hpBeforeRecoil > pokemon.maxhp / 1.33) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Cool",
 	},
 };

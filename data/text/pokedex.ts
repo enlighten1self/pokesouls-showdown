@@ -3974,4 +3974,37 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	withordemega: {
 		name: "Withorde-Mega",
 	},
+	taurosmega: {
+		name: "Tauros-Mega",
+	},
+	tauroscombatmega: {
+		name: "Tauros-Combat-Mega",
+	},
+	taurosblazemega: {
+		name: "Tauros-Blaze-Mega",
+	},
+	taurosaquamega: {
+		name: "Tauros-Aqua-Mega",
+	},
+	boomkeldurr: {
+		name: "Boomkeldurr",
+	},
+	fugitile: {
+		name: "Fugitile",
+	},
+	huesotops: {
+		name: "Huesotops",
+	},
+	despharos: {
+		name: "Despharos",
+	},
+	despharosmega: {
+		name: "Despharos-Mega",
+	},
+	atlascross: {
+		name: "Atlascross",
+	},
+	atlascrossmega: {
+		name: "Atlascross-Mega",
+	},
 };

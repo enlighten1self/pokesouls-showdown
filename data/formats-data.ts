@@ -1025,20 +1025,40 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
+	taurosmega: {
+		tier: "Illegal",
+		doublesTier: "Illegal",
+		natDexTier: "OU",
+	},
 	taurospaldeacombat: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
+	},
+	tauroscombatmega: {
+		tier: "Illegal",
+		doublesTier: "Illegal",
+		natDexTier: "UU",
 	},
 	taurospaldeablaze: {
 		tier: "NU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
+	taurosblazemega: {
+		tier: "Illegal",
+		doublesTier: "Illegal",
+		natDexTier: "OU",
+	},
 	taurospaldeaaqua: {
 		tier: "NU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
+	},
+	taurosaquamega: {
+		tier: "Illegal",
+		doublesTier: "Illegal",
+		natDexTier: "UUBL",
 	},
 	magikarp: {
 		tier: "LC",
@@ -6255,6 +6275,34 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	ophadol: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	boomkeldurr: {
+		tier: "Illegal",
+		natDexTier: "UUBL",
+	},
+	fugitile: {
+		tier: "Illegal",
+		natDexTier: "UUBL",
+	},
+	huesotops: {
+		tier: "Illegal",
+		natDexTier: "UUBL",
+	},
+	despharos: {
+		tier: "Illegal",
+		natDexTier: "RU",
+	},
+	despharosmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	atlascross: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	atlascrossmega: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},

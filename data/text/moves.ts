@@ -7574,4 +7574,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's Attack by 2 stages.",
 		shortDesc: "Lowers the user's Atk by 2.",
 	},
+	tremorturn: {
+		name: "Tremor Turn",
+		desc: "User takes 1/4 of its HP then switches out after doing damage.",
+		shortDesc: "User takes 1/4 of its HP then switches out after doing dmg.",
+	},
 };

@@ -5700,4 +5700,71 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3.5,
 		num: -7,
 	},
+	armoredponcho: {
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Fire') mod *= 2;
+			if (move.flags['contact']) mod /= 2;
+			return this.chainModify(mod);
+		},
+		flags: {breakable: 1},
+		name: "Armored Poncho",
+		rating: 3.5,
+		num: -8,
+	},
+	corruption: {
+		onTryHit(target,source,move) {
+			if (target !== source && move.flags['contact']) {
+				if (this.runEvent('DragOut', source, target, move)) {
+					source.forceSwitchFlag = true
+					target.forceSwitchFlag = true
+				}
+			}
+		},
+		flags: {},
+		name: "Corruption",
+		rating: 1,
+		num: -9,
+	},
+	stampede: {
+		onStart(pokemon) {
+			if (pokemon.side.totalFainted) {
+				this.add('-activate', pokemon, 'ability: Stampede');
+				const fallen = Math.min(pokemon.side.totalFainted, 5);
+				this.add('-start', pokemon, `fallen${fallen}`, '[silent]');
+				this.effectState.fallen = fallen;
+			}
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
+		},
+		onModifySpe(attacker, defender, move) {
+			if (this.effectState.fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				this.debug(`Stampede boost: ${powMod[this.effectState.fallen]}/4096`);
+				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+			}
+		},
+		flags: {},
+		name: "Stampede",
+		rating: 4,
+		num: -10,
+	},
+	tectonicshift: {
+		onStart(pokemon) {
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-activate', pokemon, 'ability: Tectonic Shift');
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.addVolatile('onetrapped');
+		},
+		flags: {},
+		name: "Tectonic Shift",
+		rating: 4,
+		num: -11,
+	},
 };

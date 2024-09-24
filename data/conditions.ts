@@ -194,6 +194,21 @@ export const Conditions: {[k: string]: ConditionData} = {
 		name: 'trapper',
 		noCopy: true,
 	},
+	onetrapped: {
+		name: 'onetrapped',
+		duration: 1,
+		durationCallback(target, source) {
+			if (source?.hasItem('gripclaw')) return 1;
+			return this.random(1, 1);
+		},
+		onStart(pokemon, source) {
+			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+			this.effectState.boundDivisor = source.hasItem('bindingband') ? 1 : 1;
+		},
+		onEnd(pokemon) {
+			this.add('-end', pokemon, this.effectState.sourceEffect, '[onetrapped]');
+		},
+	},
 	partiallytrapped: {
 		name: 'partiallytrapped',
 		duration: 5,

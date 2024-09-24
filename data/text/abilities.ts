@@ -2275,4 +2275,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Pure Flux",
 		shortDesc: "This Pokemon's Immune to Electric Moves and heals 1/4 of HP and Gives a +1 to SPA. Adds a 10% Electric Dmg Boost.",
 	},
+	armoredponcho: {
+		name: "Armored Poncho",
+		desc: "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
+		shortDesc: "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.",
+	},
+	corruption: {
+		name: "Corruption",
+		desc: "If this pokemon gets hit by a contact move both sides of the field get forced switched.",
+		shortDesc: "If this pokemon gets hit by a contact move both sides of the field get forced switched.",
+	},
+	stampede: {
+		name: "Stampede",
+		desc: "This Pokemon's moves have their speed multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's moves have 10% more speed for each fainted ally, up to 5 allies.",
+		activate: "  [POKEMON] gained speed from the fallen!",
+	},
+	tectonicshift: {
+		name: "Tectonic Shift",
+		desc: "Once this pokemon comes on the field it eats the hazards on the field and traps itself for 1 turn.",
+		shortDesc: "Eats Hazards and locks itself in for 1 turn.",
+	},
 };
