@@ -2441,4 +2441,16 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Withordite",
 		desc: "If held by a Withorde, this item allows it to Mega Evolve in battle.",
 	},
+	atlascrossite: {
+		name: "Atlascrossite",
+		desc: "If held by a Atlascross, this item allows it to Mega Evolve in battle.",
+	},
+	taurosite: {
+		name: "Taurosite",
+		desc: "If held by a Tauros, this item allows it to Mega Evolve in battle.",
+	},
+	despharosite: {
+		name: "Despharosite",
+		desc: "If held by a Despharos, this item allows it to Mega Evolve in battle.",
+	},
 };
