@@ -2790,8 +2790,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.4,
 		weightkg: 88.4,
 		color: "Brown",
-		otherFormes: ["Tauros-Paldea-Combat", "Tauros-Paldea-Blaze", "Tauros-Paldea-Aqua","Tauros-Mega","Tauros-Combat-Mega","Tauros-Blaze-Mega","Tauros-Aqua-Mega"],
-		formeOrder: ["Tauros", "Tauros-Paldea-Combat", "Tauros-Paldea-Blaze", "Tauros-Paldea-Aqua","Tauros-Mega","Tauros-Combat-Mega","Tauros-Blaze-Mega","Tauros-Aqua-Mega"],
+		otherFormes: ["Tauros-Paldea-Combat", "Tauros-Paldea-Blaze", "Tauros-Paldea-Aqua","Tauros-Mega","Tauros-Paldea-Combat-Mega","Tauros-Paldea-Blaze-Mega","Tauros-Paldea-Aqua-Mega"],
+		formeOrder: ["Tauros", "Tauros-Paldea-Combat", "Tauros-Paldea-Blaze", "Tauros-Paldea-Aqua","Tauros-Mega","Tauros-Paldea-Combat-Mega","Tauros-Paldea-Blaze-Mega","Tauros-Paldea-Aqua-Mega"],
 		eggGroups: ["Field"],
 	},
 	taurosmega: {
@@ -2823,9 +2823,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Field"],
 	},
-	tauroscombatmega: {
+	taurospaldeacombatmega: {
 		num: 128,
-		name: "Tauros-Combat-Mega",
+		name: "Tauros-Paldea-Combat-Mega",
 		baseSpecies: "Tauros-Paldea-Combat",
 		forme: "Mega",
 		types: ["Dark", "Fighting"],
@@ -2852,9 +2852,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Field"],
 	},
-	taurosblazemega: {
+	taurospaldeablazemega: {
 		num: 128,
-		name: "Tauros-Blaze-Mega",
+		name: "Tauros-Paldea-Blaze-Mega",
 		baseSpecies: "Tauros-Paldea-Blaze",
 		forme: "Mega",
 		types: ["Dark", "Fire"],
@@ -2881,9 +2881,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Black",
 		eggGroups: ["Field"],
 	},
-	taurosaquamega: {
+	taurospaldeaaquamega: {
 		num: 128,
-		name: "Tauros-Aqua-Mega",
+		name: "Tauros-Paldea-Aqua-Mega",
 		baseSpecies: "Tauros-Paldea-Aqua",
 		forme: "Mega",
 		types: ["Dark", "Water"],

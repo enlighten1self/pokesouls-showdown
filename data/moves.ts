@@ -15121,13 +15121,13 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'Tauros-Paldea-Aqua':
 					move.type = 'Water';
 					break;
-				case 'Tauros-Combat-Mega':
+				case 'Tauros-Paldea-Combat-Mega':
 					move.type = 'Fighting';
 					break;
-				case 'Tauros-Blaze-Mega':
+				case 'Tauros-Paldea-Blaze-Mega':
 					move.type = 'Fire';
 					break;
-				case 'Tauros-Aqua-Mega':
+				case 'Tauros-Paldea-Aqua-Mega':
 					move.type = 'Water';
 					break;
 			}
