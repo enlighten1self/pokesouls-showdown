@@ -1035,17 +1035,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
-	tauroscombatmega: {
+	taurospaldeacombatmega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	taurospaldeablaze: {
 		tier: "NU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
-	taurosblazemega: {
+	taurospaldeablazemega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
 		natDexTier: "OU",
@@ -1055,10 +1055,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
-	taurosaquamega: {
+	taurospaldeaaquamega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "UUBL",
+		natDexTier: "OU",
 	},
 	magikarp: {
 		tier: "LC",
@@ -6280,15 +6280,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	boomkeldurr: {
 		tier: "Illegal",
-		natDexTier: "UUBL",
+		natDexTier: "OU",
 	},
 	fugitile: {
 		tier: "Illegal",
-		natDexTier: "UUBL",
+		natDexTier: "OU",
 	},
 	huesotops: {
 		tier: "Illegal",
-		natDexTier: "UUBL",
+		natDexTier: "OU",
 	},
 	despharos: {
 		tier: "Illegal",
