@@ -5738,11 +5738,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onEnd(pokemon) {
 			this.add('-end', pokemon, `fallen${this.effectState.fallen}`, '[silent]');
 		},
-		onModifySpe(attacker, defender, move) {
+		onModifySpe(pokemon) {
 			if (this.effectState.fallen) {
 				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
 				this.debug(`Stampede boost: ${powMod[this.effectState.fallen]}/4096`);
-				return this.chainModify([powMod[this.effectState.fallen], 4096]);
+				return this.chainModify([powMod[this.effectState.fallen],4096]);
 			}
 		},
 		flags: {},
