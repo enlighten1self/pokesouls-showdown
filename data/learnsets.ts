@@ -105397,7 +105397,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	boomkeldurr: {
 		learnset: {
-			accelrock: ["9M"],
+			accelerock: ["9M"],
 			ironhead: ["9M"],
 			gyroball: ["9M"],
 			bodypress: ["9M"],
