@@ -5752,15 +5752,19 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	tectonicshift: {
 		onStart(pokemon) {
-			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-			for (const condition of sideConditions) {
-				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-					this.add('-activate', pokemon, 'ability: Tectonic Shift');
+			let activated = false;
+			for (const sideCondition of ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge']) {
+				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
+					if (side.getSideCondition(sideCondition)) {
+						if (!activated) {
+							this.add('-activate', pokemon, 'ability: Tectonic Shift');
+							activated = true;
+						}
+						side.removeSideCondition(sideCondition);
+						pokemon.addVolatile('onetrapped');
+					}
 				}
 			}
-		},
-		onEnd(pokemon) {
-			pokemon.addVolatile('onetrapped');
 		},
 		flags: {},
 		name: "Tectonic Shift",
