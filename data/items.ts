@@ -7718,8 +7718,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Taurosite Blaze",
 		spritenum: 767,
 		megaStone: "Tauros-Paldea-Blaze-Mega",
-		megaEvolves: "Tauros-Paldea-Blaze",
-		itemUser: ["Tauros-Paldea-Blaze"],
+		megaEvolves: "Tauros",
+		itemUser: ["Tauros"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
@@ -7731,8 +7731,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Taurosite Aqua",
 		spritenum: 767,
 		megaStone: "Tauros-Paldea-Aqua-Mega",
-		megaEvolves: "Tauros-Paldea-Aqua",
-		itemUser: ["Tauros-Paldea-Aqua"],
+		megaEvolves: "Tauros",
+		itemUser: ["Tauros"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
@@ -7744,8 +7744,8 @@ export const Items: {[itemid: string]: ItemData} = {
 		name: "Taurosite Combat",
 		spritenum: 767,
 		megaStone: "Tauros-Paldea-Combat-Mega",
-		megaEvolves: "Tauros-Paldea-Combat",
-		itemUser: ["Tauros-Paldea-Combat"],
+		megaEvolves: "Tauros",
+		itemUser: ["Tauros"],
 		onTakeItem(item, source) {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
