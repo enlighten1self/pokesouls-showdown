@@ -2449,6 +2449,18 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Taurosite",
 		desc: "If held by a Tauros, this item allows it to Mega Evolve in battle.",
 	},
+	taurositeblaze: {
+		name: "Taurosite Blaze",
+		desc: "If held by a Tauros-Paldea-Blaze, this item allows it to Mega Evolve in battle.",
+	},
+	taurositeaqua: {
+		name: "Taurosite Aqua",
+		desc: "If held by a Tauros-Paldea-Aqua, this item allows it to Mega Evolve in battle.",
+	},
+	taurositecombat: {
+		name: "Taurosite Combat",
+		desc: "If held by a Tauros-Paldea-Combat, this item allows it to Mega Evolve in battle.",
+	},
 	despharosite: {
 		name: "Despharosite",
 		desc: "If held by a Despharos, this item allows it to Mega Evolve in battle.",

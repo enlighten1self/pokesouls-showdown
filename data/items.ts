@@ -7714,6 +7714,45 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10005,
 		gen: 9
 	},
+	taurositeblaze: {
+		name: "Taurosite Blaze",
+		spritenum: 767,
+		megaStone: "Tauros-Paldea-Blaze-Mega",
+		megaEvolves: "Tauros-Paldea-Blaze",
+		itemUser: ["Tauros-Paldea-Blaze"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10006,
+		gen: 9
+	},
+	taurositeaqua: {
+		name: "Taurosite Aqua",
+		spritenum: 767,
+		megaStone: "Tauros-Paldea-Aqua-Mega",
+		megaEvolves: "Tauros-Paldea-Aqua",
+		itemUser: ["Tauros-Paldea-Aqua"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10007,
+		gen: 9
+	},
+	taurositecombat: {
+		name: "Taurosite Combat",
+		spritenum: 767,
+		megaStone: "Tauros-Paldea-Combat-Mega",
+		megaEvolves: "Tauros-Paldea-Combat",
+		itemUser: ["Tauros-Paldea-Combat"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10008,
+		gen: 9
+	},
 	despharosite: {
 		name: "Despharosite",
 		spritenum: 768,
@@ -7724,7 +7763,7 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
 			return true;
 		},
-		num: 10006,
+		num: 10009,
 		gen: 9
 	},
 };

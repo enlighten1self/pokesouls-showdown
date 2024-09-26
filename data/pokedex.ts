@@ -2836,7 +2836,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 88.4,
 		color: "Black",
 		eggGroups: ["Field"],
-		requiredItem: "Taurosite",
+		requiredItem: "Taurosite Combat",
 	},
 	taurospaldeablaze: {
 		num: 128,
@@ -2865,7 +2865,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 88.4,
 		color: "Black",
 		eggGroups: ["Field"],
-		requiredItem: "Taurosite",
+		requiredItem: "Taurosite Blaze",
 	},
 	taurospaldeaaqua: {
 		num: 128,
@@ -2894,7 +2894,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 88.4,
 		color: "Black",
 		eggGroups: ["Field"],
-		requiredItem: "Taurosite",
+		requiredItem: "Taurosite Aqua",
 	},
 	magikarp: {
 		num: 129,
