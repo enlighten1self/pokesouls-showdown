@@ -2826,8 +2826,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	taurospaldeacombatmega: {
 		num: 128,
 		name: "Tauros-Paldea-Combat-Mega",
-		baseSpecies: "Tauros-Paldea-Combat",
-		forme: "Mega",
+		baseSpecies: "Tauros",
+		forme: "Paldea-Combat-Mega",
 		types: ["Dark", "Fighting"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 130, def: 95, spa: 110, spd: 80, spe: 100},
@@ -2855,8 +2855,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	taurospaldeablazemega: {
 		num: 128,
 		name: "Tauros-Paldea-Blaze-Mega",
-		baseSpecies: "Tauros-Paldea-Blaze",
-		forme: "Mega",
+		baseSpecies: "Tauros",
+		forme: "Paldea-Blaze-Mega",
 		types: ["Dark", "Fire"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 130, def: 95, spa: 110, spd: 80, spe: 100},
@@ -2884,8 +2884,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	taurospaldeaaquamega: {
 		num: 128,
 		name: "Tauros-Paldea-Aqua-Mega",
-		baseSpecies: "Tauros-Paldea-Aqua",
-		forme: "Mega",
+		baseSpecies: "Tauros",
+		forme: "Paldea-Aqua-Mega",
 		types: ["Dark", "Water"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 130, def: 95, spa: 110, spd: 80, spe: 100},
