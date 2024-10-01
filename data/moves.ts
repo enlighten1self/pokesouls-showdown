@@ -22186,8 +22186,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onAfterMove(pokemon, target, move) {
 			if (!move.multihit) {
 				const hpBeforeRecoil = pokemon.hp;
-				this.damage(Math.round(pokemon.maxhp * 0.75), pokemon, pokemon, this.dex.conditions.get('Tremor Turn'), true);
-				if (pokemon.hp <= pokemon.maxhp * 0.75 && hpBeforeRecoil > pokemon.maxhp * 0.75) {
+				this.damage(Math.round(pokemon.maxhp * 0.25), pokemon, pokemon, this.dex.conditions.get('Tremor Turn'), true);
+				if (pokemon.hp <= pokemon.maxhp * 0.25 && hpBeforeRecoil > pokemon.maxhp * 0.25) {
 					this.runEvent('EmergencyExit', pokemon, pokemon);
 				}
 			}
