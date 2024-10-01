@@ -22183,17 +22183,17 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 5,
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
-		mindBlownRecoil: true,
 		onAfterMove(pokemon, target, move) {
-			if (move.mindBlownRecoil && !move.multihit) {
+			if (!move.multihit) {
 				const hpBeforeRecoil = pokemon.hp;
-				this.damage(Math.round(pokemon.maxhp / 1.33), pokemon, pokemon, this.dex.conditions.get('Tremor Turn'), true);
-				if (pokemon.hp <= pokemon.maxhp / 1.33 && hpBeforeRecoil > pokemon.maxhp / 1.33) {
+				this.damage(Math.round(pokemon.maxhp * 0.75), pokemon, pokemon, this.dex.conditions.get('Tremor Turn'), true);
+				if (pokemon.hp <= pokemon.maxhp * 0.75 && hpBeforeRecoil > pokemon.maxhp * 0.75) {
 					this.runEvent('EmergencyExit', pokemon, pokemon);
 				}
 			}
 		},
 		secondary: null,
+		selfSwitch: true,
 		target: "normal",
 		type: "Grass",
 		contestType: "Cool",
