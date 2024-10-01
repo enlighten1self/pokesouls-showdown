@@ -197,8 +197,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 	onetrapped: {
 		name: 'onetrapped',
 		duration: 1,
+		onTrapPokemon(pokemon) {
+			pokemon.tryTrap();
+		},
 		onStart(pokemon, source) {
-			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
+			this.add('-activate', pokemon, 'ability: ' + this.effectState.sourceEffect, '[of] ' + source);
 		},
 		onEnd(pokemon) {
 			this.add('-end', pokemon, this.effectState.sourceEffect, '[onetrapped]');
