@@ -196,7 +196,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 	},
 	onetrapped: {
 		name: 'onetrapped',
-		duration: 1,
+		duration: 2,
 		onTrapPokemon(pokemon) {
 			pokemon.tryTrap();
 		},
