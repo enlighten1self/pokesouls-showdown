@@ -5751,21 +5751,31 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -10,
 	},
 	tectonicshift: {
-		onStart(pokemon) {
-			let activated = false;
+		onSwitchIn(pokemon) {
 			for (const sideCondition of ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge']) {
 				for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
-					if (side.getSideCondition(sideCondition)) {
-						if (!activated) {
-							this.add('-activate', pokemon, 'ability: Tectonic Shift');
-							activated = true;
-						}
-						side.removeSideCondition(sideCondition);
-						pokemon.addVolatile('onetrapped');
-					}
-				}
+				if (side.getSideCondition(sideCondition)) {
+					this.add('-sideend', pokemon.side, `move: ${sideCondition}`, '[of] ' + pokemon);
+					pokemon.side.removeSideCondition(sideCondition);
+					pokemon.addVolatile('onetrapped');
+				}}
 			}
 		},
+		//onStart(pokemon) {
+		//	let activated = false;
+		//	for (const sideCondition of ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge']) {
+		//		for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
+		//			if (side.getSideCondition(sideCondition)) {
+		//				if (!activated) {
+		//					this.add('-activate', pokemon, 'ability: Tectonic Shift');
+		//					activated = true;
+		//				}
+		//				side.removeSideCondition(sideCondition);
+		//				pokemon.addVolatile('onetrapped');
+		//			}
+		//		}
+		//	}
+		//},
 		flags: {},
 		name: "Tectonic Shift",
 		rating: 4,

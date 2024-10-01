@@ -2282,18 +2282,18 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	corruption: {
 		name: "Corruption",
-		desc: "If this pokemon gets hit by a contact move both sides of the field get forced switched.",
-		shortDesc: "If this pokemon gets hit by a contact move both sides of the field get forced switched.",
+		desc: "Upon getting hit with a contact move, this Pokemon forces both itself and its attacker off the field.",
+		shortDesc: "Upon getting hit with a contact move, this Pokemon forces both itself and its attacker off the field.",
 	},
 	stampede: {
 		name: "Stampede",
-		desc: "This Pokemon's moves have their speed multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
-		shortDesc: "This Pokemon's moves have 10% more speed for each fainted ally, up to 5 allies.",
+		desc: "This Pokemon's get their speed multiplied by 1+(X*0.1), where X is the total number of times any Pokemon has fainted on the user's side when this Ability became active, and X cannot be greater than 5.",
+		shortDesc: "This Pokemon's gains 10% more speed for each fainted ally, up to 5 allies.",
 		activate: "  [POKEMON] gained speed from the fallen!",
 	},
 	tectonicshift: {
 		name: "Tectonic Shift",
-		desc: "Once this pokemon comes on the field it eats the hazards on the field and traps itself for 1 turn.",
-		shortDesc: "Eats Hazards and locks itself in for 1 turn.",
+		desc: "Upon switch-in this Pokémon clears hazards on its side of the field, it is unable to switch until the following turn.",
+		shortDesc: "Upon switch-in this Pokémon clears hazards on its side of the field, it is unable to switch until the following turn.",
 	},
 };
