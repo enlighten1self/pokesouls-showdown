@@ -5755,8 +5755,8 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (side.getSideCondition(sideCondition)) {
 					this.add('-sideend', pokemon.side, `move: ${sideCondition}`, '[of] ' + pokemon);
 					pokemon.side.removeSideCondition(sideCondition);
-					pokemon.addVolatile('onetrapped');
 				}}
+				pokemon.addVolatile('onetrapped');
 			}
 		},
 		flags: {},
