@@ -5713,12 +5713,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -8,
 	},
 	corruption: {
-		onTryHit(target,source,move) {
-			if (target !== source && move.flags['contact']) {
-				if (this.runEvent('DragOut', source, target, move)) {
-					source.forceSwitchFlag = true
-					target.forceSwitchFlag = true
-				}
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				source.forceSwitchFlag = true
+				target.forceSwitchFlag = true
 			}
 		},
 		flags: {},
@@ -5761,21 +5759,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}}
 			}
 		},
-		//onStart(pokemon) {
-		//	let activated = false;
-		//	for (const sideCondition of ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge']) {
-		//		for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
-		//			if (side.getSideCondition(sideCondition)) {
-		//				if (!activated) {
-		//					this.add('-activate', pokemon, 'ability: Tectonic Shift');
-		//					activated = true;
-		//				}
-		//				side.removeSideCondition(sideCondition);
-		//				pokemon.addVolatile('onetrapped');
-		//			}
-		//		}
-		//	}
-		//},
 		flags: {},
 		name: "Tectonic Shift",
 		rating: 4,
