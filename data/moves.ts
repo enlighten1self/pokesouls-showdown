@@ -22198,4 +22198,31 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 		contestType: "Cool",
 	},
+	pumpkinmash: {
+		num: 1008,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Pumpkin Mash",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		mindBlownRecoil: true,
+		self: {
+			volatileStatus: 'healblock',
+		},
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Mind Blown'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
+				}
+			}
+		},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ghost",
+		contestType: "Cool",
+	},
 };

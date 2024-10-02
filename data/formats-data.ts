@@ -6134,11 +6134,23 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	pumpkasaurmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	spectoise: {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
+	spectoisemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	ghoulizard: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	ghoulizardmega: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},

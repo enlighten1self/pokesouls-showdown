@@ -7766,4 +7766,43 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10009,
 		gen: 9
 	},
+	ghoulizardite: {
+		name: "Ghoulizardite",
+		spritenum: 769,
+		megaStone: "Ghoulizard-Mega",
+		megaEvolves: "Ghoulizard",
+		itemUser: ["Ghoulizard"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10010,
+		gen: 9
+	},
+	pumpkasaurite: {
+		name: "Pumpkasaurite",
+		spritenum: 770,
+		megaStone: "Pumpkasaur-Mega",
+		megaEvolves: "Pumpkasaur",
+		itemUser: ["Pumpkasaur"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10011,
+		gen: 9
+	},
+	spectoisite: {
+		name: "Spectoisite",
+		spritenum: 771,
+		megaStone: "Spectoise-Mega",
+		megaEvolves: "Spectoise",
+		itemUser: ["Spectoise"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10012,
+		gen: 9
+	},
 };

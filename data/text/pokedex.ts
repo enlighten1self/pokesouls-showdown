@@ -3854,11 +3854,20 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	pumpkasaur: {
 		name: "Pumpkasaur",
 	},
+	pumpkasaurmega: {
+		name: "Pumpkasaur-Mega",
+	},
 	spectoise: {
 		name: "Spectoise",
 	},
+	spectoisemega: {
+		name: "Spectoise-Mega",
+	},
 	ghoulizard: {
 		name: "Ghoulizard",
+	},
+	ghoulizardmega: {
+		name: "Ghoulizard-Mega",
 	},
 	bloodtales: {
 		name: "Bloodtales",

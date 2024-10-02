@@ -101682,6 +101682,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pumpkasaur: {
 		learnset: {
+			pumpkinmash: ["9M"],
 			shadowball: ["9M"],
 			poltergeist: ["9M"],
 			shadowsneak: ["9M"],
@@ -101914,6 +101915,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ghoulizard: {
 		learnset: {
+			superpower: ["9M"],
+			earthpower: ["9M"],
 			shadowbone: ["9M"],
 			poltergeist: ["9M"],
 			shadowsneak: ["9M"],

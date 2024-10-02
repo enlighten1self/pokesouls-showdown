@@ -5778,4 +5778,29 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4,
 		num: -11,
 	},
+	eclipseflare: {
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Fire' || move.type === 'water' || move.type === 'ghost') mod *= (5120/4096);
+			return this.chainModify(mod);
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'water' || move.type === 'ghost') {
+				this.debug('Eclipse Flare boost');
+				return this.chainModify([5120, 4096]);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire' || move.type === 'water' || move.type === 'ghost') {
+				this.debug('Eclipse Flare boost');
+				return this.chainModify([5120, 4096]);
+			}
+		},
+		flags: {},
+		name: "Eclipse Flare",
+		rating: 3.5,
+		num: -12,
+	},
 };

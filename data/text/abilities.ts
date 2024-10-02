@@ -2296,4 +2296,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Upon switch-in this Pokémon clears hazards on its side of the field, it is unable to switch until the following turn.",
 		shortDesc: "Upon switch-in this Pokémon clears hazards on its side of the field, it is unable to switch until the following turn.",
 	},
+	eclipseflare: {
+		name: "Eclipse Flare",
+		shortDesc: "Increases damage from all Fire, Ghost, and Water Moves for both sides by 25%.",
+	},
 };
