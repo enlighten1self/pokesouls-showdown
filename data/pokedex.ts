@@ -20820,7 +20820,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Despharos",
 		forme: "Mega",
 		types: ["Electric", "Ground"],
-		baseStats: {hp: 80, atk: 85, def: 80, spa: 150, spd: 135, spe: 90},
+		baseStats: {hp: 80, atk: 85, def: 80, spa: 150, spd: 125, spe: 100},
 		abilities: {0: "Armored Poncho"},
 		heightm: 1.4,
 		weightkg: 61.5,

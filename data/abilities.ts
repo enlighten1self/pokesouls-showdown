@@ -5701,10 +5701,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: -7,
 	},
 	armoredponcho: {
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			return this.chainModify(2);
+		},
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
 			if (move.type === 'Fire') mod *= 2;
-			if (move.flags['contact']) mod /= 2;
 			return this.chainModify(mod);
 		},
 		flags: { breakable: 1 },

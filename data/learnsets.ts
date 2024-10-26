@@ -105406,7 +105406,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			bodypress: ["9M"],
 			meteormash: ["9M"],
 			bulletpunch: ["9M"],
-			behemothbash: ["9M"],
 			attract: ["8M", "7M", "6M", "5M"],
 			bide: ["7L1", "6L1", "5L1"],
 			block: ["7T", "6T", "5T"],
@@ -105492,6 +105491,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	fugitile: {
 		learnset: {
+			stoneedge: ["9M"],
 			spikes: ["9M"],
 			stealthrock: ["9M"],
 			powerwhip: ["9M"],
@@ -105622,6 +105622,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	huesotops: {
 		learnset: {
+			shadowclaw: ["8M"],
 			earthquake: ["8M"],
 			tripleaxel: ["8M"],
 			poltergeist: ["8M"],
@@ -105732,6 +105733,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	atlascross: {
 		learnset: {
+			leechlife: ["8M"],
 			aerialace: ["9M", "9L15", "8L15", "7M", "7L10", "6M", "6L10", "5M", "5L10", "4M", "4L13"],
 			armthrust: ["9L1", "7L1", "6L1"],
 			assurance: ["8M"],
