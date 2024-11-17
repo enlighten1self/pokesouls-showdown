@@ -5806,4 +5806,18 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		num: -12,
 	},
+	corruptedspirit: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Dark') {
+				if (!this.damage(target.baseMaxhp / 8, target, target)) {
+					this.add('-immune', target, '[from] ability: Dry Skin');
+				}
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Corrupted Spirit",
+		rating: 3,
+		num: -13,
+	},
 };

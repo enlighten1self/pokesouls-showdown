@@ -217,6 +217,7 @@ export const Formats: FormatList = [
 			"Last Respects",
 			"Shed Tail",
 			"Tricky Reception",
+			"Caimanrago",
 		],
 	},
 	{

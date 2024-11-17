@@ -20190,7 +20190,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Grass", "Ghost"],
 		baseStats: {hp: 80, atk: 125, def: 135, spa: 65, spd: 150, spe: 70},
-		abilities: {0: "Intimidate"},
+		abilities: {0: "Corrupted Spirit"},
 		heightm: 2,
 		weightkg: 100,
 		color: "Green",

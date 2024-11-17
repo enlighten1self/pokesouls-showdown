@@ -2273,17 +2273,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pureflux: {
 		name: "Pure Flux",
-		shortDesc: "This Pokemon's Immune to Electric Moves and heals 1/4 of HP and Gives a +1 to SPA. Adds a 10% Electric Dmg Boost.",
+		desc: "This Pokemon's Immune to Electric Moves and heals 1/4 of HP and Gives a +1 to SPA. Adds a 10% Electric Dmg Boost.",
 	},
 	armoredponcho: {
 		name: "Armored Poncho",
-		desc: "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
-		shortDesc: "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.",
+		desc: "This Pokemon receives 1/2 damage from physical moves, but double damage from Fire moves.",
+		shortDesc: "This Pokemon takes 1/2 damage from physical moves, 2x damage from Fire moves.",
 	},
 	corruption: {
 		name: "Corruption",
-		desc: "Upon getting hit with a contact move, this Pokemon forces both itself and its attacker off the field.",
-		shortDesc: "Upon getting hit with a contact move, this Pokemon forces both itself and its attacker off the field.",
+		desc: "Upon getting hit with a physical move, this Pokemon forces both itself and its attacker off the field.",
+		shortDesc: "Upon getting hit with a physical move, this Pokemon forces both itself and its attacker off the field.",
 	},
 	stampede: {
 		name: "Stampede",
@@ -2299,5 +2299,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	eclipseflare: {
 		name: "Eclipse Flare",
 		shortDesc: "Increases damage from all Fire, Ghost, and Water Moves for both sides by 25%.",
+	},
+	corruptedspirit: {
+		name: "Corrupted Spirit",
+		shortDesc: "This Pokemon's Immune to Dark-Moves but Takes 1/8 HP.",
 	},
 };
