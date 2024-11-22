@@ -6157,7 +6157,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	ghoulizardmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "(OU)",
 	},
 	bloodtales: {
 		tier: "Illegal",
@@ -6165,7 +6165,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	kringuin: {
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "UU",
 	},
 	skellejack: {
 		tier: "Illegal",
@@ -6317,7 +6317,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	atlascross: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	atlascrossmega: {
 		tier: "Illegal",

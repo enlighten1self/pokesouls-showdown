@@ -102144,6 +102144,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	kringuin: {
 		learnset: {
+			teleport: ["9M"],
+			wish: ["9M"],
 			taunt: ["9M"],
 			mist: ["9M"],
 			moonblast: ["9M"],
@@ -102682,7 +102684,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			brutalswing: ["9M"],
 			storedpower: ["9M"],
 			poisonjab: ["9M"],
+			terablast: ["9M"],
 			shadowball: ["9M"],
+			trickroom: ["9M"],
 		},
 	},
 	aereon: {
@@ -102715,6 +102719,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			solarbeam: ["9M"],
 			featherdance: ["9M"],
 			skydrop: ["9M"],
+			hurricane: ["9M"],
+			swordsdance: ["9M"],
+			fling: ["9M"],
 		},
 	},
 	automeon: {
@@ -102746,6 +102753,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			bulletpunch: ["9M"],
 			gyroball: ["9M"],
 			honeclaws: ["9M"],
+			shiftgear: ["9M"],
+			trickroom: ["9M"],
+			recover: ["9M"],
+			explosion: ["9M"],
+			smartstrike: ["9M"],
 		},
 	},
 	champeon: {
@@ -102779,6 +102791,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			bulkup: ["9M"],
 			torment: ["9M"],
 			detect: ["9M"],
+			bodypress: ["9M"],
+			irondefense: ["9M"],
+			substitute: ["9M"],
 		},
 	},
 	dungeon: {
@@ -102810,6 +102825,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			stoneedge: ["9M"],
 			stompingtantrum: ["9M"],
 			earthquake: ["9M"],
+			recover: ["9M"],
+			explosion: ["9M"],
+			imprison: ["9M"],
 			fissure: ["9M"]
 		},
 	},
@@ -102843,6 +102861,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			machpunch: ["9M"],
 			facade: ["9M"],
 			hyperbeam: ["9M"],
+			flamethrower: ["9M"],
+			surf: ["9M"],
+			energyball: ["9M"],
+			icebeam: ["9M"],
+			ironhead: ["9M"],
+			psychic: ["9M"],
 			gigaimpact: ["9M"]
 		},
 	},
@@ -102876,6 +102900,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			facade: ["9M"],
 			falseswipe: ["9M"],
 			megahorn: ["9M"],
+			earthquake: ["9M"],
+			earthpower: ["9M"],
+			airslash: ["9M"],
 		},
 	},
 	minereon: {
@@ -102907,6 +102934,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			stoneedge: ["9M"],
 			facade: ["9M"],
 			earthquake: ["9M"],
+			dazzlinggleam: ["9M"],
+			explosion: ["9M"],
+			reflect: ["9M"],
+			ironhead: ["9M"],
+			recover: ["9M"],
+			destinybond: ["9M"],
 		},
 	},
 	spectreon: {
@@ -102955,6 +102988,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			swagger: ["9M"],
 			terablast: ["9M"],
 			zenheadbutt: ["9M"],
+			poltergeist: ["9M"],
 		},
 	},
 	wyveon: {
@@ -102986,6 +103020,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			dragonhammer: ["9M"],
 			dualchop: ["9M"],
 			dracometeor: ["9M"],
+			agility: ["9M"],
+			skyattack: ["9M"],
+			bravebird: ["9M"],
+			wavecrash: ["9M"],
 		},
 	},
 	arkidna: {
