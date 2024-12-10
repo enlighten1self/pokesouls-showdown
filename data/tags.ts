@@ -34,6 +34,18 @@ export const Tags: {[id: string]: TagData} = {
 		name: "Mega",
 		speciesFilter: species => !!species.isMega,
 	},
+	paldeablazemega: {
+		name: "Paldea-Blaze-Mega",
+		speciesFilter: species => !!species.isMega,
+	},
+	paldeaaquamega: {
+		name: "Paldea-Aqua-Mega",
+		speciesFilter: species => !!species.isMega,
+	},
+	paldeacombatmega: {
+		name: "Paldea-Combat-Mega",
+		speciesFilter: species => !!species.isMega,
+	},
 	mythical: {
 		name: "Mythical",
 		speciesFilter: species => species.tags.includes("Mythical"),

@@ -2746,12 +2746,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	garchomp: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	garchompmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	riolu: {
 		tier: "LC",
@@ -5464,7 +5464,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironhands: {
 		tier: "UUBL",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	ironjugulis: {
 		tier: "RUBL",
@@ -6289,7 +6289,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	blimplord: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	ophadol: {
 		tier: "Illegal",
@@ -6301,7 +6301,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	fugitile: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	huesotops: {
 		tier: "Illegal",
