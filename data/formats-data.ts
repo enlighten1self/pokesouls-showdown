@@ -6273,7 +6273,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	boarbaque: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	lordfetchd: {
 		tier: "Illegal",
