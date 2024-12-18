@@ -2304,4 +2304,17 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Corrupted Spirit",
 		shortDesc: "This Pokemon's Immune to Dark-Moves but Takes 1/8 HP.",
 	},
+	psionic: {
+		name: "Psionic",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Psychic-type attack.",
+	},
+	regenerative: {
+		name: "Regenerative",
+		desc: "This Pokemon has its non-volatile status condition cured when it switches out. Also gains 1/16 HP per turn",
+		activate: "  ([POKEMON] is cured by its Regenerative!)",
+	},
+	antarcticpower: {
+		name: "Antarctic Power",
+		shortDesc: "All Special moves hit for Physical damage on the opposing Pokemon,",
+	},
 };

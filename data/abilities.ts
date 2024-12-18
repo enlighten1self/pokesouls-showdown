@@ -5820,4 +5820,89 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3,
 		num: -13,
 	},
+	regenerative: {
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
+		},
+		onCheckShow(pokemon) {
+			if (pokemon.side.active.length === 1) return;
+			if (pokemon.showCure === true || pokemon.showCure === false) return;
+			const cureList = [];
+			let noCureCount = 0;
+			for (const curPoke of pokemon.side.active) {
+				if (!curPoke?.status) {
+					continue;
+				}
+				if (curPoke.showCure) {
+					continue;
+				}
+				const species = curPoke.species;
+				if (!Object.values(species.abilities).includes('Regenerative')) {
+					continue;
+				}
+				if (!species.abilities['1'] && !species.abilities['H']) {
+					continue;
+				}
+				// pokemon isn't switching this turn
+				if (curPoke !== pokemon && !this.queue.willSwitch(curPoke)) {
+					continue;
+				}
+				if (curPoke.hasAbility('regenerative')) {
+					cureList.push(curPoke);
+				} else {
+					noCureCount++;
+				}
+			}
+			if (!cureList.length || !noCureCount) {
+				for (const pkmn of cureList) {
+					pkmn.showCure = true;
+				}
+			} else {
+				this.add('-message', "(" + cureList.length + " of " + pokemon.side.name + "'s pokemon " + (cureList.length === 1 ? "was" : "were") + " cured by Regenerative.)");
+				for (const pkmn of cureList) {
+					pkmn.showCure = false;
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			if (!pokemon.status) return;
+			if (pokemon.showCure === undefined) pokemon.showCure = true;
+			if (pokemon.showCure) this.add('-curestatus', pokemon, pokemon.status, '[from] ability: Regenerative');
+			pokemon.clearStatus();
+			if (!pokemon.showCure) pokemon.showCure = undefined;
+		},
+		flags: {},
+		name: "Regenerative",
+		rating: 2.5,
+		num: -14,
+	},
+	psionic: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Psychic') {
+				this.debug('Psionic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Psychic') {
+				this.debug('Psionic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Psionic",
+		rating: 3.5,
+		num: -15,
+	},
+	antarcticpower: {
+		onModifyMove(move) {
+			if (move.category === "Special") move.overrideDefensiveStat = 'def'
+		},
+		flags: {},
+		name: "Antarctic Power",
+		rating: 3.5,
+		num: -15,
+	},
 };

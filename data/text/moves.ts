@@ -7585,4 +7585,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon. Applies Heal Block for 1 Turn on User",
 		damage: "  ([POKEMON] cut its own HP to power up its move!)",
 	},
+	davysmash: {
+		name: "Davy Smash",
+		desc: "Has a 50% chance to raise the user's Attack by 1 stage.",
+		shortDesc: "50% chance to raise the user's Attack by 1.",
+	},
 };

@@ -7805,4 +7805,56 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10012,
 		gen: 9
 	},
+	crystalixite: {
+		name: "Crystalixite",
+		spritenum: 772,
+		megaStone: "Crystalix-Mega",
+		megaEvolves: "Crystalix",
+		itemUser: ["Crystalix"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10013,
+		gen: 9
+	},
+	zapoleonite: {
+		name: "Zapoleonite",
+		spritenum: 773,
+		megaStone: "Zapoleon-Mega",
+		megaEvolves: "Zapoleon",
+		itemUser: ["Zapoleon"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10014,
+		gen: 9
+	},
+	geyseruptite: {
+		name: "Geyseruptite",
+		spritenum: 774,
+		megaStone: "Geyserupt-Mega",
+		megaEvolves: "Geyserupt",
+		itemUser: ["Geyserupt"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10015,
+		gen: 9
+	},
+	frostikenite: {
+		name: "Frostikenite",
+		spritenum: 775,
+		megaStone: "Frostiken-Mega",
+		megaEvolves: "Frostiken",
+		itemUser: ["Frostiken"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10016,
+		gen: 9
+	},
 };

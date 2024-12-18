@@ -3842,6 +3842,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	crystalix: {
 		name: "Crystalix",
 	},
+	crystalixmega: {
+		name: "Crystalix-Mega",
+	},
 	forrogue: {
 		name: "Forrogue",
 	},
@@ -3881,8 +3884,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	zapoleon: {
 		name: "Zapoleon",
 	},
+	zapoleonmega: {
+		name: "Zapoleon-Mega",
+	},
 	frostiken: {
 		name: "Frostiken",
+	},
+	frostikenmega: {
+		name: "Frostiken-Mega",
 	},
 	acideon: {
 		name: "Acideon",
@@ -4015,5 +4024,23 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	atlascrossmega: {
 		name: "Atlascross-Mega",
+	},
+	thalassigon: {
+		name: "Thalassigon",
+	},
+	drownoir: {
+		name: "Drownoir",
+	},
+	jelliclus: {
+		name: "Jelliclus",
+	},
+	geyserupt: {
+		name: "Geyserupt",
+	},
+	geyseruptmega: {
+		name: "Geyserupt-Mega",
+	},
+	malabyss: {
+		name: "Malabyss",
 	},
 };

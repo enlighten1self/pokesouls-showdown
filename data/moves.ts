@@ -22069,16 +22069,23 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 15,
 		priority: 0,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
-		self: {
-			onHit(source) {
+		onAfterHit(target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
 				for (const side of source.side.foeSidesWithConditions()) {
 					side.addSideCondition("gmaxsteelsurge");
 				}
 			}
 		},
-		secondary: {},
+		onAfterSubDamage(damage, target, source, move) {
+			if (!move.hasSheerForce && source.hp) {
+				for (const side of source.side.foeSidesWithConditions()) {
+					side.addSideCondition("gmaxsteelsurge");
+				}
+			}
+		},
+		secondary: {}, // Sheer Force-boosted
 		target: "normal",
-		type: "Steel"
+		type: "Steel",
 	},
 	sulphuricdownpour: {
 		num: 1003,
@@ -22222,6 +22229,27 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		secondary: null,
 		target: "allAdjacent",
+		type: "Ghost",
+		contestType: "Cool",
+	},
+	davysmash: {
+		num: 1009,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Davy Smash",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, punch: 1, metronome: 1 },
+		secondary: {
+			chance: 50,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		target: "normal",
 		type: "Ghost",
 		contestType: "Cool",
 	},

@@ -318,7 +318,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	clefable: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	vulpix: {
 		tier: "ZUBL",
@@ -1071,7 +1071,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gyaradosmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UUBL",
 	},
 	lapras: {
 		tier: "NU",
@@ -1206,7 +1206,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	zapdos: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	zapdosgalar: {
 		tier: "UU",
@@ -4138,7 +4138,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	hoopaunbound: {
 		tier: "RUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	volcanion: {
 		tier: "UU",
@@ -5234,7 +5234,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	palafin: {
 		tier: "Uber",
 		doublesTier: "DUU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	smoliv: {
 		tier: "LC",
@@ -5558,7 +5558,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	clodsire: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	annihilape: {
 		tier: "Uber",
@@ -6053,7 +6053,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	chocopertmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "(OU)",
 	},
 	turtaya: {
 		tier: "Illegal",
@@ -6123,6 +6123,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	crystalixmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	forrogue: {
 		tier: "Illegal",
 		natDexTier: "UU",
@@ -6175,9 +6179,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
+	zapoleonmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 	frostiken: {
 		tier: "Illegal",
 		natDexTier: "OU",
+	},
+	frostikenmega: {
+		tier: "Illegal",
+		natDexTier: "Uber",
 	},
 	acideon: {
 		tier: "Illegal",
@@ -6320,6 +6332,30 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UU",
 	},
 	atlascrossmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	thalassigon: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	drownoir: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	jelliclus: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	geyserupt: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	geyseruptmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	malabyss: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
