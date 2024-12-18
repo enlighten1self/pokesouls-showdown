@@ -20135,6 +20135,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	crystalixmega: {
 		num: -10017,
 		name: "Crystalix-Mega",
+		baseSpecies: "Crystalix",
+		forme: "Mega",
 		types: ["Ground","Dragon"],
 		baseStats: {hp: 75, atk: 135, def: 140, spa: 50, spd: 75, spe: 35},
 		abilities: {0: "Regenerator"},
