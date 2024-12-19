@@ -244,7 +244,7 @@ function getLetsGoMoves(species: string | Species) {
 	if (!data) return false;
 	const isLetsGoLegal = (
 		(species.num <= 151 || ['Meltan', 'Melmetal'].includes(species.name)) &&
-		(!species.forme || ['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Starter'].includes(species.forme))
+		(!species.forme || ['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Starter',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(species.forme))
 	);
 	if (!isLetsGoLegal) return false;
 	if (!data.moves?.length) return false;
