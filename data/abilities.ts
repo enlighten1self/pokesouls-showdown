@@ -5765,17 +5765,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				pokemon.addVolatile('onetrapped');
 			}
 		},
-		//onSwitchIn(pokemon) {
-		//	for (const sideCondition of ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge']) {
-		//		for (const side of [pokemon.side, ...pokemon.side.foeSidesWithConditions()]) {
-		//			if (side.getSideCondition(sideCondition)) {
-		//				this.add('-sideend', pokemon.side, `move: ${sideCondition}`, '[of] ' + pokemon);
-		//				pokemon.side.removeSideCondition(sideCondition);
-		//			}
-		//			pokemon.addVolatile('onetrapped');
-		//		}
-		//	}
-		//},
 		flags: {},
 		name: "Tectonic Shift",
 		rating: 4,
@@ -5810,7 +5799,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Dark') {
 				if (!this.damage(target.baseMaxhp / 8, target, target)) {
-					this.add('-immune', target, '[from] ability: Dry Skin');
+					this.add('-immune', target, '[from] ability: Corrupted Spirit');
 				}
 				return null;
 			}
@@ -5843,7 +5832,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 				if (!species.abilities['1'] && !species.abilities['H']) {
 					continue;
 				}
-				// pokemon isn't switching this turn
 				if (curPoke !== pokemon && !this.queue.willSwitch(curPoke)) {
 					continue;
 				}

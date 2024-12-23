@@ -1028,7 +1028,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurosmega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	taurospaldeacombat: {
 		tier: "ZU",
@@ -6333,7 +6333,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	atlascrossmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	thalassigon: {
 		tier: "Illegal",

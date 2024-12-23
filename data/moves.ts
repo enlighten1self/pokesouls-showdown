@@ -22189,7 +22189,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Tremor Turn",
 		pp: 5,
 		priority: 0,
-		flags: { protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, contact: 1 },
 		onAfterMove(pokemon, target, move) {
 			if (!move.multihit) {
 				const hpBeforeRecoil = pokemon.hp;

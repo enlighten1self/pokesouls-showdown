@@ -105987,6 +105987,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	jelliclus: {
 		learnset: {
+			aquajet: ["9M"],
 			liquidation: ["9M"],
 			waterfall: ["9M"],
 			bulkup: ["9M"],
@@ -106303,6 +106304,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	drownoir: {
 		learnset: {
+			surf: ["9M"],
+			hydropump: ["9M"],
+			waterfall: ["9M"],
+			scald: ["9M"],
 			wavecrash: ["9M"],
 			liquidation: ["9M"],
 			knockoff: ["9M"],
