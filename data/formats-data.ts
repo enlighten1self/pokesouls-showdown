@@ -1762,7 +1762,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	blaziken: {
 		tier: "UUBL",
 		doublesTier: "DUU",
-		natDexTier: "UUBL",
+		natDexTier: "UU",
 	},
 	blazikenmega: {
 		isNonstandard: "Past",
@@ -6125,7 +6125,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	crystalixmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	forrogue: {
 		tier: "Illegal",
@@ -6345,18 +6345,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	jelliclus: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	geyserupt: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	geyseruptmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	malabyss: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 };

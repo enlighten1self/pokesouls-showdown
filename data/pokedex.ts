@@ -20325,7 +20325,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Ice", "Electric"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 120, atk: 65, def: 105, spa: 140, spd: 110, spe: 100},
+		baseStats: {hp: 120, atk: 75, def: 105, spa: 140, spd: 110, spe: 100},
 		abilities: {0: "Antarctic Power"},
 		heightm: 1.7,
 		weightkg: 84.5,
@@ -20511,7 +20511,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	spiritran: {
 		num: -10040,
 		name: "Spiritran",
-		types: ["Steel","Ghost"],
+		types: ["Ghost","Steel"],
 		gender: "N",
 		baseStats: {hp: 91, atk: 130, def: 106, spa: 90, spd: 106, spe: 77},
 		abilities: {0: "Intimidate", 1: "Cursed Body", H: "Neutralizing Gas"},
