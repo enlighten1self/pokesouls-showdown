@@ -94,11 +94,7 @@ export const Formats: FormatList = [
 		ruleset: ["[Gen 9] National Dex"],
 		banlist: [
 			"ND OU",
-			"ND UUBL",
-			"Battle Bond",
-			"Drizzle",
-			"Drought",
-			"Light Clay",
+			"ND UUBL"
 		],
 	},
 	{

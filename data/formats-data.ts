@@ -2144,7 +2144,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	torkoal: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "RU",
+		natDexTier: "UU",
 	},
 	spoink: {
 		tier: "LC",
@@ -2264,6 +2264,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
+	},
+	miloticmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
 	},
 	castform: {
 		isNonstandard: "Past",
@@ -3800,7 +3804,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	greninjabond: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UUBL",
+		natDexTier: "UU",
 	},
 	greninjaash: {
 		isNonstandard: "Past",
@@ -6243,18 +6247,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
-	togo: {
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	togeo: {
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
-	togeru: {
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
 	ultigigas: {
 		tier: "Illegal",
 		natDexTier: "OU",
@@ -6358,5 +6350,57 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	malabyss: {
 		tier: "Illegal",
 		natDexTier: "UU",
+	},
+	barbedchaos: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	crescentwing: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	chronovenom: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	celestialorbit: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	weepingwoods: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	freezingking: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	bulkingblade: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	abyssalvoid: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	titaniumdelta: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	quantumsyphon: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	elysiandance: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	flamingwrath: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	resurgentjustice: {
+		tier: "Illegal",
+		natDexTier: "OU",
 	},
 };

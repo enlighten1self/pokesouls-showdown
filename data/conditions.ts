@@ -635,6 +635,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (this.field.isWeather('sandstorm')) this.eachEvent('Weather');
 		},
 		onWeather(target) {
+			if (target.ability === "protomorphosis") return;
 			this.damage(target.baseMaxhp / 16);
 		},
 		onFieldEnd() {

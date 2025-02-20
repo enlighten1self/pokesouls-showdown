@@ -2493,4 +2493,8 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Frostikenite",
 		desc: "If held by a Frostiken, this item allows it to Mega Evolve in battle.",
 	},
+	milotite: {
+		name: "Milotite",
+		desc: "If held by a Milotic, this item allows it to Mega Evolve in battle.",
+	},
 };

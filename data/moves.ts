@@ -22253,4 +22253,72 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		contestType: "Cool",
 	},
+	photonhaymaker: {
+		num: 1010,
+		accuracy: 90,
+		basePower: 130,
+		category: "Physical",
+		name: "Photon Haymaker",
+		pp: 5,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			boosts: {
+				atk: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Beautiful",
+	},
+	endlesstorment: {
+		num: 1011,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Endless Torment",
+		pp: 15,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Endless Torment');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / 8);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Endless Torment');
+			},
+		},
+		secondary: {
+			chance: 100,
+			volatileStatus: 'endlesstorment',
+		},
+		target: "normal",
+		type: "Dark",
+	},
+	primalrage: {
+		num: 1012,
+		accuracy: 100,
+		basePower: 120,
+		category: "Special",
+		name: "Primal Rage",
+		pp: 5,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
 };

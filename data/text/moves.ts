@@ -7590,4 +7590,22 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 50% chance to raise the user's Attack by 1 stage.",
 		shortDesc: "50% chance to raise the user's Attack by 1.",
 	},
+	photonhaymaker: {
+		name: "Photon Haymaker",
+		desc: "Lowers the user's Attack by 2 stages.",
+		shortDesc: "Lowers the user's Atk by 2.",
+	},
+	endlesstorment: {
+		name: "Endless Torment",
+		desc: "Causes damage to the target equal to 1/8 of its maximum HP, rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Deals 1/8 max HP each turn.",
+
+		start: "  [POKEMON] is being Endlessly Tormented!",
+		damage: "  [POKEMON] is hurt by Endless Torment!",
+	},
+	primalrage: {
+		name: "Primal Rage",
+		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+	},
 };

@@ -1373,6 +1373,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	milotic: {
 		name: "Milotic",
 	},
+	miloticmega: {
+		name: "Milotic-Mega",
+	},
 	castform: {
 		name: "Castform",
 	},
@@ -3932,14 +3935,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	titanios: {
 		name: "Titanios",
 	},
-	togo: {
-		name: "Togo",
-	},
-	togeo: {
-		name: "Togeo",
-	},
-	togeru: {
-		name: "Togeru",
+	barbedchaos: {
+		name: "Barbed Chaos",
 	},
 	ultigigas: {
 		name: "Ultigigas",
@@ -4042,5 +4039,41 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	malabyss: {
 		name: "Malabyss",
+	},
+	crescentwing: {
+		name: "Crescent Wing",
+	},
+	chronovenom: {
+		name: "Chrono Venom",
+	},
+	celestialorbit: {
+		name: "Celestial Orbit",
+	},
+	weepingwoods: {
+		name: "Weeping Woods",
+	},
+	freezingking: {
+		name: "Freezing King",
+	},
+	bulkingblade: {
+		name: "Bulking Blade",
+	},
+	abyssalvoid: {
+		name: "Abyssal Void",
+	},
+	titaniumdelta: {
+		name: "Titanium Delta",
+	},
+	quantumsyphon: {
+		name: "Quantum Syphon",
+	},
+	elysiandance: {
+		name: "Elysian Dance",
+	},
+	flamingwrath: {
+		name: "Flaming Wrath",
+	},
+	resurgentjustice: {
+		name: "Resurgent Justice",
 	},
 };

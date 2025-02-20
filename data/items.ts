@@ -7857,4 +7857,17 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10016,
 		gen: 9
 	},
+	milotite: {
+		name: "Milotite",
+		spritenum: 776,
+		megaStone: "Milotic-Mega",
+		megaEvolves: "Milotic",
+		itemUser: ["Milotic"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10017,
+		gen: 9
+	},
 };

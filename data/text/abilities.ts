@@ -1393,7 +1393,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		shortDesc: "Electric Terrain active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
 
 		activate: "  The Electric Terrain activated [POKEMON]'s Quark Drive!",
-		activateFromItem: "  [POKEMON] used its Booster Energy to activate its Quark Drive!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate its Quark Driquarkve!",
 		start: "  [POKEMON]'s [STAT] was heightened!",
 		end: "  The effects of [POKEMON]'s Quark Drive wore off!",
 	},
@@ -2316,5 +2316,25 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	antarcticpower: {
 		name: "Antarctic Power",
 		shortDesc: "All Special moves hit for Physical damage on the opposing Pokemon,",
+	},
+	protomorphosis: {
+		name: "Protomorphosis",
+		desc: "If Sandstorm is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Sandstorm, a held Booster Energy will not activate and the effect ends when Sandstorm is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
+		shortDesc: "Sandstormy active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+
+		activate: "  The Sandstorm activated [POKEMON]'s Protomorphosis!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate Protomorphosis!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Protomorphosis wore off!",
+	},
+	neurodrive: {
+		name: "Neuro Drive",
+		desc: "If Psychic Terrain is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Psychic Terrain, a held Booster Energy will not activate and the effect ends when Psychic Terrain is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
+		shortDesc: "Psychic Terrain active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+
+		activate: "  The Psychic Terrain activated [POKEMON]'s Neuro Drive!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate its Neuro Drive!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Neuro Drive wore off!",
 	},
 };
