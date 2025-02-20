@@ -2320,7 +2320,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	protomorphosis: {
 		name: "Protomorphosis",
 		desc: "If Sandstorm is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Sandstorm, a held Booster Energy will not activate and the effect ends when Sandstorm is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
-		shortDesc: "Sandstormy active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+		shortDesc: "Sandstorm active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
 
 		activate: "  The Sandstorm activated [POKEMON]'s Protomorphosis!",
 		activateFromItem: "  [POKEMON] used its Booster Energy to activate Protomorphosis!",

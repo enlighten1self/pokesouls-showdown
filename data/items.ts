@@ -627,6 +627,12 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
 				pokemon.addVolatile('quarkdrive');
 			}
+			if (pokemon.hasAbility('protomorphosis') && !this.field.isTerrain('sandstorm') && pokemon.useItem()) {
+				pokemon.addVolatile('protomorphosis');
+			}
+			if (pokemon.hasAbility('neurodrive') && !this.field.isTerrain('psychicterrain') && pokemon.useItem()) {
+				pokemon.addVolatile('qneurodrive');
+			}
 		},
 		onTakeItem(item, source) {
 			if (source.baseSpecies.tags.includes("Paradox")) return false;
