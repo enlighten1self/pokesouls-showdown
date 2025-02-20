@@ -106843,6 +106843,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	resurgentjustice: {
 		learnset: {
+			playrough: ["9M"],
+			spiritbreak: ["9M"],
 			thunderbolt: ["9M"],
 			dazzlinggleam: ["9M"],
 			moonblast: ["9M"],
