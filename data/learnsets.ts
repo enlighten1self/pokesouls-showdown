@@ -107042,7 +107042,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		],
 		eventOnly: true,
 	},
-	crescentwings: {
+	crescentwing: {
 		learnset: {
 			scaleshot: ["9M"],
 			dragondance: ["9M"],

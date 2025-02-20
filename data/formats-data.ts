@@ -6355,7 +6355,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
-	crescentwings: {
+	crescentwing: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
