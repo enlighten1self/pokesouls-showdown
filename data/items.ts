@@ -631,7 +631,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				pokemon.addVolatile('protomorphosis');
 			}
 			if (pokemon.hasAbility('neurodrive') && !this.field.isTerrain('psychicterrain') && pokemon.useItem()) {
-				pokemon.addVolatile('qneurodrive');
+				pokemon.addVolatile('neurodrive');
 			}
 		},
 		onTakeItem(item, source) {

@@ -21069,7 +21069,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	resurgentjustice: {
 		num: -10077,
 		name: "Resurgent Justice",
-		types: ["Fire", "Fairy"],
+		types: ["Fire", "Water"],
 		gender: "N",
 		baseStats: {hp: 86, atk: 114, def: 86, spa: 114, spd: 70, spe: 100},
 		abilities: {0: "Neuro Drive"},
