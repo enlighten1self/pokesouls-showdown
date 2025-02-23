@@ -106460,6 +106460,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	quantumsyphon: {
 		learnset: {
+			icepunch: ["9M"],
+			firepunch: ["9M"],
+			thunderpunch: ["9M"],
 			photonhaymaker: ["9M"],
 			ironhead: ["9M"],
 			heavyslam: ["9M"],
@@ -107046,6 +107049,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crescentwing: {
 		learnset: {
+			playrough: ["9M"],
 			scaleshot: ["9M"],
 			dragondance: ["9M"],
 			outrage: ["9M"],
@@ -107580,6 +107584,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	barbedchaos: {
 		learnset: {
+			barbbarrage: ["8M"],
 			sludgewave: ["8M"],
 			toxicspikes: ["8M"],
 			sludgebomb: ["8M"],

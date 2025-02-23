@@ -1048,7 +1048,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurospaldeablazemega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	taurospaldeaaqua: {
 		tier: "NU",
@@ -1058,7 +1058,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurospaldeaaquamega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	magikarp: {
 		tier: "LC",
@@ -1577,7 +1577,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ursaluna: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	ursalunabloodmoon: {
 		tier: "Uber",
@@ -1783,7 +1783,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	swampertmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	poochyena: {
 		tier: "LC",
@@ -1881,7 +1881,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	pelipper: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	ralts: {
 		tier: "LC",
@@ -2267,7 +2267,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	miloticmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	castform: {
 		isNonstandard: "Past",
@@ -5625,7 +5625,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	archaludon: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UUBL",
 	},
 	hydrapple: {
 		tier: "UU",
@@ -6149,7 +6149,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	pumpkasaurmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	spectoise: {
 		tier: "Illegal",
@@ -6353,7 +6353,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	barbedchaos: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	crescentwing: {
 		tier: "Illegal",
