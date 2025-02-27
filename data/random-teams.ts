@@ -207,7 +207,7 @@ export class RandomTeams {
 			Grass: (movePool, moves, abilities, types, counter, species) => (
 				!counter.get('Grass') && (
 					movePool.includes('leafstorm') || species.baseStats.atk >= 100 ||
-					types.includes('Electric') || abilities.includes('Seed Sower')
+					types.includes('Electric') || abilities.has('Seed Sower')
 				)
 			),
 			Ground: (movePool, moves, abilities, types, counter) => !counter.get('Ground'),
@@ -402,7 +402,7 @@ export class RandomTeams {
 				if (move.flags['bite']) counter.add('strongjaw');
 				if (move.flags['punch']) counter.ironFist++;
 				if (move.flags['sound']) counter.add('sound');
-				if (move.priority > 0 || (moveid === 'grassyglide' && abilities.includes('Grassy Surge'))) {
+				if (move.priority > 0 || (moveid === 'grassyglide' && abilities.has('Grassy Surge'))) {
 					counter.add('priority');
 				}
 			}
@@ -596,7 +596,7 @@ export class RandomTeams {
 
 		if (!isDoubles) this.incompatibleMoves(moves, movePool, ['taunt', 'strengthsap'], 'encore');
 
-		if (!abilities.includes('Prankster')) this.incompatibleMoves(moves, movePool, 'thunderwave', 'yawn');
+		if (!abilities.has('Prankster')) this.incompatibleMoves(moves, movePool, 'thunderwave', 'yawn');
 
 		// This space reserved for assorted hardcodes that otherwise make little sense out of context
 		if (species.id === 'luvdisc') {
@@ -678,10 +678,10 @@ export class RandomTeams {
 
 		const moveType = move.type;
 		if (moveType === 'Normal') {
-			if (abilities.includes('Aerilate')) return 'Flying';
-			if (abilities.includes('Galvanize')) return 'Electric';
-			if (abilities.includes('Pixilate')) return 'Fairy';
-			if (abilities.includes('Refrigerate')) return 'Ice';
+			if (abilities.has('Aerilate')) return 'Flying';
+			if (abilities.has('Galvanize')) return 'Electric';
+			if (abilities.has('Pixilate')) return 'Fairy';
+			if (abilities.has('Refrigerate')) return 'Ice';
 		}
 		return moveType;
 	}
@@ -725,7 +725,7 @@ export class RandomTeams {
 		// Add other moves you really want to have, e.g. STAB, recovery, setup.
 
 		// Enforce Facade if Guts is a possible ability
-		if (movePool.includes('facade') && abilities.includes('Guts')) {
+		if (movePool.includes('facade') && abilities.has('Guts')) {
 			counter = this.addMove('facade', moves, types, abilities, teamDetails, species, isLead, isDoubles,
 				movePool, role);
 		}
@@ -795,12 +795,12 @@ export class RandomTeams {
 					movePool, role);
 			}
 			// Enforce Tailwind on Prankster and Gale Wings users
-			if (movePool.includes('tailwind') && (abilities.includes('Prankster') || abilities.includes('Gale Wings'))) {
+			if (movePool.includes('tailwind') && (abilities.has('Prankster') || abilities.has('Gale Wings'))) {
 				counter = this.addMove('tailwind', moves, types, abilities, teamDetails, species, isLead, isDoubles,
 					movePool, role);
 			}
 			// Enforce Thunder Wave on Prankster users as well
-			if (movePool.includes('thunderwave') && abilities.includes('Prankster')) {
+			if (movePool.includes('thunderwave') && abilities.has('Prankster')) {
 				counter = this.addMove('thunderwave', moves, types, abilities, teamDetails, species, isLead, isDoubles,
 					movePool, role);
 			}
@@ -816,7 +816,7 @@ export class RandomTeams {
 				const move = this.dex.moves.get(moveid);
 				const moveType = this.getMoveType(move, species, abilities);
 				if (
-					types.includes(moveType) && (move.priority > 0 || (moveid === 'grassyglide' && abilities.includes('Grassy Surge'))) &&
+					types.includes(moveType) && (move.priority > 0 || (moveid === 'grassyglide' && abilities.has('Grassy Surge'))) &&
 					(move.basePower || move.basePowerCallback)
 				) {
 					priorityMoves.push(moveid);
@@ -1011,14 +1011,14 @@ export class RandomTeams {
 		case 'Compound Eyes': case 'No Guard':
 			return !counter.get('inaccurate');
 		case 'Cursed Body':
-			return abilities.includes('Infiltrator');
+			return abilities.has('Infiltrator');
 		case 'Defiant':
-			return (!counter.get('Physical') || (abilities.includes('Prankster') && (moves.has('thunderwave') || moves.has('taunt'))));
+			return (!counter.get('Physical') || (abilities.has('Prankster') && (moves.has('thunderwave') || moves.has('taunt'))));
 		case 'Flame Body':
 			return (species.id === 'magcargo' && moves.has('shellsmash'));
 		case 'Flash Fire':
 			return (
-				['Drought', 'Flame Body', 'Intimidate', 'Rock Head', 'Weak Armor'].some(m => abilities.includes(m)) &&
+				['Drought', 'Flame Body', 'Intimidate', 'Rock Head', 'Weak Armor'].some(m => abilities.has(m)) &&
 				this.dex.getEffectiveness('Fire', species) < 0
 			);
 		case 'Guts':
@@ -1027,14 +1027,14 @@ export class RandomTeams {
 			// some of this is just for Delibird in singles/doubles
 			return (!counter.get('Physical') || moves.has('fakeout') || moves.has('rapidspin'));
 		case 'Infiltrator':
-			return (isDoubles && abilities.includes('Clear Body'));
+			return (isDoubles && abilities.has('Clear Body'));
 		case 'Insomnia':
 			return (role === 'Wallbreaker');
 		case 'Intimidate':
-			if (abilities.includes('Hustle')) return true;
-			if (abilities.includes('Sheer Force') && !!counter.get('sheerforce')) return true;
+			if (abilities.has('Hustle')) return true;
+			if (abilities.has('Sheer Force') && !!counter.get('sheerforce')) return true;
 			if (species.id === 'hitmontop' && moves.has('tripleaxel')) return true;
-			return (abilities.includes('Stakeout'));
+			return (abilities.has('Stakeout'));
 		case 'Iron Fist':
 			return !counter.ironFist || moves.has('dynamicpunch');
 		case 'Justified':
@@ -1044,7 +1044,7 @@ export class RandomTeams {
 		case 'Lightning Rod':
 			return species.id === 'rhyperior';
 		case 'Mold Breaker':
-			return (['Pickpocket', 'Sharpness', 'Sheer Force', 'Unburden'].some(m => abilities.includes(m)));
+			return (['Pickpocket', 'Sharpness', 'Sheer Force', 'Unburden'].some(m => abilities.has(m)));
 		case 'Moxie':
 			return (!counter.get('Physical') || moves.has('stealthrock'));
 		case 'Natural Cure':
@@ -1073,7 +1073,7 @@ export class RandomTeams {
 			return role === 'Bulky Support';
 		case 'Sheer Force':
 			const braviaryCase = (species.id === 'braviaryhisui' && (role === 'Wallbreaker' || role === 'Bulky Protect'));
-			const abilitiesCase = (abilities.includes('Guts') || abilities.includes('Sharpness'));
+			const abilitiesCase = (abilities.has('Guts') || abilities.has('Sharpness'));
 			const movesCase = (moves.has('bellydrum') || moves.has('flamecharge'));
 			return (!counter.get('sheerforce') || braviaryCase || abilitiesCase || movesCase);
 		case 'Slush Rush':
@@ -1089,11 +1089,11 @@ export class RandomTeams {
 		case 'Swarm':
 			return (!counter.get('Bug') || !!counter.get('recovery'));
 		case 'Swift Swim':
-			return (abilities.includes('Intimidate') || (!moves.has('raindance') && !teamDetails.rain));
+			return (abilities.has('Intimidate') || (!moves.has('raindance') && !teamDetails.rain));
 		case 'Synchronize':
 			return (species.id !== 'umbreon' && species.id !== 'rabsca');
 		case 'Technician':
-			return (!counter.get('technician') || abilities.includes('Punk Rock') || abilities.includes('Fur Coat'));
+			return (!counter.get('technician') || abilities.has('Punk Rock') || abilities.has('Fur Coat'));
 		case 'Tinted Lens':
 			const hbraviaryCase = (species.id === 'braviaryhisui' && (role === 'Setup Sweeper' || role === 'Doubles Wallbreaker'));
 			const yanmegaCase = (species.id === 'yanmega' && moves.has('protect'));
@@ -1101,12 +1101,12 @@ export class RandomTeams {
 		case 'Unaware':
 			return (species.id === 'clefable' && role !== 'Bulky Support');
 		case 'Unburden':
-			return (abilities.includes('Prankster') || !counter.get('setup') || species.id === 'sceptile');
+			return (abilities.has('Prankster') || !counter.get('setup') || species.id === 'sceptile');
 		case 'Vital Spirit':
 			// Magmar and Electabuzz want their contact status abilities in Doubles
 			return (species.nfe && isDoubles);
 		case 'Volt Absorb':
-			if (abilities.includes('Iron Fist') && counter.ironFist >= 2) return true;
+			if (abilities.has('Iron Fist') && counter.ironFist >= 2) return true;
 			return (this.dex.getEffectiveness('Electric', species) < -1);
 		case 'Water Absorb':
 			return (['lanturn', 'politoed', 'quagsire'].includes(species.id) || moves.has('raindance'));
@@ -1143,7 +1143,7 @@ export class RandomTeams {
 		if (species.id === 'dodrio') return 'Early Bird';
 		if (species.id === 'chandelure') return 'Flash Fire';
 		if (species.id === 'golemalola' && moves.has('doubleedge')) return 'Galvanize';
-		if (abilities.includes('Guts') && (moves.has('facade') || moves.has('sleeptalk') || species.id === 'gurdurr')) return 'Guts';
+		if (abilities.has('Guts') && (moves.has('facade') || moves.has('sleeptalk') || species.id === 'gurdurr')) return 'Guts';
 		if (species.id === 'copperajah' && moves.has('heavyslam')) return 'Heavy Metal';
 		if (species.id === 'jumpluff') return 'Infiltrator';
 		if (species.id === 'toucannon' && !counter.get('skilllink')) return 'Keen Eye';
@@ -1167,12 +1167,12 @@ export class RandomTeams {
 			if (['raikou', 'suicune', 'vespiquen'].includes(species.id)) return 'Pressure';
 			if (species.id === 'enamorus' && moves.has('calmmind')) return 'Cute Charm';
 			if (species.id === 'klawf' && role === 'Setup Sweeper') return 'Anger Shell';
-			if (abilities.includes('Cud Chew') && moves.has('substitute')) return 'Cud Chew';
-			if (abilities.includes('Harvest') && (moves.has('protect') || moves.has('substitute'))) return 'Harvest';
-			if (abilities.includes('Serene Grace') && moves.has('headbutt')) return 'Serene Grace';
-			if (abilities.includes('Own Tempo') && moves.has('petaldance')) return 'Own Tempo';
-			if (abilities.includes('Slush Rush') && moves.has('snowscape')) return 'Slush Rush';
-			if (abilities.includes('Soundproof') && (moves.has('substitute') || counter.get('setup'))) return 'Soundproof';
+			if (abilities.has('Cud Chew') && moves.has('substitute')) return 'Cud Chew';
+			if (abilities.has('Harvest') && (moves.has('protect') || moves.has('substitute'))) return 'Harvest';
+			if (abilities.has('Serene Grace') && moves.has('headbutt')) return 'Serene Grace';
+			if (abilities.has('Own Tempo') && moves.has('petaldance')) return 'Own Tempo';
+			if (abilities.has('Slush Rush') && moves.has('snowscape')) return 'Slush Rush';
+			if (abilities.has('Soundproof') && (moves.has('substitute') || counter.get('setup'))) return 'Soundproof';
 		}
 
 		// doubles, multi, and ffa
@@ -1188,7 +1188,7 @@ export class RandomTeams {
 				['oinkologne', 'oinkolognef', 'snorlax', 'swalot'].includes(species.id) && role !== 'Doubles Wallbreaker'
 			) return 'Gluttony';
 			if (species.id === 'conkeldurr' && role === 'Doubles Wallbreaker') return 'Guts';
-			if (species.id !== 'arboliva' && abilities.includes('Harvest')) return 'Harvest';
+			if (species.id !== 'arboliva' && abilities.has('Harvest')) return 'Harvest';
 			if (species.id === 'dragonite' || species.id === 'lucario') return 'Inner Focus';
 			if (species.id === 'ariados') return 'Insomnia';
 			if (species.id === 'primarina') return 'Liquid Voice';
@@ -1200,7 +1200,7 @@ export class RandomTeams {
 			if (species.id === 'magnezone') return 'Sturdy';
 			if (species.id === 'clefable' && role === 'Doubles Support') return 'Unaware';
 			if (['drifblim', 'hitmonlee', 'sceptile'].includes(species.id) && !moves.has('shedtail')) return 'Unburden';
-			if (abilities.includes('Intimidate')) return 'Intimidate';
+			if (abilities.has('Intimidate')) return 'Intimidate';
 
 			if (this.randomChance(1, 2) && species.id === 'kingambit') return 'Defiant';
 
@@ -1214,7 +1214,7 @@ export class RandomTeams {
 				if (species.id === 'sinistcha') return 'Hospitality';
 				if (species.id === 'duraludon') return 'Stalwart';
 				if (species.id === 'barraskewda') return 'Propeller Tail';
-				if (species.id === 'oranguru' || abilities.includes('Pressure') && abilities.includes('Telepathy')) return 'Telepathy';
+				if (species.id === 'oranguru' || abilities.has('Pressure') && abilities.has('Telepathy')) return 'Telepathy';
 
 				if (this.randomChance(1, 2) && species.id === 'mukalola') return 'Power of Alchemy';
 			}
