@@ -119,6 +119,15 @@ const PRIORITY_POKEMON = [
 	'lokix', 'pinsirmega', 'rillaboom', 'arcanine', 'arcaninehisui', 'comfey', 'conkeldurr', 'crawdaunt', 'diggersby', 'donphan', 'eeveeon', 'entei', 'hitmonchan', 'hitmonlee', 'hitmontop', 'linoone', 'lucario', 'lycanroc', 
 	'lycanrocdusk', 'machamp', 'malamar', 'marowakalola', 'toxicroak','arceus','kangaskhanmega', 'marshadow', 'yveltal'
 ];
+
+const NO_LEAD_POKEMON = [
+	'Mew'
+];
+
+const DOUBLES_NO_LEAD_POKEMON = [
+	'Mew'
+];
+
 function sereneGraceBenefits(move: Move) {
 	return move.secondary?.chance && move.secondary.chance >= 20 && move.secondary.chance < 100;
 }
