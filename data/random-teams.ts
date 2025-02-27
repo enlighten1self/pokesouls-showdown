@@ -4,6 +4,20 @@ import {PRNG, PRNGSeed} from '../sim/prng';
 import {RuleTable} from '../sim/dex-formats';
 import {Tags} from './tags';
 
+export class MoveCounter extends Utils.Multiset<string> {
+	damagingMoves: Set<Move>;
+
+	constructor() {
+		super();
+		this.damagingMoves = new Set();
+	}
+}
+
+type MoveEnforcementChecker = (
+	movePool: string[], moves: Set<string>, abilities: string[], types: string[],
+	counter: MoveCounter, species: Species, teamDetails: RandomTeamsTypes.TeamDetails,
+	isLead: boolean, isDoubles: boolean, teraType: string, role: RandomTeamsTypes.Role,
+) => boolean;
 
 export interface TeamData {
 	typeCount: {[k: string]: number};
@@ -173,9 +187,16 @@ export class RandomTeams {
 		this.moveEnforcementCheckers = {
 			Bug: (movePool, moves, abilities, types, counter) => (
 				movePool.includes('megahorn') || movePool.includes('xscissor') ||
-				(!counter.get('Bug') && types.includes('Electric'))
+				(!counter.get('Bug') && (types.includes('Electric') || types.includes('Psychic')))
 			),
-			Dark: (movePool, moves, abilities, types, counter) => !counter.get('Dark'),
+			Dark: (
+				movePool, moves, abilities, types, counter, species, teamDetails, isLead, isDoubles, teraType, role
+			) => {
+				if (
+					counter.get('Dark') < 2 && PRIORITY_POKEMON.includes(species.id) && role === 'Wallbreaker'
+				) return true;
+				return !counter.get('Dark');
+			},
 			Dragon: (movePool, moves, abilities, types, counter) => !counter.get('Dragon'),
 			Electric: (movePool, moves, abilities, types, counter) => !counter.get('Electric'),
 			Fairy: (movePool, moves, abilities, types, counter) => !counter.get('Fairy'),
@@ -186,7 +207,7 @@ export class RandomTeams {
 			Grass: (movePool, moves, abilities, types, counter, species) => (
 				!counter.get('Grass') && (
 					movePool.includes('leafstorm') || species.baseStats.atk >= 100 ||
-					types.includes('Electric') || abilities.has('Seed Sower')
+					types.includes('Electric') || abilities.includes('Seed Sower')
 				)
 			),
 			Ground: (movePool, moves, abilities, types, counter) => !counter.get('Ground'),
@@ -199,10 +220,10 @@ export class RandomTeams {
 				return !counter.get('Poison');
 			},
 			Psychic: (movePool, moves, abilities, types, counter, species, teamDetails, isLead, isDoubles) => {
-				if (counter.get('Psychic')) return false;
-				if (movePool.includes('calmmind') || abilities.has('Strong Jaw')) return true;
-				if (isDoubles && movePool.includes('psychicfangs')) return true;
-				return abilities.has('Psychic Surge') || ['Electric', 'Fighting', 'Fire', 'Grass', 'Poison'].some(m => types.includes(m));
+				if ((isDoubles || species.id === 'bruxish') && movePool.includes('psychicfangs')) return true;
+				if (species.id === 'hoopaunbound' && movePool.includes('psychic')) return true;
+				if (['Dark', 'Steel', 'Water'].some(m => types.includes(m))) return false;
+				return !counter.get('Psychic');
 			},
 			Rock: (movePool, moves, abilities, types, counter, species) => !counter.get('Rock') && species.baseStats.atk >= 80,
 			Steel: (movePool, moves, abilities, types, counter, species, teamDetails, isLead, isDoubles) => (
