@@ -2451,23 +2451,5 @@
         ]
       }
     ]
-  },
-  "meganium": {
-    "level": 84,
-    "sets": [
-      {
-        "role": "Bulky Support",
-        "movepool": [
-          "Curse",
-          "Earthquake",
-          "Encore",
-          "Giga Drain",
-          "Knock Off",
-          "Leech Seed",
-          "Toxic",
-          "Synthesis"
-        ]
-      }
-    ]
   }
 }
