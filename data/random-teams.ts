@@ -1737,7 +1737,7 @@ export class RandomTeams {
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-sets.json');
 	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
 
-	randomTeam(species: Species, teamData: RandomTeamsTypes.FactoryTeamDetails, tier: string) {
+	randomTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
 
 		const seed = this.prng.seed;
@@ -1792,6 +1792,7 @@ export class RandomTeams {
 			if (hasMega && species.isMega) continue;
 			// Illusion shouldn't be on the last slot
 			if (species.baseSpecies === 'Zoroark' && pokemon.length >= (this.maxTeamSize - 1)) continue;
+
 			const types = species.types;
 			const typeCombo = types.slice().sort().join();
 			const weakToFreezeDry = (
@@ -2182,7 +2183,7 @@ export class RandomTeams {
 		return nPokemon;
 	}
 
-	randomHCTeam(species: Species, teamData: RandomTeamsTypes.FactoryTeamDetails, tier: string): PokemonSet[] {
+	randomHCTeam(): PokemonSet[] {
 		const hasCustomBans = this.hasDirectCustomBanlistChanges();
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
 		const hasNonexistentBan = hasCustomBans && ruleTable.check('nonexistent');
@@ -2201,8 +2202,6 @@ export class RandomTeams {
 			} else {
 				const hasAllItemsBan = ruleTable.check('pokemontag:allitems');
 				for (const item of this.dex.items.all()) {
-					if (teamData.megaCount && teamData.megaCount > 0 && item.megaStone) continue;
-					if (teamData.zCount && teamData.zCount > 0 && item.zMove) continue;
 					let banReason = ruleTable.check('item:' + item.id);
 					if (banReason) continue;
 					if (banReason !== '' && item.id) {
@@ -2326,7 +2325,7 @@ export class RandomTeams {
 				do {
 					itemData = this.sampleNoReplace(itemPool);
 					item = itemData?.name;
-					isBadItem = item.startsWith("TR") || itemData.isPokeball
+					isBadItem = item.startsWith("TR") || itemData.isPokeball;
 				} while (isBadItem && this.randomChance(19, 20) && itemPool.length > this.maxTeamSize);
 			}
 
