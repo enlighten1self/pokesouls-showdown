@@ -1846,10 +1846,6 @@ export class RandomTeams {
 
 			let set: RandomTeamsTypes.RandomSet;
 
-			const item = this.dex.items.get(item)
-
-			if (item.zMove && teamDetails.zMove) continue;
-
 			if (leadsRemaining) {
 				if (
 					isDoubles && DOUBLES_NO_LEAD_POKEMON.includes(species.baseSpecies) ||
@@ -1899,8 +1895,6 @@ export class RandomTeams {
 
 			// Increment level 100 counter
 			if (set.level === 100) numMaxLevelPokemon++;
-			if (item.megaStone || species.name === 'Rayquaza-Mega') hasMega = true;
-			if (item.zMove) teamDetails.zMove = 1;
 			// Track what the team has
 			if (set.ability === 'Drizzle' || set.moves.includes('raindance')) teamDetails.rain = 1;
 			if (set.ability === 'Drought' || set.ability === 'Orichalcum Pulse' || set.moves.includes('sunnyday')) {
