@@ -1777,6 +1777,10 @@ export class RandomTeams {
 			}
 			for (const poke of pokemonPool) {
 				const species = this.dex.species.get(poke);
+				// Prevent multiple megas
+				if (hasMega && species.isMega) continue;
+				// Prevent base forme, if a mega is available
+				if (canMega && !species.isMega) continue;
 				currentSpeciesPool.push(species);
 			}
 			let species = this.sample(currentSpeciesPool);
@@ -1788,10 +1792,6 @@ export class RandomTeams {
 			if (hasMega && species.isMega) continue;
 			// Illusion shouldn't be on the last slot
 			if (species.baseSpecies === 'Zoroark' && pokemon.length >= (this.maxTeamSize - 1)) continue;
-			const itemData = this.dex.items.get(set.item);
-
-			// Limit the number of Z moves to one
-			if (teamData.zCount && teamData.zCount >= 1 && itemData.zMove) continue;
 			const types = species.types;
 			const typeCombo = types.slice().sort().join();
 			const weakToFreezeDry = (
@@ -2207,6 +2207,8 @@ export class RandomTeams {
 			} else {
 				const hasAllItemsBan = ruleTable.check('pokemontag:allitems');
 				for (const item of this.dex.items.all()) {
+					if (teamData.megaCount && teamData.megaCount > 0 && item.megaStone) continue;
+					if (teamData.zCount && teamData.zCount > 0 && item.zMove) continue;
 					let banReason = ruleTable.check('item:' + item.id);
 					if (banReason) continue;
 					if (banReason !== '' && item.id) {
