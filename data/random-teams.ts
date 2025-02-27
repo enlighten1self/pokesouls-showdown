@@ -16,7 +16,7 @@ export class MoveCounter extends Utils.Multiset<string> {
 type MoveEnforcementChecker = (
 	movePool: string[], moves: Set<string>, abilities: string[], types: string[],
 	counter: MoveCounter, species: Species, teamDetails: RandomTeamsTypes.TeamDetails,
-	isLead: boolean, isDoubles: boolean, teraType: string, role: RandomTeamsTypes.Role,
+	isLead: boolean, isDoubles: boolean, role: RandomTeamsTypes.Role,
 ) => boolean;
 
 export interface TeamData {
@@ -190,7 +190,7 @@ export class RandomTeams {
 				(!counter.get('Bug') && (types.includes('Electric') || types.includes('Psychic')))
 			),
 			Dark: (
-				movePool, moves, abilities, types, counter, species, teamDetails, isLead, isDoubles, teraType, role
+				movePool, moves, abilities, types, counter, species, teamDetails, isLead, isDoubles, role
 			) => {
 				if (
 					counter.get('Dark') < 2 && PRIORITY_POKEMON.includes(species.id) && role === 'Wallbreaker'
