@@ -24,13 +24,13 @@ export const Formats: FormatList = [
 	{
 		section: "Souls",
 	},
-	//{
-	//	name: "[Gen 9] Random Battle",
-	//	desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
-	//	mod: 'gen9',
-	//	team: 'random',
-	//	ruleset: ["Standard NatDex", 'PotD', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-	//},
+	{
+			name: "[Gen 9] Random Battle",
+			desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
+			mod: 'gen9',
+			team: 'random',
+			ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
+		},
 	{
 		name: "[Gen 9] National Dex",
 		threads: [
