@@ -49,15 +49,15 @@ interface BattleFactorySet {
 }
 
 export const ZeroAttackHPIVs: { [k: string]: SparseStatsTable } = {
-	grass: { hp: 30, spa: 30 },
-	fire: { spa: 30, spe: 30 },
-	ice: { def: 30 },
-	ground: { spa: 30, spd: 30 },
-	fighting: { def: 30, spa: 30, spd: 30, spe: 30 },
-	electric: { def: 30, spe: 30 },
-	psychic: { spe: 30 },
-	flying: { spa: 30, spd: 30, spe: 30 },
-	rock: { def: 30, spd: 30, spe: 30 },
+	Grass: { hp: 30, spa: 30 },
+	Fire: { spa: 30, spe: 30 },
+	Ice: { def: 30 },
+	Ground: { spa: 30, spd: 30 },
+	Fighting: { def: 30, spa: 30, spd: 30, spe: 30 },
+	Electric: { def: 30, spe: 30 },
+	Psychic: { spe: 30 },
+	Flying: { spa: 30, spd: 30, spe: 30 },
+	Rock: { def: 30, spd: 30, spe: 30 },
 };
 
 // Moves that restore HP:
@@ -1693,7 +1693,7 @@ export class RandomTeams {
 		if (hasHiddenPower && level < 100) {
 			let hpType;
 			for (const move of moves) {
-				if (move.startsWith('hiddenpower')) hpType = move.replace('hiddenpower','')
+				if (move.startsWith('hiddenpower')) hpType = move.replace('Hidden Power ','')
 			}
 			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
 			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
