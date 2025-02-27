@@ -1693,7 +1693,7 @@ export class RandomTeams {
 		if (hasHiddenPower && level < 100) {
 			let hpType;
 			for (const move of moves) {
-				if (move.startsWith('hiddenpower')) hpType = move.substr(11);
+				if (move.startsWith('hiddenpower')) hpType = move.slice(0,11);
 			}
 			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
 			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
