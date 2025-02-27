@@ -205,7 +205,7 @@ export class RandomTeams {
 			Fire: (movePool, moves, abilities, types, counter, species) => !counter.get('Fire'),
 			Flying: (movePool, moves, abilities, types, counter) => (
 				!counter.get('Flying') &&
-				!movePool.includes('hiddenpowerflying')
+				!movePool.includes('Hidden Power Flying')
 			),
 			Ghost: (movePool, moves, abilities, types, counter) => !counter.get('Ghost'),
 			Grass: (movePool, moves, abilities, types, counter, species) => (
@@ -451,14 +451,14 @@ export class RandomTeams {
 	): void {
 		let hasHiddenPower = false;
 		for (const move of moves) {
-			if (move.startsWith('hiddenpower')) hasHiddenPower = true;
+			if (move.startsWith('Hidden Power')) hasHiddenPower = true;
 		}
 		if (hasHiddenPower) {
 			let movePoolHasHiddenPower = true;
 			while (movePoolHasHiddenPower) {
 				movePoolHasHiddenPower = false;
 				for (const moveid of movePool) {
-					if (moveid.startsWith('hiddenpower')) {
+					if (moveid.startsWith('Hidden Power')) {
 						this.fastPop(movePool, movePool.indexOf(moveid));
 						movePoolHasHiddenPower = true;
 						break;
@@ -1688,12 +1688,12 @@ export class RandomTeams {
 		}
 		let hasHiddenPower = false;
 		for (const move of moves) {
-			if (move.startsWith('hiddenpower')) hasHiddenPower = true;
+			if (move.startsWith('Hidden Power')) hasHiddenPower = true;
 		}
 		if (hasHiddenPower && level < 100) {
 			let hpType;
 			for (const move of moves) {
-				if (move.startsWith('hiddenpower')) hpType = move.replace('Hidden Power ','')
+				if (move.startsWith('Hidden Power')) hpType = move.replace('Hidden Power ','')
 			}
 			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
 			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
