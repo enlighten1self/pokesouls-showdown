@@ -1777,10 +1777,6 @@ export class RandomTeams {
 			}
 			for (const poke of pokemonPool) {
 				const species = this.dex.species.get(poke);
-				// Prevent multiple megas
-				if (hasMega && species.isMega) continue;
-				// Prevent base forme, if a mega is available
-				if (canMega && !species.isMega) continue;
 				currentSpeciesPool.push(species);
 			}
 			let species = this.sample(currentSpeciesPool);
