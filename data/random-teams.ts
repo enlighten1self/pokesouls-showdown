@@ -48,16 +48,16 @@ interface BattleFactorySet {
 	ivs?: Partial<StatsTable>;
 }
 
-export const ZeroAttackHPIVs: {[k: string]: SparseStatsTable} = {
-	grass: {hp: 30, spa: 30},
-	fire: {spa: 30, spe: 30},
-	ice: {def: 30},
-	ground: {spa: 30, spd: 30},
-	fighting: {def: 30, spa: 30, spd: 30, spe: 30},
-	electric: {def: 30, spe: 30},
-	psychic: {spe: 30},
-	flying: {spa: 30, spd: 30, spe: 30},
-	rock: {def: 30, spd: 30, spe: 30},
+export const ZeroAttackHPIVs: { [k: string]: SparseStatsTable } = {
+	grass: { hp: 30, spa: 30 },
+	fire: { spa: 30, spe: 30 },
+	ice: { def: 30 },
+	ground: { spa: 30, spd: 30 },
+	fighting: { def: 30, spa: 30, spd: 30, spe: 30 },
+	electric: { def: 30, spe: 30 },
+	psychic: { spe: 30 },
+	flying: { spa: 30, spd: 30, spe: 30 },
+	rock: { def: 30, spd: 30, spe: 30 },
 };
 
 // Moves that restore HP:
@@ -1566,7 +1566,7 @@ export class RandomTeams {
 		// Default to tier-based levelling
 		const tier = species.tier;
 		const tierScale: Partial<Record<Species['tier'], number>> = {
-			Uber: 76,
+			Uber: 79,
 			OU: 80,
 			UUBL: 81,
 			UU: 82,
@@ -1614,7 +1614,7 @@ export class RandomTeams {
 		let ability = '';
 		let item = undefined;
 
-		const evs = {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85};
+		const evs = {hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0};
 		const ivs = {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31};
 
 		const types = species.types;
@@ -1693,7 +1693,7 @@ export class RandomTeams {
 		if (hasHiddenPower && level < 100) {
 			let hpType;
 			for (const move of moves) {
-				if (move.startsWith('hiddenpower')) hpType = move.slice(0,11);
+				if (move.startsWith('hiddenpower')) hpType = move.replace('hiddenpower','')
 			}
 			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
 			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;

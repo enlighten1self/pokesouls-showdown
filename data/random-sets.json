@@ -2451,5 +2451,121 @@
         ]
       }
     ]
+  },
+  "meganium": {
+    "level": 84,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "Curse",
+          "Earthquake",
+          "Encore",
+          "Giga Drain",
+          "Knock Off",
+          "Leech Seed",
+          "Toxic",
+          "Synthesis"
+        ]
+      }
+    ]
+  },
+  "typhlosion": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Choice Item user",
+        "movepool": [
+          "Eruption",
+          "Extrasensory",
+          "Flamethrower",
+          "Focus Blast",
+          "hiddenpowerice",
+          "Scorching Sands",
+          "Shadow Ball"
+        ]
+      }
+    ]
+  },
+  "typhlosionhisui": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Choice Item user",
+        "movepool": [
+          "Eruption",
+          "Extrasensory",
+          "Flamethrower",
+          "Focus Blast",
+          "hiddenpowerice",
+          "Scorching Sands",
+          "Shadow Ball"
+        ]
+      }
+    ]
+  },
+  "feraligatr": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "Crunch",
+          "Dragon Dance",
+          "Earthquake",
+          "Ice Punch",
+          "Liquidation",
+          "Rock Slide"
+        ]
+      }
+    ]
+  },
+  "furret": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Fast Support",
+        "movepool": [
+          "Tidy Up",
+          "Double-Edge",
+          "Fire Punch",
+          "Ice Punch",
+          "Knock Off",
+          "Quick Attack",
+          "Return",
+          "Thunder Punch"
+        ]
+      }
+    ]
+  },
+  "noctowl": {
+    "level": 94,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "Calm Mind",
+          "Defog",
+          "Future Sight",
+          "Hurricane",
+          "Psychic Noise",
+          "Roost",
+          "Toxic"
+        ]
+      },
+      {
+        "role": "Bulky Setup",
+        "movepool": [
+          "Calm Mind",
+          "Defog",
+          "Future Sight",
+          "Hurricane",
+          "Psychic",
+          "Roost",
+          "Heat Wave",
+          "hiddenpowerice"
+        ]
+      }
+    ]
   }
 }
