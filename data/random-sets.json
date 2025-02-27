@@ -21,7 +21,7 @@
           "Substitute",
           "Protect",
           "Knock Off",
-          "hiddenpowerFire"
+          "Hidden Power Fire"
         ]
       },
       {
@@ -81,7 +81,7 @@
           "Air Slash",
           "Fire Blast",
           "Focus Blast",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Scorching Sands",
           "Solar Beam",
           "Weather Ball",
@@ -173,7 +173,7 @@
           "Heat Wave",
           "Hurricane",
           "Roost",
-          "hiddenpowerIce"
+          "Hidden Power Ice"
         ]
       }
     ]
@@ -263,7 +263,7 @@
           "Alluring Voice",
           "Focus Blast",
           "Grass Knot",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Nasty Plot",
           "Surf",
           "Thunderbolt"
@@ -283,7 +283,7 @@
           "Alluring Voice",
           "Focus Blast",
           "Grass Knot",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Nasty Plot",
           "Surf",
           "Thunderbolt"
@@ -417,7 +417,7 @@
           "Solar Beam",
           "Nasty Plot",
           "Scorching Sands",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Will-O-Wisp"
         ]
       }
@@ -492,7 +492,7 @@
           "Sludge Wave",
           "Energy Ball",
           "Giga Drain",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Sleep Powder",
           "Psychic",
           "Quiver Dance"
@@ -680,7 +680,7 @@
           "Dazzling Gleam",
           "Energy Ball",
           "Focus Blast",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Psychic",
           "Psyshock",
           "Shadow Ball"
@@ -698,7 +698,7 @@
           "Dazzling Gleam",
           "Energy Ball",
           "Focus Blast",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Psychic",
           "Psyshock",
           "Shadow Ball"
@@ -809,8 +809,8 @@
           "Earth Power",
           "Fire Blast",
           "Focus Blast",
-          "hiddenpowerGrass",
-          "hiddenpowerIce",
+          "Hidden Power Grass",
+          "Hidden Power Ice",
           "Psychic",
           "Psyshock"
         ]
@@ -960,12 +960,12 @@
         "role": "Bulky Attacker",
         "movepool": [
           "Flash Cannon",
-          "hiddenpowerFire",
+          "Hidden Power Fire",
           "Thunderbolt",
           "Volt Switch",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Steel Beam",
-          "hiddenpowerGrass"
+          "Hidden Power Grass"
         ]
       }
     ]
@@ -1120,7 +1120,7 @@
           "Sludge Wave",
           "Shadow Ball",
           "Nasty Plot",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Energy Ball",
           "Focus Blast"
         ]
@@ -1137,7 +1137,7 @@
           "Sludge Wave",
           "Shadow Ball",
           "Nasty Plot",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Energy Ball",
           "Focus Blast"
         ]
@@ -1210,9 +1210,9 @@
         "role": "Fast Support",
         "movepool": [
           "Thunderbolt",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Volt Switch",
-          "hiddenpowerGrass",
+          "Hidden Power Grass",
           "Taunt",
           "Thunder Wave",
           "Magic Coat",
@@ -1262,7 +1262,7 @@
         "role": "Bulky Setup",
         "movepool": [
           "Growth",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Giga Drain",
           "Sludge Bomb",
           "Psychic",
@@ -1285,7 +1285,7 @@
           "Earthquake",
           "Energy Ball",
           "Flamethrower",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Giga Drain",
           "Power Whip",
           "Dragon Hammer",
@@ -1472,7 +1472,7 @@
         "role": "Bulky Support",
         "movepool": [
           "Giga Drain",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Knock Off",
           "Leech Seed",
           "Sleep Powder",
@@ -1523,7 +1523,7 @@
           "Dragon Pulse",
           "Flash Cannon",
           "Flip Turn",
-          "hiddenpowerGrass",
+          "Hidden Power Grass",
           "Hydro Pump",
           "Ice Beam",
           "Scald"
@@ -1657,7 +1657,7 @@
         "role": "Fast Attacker",
         "movepool": [
           "Focus Blast",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Psychic",
           "Thunderbolt",
           "Volt Switch"
@@ -1673,7 +1673,7 @@
         "movepool": [
           "Fire Blast",
           "Focus Blast",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Scorching Sands",
           "Overheat"
         ]
@@ -1951,8 +1951,8 @@
         "role": "Fast Attacker",
         "movepool": [
           "Alluring Voice",
-          "hiddenpowerGrass",
-          "hiddenpowerIce",
+          "Hidden Power Grass",
+          "Hidden Power Ice",
           "Hyper Voice",
           "Shadow Ball",
           "Thunderbolt",
@@ -1963,8 +1963,8 @@
         "role": "Choice Item user",
         "movepool": [
           "Alluring Voice",
-          "hiddenpowerGrass",
-          "hiddenpowerIce",
+          "Hidden Power Grass",
+          "Hidden Power Ice",
           "Hyper Voice",
           "Shadow Ball",
           "Thunderbolt",
@@ -2010,7 +2010,7 @@
           "Hydro Pump",
           "Ice Beam",
           "Shell Smash",
-          "hiddenpowerGrass",
+          "Hidden Power Grass",
           "Surf"
         ]
       }
@@ -2130,7 +2130,7 @@
           "Discharge",
           "Defog",
           "Heat Wave",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Hurricane",
           "Roost",
           "U-turn",
@@ -2145,7 +2145,7 @@
           "Heat Wave",
           "Hurricane",
           "Roost",
-          "hiddenpowerIce",
+          "Hidden Power Ice",
           "Volt Switch"
         ]
       }
