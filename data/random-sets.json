@@ -187,7 +187,7 @@
           "Crunch",
           "Double-Edge",
           "Facade",
-          "Frustration",
+          "Return",
           "Pursuit",
           "Quick Attack",
           "Stomping Tantrum",
@@ -206,7 +206,7 @@
         "movepool": [
           "Knock Off",
           "Bulk Up",
-          "Frustration",
+          "Return",
           "Pursuit",
           "Quick Attack",
           "Stomping Tantrum",
@@ -226,7 +226,7 @@
           "Drill Peck",
           "Double-Edge",
           "Drill Run",
-          "Frustration",
+          "Return",
           "Pursuit",
           "Quick Attack",
           "Throat Chop",
@@ -2448,6 +2448,24 @@
           "Swords Dance",
           "Nasty Plot",
           "Soft-Boiled"
+        ]
+      }
+    ]
+  },
+  "meganium": {
+    "level": 84,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "Curse",
+          "Earthquake",
+          "Encore",
+          "Giga Drain",
+          "Knock Off",
+          "Leech Seed",
+          "Toxic",
+          "Synthesis"
         ]
       }
     ]

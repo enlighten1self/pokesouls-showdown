@@ -1577,7 +1577,18 @@ export class RandomTeams {
 		}
 		const sets = (this as any)[`random${isDoubles ? 'Doubles' : ''}Sets`][species.id]["sets"];
 		const possibleSets = [];
+		let canZMove = false;
 
+		for (const set of sets) {
+			if (!teamDetails.zMove && set.role === 'Z-Move user') canZMove = true;
+		}
+		for (const set of sets) {
+			// Prevent multiple Z-Move users
+			if (teamDetails.zMove && set.role === 'Z-Move user') continue;
+			// Prevent Setup Sweeper and Bulky Setup if Z-Move user is available
+			if (canZMove && ['Setup Sweeper', 'Bulky Setup'].includes(set.role)) continue;
+			possibleSets.push(set);
+		}
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
 
 		for (const set of sets) {
@@ -1597,7 +1608,9 @@ export class RandomTeams {
 		const ivs = {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31};
 
 		const types = species.types;
-		const abilities = new Set(Object.values(species.abilities));
+		const baseAbilities = sets.abilities!;
+		const abilities = (species.battleOnly && !species.requiredAbility) ? Object.values(species.abilities) : baseAbilities;
+		
 		if (species.unreleasedHidden) abilities.delete(species.abilities.H);
 
 		// Get moves
@@ -1724,7 +1737,7 @@ export class RandomTeams {
 	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-sets.json');
 	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
 
-	randomTeam() {
+	randomTeam(species: Species, teamData: RandomTeamsTypes.FactoryTeamDetails, tier: string) {
 		this.enforceNoDirectCustomBanlistChanges();
 
 		const seed = this.prng.seed;
@@ -1742,7 +1755,7 @@ export class RandomTeams {
 		const potd = usePotD ? this.dex.species.get(Config.potd) : null;
 
 		const baseFormes: {[k: string]: number} = {};
-
+		let hasMega = false;
 		const typeCount: {[k: string]: number} = {};
 		const typeComboCount: {[k: string]: number} = {};
 		const typeWeaknesses: {[k: string]: number} = {};
@@ -1756,9 +1769,19 @@ export class RandomTeams {
 		while (baseSpeciesPool.length && pokemon.length < this.maxTeamSize) {
 			const baseSpecies = this.sampleNoReplace(baseSpeciesPool);
 			const currentSpeciesPool: Species[] = [];
+			let canMega = false;
 			for (const poke of pokemonPool) {
 				const species = this.dex.species.get(poke);
+				if (!hasMega && species.isMega) canMega = true;
 				if (species.baseSpecies === baseSpecies) currentSpeciesPool.push(species);
+			}
+			for (const poke of pokemonPool) {
+				const species = this.dex.species.get(poke);
+				// Prevent multiple megas
+				if (hasMega && species.isMega) continue;
+				// Prevent base forme, if a mega is available
+				if (canMega && !species.isMega) continue;
+				currentSpeciesPool.push(species);
 			}
 			let species = this.sample(currentSpeciesPool);
 			if (!species.exists) continue;
@@ -1766,9 +1789,16 @@ export class RandomTeams {
 			// Limit to one of each species (Species Clause)
 			if (baseFormes[species.baseSpecies]) continue;
 
+			if (hasMega && species.isMega) continue;
 			// Illusion shouldn't be on the last slot
 			if (species.baseSpecies === 'Zoroark' && pokemon.length >= (this.maxTeamSize - 1)) continue;
+			const itemData = this.dex.items.get(set.item);
 
+			// Actually limit the number of Megas to one
+			if (teamData.megaCount >= 1 && itemData.megaStone) continue;
+
+			// Limit the number of Z moves to one
+			if (teamData.zCount && teamData.zCount >= 1 && itemData.zMove) continue;
 			const types = species.types;
 			const typeCombo = types.slice().sort().join();
 			const weakToFreezeDry = (
@@ -1823,6 +1853,10 @@ export class RandomTeams {
 
 			let set: RandomTeamsTypes.RandomSet;
 
+			const item = this.dex.items.get(item)
+
+			if (item.zMove && teamDetails.zMove) continue;
+
 			if (leadsRemaining) {
 				if (
 					isDoubles && DOUBLES_NO_LEAD_POKEMON.includes(species.baseSpecies) ||
@@ -1872,7 +1906,8 @@ export class RandomTeams {
 
 			// Increment level 100 counter
 			if (set.level === 100) numMaxLevelPokemon++;
-
+			if (item.megaStone || species.name === 'Rayquaza-Mega') hasMega = true;
+			if (item.zMove) teamDetails.zMove = 1;
 			// Track what the team has
 			if (set.ability === 'Drizzle' || set.moves.includes('raindance')) teamDetails.rain = 1;
 			if (set.ability === 'Drought' || set.ability === 'Orichalcum Pulse' || set.moves.includes('sunnyday')) {
@@ -2160,7 +2195,7 @@ export class RandomTeams {
 		return nPokemon;
 	}
 
-	randomHCTeam(): PokemonSet[] {
+	randomHCTeam(species: Species, teamData: RandomTeamsTypes.FactoryTeamDetails, tier: string): PokemonSet[] {
 		const hasCustomBans = this.hasDirectCustomBanlistChanges();
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
 		const hasNonexistentBan = hasCustomBans && ruleTable.check('nonexistent');
@@ -2179,6 +2214,8 @@ export class RandomTeams {
 			} else {
 				const hasAllItemsBan = ruleTable.check('pokemontag:allitems');
 				for (const item of this.dex.items.all()) {
+					if (teamData.megaCount && teamData.megaCount > 0 && item.megaStone) continue;
+					if (teamData.zCount && teamData.zCount > 0 && item.zMove) continue;
 					let banReason = ruleTable.check('item:' + item.id);
 					if (banReason) continue;
 					if (banReason !== '' && item.id) {
@@ -2302,7 +2339,7 @@ export class RandomTeams {
 				do {
 					itemData = this.sampleNoReplace(itemPool);
 					item = itemData?.name;
-					isBadItem = item.startsWith("TR") || itemData.isPokeball;
+					isBadItem = item.startsWith("TR") || itemData.isPokeball
 				} while (isBadItem && this.randomChance(19, 20) && itemPool.length > this.maxTeamSize);
 			}
 
