@@ -116,7 +116,6 @@ export class RandomTeams {
 	moveEnforcementCheckers: {[k: string]: MoveEnforcementChecker};
 
 	constructor(format: Format | string, prng: PRNG | PRNGSeed | null) {
-		super(format, prng);
 		format = Dex.formats.get(format);
 		this.dex = dex.forFormat(format);
 		this.gen = this.dex.gen;
