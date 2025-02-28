@@ -100,7 +100,8 @@ function sereneGraceBenefits(move: Move) {
 
 export class RandomTeams {
 	dex: ModdedDex;
-	gen: number,
+	gen: number;
+	format: Format;
 	prng: PRNG;
 	noStab: string[];
 	readonly maxTeamSize: number;
