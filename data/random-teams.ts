@@ -35,48 +35,52 @@ const RECOVERY_MOVES = [
 ];
 // Moves that drop stats:
 const CONTRARY_MOVES = [
-	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate',
+	'closecombat', 'leafstorm', 'overheat', 'superpower', 'vcreate', 'armorcannon', 'makeitrain', 'spinout', "primalrage", "photonhaymaker", "spectraltail",
 ];
 // Moves that boost Attack:
 const PHYSICAL_SETUP = [
-	'bellydrum', 'bulkup', 'coil', 'curse', 'dragondance', 'honeclaws', 'howl', 'meditate', 'poweruppunch', 'screech', 'swordsdance',
+	'bellydrum', 'bulkup', 'coil', 'curse', 'dragondance', 'honeclaws', 'howl', 'meditate', 'poweruppunch', 'screech', 'swordsdance', 'tidyup', 'victorydance',
 ];
 // Moves which boost Special Attack:
 const SPECIAL_SETUP = [
-	'calmmind', 'chargebeam', 'geomancy', 'nastyplot', 'quiverdance', 'tailglow',
+	'calmmind', 'chargebeam', 'geomancy', 'nastyplot', 'quiverdance', 'tailglow', 'torchsong',
 ];
 // Moves that boost Attack AND Special Attack:
 const MIXED_SETUP = [
-	'celebrate', 'growth', 'happyhour', 'holdhands', 'shellsmash', 'workup',
+	'clangoroussoul', 'celebrate', 'growth', 'happyhour', 'holdhands', 'shellsmash', 'workup', 'noretreat',
 ];
 // Some moves that only boost Speed:
 const SPEED_SETUP = [
-	'agility', 'autotomize', 'flamecharge', 'rockpolish',
+	'agility', 'autotomize', 'flamecharge', 'rockpolish', 'trailblaze', 'tidyup',
 ];
 // Conglomerate for ease of access
 const SETUP = [
-	'acidarmor', 'agility', 'autotomize', 'bellydrum', 'bulkup', 'calmmind', 'celebrate', 'coil', 'conversion', 'curse', 'dragondance',
+	'acidarmor', 'agility', 'autotomize', 'bellydrum', 'bulkup', 'calmmind', 'clangoroussoul', 'celebrate', 'coil', 'conversion', 'curse', 'dragondance',
 	'electricterrain', 'flamecharge', 'focusenergy', 'geomancy', 'growth', 'happyhour', 'holdhands', 'honeclaws', 'howl', 'irondefense', 'meditate',
-	'nastyplot', 'poweruppunch', 'quiverdance', 'raindance', 'rockpolish', 'shellsmash', 'shiftgear', 'swordsdance', 'tailglow', 'workup',
+	'nastyplot', 'noretreat', 'poweruppunch', 'quiverdance', 'raindance', 'rockpolish', 'shellsmash', 'shiftgear', 'swordsdance', 'tailglow', 'workup', 'victorydance',
+	'tidyup'
+];
+const SPEED_CONTROL = [
+	'electroweb', 'glare', 'icywind', 'lowsweep', 'quash', 'rocktomb', 'stringshot', 'tailwind', 'thunderwave', 'trickroom',
 ];
 // Moves that shouldn't be the only STAB moves:
 const NO_STAB = [
-	'accelerock', 'aquajet', 'bulletpunch', 'clearsmog', 'dragontail', 'eruption', 'explosion',
-	'fakeout', 'firstimpression', 'flamecharge', 'futuresight', 'iceshard', 'icywind', 'incinerate', 'machpunch', 'nuzzle',
-	'pluck', 'poweruppunch', 'pursuit', 'quickattack', 'rapidspin', 'reversal', 'selfdestruct', 'shadowsneak', 'skyattack',
-	'skydrop', 'snarl', 'suckerpunch', 'uturn', 'watershuriken', 'vacuumwave', 'voltswitch', 'waterspout',
+	'accelerock', 'aquajet', 'bounce', 'breakingswipe', 'bulletpunch', 'clearsmog', 'chatter', 'chloroblast', 'clearsmog', 'covet', 'dragontail', 'doomdesire',
+	'electroweb', 'eruption', 'explosion', 'fakeout', 'firstimpression', 'feint', 'flamecharge', 'flipturn', 'futuresight', 'grassyglide', 'iceshard', 'icywind',
+	'incinerate', 'infestation', 'machpunch', 'meteorbeam', 'mortalspin', 'nuzzle', 'pluck', 'poweruppunch', 'pursuit', 'quickattack', 'rapidspin', 'reversal', 'selfdestruct', 'shadowsneak', 'skyattack',
+	'skydrop', 'snarl', 'strugglebug', 'suckerpunch', 'uturn', 'watershuriken', 'vacuumwave', 'voltswitch', 'waterspout',
 ];
 // Hazard-setting moves
 const HAZARDS = [
-	'spikes', 'stealthrock', 'stickyweb', 'toxicspikes',
+	'spikes', 'stealthrock', 'stickyweb', 'toxicspikes',,
 ];
 // Protect and its variants
 const PROTECT_MOVES = [
-	'banefulbunker', 'kingsshield', 'protect', 'spikyshield',
+	'banefulbunker', 'burningbulwark', 'kingsshield', 'protect', 'spikyshield', 'detect',
 ];
 // Moves that switch the user out
 const PIVOT_MOVES = [
-	'partingshot', 'uturn', 'voltswitch',
+	'chillyreception', 'flipturn', 'partingshot', 'shedtail', 'teleport', 'uturn', 'voltswitch', 'tremorturn', 'altitude', 'trickyreception', 'foliageturn'
 ];
 
 // Moves that should be paired together when possible
@@ -85,6 +89,7 @@ const MOVE_PAIRS = [
 	['sleeptalk', 'rest'],
 	['protect', 'wish'],
 	['spikyshield', 'wish'],
+	['leechseed', 'protect'],
 	['leechseed', 'substitute'],
 	['perishsong', 'protect'],
 	['solarbeam', 'sunnyday'],
@@ -92,7 +97,10 @@ const MOVE_PAIRS = [
 
 /** Pokemon who always want priority STAB, and are fine with it as its only STAB move of that type */
 const PRIORITY_POKEMON = [
-	'aegislashblade', 'banette', 'breloom', 'cacturne', 'doublade', 'dusknoir', 'golisopod', 'honchkrow', 'mimikyu', 'scizor', 'scizormega', 'shedinja',
+	'aegislashblade', 'banette', 'breloom', 'brutebonnet', 'cacturne', 'doublade', 'dusknoir', 'golisopod', 'honchkrow', 'mimikyu', 'scizor', 'scizormega', 'shedinja', 'kingambit', 'plaguekrow', 'bisharp', 
+	'drownoir', 'bloodtales', 'lopunnymega', 'medichammega', 'metagrossmega', 'palafin', 'samurotthisui', 'ultigigas', 'mawilemega', 'azumarill', 'greninja', 'greninjabond', 'jelliclus', 'keldeo', 'keldeoresolute',
+	'lokix', 'pinsirmega', 'rillaboom', 'arcanine', 'arcaninehisui', 'comfey', 'conkeldurr', 'crawdaunt', 'diggersby', 'donphan', 'eeveeon', 'entei', 'hitmonchan', 'hitmonlee', 'hitmontop', 'linoone', 'lucario', 'lycanroc', 
+	'lycanrocdusk', 'machamp', 'malamar', 'marowakalola', 'toxicroak','arceus','kangaskhanmega', 'marshadow', 'yveltal'
 ];
 function sereneGraceBenefits(move: Move) {
 	return move.secondary?.chance && move.secondary.chance >= 20 && move.secondary.chance < 100;
@@ -210,6 +218,7 @@ export class RandomTeams extends RandomGen8Teams {
 			if (move.accuracy && move.accuracy !== true && move.accuracy < 90) counter.add('inaccurate');
 
 			// Moves that change stats:
+			if (SPEED_CONTROL.includes(moveid)) counter.add('speedcontrol');
 			if (RECOVERY_MOVES.includes(moveid)) counter.add('recovery');
 			if (CONTRARY_MOVES.includes(moveid)) counter.add('contrary');
 			if (PHYSICAL_SETUP.includes(moveid)) counter.add('physicalsetup');
@@ -319,52 +328,68 @@ export class RandomTeams extends RandomGen8Teams {
 		// General incompatibilities
 		const incompatiblePairs = [
 			// These moves don't mesh well with other aspects of the set
-			[statusMoves, ['healingwish', 'memento', 'switcheroo', 'trick']],
-			[SETUP, PIVOT_MOVES],
-			[SETUP, HAZARDS],
-			[SETUP, badWithSetup],
-			[PHYSICAL_SETUP, PHYSICAL_SETUP],
-			[SPEED_SETUP, ['quickattack', 'suckerpunch']],
-			['defog', HAZARDS],
-			[['fakeout', 'uturn'], ['switcheroo', 'trick']],
-			['substitute', PIVOT_MOVES],
-			['leechseed', 'dragontail'],
-			['rest', 'substitute'],
-			[PHYSICAL_SETUP, 'dracometeor'],
-			[SPECIAL_SETUP, 'knockoff'],
+			[SPEED_CONTROL, SPEED_CONTROL],
+			[HAZARDS, HAZARDS],
+			['rockslide', 'stoneedge'],
+			[SETUP, ['fakeout', 'helpinghand']],
+			[PROTECT_MOVES, 'wideguard'],
+			[['fierydance', 'fireblast'], 'heatwave'],
+			['dazzlinggleam', ['fleurcannon', 'moonblast']],
+			['poisongas', ['toxicspikes', 'willowisp']],
+			[RECOVERY_MOVES, 'healpulse'],
+			['lifedew', 'healpulse'],
+			['haze', 'icywind'],
+			[['hydropump', 'muddywater'], ['muddywater', 'scald']],
+			['disable', 'encore'],
+			['freezedry', 'icebeam'],
+			['energyball', 'leafstorm'],
+			['wildcharge', 'thunderbolt'],
+			['earthpower', 'sandsearstorm'],
+			['coaching', ['helpinghand', 'howl']],
 
 			// These attacks are redundant with each other
-			['psychic', 'psyshock'],
-			['scald', ['hydropump', 'originpulse', 'waterpulse']],
-			['return', ['bodyslam', 'doubleedge']],
-			[['fierydance', 'firelash', 'lavaplume'], ['fireblast', 'magmastorm']],
-			[['flamethrower', 'flareblitz'], ['fireblast', 'overheat']],
-			['hornleech', 'woodhammer'],
-			[['gigadrain', 'leafstorm'], ['leafstorm', 'petaldance', 'powerwhip']],
-			['wildcharge', 'thunderbolt'],
-			['gunkshot', 'poisonjab'],
-			[['drainpunch', 'focusblast'], ['closecombat', 'highjumpkick', 'superpower']],
-			['stoneedge', 'headsmash'],
-			['dracometeor', 'dragonpulse'],
-			['dragonclaw', 'outrage'],
-			['knockoff', ['darkestlariat', 'darkpulse', 'foulplay']],
+			[['psychic', 'psychicnoise'], ['psyshock', 'psychicnoise']],
+			['surf', 'hydropump'],
+			['liquidation', 'wavecrash'],
+			['aquajet', 'flipturn'],
+			['gigadrain', 'leafstorm'],
+			['powerwhip', 'hornleech'],
+			[['airslash', 'bravebird', 'hurricane'], ['airslash', 'bravebird', 'hurricane']],
+			['knockoff', 'foulplay'],
+			['throatchop', ['crunch', 'lashout']],
+			['doubleedge', ['bodyslam', 'headbutt']],
+			['fireblast', ['fierydance', 'flamethrower']],
+			['lavaplume', 'magmastorm'],
+			['thunderpunch', 'wildcharge'],
+			['gunkshot', ['direclaw', 'poisonjab', 'sludgebomb']],
+			['aurasphere', 'focusblast'],
+			['closecombat', 'drainpunch'],
+			['bugbite', 'pounce'],
+			[['dragonpulse', 'spacialrend'], 'dracometeor'],
+			['alluringvoice', 'dazzlinggleam'],
 
 			// Status move incompatibilities
-			['toxic', 'toxicspikes'],
 			['taunt', 'disable'],
-			['defog', ['leechseed', 'substitute']],
+			['toxic', ['willowisp', 'thunderwave']],
+			[['thunderwave', 'toxic', 'willowisp'], 'toxicspikes'],
 
-			// Assorted hardcodes go here:
-			// Lunatone
-			['moonlight', 'rockpolish'],
-			// Smeargle
-			['destinybond', 'whirlwind'],
-			// Liepard
-			['copycat', 'uturn'],
-			// Seviper
-			['switcheroo', 'suckerpunch'],
-			// Jirachi
-			['bodyslam', 'healingwish'],
+			// This space reserved for assorted hardcodes that otherwise make little sense out of context
+			// Landorus and Thundurus
+			['nastyplot', ['rockslide', 'knockoff']],
+			// Persian
+			['switcheroo', 'fakeout'],
+			// Beartic
+			['snowscape', 'swordsdance'],
+			// Magnezone
+			['bodypress', 'mirrorcoat'],
+			// Amoonguss, though this can work well as a general rule later
+			['toxic', 'clearsmog'],
+			// Chansey and Blissey
+			['healbell', 'stealthrock'],
+			// Azelf and Zoroarks
+			['trick', 'uturn'],
+			// Araquanid
+			['mirrorcoat', 'hydropump'],
 		];
 
 		for (const pair of incompatiblePairs) this.incompatibleMoves(moves, movePool, pair[0], pair[1]);
