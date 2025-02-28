@@ -1965,4 +1965,4 @@ export class RandomTeams {
 	}
 }
 
-export default RandomGen7Teams;
+export default RandomTeams;
