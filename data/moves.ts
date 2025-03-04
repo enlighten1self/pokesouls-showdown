@@ -3537,6 +3537,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { protect: 1, reflectable: 1, mirror: 1, bypasssub: 1, metronome: 1 },
 		onHit(target, source, move) {
 			let success = false;
+			
 			if (!target.volatiles['substitute'] || move.infiltrates) success = !!this.boost({ evasion: -1 });
 			const removeTarget = [
 				'reflect', 'lightscreen', 'auroraveil', 'safeguard', 'mist', 'spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',
@@ -3555,6 +3556,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				if (source.side.removeSideCondition(sideCondition)) {
 					this.add('-sideend', source.side, this.dex.conditions.get(sideCondition).name, '[from] move: Defog', '[of] ' + source);
 					success = true;
+				}
+				if (source.hp && source.removeVolatile('endlesstorment')){
+					this.add('-end', source, 'Endless Torment', '[From] move: Defog', '[of]' + source)
 				}
 			}
 			this.field.clearTerrain();
@@ -22275,28 +22279,29 @@ export const Moves: { [moveid: string]: MoveData } = {
 	endlesstorment: {
 		num: 1011,
 		accuracy: 100,
-		basePower: 40,
-		category: "Special",
+		basePower: 0,
+		category: "Status",
 		name: "Endless Torment",
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
+		volatileStatus: 'endlesstorment',
 		condition: {
-			noCopy: true,
-			onStart(pokemon) {
-				this.add('-start', pokemon, 'Endless Torment');
+			onStart(target) {
+				this.add('-start', target, 'move: Endless Torment');
 			},
-			onResidualOrder: 13,
+			onResidualOrder: 8,
 			onResidual(pokemon) {
-				this.damage(pokemon.baseMaxhp / 8);
+				const target = this.getAtSlot(pokemon.volatiles['endlesstorment'].sourceSlot);
+				if (!target || target.fainted || target.hp <= 0) {
+					this.debug('Nothing to leech into');
+					return;
+				}
+				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
+				if (damage) {
+					this.heal(damage, target, pokemon);
+				}
 			},
-			onEnd(pokemon) {
-				this.add('-end', pokemon, 'Endless Torment');
-			},
-		},
-		secondary: {
-			chance: 100,
-			volatileStatus: 'endlesstorment',
 		},
 		target: "normal",
 		type: "Dark",

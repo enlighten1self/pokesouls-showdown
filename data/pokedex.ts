@@ -20967,7 +20967,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Crescent Wing",
 		types: ["Dragon","Fairy"],
 		gender: "N",
-		baseStats: {hp: 121, atk: 121, def: 69, spa: 121, spd: 73, spe: 85},
+		baseStats: {hp: 117, atk: 89, def: 83, spa: 125, spd: 73, spe: 103},
 		abilities: {0: "Protomorphosis"},
 		heightm: 1.5,
 		weightkg: 85.6,

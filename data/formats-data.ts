@@ -6369,7 +6369,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	weepingwoods: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	freezingking: {
 		tier: "Illegal",

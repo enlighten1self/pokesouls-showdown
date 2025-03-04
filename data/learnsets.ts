@@ -106179,6 +106179,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chronovenom: {
 		learnset: {
+			direclaw: ["9M"],
 			acid: ["9M"],
 			acidspray: ["9M"],
 			bulkup: ["9M"],
@@ -106609,6 +106610,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	elysiandance: {
 		learnset: {
+			petaldance: ["9M"],
 			thunderbolt: ["9M"],
 			discharge: ["9M"],
 			voltswitch: ["9M"],
@@ -107028,11 +107030,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crescentwing: {
 		learnset: {
+			takeheart: ["9M"],
+			heartswap: ["9M"],
 			playrough: ["9M"],
 			scaleshot: ["9M"],
 			dragondance: ["9M"],
 			outrage: ["9M"],
-			earthquake: ["9M"],
 			flamethrower: ["9M"],
 			dracometeor: ["9M"],
 			dragonpulse: ["9M"],
