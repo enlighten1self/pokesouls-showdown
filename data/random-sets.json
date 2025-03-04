@@ -7658,16 +7658,16 @@
         "role": "Fast Bulky Setup",
         "movepool": [
           "calmmind",
-          "earthquake"
+          "earthquake",
           "extremespeed",
           "flamethrower",
-          "flareblitz"
+          "flareblitz",
           "icebeam",
           "judgment",
           "recover",
           "shadowball",
           "shadowclaw",
-          "swordsdance"
+          "swordsdance",
           "thunderbolt"
         ],
         "abilities": ["Multitype"]
@@ -7739,17 +7739,17 @@
         "movepool": [
           "calmmind",
           "earthpower",
-          "earthquake"
+          "earthquake",
           "extremespeed",
           "flamethrower",
-          "flareblitz"
+          "flareblitz",
           "icebeam",
           "judgment",
           "recover",
           "shadowball",
           "shadowclaw",
           "stoneedge",
-          "swordsdance"
+          "swordsdance",
           "thunderbolt"
         ],
         "abilities": ["Multitype"]

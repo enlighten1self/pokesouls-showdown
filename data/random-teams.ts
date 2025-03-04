@@ -1797,9 +1797,6 @@ export class RandomTeams extends RandomGen8Teams {
 		) {
 			return "Booster Energy";
 		}
-		if (species.id === "lokix") {
-			return role === "Fast Attacker" ? "Silver Powder" : "Life Orb";
-		}
 		if (species.requiredItems) {
 			if (species.baseSpecies === "Arceus") return species.requiredItems[0];
 			return this.sample(species.requiredItems);
@@ -1870,7 +1867,6 @@ export class RandomTeams extends RandomGen8Teams {
 			}
 		}
 		if (moves.has("geomancy") || moves.has("skyattack")) return "Power Herb";
-		if (moves.has("courtchange")) return "Heavy-Duty Boots";
 		if (moves.has("shellsmash")) {
 			return ability === "Solid Rock" && !!counter.get("priority")
 				? "Weakness Policy"
@@ -1906,31 +1902,6 @@ export class RandomTeams extends RandomGen8Teams {
 		) {
 			return "Chesto Berry";
 		}
-		if (
-			(!moves.has("uturn") ||
-				types.includes("Bug") ||
-				species.baseStats.atk >= 120 ||
-				ability === "Libero") &&
-			((!moves.has("icywind") && !moves.has("electroweb")) ||
-				species.id === "ironbundle")
-		) {
-			return (ability === "Quark Drive" ||
-				ability === "Protosynthesis" ||
-				ability === "Protomorphosis" ||
-				ability === "Neuro Drive") &&
-				["firstimpression", "uturn", "voltswitch"].every(
-					(m) => !moves.has(m)
-				) &&
-				species.id !== "ironvaliant"
-				? "Booster Energy"
-				: "Life Orb";
-		}
-		if (
-			species.id !== "yanmega" &&
-			this.dex.getEffectiveness("Rock", species) >= 2 &&
-			!types.includes("Flying")
-		)
-			return "Heavy-Duty Boots";
 		if (role === "Staller") return "Leftovers";
 	}
 
@@ -2060,15 +2031,14 @@ export class RandomTeams extends RandomGen8Teams {
 				) &&
 				!types.includes("Flying") &&
 				ability !== "Levitate")
-		)
-			return "Heavy-Duty Boots";
+		) return "Heavy-Duty Boots";
 		if (role === "Fast Support") {
 			return counter.get("Physical") + counter.get("Special") >= 3 &&
 				["nuzzle", "rapidspin", "uturn", "voltswitch"].every(
 					(m) => !moves.has(m)
 				) &&
 				this.dex.getEffectiveness("Rock", species) < 2
-				? "Life Orb"
+				? "Heavy-Duty Boots"
 				: "Leftovers";
 		}
 		if (!counter.get("Status")) {
@@ -2085,8 +2055,7 @@ export class RandomTeams extends RandomGen8Teams {
 			(this.dex.getEffectiveness("Rock", species) < 2 ||
 				species.id === "ninjask") &&
 			ability !== "Sturdy"
-		)
-			return "Life Orb";
+		) return "Heavy-Duty Boots";
 		return "Leftovers";
 	}
 
@@ -2310,7 +2279,7 @@ export class RandomTeams extends RandomGen8Teams {
 				if (
 					srWeakness <= 0 ||
 					ability === "Regenerator" ||
-					["Black Sludge", "Leftovers", "Life Orb"].includes(item)
+					["Black Sludge", "Leftovers", "Life Orb", "Heavy-Duty Boots"].includes(item)
 				)
 					break;
 				if (item !== "Sitrus Berry" && hp % (4 / srWeakness) > 0) break;
