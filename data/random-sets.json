@@ -6887,7 +6887,7 @@
     "level": 83,
     "sets": [
       {
-        "role": "Z-Move user",
+        "role": "Setup Sweeper",
         "movepool": [
           "conversion",
           "hiddenpowergrass",
@@ -7407,7 +7407,7 @@
     "level": 76,
     "sets": [
       {
-        "role": "Z-Move user",
+        "role": "Setup Sweeper",
         "movepool": [
           "darkpulse",
           "focusblast",
