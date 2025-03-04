@@ -5620,7 +5620,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ogerponcornerstone: {
 		tier: "UU",
 		doublesTier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	archaludon: {
 		tier: "OU",
@@ -6361,7 +6361,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	chronovenom: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	celestialorbit: {
 		tier: "Illegal",
