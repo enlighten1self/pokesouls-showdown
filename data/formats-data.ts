@@ -1881,7 +1881,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	pelipper: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	ralts: {
 		tier: "LC",
@@ -2835,7 +2835,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rotomwash: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	rotomfrost: {
 		tier: "ZUBL",
@@ -5225,7 +5225,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dondozo: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	veluza: {
 		tier: "PU",
@@ -6277,7 +6277,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	boarbaque: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	lordfetchd: {
 		tier: "Illegal",
