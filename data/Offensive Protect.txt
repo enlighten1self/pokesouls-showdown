@@ -13,3 +13,216 @@ Fast Bulky Setup
 Z-Move user
 
 1155
+
+  "chesnaught": {
+    "level": 83,
+    "sets": []
+  },
+  "delphox": {
+    "level": 83,
+    "sets": []
+  },
+  "greninja": {
+    "level": 83,
+    "sets": []
+  },
+  "greninjabond": {
+    "level": 83,
+    "sets": []
+  },
+  "diggersby": {
+    "level": 99,
+    "sets": []
+  },
+  "talonflame": {
+    "level": 87,
+    "sets": []
+  },
+  "vivillon": {
+    "level": 100,
+    "sets": []
+  },
+  "pyroar": {
+    "level": 86,
+    "sets": []
+  },
+  "floetteeternal": {
+    "level": 81,
+    "sets": []
+  },
+  "florges": {
+    "level": 81,
+    "sets": []
+  },
+  "gogoat": {
+    "level": 83,
+    "sets": []
+  },
+  "pangoro": {
+    "level": 88,
+    "sets": []
+  },
+  "furfrou": {
+    "level": 91,
+    "sets": []
+  },
+  "meowstic": {
+    "level": 92,
+    "sets": []
+  },
+  "meowsticf": {
+    "level": 92,
+    "sets": []
+  },
+  "doublade": {
+    "level": 95,
+    "sets": []
+  },
+  "aegislash": {
+    "level": 87,
+    "sets": []
+  },
+  "aromatisse": {
+    "level": 93,
+    "sets": []
+  },
+  "slurpuff": {
+    "level": 90,
+    "sets": []
+  },
+  "malamar": {
+    "level": 90,
+    "sets": []
+  },
+  "barbaracle": {
+    "level": 87,
+    "sets": []
+  },
+  "dragalge": {
+    "level": 88,
+    "sets": []
+  },
+  "clawitzer": {
+    "level": 87,
+    "sets": []
+  },
+  "heliolisk": {
+    "level": 90,
+    "sets": []
+  },
+  "tyrantrum": {
+    "level": 85,
+    "sets": []
+  },
+  "aurorus": {
+    "level": 85,
+    "sets": []
+  },
+  "sylveon": {
+    "level": 84,
+    "sets": []
+  },
+  "hawlucha": {
+    "level": 87,
+    "sets": []
+  },
+  "dedenne": {
+    "level": 98,
+    "sets": []
+  },
+  "carbink": {
+    "level": 87,
+    "sets": []
+  },
+  "sliggoo": {
+    "level": 94,
+    "sets": []
+  },
+  "sliggoohisui": {
+    "level": 94,
+    "sets": []
+  },
+  "goodra": {
+    "level": 76,
+    "sets": []
+  },
+  "goodrahisui": {
+    "level": 76,
+    "sets": []
+  },
+  "klefki": {
+    "level": 92,
+    "sets": []
+  },
+  "trevenant": {
+    "level": 91,
+    "sets": []
+  },
+  "gourgeist": {
+    "level": 88,
+    "sets": []
+  },
+  "gourgeistsmall": {
+    "level": 88,
+    "sets": []
+  },
+  "gourgeistlarge": {
+    "level": 88,
+    "sets": []
+  },
+  "gourgeistsuper": {
+    "level": 88,
+    "sets": []
+  },
+  "avalugg": {
+    "level": 85,
+    "sets": []
+  },
+  "avalugghisui": {
+    "level": 85,
+    "sets": []
+  },
+  "noivern": {
+    "level": 83,
+    "sets": []
+  },
+  "xerneas": {
+    "level": 68,
+    "sets": []
+  },
+  "yveltal": {
+    "level": 68,
+    "sets": []
+  },
+  "zygarde10": {
+    "level": 89,
+    "sets": []
+  },
+  "zygarde": {
+    "level": 76,
+    "sets": []
+  },
+  "zygardecomplete": {
+    "level": 66,
+    "sets": []
+  },
+  "diancie": {
+    "level": 76,
+    "sets": []
+  },
+  "dianciemega": {
+    "level": 67,
+    "sets": []
+  },
+  "hoopa": {
+    "level": 76,
+    "sets": []
+  },
+  "hoopaunbound": {
+    "level": 68,
+    "sets": []
+  },
+  "volcanion": {
+    "level": 76,
+    "sets": []
+  }
