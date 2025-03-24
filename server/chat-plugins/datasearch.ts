@@ -630,6 +630,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		anythinggoes: 'AG', ag: 'AG',
 		uber: 'Uber', ubers: 'Uber', ou: 'OU',
 		uubl: 'UUBL', uu: 'UU',
+		bubl: 'BUBL', bu: 'BU',
 		rubl: 'RUBL', ru: 'RU',
 		nubl: 'NUBL', nu: 'NU',
 		publ: 'PUBL', pu: 'PU',

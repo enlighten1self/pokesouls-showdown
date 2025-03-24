@@ -105413,7 +105413,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	atlascross: {
 		learnset: {
-			firstimpression: ["8M"],
 			leechlife: ["8M"],
 			aerialace: ["9M", "9L15", "8L15", "7M", "7L10", "6M", "6L10", "5M", "5L10", "4M", "4L13"],
 			armthrust: ["9L1", "7L1", "6L1"],

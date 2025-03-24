@@ -106,15 +106,15 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex RU",
+		name: "[Gen 9] National Dex BU",
 		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex RU Resources</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex BU Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex BU Resources</a>`,
 		],
 
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex UU"],
-		banlist: ["ND UU", "ND RUBL", "Slowbro-Base + Slowbronite", "Heat Rock"],
+		banlist: ["ND UU", "ND BUBL", "Slowbro-Base + Slowbronite", "Heat Rock"],
 	},
 	{
 		name: "[Gen 9] National Dex Monotype",
