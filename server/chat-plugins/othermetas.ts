@@ -401,7 +401,9 @@ export const commands: Chat.ChatCommands = {
 		}
 		const boosts: {[tier in TierShiftTiers]: number} = {
 			UU: 15,
-			RUBL: 15,
+			BUBL: 15,
+			BU: 20,
+			RUBL: 20,
 			RU: 20,
 			NUBL: 20,
 			NU: 25,
@@ -413,7 +415,8 @@ export const commands: Chat.ChatCommands = {
 			LC: 30,
 		};
 		if (dex.gen < 9) {
-			boosts['UU'] = boosts['RUBL'] = 10;
+			boosts['UU'] = boosts['BUBL'] = 10;
+			boosts['BU'] = boosts['RUBL'] = 20;
 			boosts['RU'] = boosts['NUBL'] = 20;
 			boosts['NU'] = boosts['PUBL'] = 30;
 			boosts['PU'] = boosts['NFE'] = boosts['LC'] = 40;

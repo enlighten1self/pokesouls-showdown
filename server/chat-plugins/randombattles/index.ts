@@ -116,7 +116,7 @@ const STAT_NAMES: {[k: string]: string} = {
 
 const TIERS: {[k: string]: string} = {
 	uber: "Uber", ubers: "Uber",
-	ou: "OU", uu: "UU", ru: "RU", nu: "NU", pu: "PU",
+	ou: "OU", uu: "UU", bu: "BU", ru: "RU", nu: "NU", pu: "PU",
 	mono: "Mono", monotype: "Mono", lc: "LC", littlecup: "LC",
 };
 
@@ -963,7 +963,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	battlefactoryhelp: [
 		`/battlefactory [pokemon], [tier], [gen] - Displays a Pok\u00e9mon's Battle Factory sets. Supports Gens 6-7. Defaults to Gen 7. If no tier is provided, defaults to OU.`,
-		`- Supported tiers: OU, Ubers, UU, RU, NU, PU, Monotype (Gen 7 only), LC (Gen 7 only)`,
+		`- Supported tiers: OU, Ubers, UU, BU, RU, NU, PU, Monotype (Gen 7 only), LC (Gen 7 only)`,
 		`/bssfactory [pokemon], [gen] - Displays a Pok\u00e9mon's BSS Factory sets. Supports Gen 7. Defaults to Gen 7.`,
 	],
 

@@ -53,7 +53,7 @@ export function findFormats(targetId: string, isOMSearch = false) {
 		) {
 			if (isOMSearch) {
 				const officialFormats = [
-					'ou', 'uu', 'ru', 'nu', 'pu', 'ubers', 'lc', 'monotype', 'customgame', 'doublescustomgame', 'gbusingles', 'gbudoubles',
+					'ou', 'uu', 'bu', 'ru', 'nu', 'pu', 'ubers', 'lc', 'monotype', 'customgame', 'doublescustomgame', 'gbusingles', 'gbudoubles',
 				];
 				if (format.id.startsWith('gen') && officialFormats.includes(format.id.slice(4))) {
 					continue;
