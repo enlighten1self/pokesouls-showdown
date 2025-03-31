@@ -33,12 +33,6 @@ export const Formats: FormatList = [
 		},
 	{
 		name: "[Gen 9] National Dex",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714511/">National Dex Viability Rankings</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3714863/">National Dex Sample Teams</a>`,
-		],
-
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
@@ -66,12 +60,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex Ubers",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">National Dex Ubers Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">National Dex Ubers Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3712169/">National Dex Ubers Viability Rankings</a>`,
-		],
-
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
@@ -90,13 +78,48 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex UU",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">National Dex UU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3719079/">National Dex UU Viability Rankings</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3725988/">National Dex UU Sample Teams</a>`,
+		name: "[Gen 9] National Dex Ubers UU",
+		mod: "gen9",
+		ruleset: [
+			"[Gen 9] National Dex Ubers", "!Sleep Moves Clause", 'Sleep Clause Mod'
 		],
-
+		banlist: [
+			"Arceus-Normal",
+			"Arceus-Dark",
+			"Arceus-Fairy",
+			"Arceus-Ground",
+			"Calyrex-Ice",
+			"Chien-Pao",
+			"Deoxys-Attack",
+			"Eternatus",
+			"Frostikenite",
+			"Griseous Core",
+			"Red Orb",
+			"Ho-Oh",
+			"Blue Orb",
+			"Necrozma-Dusk-Mane",
+			"Ultranecrozium Z",
+			"Rayquaza",
+			"Salamencite",
+			"Xerneas",
+			"Yveltal",
+			"Rusted Sword",
+			"Power Construct",
+			"Ferrothorn",
+			"Alomomola",
+			"Ditto",
+			"Chocopert",
+			"Smeargle",
+			"Gothitelle",
+			"Arena Trap",
+			"Shadow Tag",
+			"King's Rock",
+			"Razor Fang",
+			"Last Respects",
+		],
+	},
+	{
+		name: "[Gen 9] National Dex UU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex"],
 		banlist: [
@@ -107,23 +130,12 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex BU",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex BU Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3721776/">National Dex BU Resources</a>`,
-		],
-
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex UU"],
-		banlist: ["ND UU", "ND BUBL", "Slowbro-Base + Slowbronite", "Heat Rock"],
+		banlist: ["ND UU", "ND BUBL", "Slowbro-Base + Slowbronite"],
 	},
 	{
 		name: "[Gen 9] National Dex Monotype",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3710738/">National Dex Monotype Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3716842/">National Dex Monotype Sample Teams</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3715785/">National Dex Monotype Viability Rankings</a>`,
-		],
-
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
@@ -154,6 +166,7 @@ export const Formats: FormatList = [
 			"Espathra",
 			"Eternatus",
 			"Flutter Mane",
+			"Frostiken-Mega",
 			"Genesect",
 			"Gengar-Mega",
 			"Giratina",
@@ -226,11 +239,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex Doubles",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3720802/">National Dex Doubles Metagame Discussion</a>`,
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3726341/">National Dex Doubles Resources</a>`,
-		],
-
 		mod: "gen9",
 		gameType: "doubles",
 		ruleset: [
@@ -290,10 +298,6 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex AG",
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
-		],
-
 		mod: "gen9",
 		searchShow: false,
 		ruleset: ["Standard NatDex"],
@@ -301,10 +305,6 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 9] National Dex BH",
 		desc: `Balanced Hackmons with National Dex elements mixed in.`,
-		threads: [
-			`&bullet; <a href="https://www.smogon.com/forums/threads/3711099/">National Dex BH</a>`,
-		],
-
 		mod: "gen9",
 		searchShow: false,
 		ruleset: [

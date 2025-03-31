@@ -2337,4 +2337,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  [POKEMON]'s [STAT] was heightened!",
 		end: "  The effects of [POKEMON]'s Neuro Drive wore off!",
 	},
+	asonewithordemega: {
+		name: "As One (Withorde Mega)",
+		shortDesc: "Combination of the Sharpness and Defiant Abilities.",
+	},
 };

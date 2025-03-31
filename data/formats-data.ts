@@ -5513,7 +5513,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	koraidon: {
 		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "Uber",
+		natDexTier: "AG",
 	},
 	miraidon: {
 		tier: "Uber",
@@ -6113,7 +6113,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	withordemega: {
 		tier: "Illegal",
-		natDexTier: "(OU)",
+		natDexTier: "Uber",
 	},
 	caimanrago: {
 		tier: "Illegal",

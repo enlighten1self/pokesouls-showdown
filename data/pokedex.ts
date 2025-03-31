@@ -20098,7 +20098,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Ghost","Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
-		baseStats: {hp: 85, atk: 155, def: 115, spa: 85, spd: 130, spe: 80},
+		baseStats: {hp: 85, atk: 155, def: 100, spa: 80, spd: 130, spe: 100},
 		abilities: {0: "Sharpness"},
 		heightm: 1.5,
 		weightkg: 81.9,
