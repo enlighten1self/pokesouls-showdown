@@ -108,6 +108,7 @@ export const Formats: FormatList = [
 			"King's Rock",
 			"Razor Fang",
 			"Last Respects",
+			"Mewtwonite Y",
 		],
 	},
 	{
