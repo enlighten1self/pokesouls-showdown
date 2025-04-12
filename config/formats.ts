@@ -36,6 +36,7 @@ export const Formats: FormatList = [
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
 			"OHKO Clause",
 			"Evasion Clause",
 			"Species Clause",
@@ -53,7 +54,6 @@ export const Formats: FormatList = [
 			"Quick Claw",
 			"Razor Fang",
 			"Assist",
-			"Baton Pass",
 			"Last Respects",
 			"Shed Tail",
 		],
@@ -63,6 +63,7 @@ export const Formats: FormatList = [
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
 			"OHKO Clause",
 			"Evasion Moves Clause",
 			"Evasion Items Clause",
@@ -74,7 +75,6 @@ export const Formats: FormatList = [
 		banlist: [
 			"ND AG",
 			"Assist",
-			"Baton Pass",
 		],
 	},
 	{
@@ -132,6 +132,7 @@ export const Formats: FormatList = [
 		mod: "gen9",
 		ruleset: [
 			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
 			"Same Type Clause",
 			"Terastal Clause",
 			"Species Clause",
@@ -236,6 +237,7 @@ export const Formats: FormatList = [
 		gameType: "doubles",
 		ruleset: [
 			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
 			"OHKO Clause",
 			"Evasion Moves Clause",
 			"Evasion Abilities Clause",

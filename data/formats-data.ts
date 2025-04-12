@@ -5625,7 +5625,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	archaludon: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "UUBL",
+		natDexTier: "UU",
 	},
 	hydrapple: {
 		tier: "UU",

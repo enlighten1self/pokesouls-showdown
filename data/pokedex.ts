@@ -1836,6 +1836,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		prevo: "Ponyta-Galar",
 		evoLevel: 40,
+		evos: ["Cereblaze"],
 		eggGroups: ["Field"],
 	},
 	slowpoke: {
@@ -3587,6 +3588,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Brown",
 		prevo: "Hoothoot",
 		evoLevel: 20,
+		evos: ["Scoundrowl"],
 		eggGroups: ["Flying"],
 	},
 	ledyba: {
@@ -20099,7 +20101,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ghost","Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 85, atk: 155, def: 100, spa: 80, spd: 130, spe: 100},
-		abilities: {0: "Sharpness"},
+		abilities: {0: "As One (Withorde Mega)"},
 		heightm: 1.5,
 		weightkg: 81.9,
 		color: "Black",
@@ -20583,6 +20585,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.4,
 		weightkg: 40,
 		color: "Black",
+		prevo: "Rapidash-Galar",
+		evoLevel: 25,
 		eggGroups: ["Undiscovered"],
 	},
 	wyrmperior: {
@@ -20997,6 +21001,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		abilities: {0: "Protomorphosis"},
 		heightm: 2,
 		weightkg: 128.6,
+		prevo: "Tangela",
+		evoType: "levelMove",
+		evoMove: "Ancient Power",
 		color: "Blue",
 		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
