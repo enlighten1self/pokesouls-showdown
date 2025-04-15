@@ -2341,4 +2341,27 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "As One (Withorde Mega)",
 		shortDesc: "Combination of the Sharpness and Defiant Abilities.",
 	},
+	masquerade: {
+		name: "Masquerade",
+		shortDesc: "This Pokemon's type changes to match the type of the move it is about to use.",
+	},
+	apexpredator: {
+		name: "Apex Predator",
+		desc: "This Pokemon's Attack and Speed is raised by 1 stage if it attacks and knocks out another Pokemon.",
+		shortDesc: "This Pokemon's Attack and Speed is raised by 1 stage if it attacks and KOes another Pokemon.",
+	},
+	fromashes: {
+		name: "From Ashes",
+		shortDesc: "When this Pokemon is knocked out it is revived, healed to 50% max hp and receives +1 attack and +1 speed. (Only works once per match)",
+	},
+	scorn: {
+		name: "Scorn",
+		shortDesc: "On switch-in, this Pokemon lowers the Attack and Special Attack of opponents by 1 stage.",
+	},
+	neuroengine: {
+		name: "Neuro Engine",
+		shortDesc: "On switch-in, summons Psychic Terrain. During Psychic Terrain, Sp. Atk is 1.1111x.",
+		start: "  [POKEMON] turned the ground into Psychic Terrain, energizing its eligance!",
+		activate: "  [POKEMON] used the Psychic Terrain to energize its eligance!",
+	},
 };
