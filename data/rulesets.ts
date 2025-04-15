@@ -1111,11 +1111,18 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 		onValidateTeam(team) {
 			const statBoostOrTrapping = [
-				'Acid Armor', 'Acupressure', 'Agility', 'Amnesia', 'Ancient Power', 'Assist', 'Barrier', 'Belly Drum', 'Block', 'Bulk Up', 'Calm Mind', 'Charge',
-				'Charge Beam', 'Cosmic Power', 'Curse', 'Defend Order', 'Defense Curl', 'Dragon Dance', 'Growth', 'Guard Swap', 'Harden', 'Heart Swap', 'Howl',
-				'Iron Defense', 'Ingrain', 'Mean Look', 'Meteor Mash', 'Meditate', 'Metal Claw', 'Nasty Plot', 'Ominous Wind', 'Power Trick', 'Psych Up', 'Rage',
-				'Rock Polish', 'Sharpen', 'Silver Wind', 'Skull Bash', 'Spider Web', 'Steel Wing', 'Stockpile', 'Swords Dance', 'Tail Glow', 'Withdraw', 'Speed Boost',
-				'Apicot Berry', 'Ganlon Berry', 'Liechi Berry', 'Petaya Berry', 'Salac Berry', 'Starf Berry',
+				'Acupressure', 'Ancient Power', 'Belly Drum', 'Bulk Up', 'Clangorous Soul', 'Coil', 'Curse', 'Dragon Dance', 'Fell Stinger', 'Fillet Away', 'Growth', 'Hone Claws',
+				'Howl', 'Metal Claw', 'Meteor Mash', 'No Retreat', 'Order Up', 'Shell Smash', 'Shift Gear', 'Spicy Extract', 'Swords Dance', 'Tidy Up', 'Work Up',
+				'Coaching', 'Cosmic Power', 'Cotton Guard', 'Defend Order', 'Defense Curl', 'Diamond Storm', 'Harden', 'Iron Defense', 'Magnetic Flux', 'Ominous Wind', 'Order Up',
+				'Psyshield Bash', 'Shelter', 'Silver Wind', 'Skull Bash', 'Steel Wing', 'Stockpile', 'Stuff Cheeks', 'Victory Dance', 'Withdraw', 'Agility', 'Aqua Step',
+				'Aura Wheel', 'Automotize', 'Esper Wing', 'Flame Charge', 'Geomancy', 'Quiver Dance', 'Rapid Spin', 'Rock Polish', 'Scale Shot', 'Trailblaze', 'Charge Beam', 'Electro Shot',
+				'Fiery Dance', 'Gear Up', 'Meteor Beam', 'Mystical Power', 'Nasty Plot', 'Rototiller', 'Tail Glow', 'Take Heart', 'Torch Song', 'Amnesia', 'Charge', 'Liechi Berry',
+				'Cell Battery', 'Starf Berry', 'Weakness Policy', 'Electric Seed', 'Ganlon Berry', 'Grassy Seed', 'Kee Berry', 'Metal Powder', 'Adrenaline Orb', 'Blunder Policy',
+				'Salac Berry', 'Room Service', 'Absorb Bulb', 'Petaya Berry', 'Throat Spray', 'Apicot Berry', 'Luminous Moss', 'Maranga Berry', 'Misty Seed', 'Psychic Seed', '	Micle Berry',
+				'Anger Point', 'Competitive', 'Contrary', 'Defiant', 'Download', 'Anger Shell', 'Battle Bond', 'Beast Boost', 'Guard Dog', 'Intrepid Sword', 'Moxie', "Justified", 'Lightning Rod',
+				'Sap Sipper', 'Thermal Exchange', 'Weak Armor', 'Storm Drain', 'Rattled', 'Speed Boost', 'Motor Drive', 'Chilling Neigh', 'Wind Rider', 'Dautnless Shield', 'Stamina', 'Water Compaction',
+				'Well-Baked Body', 'Steadfast', 'Berserk', 'Soul-Heart', 'Tangled Feet', 'Moody', 'Anchor Shot', 'Block', 'Fairy Lock', 'Ingrain', 'Jaw Lock', 'Mean Look', 'Octolock', 'Spider Web',
+				'Spirit Shackle', 'Thousand Waves', 'Bind', 'Clamp', 'Fire Spin', 'Infestation', 'Magma Storm', 'Sand Tomb', 'Snap Trap', 'Thunder Cage', 'Whirlpool', 'Wrap', 'Davy Smash'
 			].map(this.toID);
 			for (const set of team) {
 				if (!set.moves.map(this.toID).includes('batonpass' as ID)) continue;

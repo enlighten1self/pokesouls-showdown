@@ -6055,4 +6055,85 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		num: -18,
 	},
+	masquerade: {
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] ability: Masquerade');
+			}
+		},
+		name: "Masquerade",
+		rating: 4.5,
+		num: -19,
+	},
+	scorn: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Scorn', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({ atk: -1, spa: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		flags: {},
+		name: "Scorn",
+		rating: 3.5,
+		num: -20,
+	},
+	apexpredator: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.boost({ atk: length, spe: length }, source);
+			}
+		},
+		flags: {},
+		name: "Apex Predator",
+		rating: 3,
+		num: 153,
+	},
+	fromashes: {
+		onTryHit(target, source, move) {
+			if (target !== source && move?.effectType === 'Move') {
+				if (target.baseMaxhp - (typeof move?.damage === 'number' ? move.damage : 0) === 0 || target.species.baseSpecies === 'Tempervian-Mega') {
+					if (typeof move?.damage === 'number' && move.damage > 0) {
+						this.add('-activate', target, 'ability: From Ashes', '[of] ' + target);
+						target.heal(target.baseMaxhp / 2);
+						this.add('-heal', target, target.getHealth, '[from] ability: From Ashes', '[of] ' + target);
+						target.formeChange('Tempervian-Mega-Ashen', this.effect, true, '[silent]');
+						return null;
+					}
+				}
+			}
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "From Ashes",
+		rating: 3,
+		num: 208,
+	},
+	neuroengine: {
+		onStart(pokemon) {
+			if (!this.field.setTerrain('psychicterrain') && this.field.isTerrain('psychicterrain')) {
+				this.add('-activate', pokemon, 'ability: Neuro Engine');
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (this.field.isTerrain('psychicterrain')) {
+				this.debug('Neuro Engine boost');
+				return this.chainModify([4551, 4096]);
+			}
+		},
+		flags: {},
+		name: "Neuro Engine",
+		rating: 4.5,
+		num: 289,
+	},
 };

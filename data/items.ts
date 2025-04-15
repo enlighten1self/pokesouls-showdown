@@ -7876,4 +7876,69 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10017,
 		gen: 9
 	},
+	forroguite: {
+		name: "Forroguite",
+		spritenum: 777,
+		megaStone: "Forrogue-Mega",
+		megaEvolves: "Forrogue",
+		itemUser: ["Forrogue"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10018,
+		gen: 9
+	},
+	caimanragonite: {
+		name: "Caimanragonite",
+		spritenum: 778,
+		megaStone: "Caimanrago-Mega",
+		megaEvolves: "Caimanrago",
+		itemUser: ["Caimanrago"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10019,
+		gen: 9
+	},
+	wyrmperionite: {
+		name: "Wyrmperionite",
+		spritenum: 779,
+		megaStone: "Wyrmperior-Mega",
+		megaEvolves: "Wyrmperior",
+		itemUser: ["Wyrmperior"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10020,
+		gen: 9
+	},
+	cereblazite: {
+		name: "Cereblazite",
+		spritenum: 780,
+		megaStone: "Cereblaze-Mega",
+		megaEvolves: "Cereblaze",
+		itemUser: ["Cereblaze"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10021,
+		gen: 9
+	},
+	tempervianite: {
+		name: "Tempervianite",
+		spritenum: 781,
+		megaStone: "Tempervian-Mega",
+		megaEvolves: "Tempervian",
+		itemUser: ["Tempervian"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10022,
+		gen: 9
+	},
 };

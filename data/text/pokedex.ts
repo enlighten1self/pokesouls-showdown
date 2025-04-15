@@ -3839,6 +3839,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	caimanrago: {
 		name: "Caimanrago",
 	},
+	caimanragomega: {
+		name: "Caimanrago-Mega",
+	},
 	gemix: {
 		name: "Gemix",
 	},
@@ -3850,6 +3853,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	forrogue: {
 		name: "Forrogue",
+	},
+	forroguemega: {
+		name: "Forrogue-Mega",
 	},
 	bellzong: {
 		name: "Bellzong",
@@ -3950,8 +3956,14 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	cereblaze: {
 		name: "Cereblaze",
 	},
+	cereblazemega: {
+		name: "Cereblaze-Mega",
+	},
 	wyrmperior: {
 		name: "Wyrmperior",
+	},
+	wyrmperiormega: {
+		name: "Wyrmperior-Mega",
 	},
 	zeranheit: {
 		name: "Zeranheit",
@@ -3959,6 +3971,12 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	tempervian: {
 		name: "Tempervian",
 	},
+	tempervianmega: {
+		name: "Tempervian-Mega",
+	},
+	tempervianmegaashen: {
+		name: "Tempervian-Mega-Ashen",
+	},	
 	boarbaque: {
 		name: "Boarbaque",
 	},
