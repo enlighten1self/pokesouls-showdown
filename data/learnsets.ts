@@ -102675,7 +102675,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			confuseray: ["9M"],
 			venoshock: ["9M"],
 			doubleteam: ["9M"],
-			leechseed: ["9M"],
+			sludgewave: ["9M"],
+			recover: ["9M"],
 			imprison: ["9M"],
 			toxicspikes: ["9M"],
 			hyperbeam: ["9M"],
@@ -102691,6 +102692,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	aereon: {
 		learnset: {
+			knockoff: ["9M"],
+			uturn: ["9M"],
 			gust: ["9M"],
 			growl: ["9M"],
 			tailwhip: ["9M"],
@@ -102726,6 +102729,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	automeon: {
 		learnset: {
+			voltswitch: ["9M"],
+			wildcharge: ["9M"], 
+			encore: ["9M"], 
+			taunt: ["9M"],
 			chargebeam: ["9M"],
 			gearup: ["9M"],
 			tailwhip: ["9M"],
@@ -102763,6 +102770,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	champeon: {
 		learnset: {
 			assurance: ["9M"],
+			knockoff: ["9M"],
 			growl: ["9M"],
 			tailwhip: ["9M"],
 			helpinghand: ["9M"],
@@ -102798,6 +102806,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dungeon: {
 		learnset: {
+			thunderwave: ["9M"],
+			encore: ["9M"],
 			scratch: ["9M"],
 			growl: ["9M"],
 			tailwhip: ["9M"],
@@ -102872,6 +102882,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	hiveon: {
 		learnset: {
+			attackorder: ["9M"],
+			defendorder: ["9M"],
+			healorder: ["9M"],
+			taunt: ["9M"],
 			bugbite: ["9M"],
 			growl: ["9M"],
 			tailwhip: ["9M"],
@@ -102907,6 +102921,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	minereon: {
 		learnset: {
+			spikes: ["9M"],
+			swordsdance: ["9M"],
+			uturn: ["9M"],
 			rollout: ["9M"],
 			growl: ["9M"],
 			tailwhip: ["9M"],
@@ -102944,6 +102961,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	spectreon: {
 		learnset: {
+			thunderwave: ["9M"],
+			focusblast: ["9M"],
 			bite: ["9M"],
 			growl: ["9M"],
 			faketears: ["9M"],
@@ -102993,6 +103012,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	wyveon: {
 		learnset: {
+			flareblitz: ["9M"],
+			slackoff: ["9M"],
 			scratch: ["9M"],
 			tackle: ["9M"],
 			tailwhip: ["9M"],

@@ -4989,7 +4989,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dracozolt: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	arctozolt: {
 		isNonstandard: "Past",
@@ -5585,7 +5585,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	sinistcha: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	okidogi: {
 		tier: "UU",
@@ -6237,7 +6237,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	spectreon: {
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	wyveon: {
 		tier: "Illegal",
