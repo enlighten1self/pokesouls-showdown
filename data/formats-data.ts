@@ -634,7 +634,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	slowking: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	slowkinggalar: {
 		tier: "OU",
@@ -5188,7 +5188,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	lokix: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	rellor: {
 		tier: "LC",
@@ -5650,7 +5650,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironcrown: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	terapagos: {
 		tier: "Uber",
@@ -6205,7 +6205,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	acideon: {
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	aereon: {
 		tier: "Illegal",
@@ -6309,7 +6309,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	scoundrowl: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	blimplord: {
 		tier: "Illegal",
@@ -6385,7 +6385,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	celestialorbit: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	weepingwoods: {
 		tier: "Illegal",
@@ -6417,7 +6417,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	flamingwrath: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	resurgentjustice: {
 		tier: "Illegal",

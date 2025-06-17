@@ -6100,23 +6100,42 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 153,
 	},
 	fromashes: {
-		onTryHit(target, source, move) {
-			if (target !== source && move?.effectType === 'Move') {
-				if (target.baseMaxhp - (typeof move?.damage === 'number' ? move.damage : 0) === 0 || target.species.baseSpecies === 'Tempervian-Mega') {
-					if (typeof move?.damage === 'number' && move.damage > 0) {
-						this.add('-activate', target, 'ability: From Ashes', '[of] ' + target);
-						target.heal(target.baseMaxhp / 2);
-						this.add('-heal', target, target.getHealth, '[from] ability: From Ashes', '[of] ' + target);
-						target.formeChange('Tempervian-Mega-Ashen', this.effect, true, '[silent]');
-						return null;
-					}
-				}
-			}
+		onStart(pokemon) {
+		  if (!pokemon.m.pheonixUsed) pokemon.m.pheonixUsed = false;
 		},
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
-		name: "From Ashes",
-		rating: 3,
-		num: 208,
+		onDamage(damage, target, source, effect) {
+		  if (
+		    damage >= target.hp &&
+		    !target.m.pheonixUsed &&
+		    target.hp > 0
+		  ) {
+		    this.add('-ability', target, 'Phoenix Down');
+		    this.add('-message', `${target.name} held on thanks to Phoenix Down!`);
+		    target.m.pheonixUsed = true;
+		    target.sethp(Math.floor(target.maxhp / 2));
+		    this.add('-heal', target, target.getHealth, '[from] ability: Phoenix Down');
+		    target.cureStatus();
+		    target.clearBoosts();
+		    this.add('-clearboost', target, '[silent]');
+		    for (const moveSlot of target.moveSlots) {
+		      moveSlot.pp = Math.min(5, this.dex.moves.get(moveSlot.id).pp);
+		    }
+		    return 0; 
+		  }
+		},
+		onBeforeMove(target, source, move) {
+		  if (
+		    target.m.pheonixUsed &&
+		    move &&
+		    move.secondaries?.length
+		  ) {
+		    this.add('-message', `Phoenix Down blocked secondary effects!`);
+		    move.secondaries = [];
+		  }
+		},
+		name: "Phoenix Down",
+		rating: 5,
+		num: -1006,
 	},
 	neuroengine: {
 		onStart(pokemon) {

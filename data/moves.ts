@@ -22188,7 +22188,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	tremorturn: {
 		num: 1007,
 		accuracy: 100,
-		basePower: 130,
+		basePower: 120,
 		category: "Physical",
 		name: "Tremor Turn",
 		pp: 5,
@@ -22206,7 +22206,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		secondary: null,
 		selfSwitch: true,
 		target: "normal",
-		type: "Grass",
+		type: "Ground",
 		contestType: "Cool",
 	},
 	pumpkinmash: {
