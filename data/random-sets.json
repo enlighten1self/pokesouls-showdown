@@ -10896,7 +10896,7 @@
           "hurricane",
           "quiverdance",
           "revelationdance",
-          "roost",
+          "roost"
         ],
         "abilities": ["Dancer"]
       }
@@ -10913,7 +10913,7 @@
           "hurricane",
           "quiverdance",
           "revelationdance",
-          "roost",
+          "roost"
         ],
         "abilities": ["Dancer"]
       }
@@ -10930,7 +10930,7 @@
           "hurricane",
           "quiverdance",
           "revelationdance",
-          "roost",
+          "roost"
         ],
         "abilities": ["Dancer"]
       }
@@ -10947,7 +10947,7 @@
           "hurricane",
           "quiverdance",
           "revelationdance",
-          "roost",
+          "roost"
         ],
         "abilities": ["Dancer"]
       }
@@ -10976,7 +10976,7 @@
           "moonblast",
           "psychicnoise",
           "roost",
-          "quiverdance",
+          "quiverdance"
         ],
         "abilities": ["Shield Dust"]
       }
@@ -11857,7 +11857,7 @@
           "irondefense",
           "rapidspin",
           "scorchingsands",
-          "willowisp",
+          "willowisp"
         ],
         "abilities": ["Shell Armor"]
       }
@@ -11875,7 +11875,7 @@
           "spikyshield",
           "uturn",
           "wish",
-          "zingzap",
+          "zingzap"
         ],
         "abilities": ["Iron Barbs"]
       }
@@ -12273,7 +12273,7 @@
           "stoneedge"
         ],
         "abilities": ["Beast Boost"]
-      },
+      }
     ]
   },
   "necrozma": {
@@ -12300,7 +12300,7 @@
           "photongeyser"
         ],
         "abilities": ["Prism Armor"]
-      },
+      }
     ]
   },
   "necrozmaduskmane": {
@@ -12330,7 +12330,7 @@
           "thunderwave"
         ],
         "abilities": ["Prism Armor"]
-      },
+      }
     ]
   },
   "necrozmadawnwings": {
@@ -12349,7 +12349,7 @@
           "photongeyser"
         ],
         "abilities": ["Prism Armor"]
-      },
+      }
     ]
   },
   "magearna": {
@@ -12382,7 +12382,7 @@
           "thunderwave"
         ],
         "abilities": ["Soul-Heart"]
-      },
+      }
     ]
   },
   "marshadow": {
@@ -12446,7 +12446,7 @@
           "trickroom"
         ],
         "abilities": ["Beast Boost"]
-      },
+      }
     ]
   },
   "blacephalon": {
