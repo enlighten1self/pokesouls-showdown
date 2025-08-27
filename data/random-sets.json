@@ -791,7 +791,7 @@
     "level": 85,
     "sets": [
       {
-        "role": "Fast Support",
+        "role": "Spinner",
         "movepool": [
           "flipturn",
           "haze",
@@ -1145,7 +1145,7 @@
     "level": 84,
     "sets": [
       {
-        "role": "Bulky Support",
+        "role": "Spinner",
         "movepool": [
           "toxicspikes",
           "toxic",
@@ -1409,7 +1409,7 @@
     "level": 94,
     "sets": [
       {
-        "role": "Fast Attacker",
+        "role": "Spinner",
         "movepool": [
           "blazekick",
           "bulkup",
@@ -1650,7 +1650,7 @@
         "abilities": ["Natural Cure"]
       },
       {
-        "role": "Fast Support",
+        "role": "Spinner",
         "movepool": [
           "flipturn",
           "scald",
@@ -5030,7 +5030,7 @@
     "level": 87,
     "sets": [
       {
-        "role": "Bulky Support",
+        "role": "Spinner",
         "movepool": [
           "earthpower",
           "earthquake",
@@ -5067,7 +5067,7 @@
     "level": 88,
     "sets": [
       {
-        "role": "Bulky Support",
+        "role": "Spinner",
         "movepool": [
           "aquajet",
           "earthquake",
@@ -6881,7 +6881,7 @@
     "level": 83,
     "sets": [
       {
-        "role": "Setup Sweeper",
+        "role": "Z-Move user",
         "movepool": [
           "conversion",
           "hiddenpowergrass",
@@ -9030,7 +9030,7 @@
     "level": 85,
     "sets": [
       {
-        "role": "Fast Attacker",
+        "role": "Spinner",
         "movepool": [
           "defog",
           "flashcannon",
