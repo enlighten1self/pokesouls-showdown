@@ -675,8 +675,11 @@ export class RandomTeams extends RandomGen8Teams {
 			["mirrorcoat", "hydropump"],
 		];
 
-		for (const pair of incompatiblePairs)
-			this.incompatibleMoves(moves, movePool, pair[0], pair[1]);
+		for (const pair of incompatiblePairs) {
+			const a = Array.isArray(pair[0]) ? (pair[0] as (string | undefined)[]).filter((x): x is string => !!x) : pair[0];
+			const b = Array.isArray(pair[1]) ? (pair[1] as (string | undefined)[]).filter((x): x is string => !!x) : pair[1];
+			this.incompatibleMoves(moves, movePool, a, b);
+		}
 
 		if (!types.includes("Dark") && preferredType !== "Dark") {
 			this.incompatibleMoves(moves, movePool, "knockoff", [
@@ -1274,8 +1277,8 @@ export class RandomTeams extends RandomGen8Teams {
 		) {
 			if (counter.damagingMoves.size === 1) {
 				// Find the type of the current attacking move
-				const currentAttackType = counter.damagingMoves.values().next()
-					.value.type;
+				const firstDamagingMove = counter.damagingMoves.values().next().value;
+				const currentAttackType = firstDamagingMove ? firstDamagingMove.type : undefined;
 				// Choose an attacking move that is of different type to the current single attack
 				const coverageMoves = [];
 				for (const moveid of movePool) {
