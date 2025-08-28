@@ -6698,8 +6698,7 @@
           "stealthrock",
           "stoneedge",
           "supercellslam",
-          "toxic",
-          "wish"
+          "toxic"
         ],
         "abilities": ["Solid Rock"]
       }
@@ -12511,6 +12510,1334 @@
           "toxic"
         ],
         "abilities": ["Iron Fist"]
+      }
+    ]
+  },
+  "thwackey": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "drainpunch",
+          "fakeout",
+          "grassyglide",
+          "knockoff",
+          "swordsdance",
+          "uturn",
+          "woodhammer"
+        ],
+        "abilities": ["Grassy Surge"]
+      }
+    ]
+  },
+  "rillaboom": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "drainpunch",
+          "fakeout",
+          "grassyglide",
+          "knockoff",
+          "swordsdance",
+          "uturn",
+          "woodhammer"
+        ],
+        "abilities": ["Grassy Surge"]
+      },
+      {
+        "role": "Choice Item user",
+        "movepool": [
+          "drainpunch",
+          "grassyglide",
+          "knockoff",
+          "uturn",
+          "woodhammer"
+        ],
+        "abilities": ["Grassy Surge"]
+      }
+    ]
+  },
+  "raboot": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "flareblitz",
+          "gunkshot",
+          "highjumpkick",
+          "suckerpunch",
+          "swordsdance",
+          "Uturn"
+        ],
+        "abilities": ["Libero"]
+      }
+    ]
+  },
+  "cinderace": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "pyroball",
+          "gunkshot",
+          "highjumpkick",
+          "suckerpunch",
+          "uturn",
+          "courtchange"
+        ],
+        "abilities": ["Libero"]
+      }
+    ]
+  },
+  "drizzile": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "hydropump",
+          "surf",
+          "terablast",
+          "uturn",
+          "mudshot"
+        ],
+        "abilities": ["Sniper"]
+      }
+    ]
+  },
+  "inteleon": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "airslash",
+          "darkpulse",
+          "flipturn",
+          "icebeam",
+          "shadowball",
+          "snipeshot",
+          "focusenergy"
+        ],
+        "abilities": ["Sniper"]
+      }
+    ]
+  },
+  "greedent": {
+    "level": 93,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodyslam",
+          "curse",
+          "earthquake",
+          "knockoff",
+          "bodypress",
+          "gyroball"
+        ],
+        "abilities": ["Cheek Pouch"]
+      }
+    ]
+  },
+  "corviknight": {
+    "level": 88,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodypress",
+          "bravebird",
+          "defog",
+          "irondefense",
+          "roost",
+          "uturn"
+        ],
+        "abilities": ["Pressure"]
+      }
+    ]
+  },
+  "orbeetle": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bugbuzz",
+          "calmmind",
+          "futuresight",
+          "psyshock",
+          "recover",
+          "shadowball",
+          "stickyweb",
+          "uturn"
+        ],
+        "abilities": ["Frisk"]
+      }
+    ]
+  },
+  "thievul": {
+    "level": 94,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "darkpulse",
+          "grassknot",
+          "nastyplot",
+          "partingshot",
+          "shadowball",
+          "uturn",
+          "burningjealousy"
+        ],
+        "abilities": ["Unburden"]
+      }
+    ]
+  },
+  "eldegoss": {
+    "level": 93,
+    "sets": [
+      {
+        "role": "AV Pivot",
+        "movepool": [
+          "gigadrain",
+          "hypervoice",
+          "rapidspin",
+          "pollenpuff",
+          "leafstorm"
+        ],
+        "abilities": ["Regenerator"]
+      },
+      {
+        "role": "Spinner",
+        "movepool": [
+          "gigadrain",
+          "hypervoice",
+          "rapidspin",
+          "pollenpuff",
+          "leafstorm",
+          "aromatherapy",
+          "sleeppowder",
+          "leechseed"
+        ],
+        "abilities": ["Regenerator"]
+      }
+    ]
+  },
+  "dubwool": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodypress",
+          "bodyslam",
+          "cottonguard",
+          "thunderwave",
+          "wildcharge"
+        ],
+        "abilities": ["Fluffy"]
+      }
+    ]
+  },
+  "drednaw": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "crunch",
+          "earthquake",
+          "icefang",
+          "shellsmash",
+          "liquidation",
+          "stoneedge"
+        ],
+        "abilities": ["Strong Jaw"]
+      }
+    ]
+  },
+  "boltund": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "bulkup",
+          "crunch",
+          "firefang",
+          "playrough",
+          "psychicfangs",
+          "voltswitch",
+          "thunderfang"
+        ],
+        "abilities": ["Strong Jaw"]
+      }
+    ]
+  },
+  "carkol": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Spinner",
+        "movepool": [
+          "bodypress",
+          "bodyslam",
+          "flareblitz",
+          "rapidspin",
+          "spikes",
+          "stealthrock",
+          "stoneedge",
+          "willowisp"
+        ],
+        "abilities": ["Flame Body"]
+      }
+    ]
+  },
+  "coalossal": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Spinner",
+        "movepool": [
+          "bodypress",
+          "bodyslam",
+          "flareblitz",
+          "rapidspin",
+          "spikes",
+          "stealthrock",
+          "stoneedge",
+          "willowisp"
+        ],
+        "abilities": ["Flame Body"]
+      }
+    ]
+  },
+  "flapple": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "dragondance",
+          "dualwingbeat",
+          "gravapple",
+          "outrage",
+          "suckerpunch"
+        ],
+        "abilities": ["Hustle"]
+      }
+    ]
+  },
+  "appletun": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "dracometeor",
+          "gigadrain",
+          "recover",
+          "bodypress",
+          "curse",
+          "dragontail"
+        ],
+        "abilities": ["Thick Fat"]
+      }
+    ]
+  },
+  "sandaconda": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodypress",
+          "coil",
+          "earthquake",
+          "glare",
+          "stealthrock",
+          "stoneedge"
+        ],
+        "abilities": ["Shed Skin"]
+      }
+    ]
+  },
+  "cramorant": {
+    "level": 91,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "defog",
+          "hurricane",
+          "icebeam",
+          "roost",
+          "surf"
+        ],
+        "abilities": ["Gulp Missile"]
+      }
+    ]
+  },
+  "barraskewda": {
+    "level": 89,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "closecombat",
+          "crunch",
+          "drillrun",
+          "flipturn",
+          "liquidation",
+          "psychicfangs"
+        ],
+        "abilities": ["Gulp Missile"]
+      }
+    ]
+  },
+  "toxtricity": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "boomburst",
+          "overdrive",
+          "psychicnoise",
+          "shiftgear",
+          "sludgewave",
+          "voltswitch"
+        ],
+        "abilities": ["Punk Rock"]
+      }
+    ]
+  },
+  "centiskorch": {
+    "level": 84,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "coil",
+          "firelash",
+          "knockoff",
+          "leechlife",
+          "powerwhip",
+          "willowisp"
+        ],
+        "abilities": ["Flash Fire"]
+      }
+    ]
+  },
+  "grapploct": {
+    "level": 90,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bulkup",
+          "drainpunch",
+          "icepunch",
+          "liquidation",
+          "stompingtantrum",
+          "suckerpunch"
+        ],
+        "abilities": ["Limber"]
+      }
+    ]
+  },
+  "polteageist": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "Giga Drain",
+          "Psyshock",
+          "Shadow Ball",
+          "Shell Smash"
+        ],
+        "abilities": ["Weak Armor"]
+      }
+    ]
+  },
+  "hatterene": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Bulky Setup",
+        "movepool": [
+          "calmmind",
+          "drainingkiss",
+          "mysticalfire",
+          "nuzzle",
+          "psychicnoise"
+        ],
+        "abilities": ["Magic Bounce"]
+      }
+    ]
+  },
+  "grimmsnarl": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "fakeout",
+          "foulplay",
+          "lightscreen",
+          "partingshot",
+          "reflect",
+          "spiritbreak",
+          "suckerpunch",
+          "thunderwave"
+        ],
+        "abilities": ["Prankster"]
+      }
+    ]
+  },
+  "obstagoon": {
+    "level": 85,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "closecombat",
+          "facade",
+          "icepunch",
+          "bulkup",
+          "knockoff",
+          "partingshot"
+        ],
+        "abilities": ["Guts"]
+      }
+    ]
+  },
+  "perrserker": {
+    "level": 96,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "closecombat",
+          "fakeout",
+          "ironhead",
+          "knockoff",
+          "stealthrock",
+          "uturn"
+        ],
+        "abilities": ["Tough Claws"]
+      }
+    ]
+  },
+  "cursola": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "calmmind",
+          "earthpower",
+          "icebeam",
+          "shadowball",
+          "willowisp"
+        ],
+        "abilities": ["Perish Body"]
+      }
+    ]
+  },
+  "sirfetchd": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bravebird",
+          "closecombat",
+          "curse",
+          "defog",
+          "firstimpression",
+          "knockoff"
+        ],
+        "abilities": ["Scrappy"]
+      }
+    ]
+  },
+  "mrrime": {
+    "level": 85,
+    "sets": [
+      {
+        "role": "Spinner",
+        "movepool": [
+          "encore",
+          "focusblast",
+          "freezedry",
+          "psyshock",
+          "rapidspin",
+          "slackoff",
+          "thunderbolt"
+        ],
+        "abilities": ["Screen Cleaner"]
+      }
+    ]
+  },
+  "runerigus": {
+    "level": 90,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodypress",
+          "earthquake",
+          "irondefense",
+          "nightshade",
+          "protect",
+          "stealthrock",
+          "toxicspikes",
+          "willowisp"
+        ],
+        "abilities": ["Wandering Spirit"]
+      }
+    ]
+  },
+  "alcremie": {
+    "level": 88,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "calmmind",
+          "drainingkiss",
+          "gigadrain",
+          "mysticalfire",
+          "recover"
+        ],
+        "abilities": ["Aroma Veil"]
+      }
+    ]
+  },
+  "falinks": {
+    "level": 92,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "closecombat",
+          "ironhead",
+          "knockoff",
+          "megahorn",
+          "noretreat",
+          "rockslide"
+        ],
+        "abilities": ["Defiant"]
+      }
+    ]
+  },
+  "pincurchin": {
+    "level": 97,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "recover",
+          "risingvoltage",
+          "scald",
+          "spikes",
+          "thunderwave",
+          "toxicspikes"
+        ],
+        "abilities": ["Electric Surge"]
+      }
+    ]
+  },
+  "frosmoth": {
+    "level": 91,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "bugbuzz",
+          "dazzlinggleam",
+          "gigadrain",
+          "icebeam",
+          "quiverdance"
+        ],
+        "abilities": ["Ice Scales"]
+      }
+    ]
+  },
+  "stonjourner": {
+    "level": 92,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bodypress",
+          "curse",
+          "earthquake",
+          "heatcrash",
+          "stealthrock",
+          "stoneedge"
+        ],
+        "abilities": ["Power Spot"]
+      }
+    ]
+  },
+  "eiscue": {
+    "level": 92,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "bellydrum",
+          "doubleedge",
+          "icespinner",
+          "ironhead",
+          "liquidation"
+        ],
+        "abilities": ["Ice Face"]
+      }
+    ]
+  },
+  "indeedee": {
+    "level": 91,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "calmmind",
+          "hypervoice",
+          "mysticalfire",
+          "healingwish",
+          "expandingforce"
+        ],
+        "abilities": ["Psychic Surge"]
+      }
+    ]
+  },
+  "indeedeef": {
+    "level": 91,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "calmmind",
+          "hypervoice",
+          "mysticalfire",
+          "healingwish",
+          "expandingforce"
+        ],
+        "abilities": ["Psychic Surge"]
+      }
+    ]
+  },
+  "morpeko": {
+    "level": 97,
+    "sets": [
+      {
+        "role": "Spinner",
+        "movepool": [
+          "aurawheel",
+          "knockoff",
+          "partingshot",
+          "rapidspin",
+          "seedbomb",
+          "stompingtantrum"
+        ],
+        "abilities": ["Hunger Switch"]
+      }
+    ]
+  },
+  "copperajah": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "curse",
+          "earthquake",
+          "heatcrash",
+          "heavyslam",
+          "knockoff",
+          "playrough",
+          "powerwhip",
+          "stealthrock"
+        ],
+        "abilities": ["Sheer Force", "Heavy Metal"]
+      }
+    ]
+  },
+  "dracozolt": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "boltbeak",
+          "dracometeor",
+          "earthquake",
+          "fireblast",
+          "stoneedge"
+        ],
+        "abilities": ["Hustle", "Sand Rush"]
+      }
+    ]
+  },
+  "arctozolt": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "blizzard",
+          "boltbeak",
+          "freezedry",
+          "iciclecrash",
+          "stompingtantrum",
+          "stoneedge"
+        ],
+        "abilities": ["Slush Rush"]
+      }
+    ]
+  },
+  "dracovish": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "crunch",
+          "earthquake",
+          "fishiousrend",
+          "icefang",
+          "lowkick",
+          "psychicfangs"
+        ],
+        "abilities": ["Strong Jaw", "Sand Rush"]
+      }
+    ]
+  },
+  "arctovish": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "fishiousrend",
+          "iciclecrash",
+          "psychicfangs",
+          "crunch",
+          "stoneedge"
+        ],
+        "abilities": ["Slush Rush"]
+      }
+    ]
+  },
+  "duraludon": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bodypress",
+          "dracometeor",
+          "flashcannon",
+          "stealthrock",
+          "thunderbolt",
+          "thunderwave"
+        ],
+        "abilities": ["Light Metal"]
+      }
+    ]
+  },
+  "drakloak": {
+    "level": 100,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "doubleedge",
+          "dragondance",
+          "outrage",
+          "phantomforce",
+          "psychicfangs",
+          "steelwing"
+        ],
+        "abilities": ["Infiltrator"]
+      }
+    ]
+  },
+  "dragapult": {
+    "level": 76,
+    "sets": [
+      {
+        "role": "Fast Support",
+        "movepool": [
+          "dragondarts",
+          "hex",
+          "thunderwave",
+          "uturn",
+          "willowisp"
+        ],
+        "abilities": ["Infiltrator"]
+      },
+      {
+        "role": "Z-Move user",
+        "movepool": [
+          "dragondance",
+          "dragondarts",
+          "phantomforce",
+          "psychicfangs",
+          "willowisp"
+        ],
+        "abilities": ["Infiltrator"]
+      }
+    ]
+  },
+  "zacian": {
+    "level": 70,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "closecombat",
+          "crunch",
+          "playrough",
+          "sacredsword",
+          "swordsdance",
+          "wildcharge"
+        ],
+        "abilities": ["Intrepid Sword"]
+      }
+    ]
+  },
+  "zaciancrowned": {
+    "level": 67,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "behemothblade",
+          "closecombat",
+          "crunch",
+          "playrough",
+          "sacredsword",
+          "swordsdance",
+          "wildcharge"
+        ],
+        "abilities": ["Intrepid Sword"]
+      }
+    ]
+  },
+  "zamazenta": {
+    "level": 70,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bodypress",
+          "crunch",
+          "heavyslam",
+          "irondefense",
+          "roar",
+          "substitute"
+        ],
+        "abilities": ["Dauntless Shield"]
+      },
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "closecombat",
+          "crunch",
+          "heavyslam",
+          "icefang",
+          "playrough",
+          "stoneedge"
+        ],
+        "abilities": ["Dauntless Shield"]
+      }
+    ]
+  },
+  "zamazentacrowned": {
+    "level": 67,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bodypress",
+          "crunch",
+          "heavyslam",
+          "irondefense",
+          "roar",
+          "substitute"
+        ],
+        "abilities": ["Dauntless Shield"]
+      }
+    ]
+  },
+  "eternatus": {
+    "level": 67,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "dynamaxcannon",
+          "flamethrower",
+          "recover",
+          "sludgewave",
+          "toxic",
+          "toxicspikes"
+        ],
+        "abilities": ["Pressure"]
+      }
+    ]
+  },
+  "urshifu": {
+    "level": 81,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "closecombat",
+          "poisonjab",
+          "suckerpunch",
+          "swordsdance",
+          "uturn",
+          "wickedblow"
+        ],
+        "abilities": ["Unseen Fist"]
+      }
+    ]
+  },
+  "urshifurapidstrike": {
+    "level": 81,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "aquajet",
+          "closecombat",
+          "icespinner",
+          "surgingstrikes",
+          "swordsdance",
+          "uturn"
+        ],
+        "abilities": ["Unseen Fist"]
+      }
+    ]
+  },
+  "zarude": {
+    "level": 76,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "bulkup",
+          "closecombat",
+          "knockoff",
+          "powerwhip",
+          "stompingtantrum",
+          "uturn"
+        ],
+        "abilities": ["Leaf Guard"]
+      }
+    ]
+  },
+  "regieleki": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Fast Support",
+        "movepool": [
+          "explosion",
+          "lightscreen",
+          "rapidspin",
+          "reflect",
+          "thunderbolt",
+          "voltswitch"
+        ],
+        "abilities": ["Transistor"]
+      }
+    ]
+  },
+  "regidrago": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Setup Sweeper",
+        "movepool": [
+          "dragonclaw",
+          "dragondance",
+          "earthquake",
+          "icefang"
+        ],
+        "abilities": ["Dragon's Maw"]
+      }
+    ]
+  },
+  "glastrier": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "closecombat",
+          "highhorsepower",
+          "iciclecrash",
+          "swordsdance"
+        ],
+        "abilities": ["Chilling Neigh"]
+      }
+    ]
+  },
+  "spectrier": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "drainingkiss",
+          "nastyplot",
+          "shadowball",
+          "substitute",
+          "willowisp"
+        ],
+        "abilities": ["Grim Neigh"]
+      }
+    ]
+  },
+  "calyrex": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Support",
+        "movepool": [
+          "calmmind",
+          "futuresight",
+          "gigadrain",
+          "leechseed"
+        ],
+        "abilities": ["Unnerve"]
+      }
+    ]
+  },
+  "calyrexice": {
+    "level": 68,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "closecombat",
+          "highhorsepower",
+          "glaciallance",
+          "leechseed",
+          "swordsdance",
+          "trickroom"
+        ],
+        "abilities": ["Chilling Neigh"]
+      }
+    ]
+  },
+  "calyrexshadow": {
+    "level": 68,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "drainingkiss",
+          "nastyplot",
+          "astralbarrage",
+          "psyshock"
+        ],
+        "abilities": ["Grim Neigh"]
+      }
+    ]
+  },
+  "wyrdeer": {
+    "level": 84,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "calmmind",
+          "earthpower",
+          "earthquake",
+          "futuresight",
+          "jumpkick",
+          "psyshieldbash",
+          "psyshock",
+          "return",
+          "shadowball",
+          "suckerpunch",
+          "thunderbolt"
+        ],
+        "abilities": ["Intimidate", "Sap Sipper"]
+      }
+    ]
+  },
+  "kleavor": {
+    "level": 87,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "closecombat",
+          "knockoff",
+          "stoneaxe",
+          "swordsdance",
+          "uturn",
+          "xscissor"
+        ],
+        "abilities": ["Sharpness"]
+      }
+    ]
+  },
+  "ursaluna": {
+    "level": 81,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "closecombat",
+          "facade",
+          "headlongrush",
+          "firepunch",
+          "swordsdance"
+        ],
+        "abilities": ["Guts"]
+      }
+    ]
+  },
+  "ursalunabloodmoon": {
+    "level": 80,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "bloodmoon",
+          "calmmind",
+          "earthpower",
+          "moonblast",
+          "moonlight"
+        ],
+        "abilities": ["Mind's Eye"]
+      }
+    ]
+  },
+  "basculegion": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "aquajet",
+          "crunch",
+          "flipturn",
+          "icefang",
+          "psychicfangs",
+          "wavecrash"
+        ],
+        "abilities": ["Swift Swim", "Adaptability"]
+      }
+    ]
+  },
+  "basculegionf": {
+    "level": 83,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "hydropump",
+          "icebeam",
+          "flipturn",
+          "shadowball",
+          "surf"
+        ],
+        "abilities": ["Swift Swim", "Adaptability"]
+      }
+    ]
+  },
+  "sneasler": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "acrobatics",
+          "closecombat",
+          "direclaw",
+          "swordsdance",
+          "throatchop"
+        ],
+        "abilities": ["Unburden"]
+      }
+    ]
+  },
+  "overqwil": {
+    "level": 86,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "aquajet",
+          "crunch",
+          "gunkshot",
+          "liquidation",
+          "swordsdance"
+        ],
+        "abilities": ["Swift Swim"]
+      },
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "aquajet",
+          "barbbarrage",
+          "crunch",
+          "destinybond",
+          "haze",
+          "spikes",
+          "toxic",
+          "toxicspikes"
+        ],
+        "abilities": ["Intimidate"]
+      }
+    ]
+  },
+  "enamorus": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "earthpower",
+          "focusblast",
+          "healingwish",
+          "moonblast",
+          "mysticalfire"
+        ],
+        "abilities": ["Cute Charm"]
+      }
+    ]
+  },
+  "enamorustherian": {
+    "level": 78,
+    "sets": [
+      {
+        "role": "Bulky Attacker",
+        "movepool": [
+          "earthpower",
+          "focusblast",
+          "agility",
+          "moonblast",
+          "mysticalfire"
+        ],
+        "abilities": ["Overcoat"]
       }
     ]
   }

@@ -514,7 +514,8 @@ export class RandomTeams extends RandomGen8Teams {
 				movePoolHasHiddenPower = false;
 				for (const moveid of movePool) {
 					if (moveid.startsWith("hiddenpower")) {
-						this.fastPop(movePool, movePool.indexOf(moveid));
+						const idx = movePool.indexOf(moveid);
+						if (idx > -1) this.fastPop(movePool, idx);
 						movePoolHasHiddenPower = true;
 						break;
 					}
