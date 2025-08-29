@@ -107051,7 +107051,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crescentwing: {
 		learnset: {
-			takeheart: ["9M"],
 			heartswap: ["9M"],
 			playrough: ["9M"],
 			scaleshot: ["9M"],
