@@ -54,6 +54,12 @@ const RECOVERY_MOVES = [
 	"softboiled",
 	"strengthsap",
 	"synthesis",
+	"rest",
+	"lunarblessing",
+	"junglehealing",
+	"leechseed",
+	"lifedew",
+	"painsplit",
 ];
 // Moves that drop stats:
 const CONTRARY_MOVES = [
@@ -68,6 +74,15 @@ const CONTRARY_MOVES = [
 	"primalrage",
 	"photonhaymaker",
 	"spectraltail",
+	"clangingscales",
+	"headlongrush",
+	"hyperspacefury",
+	"dracometeor",
+	"fleurcannon",
+	"psychoboost",
+	"dragonascent",
+	"hammerarm",
+	"icehammer",
 ];
 // Moves that boost Attack:
 const PHYSICAL_SETUP = [
@@ -75,12 +90,16 @@ const PHYSICAL_SETUP = [
 	"bulkup",
 	"coil",
 	"curse",
-	"dragondance",
+	"fellstinger",
+	"growth",
 	"honeclaws",
 	"howl",
 	"meditate",
+	"metalclaw",
+	"meteormash",
 	"poweruppunch",
-	"screech",
+	"sharpen",
+	"shiftgear",
 	"swordsdance",
 	"tidyup",
 	"victorydance",
@@ -89,11 +108,14 @@ const PHYSICAL_SETUP = [
 const SPECIAL_SETUP = [
 	"calmmind",
 	"chargebeam",
+	"electroshot",
+	"fierydance",
 	"geomancy",
+	"meteorbeam",
+	"mysticalpower",
 	"nastyplot",
-	"quiverdance",
 	"tailglow",
-	"torchsong",
+	"takeheart",
 ];
 // Moves that boost Attack AND Special Attack:
 const MIXED_SETUP = [
@@ -105,15 +127,20 @@ const MIXED_SETUP = [
 	"shellsmash",
 	"workup",
 	"noretreat",
+	"filletaway",
 ];
 // Some moves that only boost Speed:
 const SPEED_SETUP = [
 	"agility",
+	"aquastep",
+	"aurawheel",
 	"autotomize",
+	"esperwing",
 	"flamecharge",
+	"rapidspin",
 	"rockpolish",
+	"scaleshot",
 	"trailblaze",
-	"tidyup",
 ];
 // Conglomerate for ease of access
 const SETUP = [
@@ -1826,6 +1853,8 @@ export class RandomTeams extends RandomGen8Teams {
 		if (species.id === "urshifurapidstrike") return "Punching Glove";
 		if (species.id === "toxtricity" && moves.has("shiftgear"))
 			return "Throat Spray";
+		if (species.id === "porygonz" && moves.has("conversion"))
+			return "Normalium Z";
 		if (species.name === "Shuckle") return "Mental Herb";
 		if (
 			ability === "Harvest" ||
@@ -2409,7 +2438,7 @@ export class RandomTeams extends RandomGen8Teams {
 				}
 				const species = this.sample(currentSpeciesPool);
 
-				if (this.gen === 7) {
+				if (this.gen) {
 					// If the team has a Z-Move user, reject Pokemon that only have the Z-Move user role
 					if (
 						this.randomSets[species.id]["sets"].length === 1 &&
