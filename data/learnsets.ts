@@ -106479,6 +106479,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	quantumsyphon: {
 		learnset: {
+			superpower: ["9M"],
+			flipturn: ["9M"],
 			icepunch: ["9M"],
 			firepunch: ["9M"],
 			thunderpunch: ["9M"],

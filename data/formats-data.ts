@@ -4521,7 +4521,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	solgaleo: {
 		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	lunala: {
 		tier: "Uber",

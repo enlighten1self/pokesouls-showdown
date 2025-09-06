@@ -22284,7 +22284,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Endless Torment",
 		pp: 15,
 		priority: 0,
-		flags: { protect: 1, mirror: 1 },
+		flags: { protect: 1, mirror: 1, reflectable: 1 },
 		volatileStatus: 'endlesstorment',
 		condition: {
 			onStart(target) {
@@ -22294,7 +22294,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			onResidual(pokemon) {
 				const target = this.getAtSlot(pokemon.volatiles['endlesstorment'].sourceSlot);
 				if (!target || target.fainted || target.hp <= 0) {
-					this.debug('Nothing to leech into');
+					this.debug('Nothing to Torment');
 					return;
 				}
 				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
@@ -22302,6 +22302,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 					this.heal(damage, target, pokemon);
 				}
 			},
+		},
+		onTryImmunity(target) {
+			return !target.hasType('Dark');
 		},
 		target: "normal",
 		type: "Dark",
