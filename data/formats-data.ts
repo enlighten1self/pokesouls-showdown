@@ -8,7 +8,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	venusaur: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	venusaurmega: {
 		isNonstandard: "Past",
@@ -331,7 +331,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ninetales: {
 		tier: "NU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	ninetalesalola: {
 		tier: "UU",
@@ -2225,7 +2225,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	crawdaunt: {
 		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	baltoy: {
 		isNonstandard: "Past",
@@ -2673,7 +2673,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gastrodon: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	drifloon: {
 		tier: "LC",
@@ -3395,7 +3395,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	reuniclus: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	ducklett: {
 		tier: "LC",
@@ -6153,7 +6153,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	pumpkasaur: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	pumpkasaurmega: {
 		tier: "Illegal",

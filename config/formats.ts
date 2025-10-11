@@ -125,7 +125,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex BU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex UU"],
-		banlist: ["ND UU", "ND BUBL", "Slowbro-Base + Slowbronite"],
+		banlist: ["ND UU", "ND BUBL", "Slowbro-Base + Slowbronite", "Drought"],
 	},
 	{
 		name: "[Gen 9] National Dex RU",
