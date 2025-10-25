@@ -1661,7 +1661,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	houndoommega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	phanpy: {
 		tier: "LC",
@@ -4521,7 +4521,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	solgaleo: {
 		tier: "Uber",
 		doublesTier: "DUber",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	lunala: {
 		tier: "Uber",
@@ -5605,7 +5605,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ogerpon: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	ogerponwellspring: {
 		tier: "OU",
