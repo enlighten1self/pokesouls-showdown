@@ -2958,7 +2958,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	serperior: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	tepig: {
 		tier: "LC",
@@ -5625,7 +5625,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	archaludon: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	hydrapple: {
 		tier: "UU",
@@ -6373,7 +6373,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	barbedchaos: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	crescentwing: {
 		tier: "Illegal",
@@ -6397,7 +6397,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	bulkingblade: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	abyssalvoid: {
 		tier: "Illegal",
