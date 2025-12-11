@@ -6109,11 +6109,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		    !target.m.pheonixUsed &&
 		    target.hp > 0
 		  ) {
-		    this.add('-ability', target, 'Phoenix Down');
-		    this.add('-message', `${target.name} held on thanks to Phoenix Down!`);
+		    this.add('-ability', target, 'From Ashes');
+		    this.add('-message', `${target.name} held on thanks to From Ashes!`);
 		    target.m.pheonixUsed = true;
 		    target.sethp(Math.floor(target.maxhp / 2));
-		    this.add('-heal', target, target.getHealth, '[from] ability: Phoenix Down');
+		    this.add('-heal', target, target.getHealth, '[from] ability: From Ashes');
 		    target.cureStatus();
 		    target.clearBoosts();
 		    this.add('-clearboost', target, '[silent]');
@@ -6129,11 +6129,11 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		    move &&
 		    move.secondaries?.length
 		  ) {
-		    this.add('-message', `Phoenix Down blocked secondary effects!`);
+		    this.add('-message', `From Ashes blocked secondary effects!`);
 		    move.secondaries = [];
 		  }
 		},
-		name: "Phoenix Down",
+		name: "From Ashes",
 		rating: 5,
 		num: -1006,
 	},

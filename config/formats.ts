@@ -109,6 +109,9 @@ export const Formats: FormatList = [
 			"Razor Fang",
 			"Last Respects",
 			"Mewtwonite Y",
+			"Caimanragonite",
+			"Cereblazite",
+			"Tempervianite"
 		],
 	},
 	{
@@ -132,6 +135,12 @@ export const Formats: FormatList = [
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex BU"],
 		banlist: ["ND BU", "ND RUBL"],
+	},
+	{
+		name: "[Gen 9] National Dex NU",
+		mod: "gen9",
+		ruleset: ["[Gen 9] National Dex RU"],
+		banlist: ["ND RU", "ND NUBL"],
 	},
 	{
 		name: "[Gen 9] National Dex Monotype",
@@ -235,6 +244,11 @@ export const Formats: FormatList = [
 			"Shed Tail",
 			"Tricky Reception",
 			"Caimanrago",
+			"Cereblaze-Mega",
+			"Forrogue-Mega",
+			"Tempervian-Mega",
+			"Wyrmperior-Mega",
+			"Tempervian-Mega-Ashen"
 		],
 	},
 	{

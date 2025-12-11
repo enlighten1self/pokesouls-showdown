@@ -7595,13 +7595,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's Attack by 2 stages.",
 		shortDesc: "Lowers the user's Atk by 2.",
 	},
+
 	endlesstorment: {
 		name: "Endless Torment",
-		desc: "Causes damage to the target equal to 1/8 of its maximum HP, rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-		shortDesc: "Deals 1/8 max HP each turn.",
+		desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out, the effect ends. Dark-type Pokemon are immune to this move on use, but not its effect.",
+		shortDesc: "1/8 of target's HP is restored to user every turn.",
 
-		start: "  [POKEMON] is being Endlessly Tormented!",
-		damage: "  [POKEMON] is hurt by Endless Torment!",
+		start: "  [POKEMON] was tormented!",
+		end: "  [POKEMON] was freed from Endless Torment!",
+		damage: "  [POKEMON]'s health is sapped by Endless Torment!",
 	},
 	primalrage: {
 		name: "Primal Rage",

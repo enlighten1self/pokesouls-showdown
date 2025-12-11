@@ -282,6 +282,14 @@ export const Tags: {[id: string]: TagData} = {
 		name: "ND RU",
 		speciesFilter: species => species.natDexTier === 'RU',
 	},
+	ndnubl: {
+		name: "ND NUBL",
+		speciesFilter: species => species.natDexTier === 'NUBL',
+	},
+	ndnu: {
+		name: "ND NU",
+		speciesFilter: species => species.natDexTier === 'NU',
+	},
 
 	// Legality tags
 	past: {

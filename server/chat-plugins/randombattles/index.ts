@@ -116,7 +116,7 @@ const STAT_NAMES: {[k: string]: string} = {
 
 const TIERS: {[k: string]: string} = {
 	uber: "Uber", ubers: "Uber",
-	ou: "OU", uu: "UU", bu: "BU", ru: "RU", nu: "NU", pu: "PU",
+	ou: "OU", uu: "UU", bu: "BU", ru: "RU", nu: "NU", pu: "PU", zu: "ZU",
 	mono: "Mono", monotype: "Mono", lc: "LC", littlecup: "LC",
 };
 

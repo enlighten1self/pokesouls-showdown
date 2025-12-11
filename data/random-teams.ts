@@ -2810,7 +2810,7 @@ export class RandomTeams extends RandomGen8Teams {
 		if (!this.factoryTier) {
 			this.factoryTier = isMonotype
 				? "Mono"
-				: this.sample(["Uber", "OU", "UU", "BU", "RU", "NU", "PU", "LC"]);
+				: this.sample(["Uber", "OU", "UU", "BU", "RU", "NU", "PU", "ZU", "LC"]);
 		} else if (isMonotype && this.factoryTier !== "Mono") {
 			// I don't think this can ever happen?
 			throw new Error(
@@ -2831,6 +2831,7 @@ export class RandomTeams extends RandomGen8Teams {
 			NU: 1,
 			PUBL: 0,
 			PU: 0,
+			ZU: 0,
 		};
 
 		const pokemon = [];
