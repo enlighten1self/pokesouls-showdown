@@ -21048,7 +21048,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.5,
 		weightkg: 47,
 		color: "Blue",
-		prevo: "Inkay",
 		evoLevel: 30,
 		evoCondition: "with the console turned upside-down",
 		eggGroups: ["Water 1", "Water 2"],

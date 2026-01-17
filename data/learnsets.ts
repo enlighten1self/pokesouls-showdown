@@ -105758,6 +105758,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	malabyss: {
 		learnset: {
+			acupressure: ["9E", "8E"],
+			camouflage: ["7E", "6E"],
+			destinybond: ["9E", "8E", "7E", "6E"],
+			disable: ["9E", "8E"],
+			flatter: ["7E", "6E"],
+			powersplit: ["7E", "6E"],
+			simplebeam: ["7E", "6E"],
 			flipturn: ["9M"],
 			surf: ["9M"],
 			scald: ["9M"],
