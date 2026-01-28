@@ -4094,4 +4094,16 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	resurgentjustice: {
 		name: "Resurgent Justice",
 	},
+	phroggeist: {
+		name: "Phroggeist-Voltago",
+	},
+	phroggeistyoseigo: {
+		name: "Phroggeist-Yoseigo",
+	},
+	phroggeistbushigo: {
+		name: "Phroggeist-Bushigo",
+	},
+	phroggeistjimengo: {
+		name: "Phroggeist-Jimengo",
+	},
 };
