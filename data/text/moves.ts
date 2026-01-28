@@ -7610,4 +7610,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
 		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
 	},
+	soulsecretion: {
+		name: "Soul Secretion",
+		desc: "This move becomes a physical attack if the user's Attack is greater than its Special Attack, including stat stage changes.",
+		shortDesc: "Physical if user's Atk > Sp. Atk.",
+	},
 };

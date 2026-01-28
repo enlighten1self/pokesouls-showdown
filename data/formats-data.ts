@@ -6259,9 +6259,21 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
-	voltago: {
+	phroggeist: {
 		tier: "Illegal",
-		natDexTier: "Illegal",
+		natDexTier: "UU",
+	},
+	phroggeistyoseigo: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	phroggeistbushigo: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	phroggeistjimengo: {
+		tier: "Illegal",
+		natDexTier: "UU",
 	},
 	zytias: {
 		tier: "Illegal",

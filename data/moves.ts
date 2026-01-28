@@ -22329,4 +22329,48 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fighting",
 		contestType: "Tough",
 	},
+	soulsecretion: {
+		num: 1013,
+		accuracy: 95,
+		basePower: 100,
+		category: "Special",
+		name: "Soul Secretion",
+		pp: 10,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, dance: 1, metronome: 1 },
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[0];
+			if (type === "Bird") type = "???";
+			if (type === "Stellar") type = pokemon.getTypes(false, true)[0];
+			move.type = type;
+			if (move.type === "Fighting") {
+				move.accuracy = true;
+			}
+		},
+		onHit(target, source, move) {
+			switch (move.type) {
+				case "Electric":
+					if (this.randomChance(3, 10)) {
+						target.trySetStatus('par', source, move);
+					}
+					break;
+				case "Ground":
+					this.boost({ spe: -1 }, target, source, move);
+					break;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+			if (move.type === "Fairy") {
+				move.drain = [1, 2];
+			} else {
+				delete move.drain;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
+
 };
