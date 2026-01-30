@@ -6145,7 +6145,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	bellzong: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	plaguekrow: {
 		tier: "Illegal",
