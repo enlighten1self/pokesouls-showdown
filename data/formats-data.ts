@@ -6113,7 +6113,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	withordemega: {
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	caimanrago: {
 		tier: "Illegal",
