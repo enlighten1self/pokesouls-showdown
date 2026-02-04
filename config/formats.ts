@@ -143,6 +143,37 @@ export const Formats: FormatList = [
 		banlist: ["ND RU", "ND NUBL"],
 	},
 	{
+		name: "[Gen 9] LC",
+		mod: 'gen9',
+		ruleset: [
+			'Little Cup',
+			'Sleep Moves Clause',
+			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
+			"OHKO Clause",
+			"Evasion Clause",
+			"Species Clause",
+			"Terastal Clause",
+		],
+		banlist: [],
+	},
+	{
+		name: "[Gen 9] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen9',
+		ruleset: [
+			'Not Fully Evolved',
+			'Sleep Moves Clause',
+			"Standard NatDex",
+			"Baton Pass Stat Trap Clause",
+			"OHKO Clause",
+			"Evasion Clause",
+			"Species Clause",
+			"Terastal Clause",
+		],
+		banlist: [],
+	},
+	{
 		name: "[Gen 9] National Dex Monotype",
 		mod: "gen9",
 		ruleset: [

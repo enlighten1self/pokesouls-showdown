@@ -2144,7 +2144,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	torkoal: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "NU",
 	},
 	spoink: {
 		tier: "LC",
@@ -6161,7 +6161,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	spectoise: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	spectoisemega: {
 		tier: "Illegal",
