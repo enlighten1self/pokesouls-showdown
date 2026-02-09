@@ -421,7 +421,9 @@ export const Formats: FormatList = [
 			'Volcarona', 'Walking Wake', 'Weavile', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Arena Trap', 'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power',
 			'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Magnet Pull', 'Moody', 'Neutralizing Gas', 'Orichalcum Pulse', 'Parental Bond', 'Poison Heal', 'Pure Power',
 			'Shadow Tag', 'Simple', 'Speed Boost', 'Stakeout', 'Toxic Debris', 'Triage', 'Unburden', 'Water Bubble', 'Wonder Guard', 'King\'s Rock', 'Razor Fang', 'Baton Pass',
-			'Last Respects', 'Shed Tail', 
+			'Last Respects', 'Shed Tail', 'From Ashes', 'Masquerade', 'Apex Predator', 'As One (Withorde Mega)', 'Corrupted Spirit', 'Eclipse Flare', 'Scorn', 'Armored Poncho', 'Corruption',
+			'Stampede', 'Pure Flux', 'Antarctic Power', 'Neuro Engine', 'Abyssal Void', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervianite', 'Huesotops',
+			'Tricky Reception', 'Ultigigas',
 		],
 	},
 	//{
