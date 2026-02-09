@@ -517,6 +517,18 @@ export const Formats: FormatList = [
 			}
 		},
 	},
+	{
+		name: "[Gen 9] National Dex Tier Shift",
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/BUBL get +15, BU/RUBL get +20, RU/NUBL get +25, and NU or lower get +30.`,
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'Evasion Clause', 'Tier Shift Mod'],
+		banlist: [
+			'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
+			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Caimanragonite', 'Tempervianite', 
+			'Forroguite', 'Caimanragonite', 'Tricky Reception', 
+		],
+		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice'],
+	},
 	//{
 	//	name: "[Gen 9] Custom Game",
 	//	mod: 'gen9',

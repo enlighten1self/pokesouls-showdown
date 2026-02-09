@@ -2157,7 +2157,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 	tiershiftmod: {
 		effectType: "Rule",
 		name: "Tier Shift Mod",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL get +15, RU/NUBL get +20, NU/PUBL get +25, and PU or lower get +30.`,
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/BUBL get +15, BU/RUBL get +20, RU/NUBL get +25, and NU or lower get +30.`,
 		ruleset: ['Overflow Stat Mod'],
 		onBegin() {
 			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');
@@ -2166,16 +2166,18 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!species.baseStats) return;
 			const boosts: {[tier: string]: number} = {
 				uu: 15,
-				rubl: 15,
-				ru: 20,
-				nubl: 20,
-				nu: 25,
-				publ: 25,
-				pu: 30,
-				zubl: 30,
-				zu: 30,
-				nfe: 30,
-				lc: 30,
+				bubl: 15,
+				bu: 20,
+				rubl: 20,
+				ru: 25,
+				nubl: 25,
+				nu: 30,
+				publ: 30,
+				pu: 35,
+				zubl: 35,
+				zu: 35,
+				nfe: 35,
+				lc: 35,
 			};
 			const isNatDex: boolean = this.ruleTable.has("standardnatdex");
 			let tier: string = this.toID(isNatDex ? species.natDexTier : species.tier);
