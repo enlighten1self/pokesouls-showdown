@@ -455,7 +455,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex', 'Standard OMs', 'Evasion Items Clause', 'Evasion Abilities Clause', 'Sleep Moves Clause', 'Terastal Clause'],
 		banlist: [
 			'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Miraidon', 'Moody', 'Shadow Tag', 'Beedrillite', 'Blazikenite', 'Gengarite',
-			'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass',
+			'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite', 'Red Orb', 'Baton Pass', 'Rayquaza-Mega',
 			'Shed Tail', 'Tempervianite', 'Caimanragonite', 'Cereblazite', 'Forroguite', 'Tricky Reception',
 		],
 		restricted: [
