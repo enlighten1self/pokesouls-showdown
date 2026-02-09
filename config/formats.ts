@@ -527,6 +527,7 @@ export const Formats: FormatList = [
 			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite', 
 			'Tricky Reception', 
 		],
+		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice'],
 	},
 	//{
 	//	name: "[Gen 9] Custom Game",
