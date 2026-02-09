@@ -386,11 +386,18 @@ export const commands: Chat.ChatCommands = {
 		this.runBroadcast();
 		const targetGen = parseInt(cmd[cmd.length - 1]);
 		if (targetGen && !args[1]) args[1] = `gen${targetGen}`;
-		let dex = Dex;
+		let dex: ModdedDex;
+		// 1) Explicit generation argument
 		if (args[1] && toID(args[1]) in Dex.dexes) {
-			const format = Dex.formats.get('gen9nationaldex');
-			dex = Dex.mod(format.mod);
+			dex = Dex.dexes[toID(args[1])];
+		
+		// 2) If in a room, respect its format
 		} else if (room?.battle) {
+			const format = Dex.formats.get(room.battle.format);
+			dex = Dex.mod(format.mod);
+		
+		// 3) Fallback: Gen 9 National Dex
+		} else {
 			const format = Dex.formats.get('gen9nationaldex');
 			dex = Dex.mod(format.mod);
 		}
