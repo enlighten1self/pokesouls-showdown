@@ -405,7 +405,7 @@ export const commands: Chat.ChatCommands = {
 		const natdexFormat = Dex.formats.get('gen9nationaldex');
 		const natdexDex = Dex.mod(natdexFormat.mod);
 		const natdexSpecies = natdexDex.species.get(species.id);
-		if (natdexSpecies?.tier) species.tier = natdexSpecies.tier;
+		if (natdexSpecies?.natDexTier) species.tier = natdexSpecies.natDexTier;
 	
 		if (!species.exists || species.gen > dex.gen) {
 			const monName = species.gen > dex.gen ? species.name : args[0].trim();
