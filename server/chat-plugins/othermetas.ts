@@ -384,29 +384,35 @@ export const commands: Chat.ChatCommands = {
 		const args = target.split(',');
 		if (!toID(args[0])) return this.parse('/help tiershift');
 		this.runBroadcast();
+		
 		const targetGen = parseInt(cmd[cmd.length - 1]);
 		if (targetGen && !args[1]) args[1] = `gen${targetGen}`;
+		
 		let dex: ModdedDex;
-		// 1) Explicit generation argument
 		if (args[1] && toID(args[1]) in Dex.dexes) {
 			dex = Dex.dexes[toID(args[1])];
-		
-		// 2) If in a room, respect its format
 		} else if (room?.battle) {
 			const format = Dex.formats.get(room.battle.format);
 			dex = Dex.mod(format.mod);
-		
-		// 3) Fallback: Gen 9 National Dex
 		} else {
 			const format = Dex.formats.get('gen9nationaldex');
 			dex = Dex.mod(format.mod);
 		}
+	
 		const species = Utils.deepClone(dex.species.get(args[0]));
+	
+		// force Gen 9 National Dex tiering
+		const natdexFormat = Dex.formats.get('gen9nationaldex');
+		const natdexDex = Dex.mod(natdexFormat.mod);
+		const natdexSpecies = natdexDex.species.get(species.id);
+		if (natdexSpecies?.tier) species.tier = natdexSpecies.tier;
+	
 		if (!species.exists || species.gen > dex.gen) {
 			const monName = species.gen > dex.gen ? species.name : args[0].trim();
 			const additionalReason = species.gen > dex.gen ? ` in Generation ${dex.gen}` : ``;
-			throw new Chat.ErrorMessage(`Error: Pok\u00e9mon '${monName}' not found${additionalReason}.`);
+			throw new Chat.ErrorMessage(`Error: Pokémon '${monName}' not found${additionalReason}.`);
 		}
+	
 		const boosts: {[tier in TierShiftTiers]: number} = {
 			UU: 15,
 			BUBL: 15,
@@ -422,26 +428,38 @@ export const commands: Chat.ChatCommands = {
 			NFE: 35,
 			LC: 35,
 		};
+	
 		if (dex.gen < 9) {
-			boosts['UU'] = boosts['BUBL'] = 10;
-			boosts['BU'] = boosts['RUBL'] = 20;
-			boosts['RU'] = boosts['NUBL'] = 20;
-			boosts['NU'] = boosts['PUBL'] = 30;
-			boosts['PU'] = boosts['NFE'] = boosts['LC'] = 40;
+			boosts.UU = boosts.BUBL = 10;
+			boosts.BU = boosts.RUBL = 20;
+			boosts.RU = boosts.NUBL = 20;
+			boosts.NU = boosts.PUBL = 30;
+			boosts.PU = boosts.NFE = boosts.LC = 40;
 		}
+	
 		let tier = species.tier;
-		if (tier[0] === '(') tier = tier.slice(1, -1);
-		if (!(tier in boosts)) return this.sendReply(`|html|${Chat.getDataPokemonHTML(species, dex.gen)}`);
+		if (tier?.startsWith('(')) tier = tier.slice(1, -1);
+		if (!(tier in boosts)) {
+			return this.sendReply(`|html|${Chat.getDataPokemonHTML(species, dex.gen)}`);
+		}
+	
 		const boost = boosts[tier as TierShiftTiers];
 		species.bst = species.baseStats.hp;
-		for (const statName in species.baseStats) {
-			if (statName === 'hp') continue;
-			if (dex.gen === 1 && statName === 'spd') continue;
-			species.baseStats[statName] = Utils.clampIntRange(species.baseStats[statName] + boost, 1, 255);
-			species.bst += species.baseStats[statName];
+	
+		for (const stat in species.baseStats) {
+			if (stat === 'hp') continue;
+			if (dex.gen === 1 && stat === 'spd') continue;
+			species.baseStats[stat] = Utils.clampIntRange(
+				species.baseStats[stat] + boost,
+				1,
+				255
+			);
+			species.bst += species.baseStats[stat];
 		}
+	
 		this.sendReply(`|raw|${Chat.getDataPokemonHTML(species, dex.gen)}`);
 	},
+
 	tiershifthelp: [
 		`/ts OR /tiershift <pokemon>[, generation] - Shows the base stats that a Pok\u00e9mon would have in Tier Shift.`,
 		`Alternatively, you can use /ts[gen number] to see a Pok\u00e9mon's stats in that generation.`,
