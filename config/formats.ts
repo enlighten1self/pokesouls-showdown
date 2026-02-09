@@ -525,9 +525,9 @@ export const Formats: FormatList = [
 		banlist: [
 			'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
 			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite', 
-			'Tricky Reception', 'Assist', 'Rayquaza-Mega', 'Gengar-Mega',
+			'Tricky Reception', 'Assist', 'Rayquaza', 'Gengar-Mega', 'Red Orb', 'Blazikenite', 'Celebrate', 'Happy Hour', 'Diggersby', 
 		],
-		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice'],
+		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice', 'Rayquaza-Base'],
 	},
 	//{
 	//	name: "[Gen 9] Custom Game",
