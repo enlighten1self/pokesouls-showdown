@@ -525,7 +525,7 @@ export const Formats: FormatList = [
 		banlist: [
 			'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
 			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite', 
-			'Tricky Reception', 
+			'Tricky Reception', 'Assist', 'Rayquaza-Mega', 'Gengar-Mega',
 		],
 		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice'],
 	},
