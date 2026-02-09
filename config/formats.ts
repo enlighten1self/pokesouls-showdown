@@ -423,7 +423,7 @@ export const Formats: FormatList = [
 			'Shadow Tag', 'Simple', 'Speed Boost', 'Stakeout', 'Toxic Debris', 'Triage', 'Unburden', 'Water Bubble', 'Wonder Guard', 'King\'s Rock', 'Razor Fang', 'Baton Pass',
 			'Last Respects', 'Shed Tail', 'From Ashes', 'Masquerade', 'Apex Predator', 'As One (Withorde Mega)', 'Corrupted Spirit', 'Eclipse Flare', 'Scorn', 'Armored Poncho', 'Corruption',
 			'Stampede', 'Pure Flux', 'Antarctic Power', 'Neuro Engine', 'Abyssal Void', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervianite', 'Huesotops',
-			'Tricky Reception', 'Ultigigas',
+			'Tricky Reception', 'Ultigigas', "Zygarde-Base", "Zygarde-Complete",
 		],
 	},
 	//{
