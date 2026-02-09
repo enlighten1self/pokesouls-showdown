@@ -386,12 +386,13 @@ export const commands: Chat.ChatCommands = {
 		this.runBroadcast();
 		const targetGen = parseInt(cmd[cmd.length - 1]);
 		if (targetGen && !args[1]) args[1] = `gen${targetGen}`;
-		let dex = Dex.mod('natdex');
+		let dex = Dex;
 		if (args[1] && toID(args[1]) in Dex.dexes) {
-			dex = Dex.dexes[toID(args[1])];
+			const format = Dex.formats.get('gen9nationaldex');
+			dex = Dex.mod(format.mod);
 		} else if (room?.battle) {
-			const format = Dex.formats.get(room.battle.format);
-			dex = Dex.mod(format.mod || 'natdex');
+			const format = Dex.formats.get('gen9nationaldex');
+			dex = Dex.mod(format.mod);
 		}
 		const species = Utils.deepClone(dex.species.get(args[0]));
 		if (!species.exists || species.gen > dex.gen) {
