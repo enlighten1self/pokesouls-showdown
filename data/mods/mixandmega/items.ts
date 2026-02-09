@@ -306,4 +306,96 @@ export const Items: {[k: string]: ModdedItemData} = {
 		},
 		onTakeItem: false,
 	},
+	chocopertite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	typhteslatite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	dorderrite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	withordite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	atlascrossite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	taurosite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	taurositeblaze: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	taurositeaqua: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	taurositecombat: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	despharosite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ghoulizardite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	pumpkasaurite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	spectoisite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	crystalixite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	zapoleonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	geyseruptite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	frostikenite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	milotite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	forroguite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	caimanragonite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wyrmperionite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	cereblazite: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	tempervianite: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
