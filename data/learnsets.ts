@@ -101436,7 +101436,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			shadowclaw: ["9M", "8M", "7M", "6M", "5M", "5S3", "4M"],
 			sleeptalk: ["9M", "8M", "7M", "6M", "5T", "4M"],
 			snore: ["8M", "7T", "6T", "5T", "4T"],
-			steelbeam: ["9M", "8T", "8S6"],
 			stoneedge: ["9M", "8M", "7M", "6M", "5M", "5S3", "4M"],
 			strength: ["6M", "5M", "4M"],
 			substitute: ["9M", "8M", "7M", "6M", "5M", "4M"],
@@ -102480,7 +102479,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			snore: ["7T", "6T", "5T", "4T"],
 			snowscape: ["9M"],
 			stealthrock: ["9M", "7T", "6T", "5T", "4M"],
-			steelbeam: ["9M"],
 			steelwing: ["7M", "6M", "4M"],
 			strength: ["6M", "5M", "4M"],
 			substitute: ["9M", "7M", "6M", "5M", "4M"],
@@ -102729,6 +102727,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	automeon: {
 		learnset: {
+			steelbeam: ["9M"],
 			voltswitch: ["9M"],
 			wildcharge: ["9M"], 
 			encore: ["9M"], 
@@ -103030,7 +103029,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			sleeptalk: ["9M"],
 			outrage: ["9M"],
 			thunderbolt: ["9M"],
-			steelbeam: ["9M"],
 			acidarmor: ["9M"],
 			shadowclaw: ["9M"],
 			stealthrock: ["9M"],
@@ -103953,6 +103951,23 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	wyrmperior: {
 		learnset: {
+			fireblast: ["9M"],
+			firelash: ["9M"],
+			flamecharge: ["9M"],
+			flamethrower: ["9M"],
+			flareblitz: ["9M"],
+			heatwave: ["9M"],
+			burningjealousy: ["9M"],
+			ember: ["9M"],
+			flameburst: ["9M"],
+			incinerate: ["9M"],
+			temperflare: ["9M"],
+			dragoncheer: ["9M"],
+			dragonrush: ["9M"],
+			inferno: ["9M"],
+			blastburn: ["9M"],
+			firepledge: ["9M"],
+			firespin: ["9M"],
 			willowisp: ["9M"],
 			morningsun: ["9M"],
 			dragondance: ["9M"],
@@ -106575,6 +106590,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	titaniumdelta: {
 		learnset: {
+			steelbeam: ["9M"],
 			flashcannon: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "8M"],
@@ -106710,6 +106726,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	quantumsyphon: {
 		learnset: {
+			steelbeam: ["9M"],
 			superpower: ["9M"],
 			flipturn: ["9M"],
 			icepunch: ["9M"],
