@@ -415,16 +415,17 @@ export const Formats: FormatList = [
 		ruleset: ["Standard NatDex", 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause',],
 		banlist: [
 			'Annihilape', 'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 
-			'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", "From Ashes", "Masquerade", 
-			'Apex Predator', "As One (Withorde Mega)", "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", "Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", "Frostiken-Mega", 
-			"Tempervianite", "Tricky Reception", "Zygarde-Base", "Zygarde-Complete", "Intrepid Sword", "Hadron Engine", "Rising Voltage", "Wyrmperior-Mega"
+			'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", 
+			"Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", "Frostiken-Mega", "Tempervianite", "Tricky Reception", "Zygarde-Base", "Zygarde-Complete", "Rising Voltage", 
+			"Wyrmperior-Mega", "Speed Boost", "Gorilla Tactics"
 		],
 		restricted : [
 			'Ceruledge', 'Darkrai', 'Dragonite', 'Gouging Fire', 'Hoopa-Unbound', 'Iron Valiant', 'Keldeo', 'Noivern', 'Regigigas', 'Slaking', 'Sneasler', 'Urshifu-Rapid-Strike', 'Volcarona', 
 			'Walking Wake', 'Weavile', 'Melmetal', 'Ultigigas', 'Magic Bounce', "Magnet Pull", "Innards Out", "Neutralizing Gas", "Poison Heal", "Simple", "Stakeout", "Toxic Debris", 
 			"Triage", "Unburden", "Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Huesotops", "Fur Coat", "Good as Gold", 
 			'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base",
-			'Solgaleo', 'Kyurem', 
+			'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", 'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", 
+			"Intrepid Sword", "Parental Bond", "Orichalcum Pulse"
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
