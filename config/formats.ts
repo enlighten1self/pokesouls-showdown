@@ -431,17 +431,23 @@ export const Formats: FormatList = [
 				const species = this.dex.species.get(set.species);
 				const ability = this.dex.abilities.get(set.ability);
 			
-				if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
-					return [
-						`"${ability.name}" is restricted from being used by any Pokémon.`,
-					];
-				} else if (
-					this.ruleTable.isRestrictedSpecies(species) &&
-					!species.abilities?.[0] &&
-					!Object.values(species.abilities).includes(ability.name)
+				const naturalAbilities = Object.values(species.abilities || {}).filter(Boolean);
+			
+				if (
+					this.ruleTable.isRestricted(`ability:${ability.id}`) &&
+					!naturalAbilities.includes(ability.name)
 				) {
 					return [
-						`"${species.name}" is restricted from using abilities it does not normally have.`,
+						`"${ability.name}" is restricted and may only be used by Pokémon that naturally have it.`,
+					];
+				}
+			
+				if (
+					this.ruleTable.isRestrictedSpecies(species) &&
+					!naturalAbilities.includes(ability.name)
+				) {
+					return [
+						`"${species.name}" is restricted and may only use its natural abilities.`,
 					];
 				}
 			}
