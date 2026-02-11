@@ -435,9 +435,7 @@ export const Formats: FormatList = [
 					return [
 						`"${ability.name}" is restricted from being used by any Pokémon.`,
 					];
-				}
-			
-				if (
+				} else if (
 					this.ruleTable.isRestrictedSpecies(species) &&
 					!species.abilities?.[0] &&
 					!Object.values(species.abilities).includes(ability.name)
