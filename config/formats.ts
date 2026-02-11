@@ -412,12 +412,10 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex AAA",
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'gen9',
-		ruleset: ["Standard NatDex", 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause'],
+		ruleset: ["Standard NatDex", 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause',],
 		banlist: [
 			'Annihilape', 'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 
-			'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 
-			'Necrozma-Dusk-Mane', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Reshiram', 'Shaymin-Sky', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Arena Trap', 'Gorilla Tactics', 'Moody', 
-			'Orichalcum Pulse', 'Parental Bond', 'Pure Power', 'Shadow Tag', 'Speed Boost', 'King\'s Rock', 'Razor Fang', 'Baton Pass', "Last Respects", "Shed Tail", "From Ashes", "Masquerade", 
+			'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", "From Ashes", "Masquerade", 
 			'Apex Predator', "As One (Withorde Mega)", "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", "Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", "Frostiken-Mega", 
 			"Tempervianite", "Tricky Reception", "Zygarde-Base", "Zygarde-Complete", "Intrepid Sword", "Hadron Engine", "Rising Voltage", "Wyrmperior-Mega"
 		],
@@ -428,6 +426,28 @@ export const Formats: FormatList = [
 			'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base",
 			'Solgaleo', 'Kyurem', 
 		],
+		onValidateTeam(team, format) {
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				const ability = this.dex.abilities.get(set.ability);
+			
+				if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
+					return [
+						`"${ability.name}" is restricted from being used by any Pokémon.`,
+					];
+				}
+			
+				if (
+					this.ruleTable.isRestrictedSpecies(species) &&
+					!species.abilities?.[0] &&
+					!Object.values(species.abilities).includes(ability.name)
+				) {
+					return [
+						`"${species.name}" is restricted from using abilities it does not normally have.`,
+					];
+				}
+			}
+		}
 	},
 	{
 		name: "[Gen 9] National Dex STABmons",
