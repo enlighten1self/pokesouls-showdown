@@ -414,10 +414,12 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ["Standard NatDex", 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause',],
 		banlist: [
-			'Annihilape', 'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 
+			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 
 			'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", 
 			"Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", "Frostiken-Mega", "Tempervianite", "Tricky Reception", "Zygarde-Base", "Zygarde-Complete", "Rising Voltage", 
-			"Wyrmperior-Mega", "Speed Boost", "Gorilla Tactics"
+			"Wyrmperior-Mega", "Speed Boost", "Gorilla Tactics", "Alakazam-Mega", "Blastoise-Mega", "Blaziken-Mega", "Dracovish", "Genesect", "Kangaskhan-Mega", "Lucario-Mega",
+			"Marshadow", "Necrozma-Dusk-Mane", "Necrozma-Dawn-Wings", "Palkia", "Salamence-Mega", "Shaymin-Sky", "Xerneas", "Yveltal", "Zekrom", "Miraidon", "Zacian", "Rayquaza", 
+			"Gengar-Mega", "Shadow Tag"
 		],
 		restricted : [
 			'Ceruledge', 'Darkrai', 'Dragonite', 'Gouging Fire', 'Hoopa-Unbound', 'Iron Valiant', 'Keldeo', 'Noivern', 'Regigigas', 'Slaking', 'Sneasler', 'Urshifu-Rapid-Strike', 'Volcarona', 
@@ -425,7 +427,7 @@ export const Formats: FormatList = [
 			"Triage", "Unburden", "Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Huesotops", "Fur Coat", "Good as Gold", 
 			'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base",
 			'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", 'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", 
-			"Intrepid Sword", "Parental Bond", "Orichalcum Pulse"
+			"Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", "Ursaluna-Bloodmoon", "Baxcalibur", "Naganadel",
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
