@@ -414,19 +414,19 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ["Standard NatDex", 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Terastal Clause',],
 		banlist: [
-			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 
-			'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", "Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", 
-			"Frostiken-Mega", "Tempervianite", "Tricky Reception", "Zygarde-Base", "Zygarde-Complete", "Rising Voltage", "Wyrmperior-Mega", "Speed Boost", "Gorilla Tactics", "Alakazam-Mega", 
-			"Blastoise-Mega", "Blaziken-Mega", "Dracovish", "Kangaskhan-Mega", "Lucario-Mega", "Marshadow", "Necrozma-Dusk-Mane", "Necrozma-Dawn-Wings", "Palkia", "Salamence-Mega", "Shaymin-Sky", 
-			"Xerneas", "Yveltal", "Zekrom", "Miraidon", "Zacian", "Rayquaza", "Gengar-Mega", "Shadow Tag"
+			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 
+			'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", "Caimanrago-Mega", "Cereblaze-Mega", "Forrogue-Mega", "Frostiken-Mega", 
+			"Tempervianite", "Tricky Reception", "Rising Voltage", "Wyrmperior-Mega", "Speed Boost", "Gorilla Tactics", "Alakazam-Mega", "Blastoise-Mega", "Blaziken-Mega", "Dracovish", "Kangaskhan-Mega", 
+			"Lucario-Mega", "Marshadow", "Necrozma-Dusk-Mane", "Necrozma-Dawn-Wings", "Palkia", "Salamence-Mega", "Shaymin-Sky", "Xerneas", "Yveltal", "Zekrom", "Miraidon", "Zacian", "Rayquaza", "Gengar-Mega", 
+			"Shadow Tag", "Power Construct"
 		],
 		restricted : [
 			'Ceruledge', 'Darkrai', 'Dragonite', 'Gouging Fire', 'Hoopa-Unbound', 'Iron Valiant', 'Keldeo', 'Noivern', 'Regigigas', 'Slaking', 'Sneasler', 'Urshifu-Rapid-Strike', 'Volcarona', 
 			'Walking Wake', 'Weavile', 'Melmetal', 'Ultigigas', 'Magic Bounce', "Magnet Pull", "Innards Out", "Neutralizing Gas", "Poison Heal", "Simple", "Stakeout", "Toxic Debris", "Triage", "Unburden", 
-			"Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Huesotops", "Fur Coat", "Good as Gold", 'Comatose', 'Contrary', 'Ice Scales', 
-			'Illusion', 'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base", 'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", 
-			"Scorn", "Neuro Engine", 'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", "Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", 
-			"Ursaluna-Bloodmoon", "Baxcalibur", "Naganadel", "Genesect", 
+			"Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Huesotops", "Fur Coat", "Good as Gold", 'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 
+			'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base", 'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", 
+			"Neuro Engine", 'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", "Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", "Ursaluna-Bloodmoon", 
+			"Baxcalibur", "Naganadel", "Genesect", "Zygarde-Base",
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
@@ -469,12 +469,12 @@ export const Formats: FormatList = [
 			'Ursaluna-Bloodmoon', 'Urshifu-Single-Strike', 'Walking Wake', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Zoroark-Hisui',
 			'Zygarde-50%', 'Arena Trap', 'Moody', 'Shadow Tag', 'Power Construct', 'Damp Rock', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Last Respects',
 			'Shed Tail', 'Wicked Blow', 'Wicked Torque', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervianite', 'Huesotops', 
-			'Ultigigas', 'Wyrmperior', 'Tricky Reception',
+			'Ultigigas', 'Wyrmperior', 'Tricky Reception', 'Stratozone',
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed',
 			'Fillet Away', 'Final Gambit', 'Fishious Rend', 'Geomancy', 'Gigaton Hammer', 'No Retreat', 'Rage Fist', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Thousand Arrows',
-			'Trick-or-Treat', 'Triple Arrows', 'V-create', 'Victory Dance', 'Spectral Tail', 'Davy Smash', 'Photon Haymaker', 'Endless Torment'
+			'Trick-or-Treat', 'Triple Arrows', 'V-create', 'Victory Dance', 'Spectral Tail', 'Davy Smash', 'Photon Haymaker', 'Endless Torment', 'Torch Song'
 		],
 	},
 	{
