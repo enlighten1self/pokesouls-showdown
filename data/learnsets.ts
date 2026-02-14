@@ -99609,6 +99609,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chocokip: {
 		learnset: {
+			moonblast: ["9M"],
+			dazzlinggleam: ["9M"],
 			amnesia: ["9M", "9L27", "8M", "8L27"],
 			ancientpower: ["9E", "8E", "7E", "6E", "5E", "4T", "4E"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -99705,6 +99707,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chocotomp: {
 		learnset: {
+			moonblast: ["9M"],
+			dazzlinggleam: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -99801,6 +99805,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chocopert: {
 		learnset: {
+			moonblast: ["9M"],
+			dazzlinggleam: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
