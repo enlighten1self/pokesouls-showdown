@@ -20230,7 +20230,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -10020,
 		name: "Plaguekrow",
 		types: ["Dark", "Poison"],
-		baseStats: {hp: 100, atk: 110, def: 95, spa: 60, spd: 65, spe: 65},
+		baseStats: {hp: 100, atk: 110, def: 100, spa: 60, spd: 75, spe: 88},
 		abilities: {0: "Poison Touch", 1: "Power Of Alchemy", H: "Neutralizing Gas"},
 		heightm: 0.9,
 		weightkg: 27.3,
