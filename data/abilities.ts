@@ -6155,4 +6155,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4.5,
 		num: 289,
 	},
+	restorativefilm: {
+		onResidual(pokemon) {
+			this.heal(pokemon.baseMaxhp / 16);
+		},
+		flags: {},
+		name: "Restorative Film",
+		rating: 2.5,
+		num: -14,
+	},
 };

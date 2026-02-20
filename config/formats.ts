@@ -147,7 +147,9 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Little Cup'],
 		banlist: [
-			'Moody', 'Eevium Z', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Dragon Rage', 'Sonic Boom',
+			'Moody', 'Eevium Z', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Gligar', 'Basculin-White-Striped', 'Duraludon',
+			'Aipom', 'Bronzor-Solarian', 'Cutiefly', 'Diglett-Base', 'Dunsparce', 'Flittle', 'Girafarig', 'Kubfu', 'Meditite', 'Misdreavus', 'Mr. Mime-Galar', 'Murkrow', 'Poipole',
+			'Porygon', 'Qwilfish-Hisui', 'Rufflet', 'Scraggy', 'Type: Null', 'Vulpix-Alola', 'Yanma', 'Belly Drum', 'Chlorophyll', 'Gemix', 'Voltorb-Hisui'
 		],
 	},
 	{

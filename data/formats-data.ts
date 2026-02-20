@@ -608,7 +608,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rapidashgalar: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "NFE",
 	},
 	slowpoke: {
 		tier: "LC",
@@ -720,7 +720,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gengar: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BUBL",
+		natDexTier: "BU",
 	},
 	gengarmega: {
 		isNonstandard: "Past",
@@ -1306,7 +1306,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	noctowl: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NFE",
 	},
 	ledyba: {
 		isNonstandard: "Past",
@@ -1447,7 +1447,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	honchkrow: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NFE",
 	},
 	misdreavus: {
 		tier: "ZU",
@@ -1633,7 +1633,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	delibird: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "LC",
 	},
 	mantyke: {
 		isNonstandard: "Past",
@@ -3218,6 +3218,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
 	},
+	basculinwhitestriped: {
+		tier: "PU",
+		doublesTier: "(DUU)",
+		natDexTier: "NFE",
+	},
 	basculegion: {
 		tier: "NU",
 		doublesTier: "DUber",
@@ -4621,7 +4626,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	meltan: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "LC",
 	},
 	melmetal: {
 		isNonstandard: "Past",
@@ -4814,7 +4819,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dipplin: {
 		tier: "PU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NFE",
 	},
 	silicobra: {
 		tier: "LC",
@@ -5009,7 +5014,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	duraludon: {
 		tier: "NU",
 		doublesTier: "NFE",
-		natDexTier: "NU",
+		natDexTier: "NFE",
 	},
 	duraludongmax: {
 		isNonstandard: "Past",

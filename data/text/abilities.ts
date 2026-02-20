@@ -2364,4 +2364,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  [POKEMON] turned the ground into Psychic Terrain, energizing its eligance!",
 		activate: "  [POKEMON] used the Psychic Terrain to energize its eligance!",
 	},
+	restorativefilm: {
+		name: "Restorative Film",
+		desc: "This Pokemon gains 1/16 HP per turn.",
+	},
 };
