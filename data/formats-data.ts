@@ -2460,7 +2460,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	latiosmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	kyogre: {
 		tier: "Uber",
@@ -4561,7 +4561,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kartana: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UUBL",
 	},
 	guzzlord: {
 		isNonstandard: "Past",
@@ -5380,7 +5380,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	glimmora: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	shroodle: {
 		tier: "LC",
@@ -5645,7 +5645,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ragingbolt: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "OU",
+		natDexTier: "UUBL",
 	},
 	ironboulder: {
 		tier: "OU",
@@ -6062,7 +6062,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	chocopertmega: {
 		tier: "Illegal",
-		natDexTier: "(OU)",
+		natDexTier: "OU",
 	},
 	turtaya: {
 		tier: "Illegal",
@@ -6198,11 +6198,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	zapoleonmega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "(OU)",
 	},
 	frostiken: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	frostikenmega: {
 		tier: "Illegal",
@@ -6302,7 +6302,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	zeranheit: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	tempervian: {
 		tier: "Illegal",
