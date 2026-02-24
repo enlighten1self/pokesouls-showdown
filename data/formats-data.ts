@@ -5412,7 +5412,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	brambleghast: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NU", 
 	},
 	gimmighoul: {
 		tier: "LC",
@@ -5423,7 +5423,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gholdengo: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	greattusk: {
 		tier: "OU",

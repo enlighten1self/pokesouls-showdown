@@ -427,7 +427,7 @@ export const Formats: FormatList = [
 			"Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Huesotops", "Fur Coat", "Good as Gold", 'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 
 			'Imposter', 'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base", 'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", 
 			"Neuro Engine", 'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", "Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", "Ursaluna-Bloodmoon", 
-			"Baxcalibur", "Naganadel", "Genesect", "Zygarde-Base",
+			"Baxcalibur", "Naganadel", "Genesect", "Zygarde-Base", "Pheromosa", "Tectonic Shift"
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
@@ -559,6 +559,25 @@ export const Formats: FormatList = [
 			'Tricky Reception', 'Assist', 'Rayquaza-Mega', 'Gengar-Mega', 'Red Orb', 'Blazikenite', 'Celebrate', 'Happy Hour', 'Diggersby', 
 		],
 		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice', 'Arceus-Electric', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Flying', 'Arceus-Dragon', 'Arceus-Fighting', ],
+	},
+	{
+		name: "[Gen 9] National Dex Convergence",
+		desc: `Allows all Pok&eacute;mon that have identical types to share moves and abilities.`,
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', 'Ability Clause = 2', 'Sleep Moves Clause', 'Convergence Legality', 'Terastal Clause', '!Obtainable Abilities'],
+		banlist: [
+			'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Comfey', 'Darkrai', 'Deoxys-Normal', 'Deoxys-Attack', 'Deoxys-Speed',
+			'Dialga', 'Dialga-Origin', 'Dondozo', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 'Haxorus', 'Ho-oh', 'Inteleon',
+			'Iron Bundle', 'Iron Hands', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Incarnate', 'Lilligant-Hisui', 'Lugia', 'Lunala',
+			'Magearna', 'Manaphy', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin',
+			'Porygon-Z', 'Primarina', 'Rayquaza', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Shaymin-Sky', 'Solgaleo', 'Slaking', 'Smeargle', 'Sneasler',
+			'Spectrier', 'Umbreon', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Walking Wake', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned',
+			'Zekrom', 'Arena Trap', 'Comatose', 'Contrary', 'Drizzle', 'Drought', 'Imposter', 'Moody', 'Pure Power', 'Shadow Tag', 'Speed Boost', 'Unburden',
+			'King\'s Rock', 'Light Clay', 'Razor Fang', 'Baton Pass', 'Belly Drum', 'Boomburst', 'Extreme Speed', 'Final Gambit', 'Last Respects', 'Population Bomb',
+			'Quiver Dance', 'Rage Fist', 'Shed Tail', 'Shell Smash', 'Transform', 'Assist', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite',
+			'Tricky Reception', 'Gengarite', 'Alakazite', 'Blastoisinite', 'Blazikenite', 'Cereblazite', 'Frostikenite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
+			'Wyrmperionite', 'Yveltal', 'Darmanitan-Galar', 'Fishious Rend', 'Bolt Beak', 'Victory Dance', 'Geomancy', 'Hydro Steam', 'No Retreat'
+		],
 	},
 	//{
 	//	name: "[Gen 9] Custom Game",
