@@ -21222,7 +21222,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Fairy", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 145, atk: 83, def: 70, spa: 108, spd: 79, spe: 105},
-		abilities: {0: "Restorative Film"},
+		abilities: {0: "Regenerative"},
 		heightm: 2.4,
 		weightkg: 66,
 		color: "Pink",

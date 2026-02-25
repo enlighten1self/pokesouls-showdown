@@ -576,10 +576,10 @@ export const Formats: FormatList = [
 			'King\'s Rock', 'Light Clay', 'Razor Fang', 'Baton Pass', 'Belly Drum', 'Boomburst', 'Extreme Speed', 'Final Gambit', 'Last Respects', 'Population Bomb',
 			'Quiver Dance', 'Rage Fist', 'Shed Tail', 'Shell Smash', 'Transform', 'Assist', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite',
 			'Tricky Reception', 'Gengarite', 'Alakazite', 'Blastoisinite', 'Blazikenite', 'Cereblazite', 'Frostikenite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
-			'Wyrmperionite', 'Yveltal', 'Darmanitan-Galar', 'Fishious Rend', 'Bolt Beak', 'Victory Dance', 'Geomancy', 'Hydro Steam', 'No Retreat', 'Huge Power',
+			'Wyrmperionite', 'Yveltal', 'Darmanitan-Galar', 'Fishious Rend', 'Bolt Beak', 'Victory Dance', 'Geomancy', 'No Retreat', 'Huge Power',
 			'Garchomp', 'Dragapult', 'Mawilite', 'Light of Ruin', 'Rising Voltage', 'Gouging Fire', 'Abyssal Void', 'Bulking Blade', 'Tail Glow', 'Tough Claws', 'Celebrate',
 			'Happy Hour', 'Conversion', 'Protean', 'Adaptability', 'Furfrou', 'Blissey', 'Chansey', 'Moltres-Galar', 'Iron Jugulis', 'Dire Claw', 'Mew', 'Iron Boulder',
-			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart'
+			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base'
 		],
 	},
 	//{
