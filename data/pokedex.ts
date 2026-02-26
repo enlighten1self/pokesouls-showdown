@@ -3149,6 +3149,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 40.5,
 		color: "Brown",
 		prevo: "Kabuto",
+		evos: ["Huesotops"],
 		evoLevel: 40,
 		eggGroups: ["Water 1", "Water 3"],
 	},
@@ -20900,6 +20901,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 3,
 		weightkg: 1590.8,
 		color: "Gray",
+		prevo: "kabutops",
 		eggGroups: ["Undiscovered"],
 	},
 	despharos: {
