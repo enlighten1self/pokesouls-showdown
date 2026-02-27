@@ -3782,6 +3782,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
+	chesnaughtmega: {
+		tier: "NU",
+		doublesTier: "(DUU)",
+		natDexTier: "OU",
+	},
 	fennekin: {
 		tier: "LC",
 	},
@@ -3792,6 +3797,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
+	},
+	delphoxmega: {
+		tier: "NU",
+		doublesTier: "(DUU)",
+		natDexTier: "OU",
 	},
 	froakie: {
 		tier: "LC",
@@ -3814,6 +3824,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	greninjaash: {
 		isNonstandard: "Past",
 		tier: "Illegal",
+	},
+	greninjamega: {
+		tier: "UU",
+		doublesTier: "DUU",
+		natDexTier: "OU",
 	},
 	bunnelby: {
 		isNonstandard: "Past",

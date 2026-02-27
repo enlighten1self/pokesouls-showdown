@@ -7941,4 +7941,43 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10022,
 		gen: 9
 	},
+	chesnaughtite: {
+		name: "Chesnaughtite",
+		spritenum: 782,
+		megaStone: "Chesnaught-Mega",
+		megaEvolves: "Chesnaught",
+		itemUser: ["Chesnaught"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10023,
+		gen: 9
+	},
+	delphoxite: {
+		name: "Delphoxite",
+		spritenum: 783,
+		megaStone: "Delphox-Mega",
+		megaEvolves: "Delphox",
+		itemUser: ["Delphox"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10024,
+		gen: 9
+	},
+	greninjite: {
+		name: "Greninjite",
+		spritenum: 784,
+		megaStone: "Greninja-Mega",
+		megaEvolves: "Greninja",
+		itemUser: ["Greninja"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10025,
+		gen: 9
+	},
 };
