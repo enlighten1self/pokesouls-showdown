@@ -819,12 +819,11 @@ export class RoomBattle extends RoomGame<RoomBattlePlayer> {
 	end(winnerName: unknown) {
 		if (this.ended) return;
 		this.setEnded();
+		this.checkActive();
+		this.timer.end();
 		// Declare variables here in case we need them for non-rated battles logging.
 		let p1score = 0.5;
 		const winnerid = toID(winnerName);
-
-		// Bot check
-		const valid = Rooms.global.checkId(this.p1.id) && Rooms.global.checkId(this.p2.id);
 
 		// Check if the battle was rated to update the ladder, return its response, and log the battle.
 		const p1name = this.p1.name;
@@ -846,7 +845,7 @@ export class RoomBattle extends RoomGame<RoomBattlePlayer> {
 		Chat.runHandlers('onBattleEnd', this, winnerid, this.players.map(p => p.id));
 		if (this.room.rated && !this.options.isBestOfSubBattle) {
 			void this.updateLadder(p1score, winnerid);
-		} else if (Config.logchallenges && !this.room.settings.isPrivate && !this.room.hideReplay && valid) {
+		} else if (Config.logchallenges) {
 			void this.logBattle(p1score);
 			const uploader = Users.get(winnerid || this.p1.id);
 			if (uploader?.connections[0]) {
