@@ -176,10 +176,10 @@ Y929lRybWEiKUr+4Yw2O1W0CAwEAAQ==
  *   Don't change this setting - there aren't any other options right now
  */
 exports.routes = {
-	root: 'pokemonshowdown.com',
-	client: 'play.pokemonshowdown.com',
-	dex: 'dex.pokemonshowdown.com',
-	replays: 'replay.pokemonshowdown.com',
+	root: 'soulsnetwork.net',
+	client: 'showdown.soulsnetwork.net',
+	dex: 'dex.soulsnetwork.net',
+	replays: 'showdown.soulsnetwork.net',
 };
 
 /**
@@ -388,12 +388,12 @@ exports.watchconfig = true;
 /**
  * logchat - whether to log chat rooms.
  */
-exports.logchat = false;
+exports.logchat = true;
 
 /**
  * logchallenges - whether to log challenge battles. Useful for tournament servers.
  */
-exports.logchallenges = false;
+exports.logchallenges = true;
 
 /**
  * loguserstats - how often (in milliseconds) to write user stats to the
@@ -753,3 +753,4 @@ exports.grouplist = [
 		punishgroup: 'MUTE',
 	},
 ];
+;
