@@ -103953,6 +103953,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	wyrmperior: {
 		learnset: {
+			glare: ["9M"],
 			fireblast: ["9M"],
 			firelash: ["9M"],
 			flamecharge: ["9M"],
