@@ -7581,9 +7581,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	pumpkinmash: {
 		name: "Pumpkin Mash",
-		desc: "Whether or not this move is successful and even if it would cause fainting, the user loses 1/2 of its maximum HP, rounded up, unless the user has the Magic Guard Ability. This move is prevented from executing and the user does not lose HP if any active Pokemon has the Damp Ability, or if this move is Fire type and the user is affected by Powder or the weather is Primordial Sea.",
-		shortDesc: "User loses 50% max HP. Hits adjacent Pokemon. Applies Heal Block for 1 Turn on User",
-		damage: "  ([POKEMON] cut its own HP to power up its move!)",
+		desc: "If the target lost HP, the user takes recoil damage equal to 33% the HP lost by the target, rounded half up, but not less than 1 HP.",
+		shortDesc: "Has 33% recoil",
 	},
 	davysmash: {
 		name: "Davy Smash",
