@@ -100387,7 +100387,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	typhtesla: {
 		learnset: {
-			blueflare: ["9M"],
 			voltswitch: ["9M"],
 			thunderbolt: ["9M"],
 			thunderwave: ["9M"],
@@ -101240,7 +101239,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			spikes: ["8M"],
 			rapidspin: ["8M"],
 			dracometeor: ["9M"],
-			diamondstorm: ["8M"],
 			dragonhammer: ["9M"],
 			scaleshot: ["9M"],
 			outrage: ["9M"],
@@ -101922,7 +101920,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			superpower: ["9M"],
 			earthpower: ["9M"],
-			shadowbone: ["9M"],
 			poltergeist: ["9M"],
 			shadowsneak: ["9M"],
 			shadowball: ["9M"],
@@ -102269,6 +102266,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	skellejack: {
 		learnset: {
+			destinybond: ["9M"],
 			defog: ["9M"],
 			spikes: ["9M"],
 			swordsdance: ["9M"],
@@ -102656,7 +102654,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			sandattack: ["9M"],
 			harden: ["9M"],
 			poisonsting: ["9M"],
-			knockoff: ["9M"],
 			screech: ["9M"],
 			acid: ["9M"],
 			crunch: ["9M"],
@@ -102680,7 +102677,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			venoshock: ["9M"],
 			doubleteam: ["9M"],
 			sludgewave: ["9M"],
-			recover: ["9M"],
 			imprison: ["9M"],
 			toxicspikes: ["9M"],
 			hyperbeam: ["9M"],
@@ -102696,7 +102692,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	aereon: {
 		learnset: {
-			knockoff: ["9M"],
 			uturn: ["9M"],
 			gust: ["9M"],
 			growl: ["9M"],
@@ -103166,8 +103161,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	spiritran: {
 		learnset: {
-			spiritshackle: ["9M"],
-			anchorshot: ["9M"],
+			soulanchor: ["9M"],
 			spikes: ["9M"],
 			shadowclaw: ["9M"],
 			ancientpower: ["9L12", "8L12", "7L1", "6L1", "5L1", "4T", "4L1", "4S2"],
@@ -106114,7 +106108,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			acidarmor: ["9M"],
 			scald: ["9M"],
-			steameruption: ["9M"],
 			surf: ["9M"],
 			waterfall: ["9M"],
 			liquidation: ["9M"],
@@ -106452,7 +106445,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chronovenom: {
 		learnset: {
-			direclaw: ["9M"],
 			acid: ["9M"],
 			acidspray: ["9M"],
 			bulkup: ["9M"],
@@ -107108,7 +107100,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			hydropump: ["9M"],
 			scald: ["9M"],
-			steameruption: ["9M"],
 			liquidation: ["9M"],
 			spiritbreak: ["9M"],
 			thunderbolt: ["9M"],
@@ -107722,7 +107713,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			focusblast: ["9M"],
 			vacuumwave: ["9M"],
 			superpower: ["9M"],
-			primalrage: ["9M"],
 			acidspray: ["9M"],
 			aquatail: ["7T", "6T", "5T", "5D", "4T"],
 			assurance: ["9E", "7E", "6E", "5E", "4E"],

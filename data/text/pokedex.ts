@@ -3803,11 +3803,11 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	turtaya: {
 		name: "Turtaya",
 	},
-	grotum: {
-		name: "Grotum",
+	grokura: {
+		name: "Grokura",
 	},
-	dorderra: {
-		name: "Dorderra",
+	drakura: {
+		name: "Drakura",
 	},
 	elequil: {
 		name: "Elequil",
@@ -3998,8 +3998,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	chocopertmega: {
 		name: "Chocopert-Mega",
 	},
-	dorderramega: {
-		name: "Dorderra-Mega",
+	drakuramega: {
+		name: "Drakura-Mega",
 	},
 	typhteslamega: {
 		name: "Typhtesla-Mega",

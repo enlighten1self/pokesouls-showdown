@@ -2310,8 +2310,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	regenerative: {
 		name: "Regenerative",
-		desc: "This Pokemon has its non-volatile status condition cured when it switches out. Also gains 1/16 HP per turn",
-		activate: "  ([POKEMON] is cured by its Regenerative!)",
+		desc: "This Pokemon gains 1/16 HP per turn.",
 	},
 	antarcticpower: {
 		name: "Antarctic Power",
@@ -2367,5 +2366,23 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	restorativefilm: {
 		name: "Restorative Film",
 		desc: "This Pokemon gains 1/16 HP per turn.",
+	},
+	revenant: {
+		name: "Revenant",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Ghost-type attack.",
+		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Ghost attacks.",
+		gen4: {
+			desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its Ghost-type attacks have their power multiplied by 1.5.",
+			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Ghost-type attacks have 1.5x power.",
+		},
+	},
+	seismic: {
+		name: "Seismic",
+		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Ground-type attack.",
+		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Ground attacks.",
+		gen4: {
+			desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its Ground-type attacks have their power multiplied by 1.5.",
+			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Ground-type attacks have 1.5x power.",
+		},
 	},
 };

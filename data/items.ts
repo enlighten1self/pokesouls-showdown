@@ -7665,12 +7665,12 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10001,
 		gen: 9
 	  },
-	  dorderrite: {
-		name: "Dorderrite",
+	  drakurite: {
+		name: "Drakurite",
 		spritenum: 764,
-		megaStone: "Dorderra-Mega",
-		megaEvolves: "Dorderra",
-		itemUser: ["Dorderra"],
+		megaStone: "Drakura-Mega",
+		megaEvolves: "Drakura",
+		itemUser: ["Drakura"],
 		onTakeItem(item, source) {
 		  if (item.megaEvolves === source.baseSpecies.baseSpecies)
 			return false;

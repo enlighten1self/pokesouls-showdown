@@ -5701,13 +5701,10 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: -7,
 	},
 	armoredponcho: {
-		onModifyDefPriority: 6,
-		onModifyDef(def) {
-			return this.chainModify(2);
-		},
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
 			if (move.type === 'Fire') mod *= 2;
+			if (move.flags['contact']) mod /= 2;
 			return this.chainModify(mod);
 		},
 		flags: { breakable: 1 },
@@ -5812,52 +5809,6 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	regenerative: {
 		onResidual(pokemon) {
 			this.heal(pokemon.baseMaxhp / 16);
-		},
-		onCheckShow(pokemon) {
-			if (pokemon.side.active.length === 1) return;
-			if (pokemon.showCure === true || pokemon.showCure === false) return;
-			const cureList = [];
-			let noCureCount = 0;
-			for (const curPoke of pokemon.side.active) {
-				if (!curPoke?.status) {
-					continue;
-				}
-				if (curPoke.showCure) {
-					continue;
-				}
-				const species = curPoke.species;
-				if (!Object.values(species.abilities).includes('Regenerative')) {
-					continue;
-				}
-				if (!species.abilities['1'] && !species.abilities['H']) {
-					continue;
-				}
-				if (curPoke !== pokemon && !this.queue.willSwitch(curPoke)) {
-					continue;
-				}
-				if (curPoke.hasAbility('regenerative')) {
-					cureList.push(curPoke);
-				} else {
-					noCureCount++;
-				}
-			}
-			if (!cureList.length || !noCureCount) {
-				for (const pkmn of cureList) {
-					pkmn.showCure = true;
-				}
-			} else {
-				this.add('-message', "(" + cureList.length + " of " + pokemon.side.name + "'s pokemon " + (cureList.length === 1 ? "was" : "were") + " cured by Regenerative.)");
-				for (const pkmn of cureList) {
-					pkmn.showCure = false;
-				}
-			}
-		},
-		onSwitchOut(pokemon) {
-			if (!pokemon.status) return;
-			if (pokemon.showCure === undefined) pokemon.showCure = true;
-			if (pokemon.showCure) this.add('-curestatus', pokemon, pokemon.status, '[from] ability: Regenerative');
-			pokemon.clearStatus();
-			if (!pokemon.showCure) pokemon.showCure = undefined;
 		},
 		flags: {},
 		name: "Regenerative",
@@ -6163,5 +6114,45 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Restorative Film",
 		rating: 2.5,
 		num: -14,
+	},
+	revenant: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ghost' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Revenant boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ghost' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Revenant boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Revenant",
+		rating: 2,
+		num: -15,
+	},
+	seismic: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Ground' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Seismic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Ground' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Seismic boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Seismic",
+		rating: 2,
+		num: -16,
 	},
 };
