@@ -100212,7 +100212,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	elequil: {
 		learnset: {
-			blueflare: ["9M"],
+			plasmaflare: ["9M"],
 			voltswitch: ["9M"],
 			thunderbolt: ["9M"],
 			thunderwave: ["9M"],
@@ -100304,7 +100304,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	quilzap: {
 		learnset: {
-			blueflare: ["9M"],
+			plasmaflare: ["9M"],
 			voltswitch: ["9M"],
 			thunderbolt: ["9M"],
 			thunderwave: ["9M"],
