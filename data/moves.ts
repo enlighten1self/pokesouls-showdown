@@ -22404,5 +22404,21 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Fire",
 		contestType: "Beautiful",
 	},
-
+	shadowrush: {
+		num: 1016,
+		accuracy: 80,
+		basePower: 100,
+		category: "Physical",
+		name: "Shadow Rush",
+		pp: 10,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ghost",
+		contestType: "Tough",
+	},
 };

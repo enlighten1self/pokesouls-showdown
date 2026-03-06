@@ -101919,6 +101919,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ghoulizard: {
 		learnset: {
+			shadowrush: ["9M"],
 			superpower: ["9M"],
 			earthpower: ["9M"],
 			poltergeist: ["9M"],

@@ -7640,4 +7640,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 30% chance to paralyze the target.",
 		shortDesc: "30% chance to paralyze adjacent Pokemon.",
 	},
+	shadowrush: {
+		name: "Shadow Rush",
+		desc: "Has a 20% chance to make the target flinch. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "20% chance to make the target flinch.",
+		gen5: {
+			desc: "Has a 20% chance to make the target flinch.",
+		},
+	},
 };
