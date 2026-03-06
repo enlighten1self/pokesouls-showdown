@@ -6083,15 +6083,15 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "LC",
 	},
-	grotum: {
+	grokura: {
 		tier: "Illegal",
 		natDexTier: "NFE",
 	},
-	dorderra: {
+	drakura: {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
-	dorderramega: {
+	drakuramega: {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
