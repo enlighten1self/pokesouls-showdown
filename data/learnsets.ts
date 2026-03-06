@@ -101139,7 +101139,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			autotomize: ["8M"],
 			metalburst: ["8M"],
-			diamondstorm: ["8M"],
 			ancientpower: ["4T"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			bide: ["7V"],
