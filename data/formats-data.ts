@@ -3801,7 +3801,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	delphoxmega: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	froakie: {
 		tier: "LC",
