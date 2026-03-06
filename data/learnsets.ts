@@ -100387,6 +100387,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	typhtesla: {
 		learnset: {
+			plasmaflare: ["9M"],
 			voltswitch: ["9M"],
 			thunderbolt: ["9M"],
 			thunderwave: ["9M"],
