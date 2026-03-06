@@ -19991,7 +19991,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 2.2,
 		weightkg: 310.0,
 		color: "Green",
-		prevo: "Grotum",
+		prevo: "Grokura",
 		evoLevel: 36,
 		eggGroups: ["Monster", "Water 1"],
 		otherFormes: ["Drakura-Mega"],

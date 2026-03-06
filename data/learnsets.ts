@@ -100018,7 +100018,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			{generation: 9, level: 1, moves: ["tackle"], pokeball: "pokeball"},
 		],
 	},
-	grotum: {
+	grokura: {
 		learnset: {
 			scaleshot: ["9L9"],
 			dragondance: ["9L9"],
@@ -100101,7 +100101,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			zenheadbutt: ["9M"],
 		},
 	},
-	dorderra: {
+	drakura: {
 		learnset: {
 			playrough: ["9L9"],
 			scaleshot: ["9L9"],
