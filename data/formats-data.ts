@@ -6313,7 +6313,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	wyrmperiormega: {
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	zeranheit: {
 		tier: "Illegal",
