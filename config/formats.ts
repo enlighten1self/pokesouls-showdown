@@ -548,18 +548,18 @@ export const Formats: FormatList = [
 			}
 		},
 	},
-	{
-		name: "[Gen 9] National Dex Tier Shift",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/BUBL get +15, BU/RUBL get +20, RU/NUBL get +25, and NU or lower get +30.`,
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'Evasion Clause', 'Tier Shift Mod'],
-		banlist: [
-			'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
-			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite', 
-			'Tricky Reception', 'Assist', 'Rayquaza-Mega', 'Gengar-Mega', 'Red Orb', 'Blazikenite', 'Celebrate', 'Happy Hour', 'Diggersby', 
-		],
-		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice', 'Arceus-Electric', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Flying', 'Arceus-Dragon', 'Arceus-Fighting', ],
-	},
+	//{
+	//	name: "[Gen 9] National Dex Tier Shift",
+	//	desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/BUBL get +15, BU/RUBL get +20, RU/NUBL get +25, and NU or lower get +30.`,
+	//	mod: 'gen9',
+	//	ruleset: ['Standard NatDex', 'Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'Evasion Clause', 'Tier Shift Mod'],
+	//	banlist: [
+	//		'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
+	//		'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite', 
+	//		'Tricky Reception', 'Assist', 'Rayquaza-Mega', 'Gengar-Mega', 'Red Orb', 'Blazikenite', 'Celebrate', 'Happy Hour', 'Diggersby', 
+	//	],
+	//	unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice', 'Arceus-Electric', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Flying', 'Arceus-Dragon', 'Arceus-Fighting', ],
+	//},
 	{
 		name: "[Gen 9] National Dex Convergence",
 		desc: `Allows all Pok&eacute;mon that have identical types to share moves and abilities.`,

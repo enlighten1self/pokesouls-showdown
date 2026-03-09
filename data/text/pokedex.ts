@@ -3977,8 +3977,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	tempervianmegaashen: {
 		name: "Tempervian-Mega-Ashen",
 	},	
-	boarbaque: {
-		name: "Boarbaque",
+	boarbeque: {
+		name: "Boarbeque",
 	},
 	lordfetchd: {
 		name: "Lordfetch\u2019d",

@@ -6327,7 +6327,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "Uber",
 	},
-	boarbaque: {
+	boarbeque: {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},

@@ -104206,7 +104206,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			workup: ["8M"],
 		},
 	},
-	boarbaque: {
+	boarbeque: {
 		learnset: {
 			lavaplume: ["9M"],
 			sulphuricdownpour: ["9M"],
