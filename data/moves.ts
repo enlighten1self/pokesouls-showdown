@@ -22033,18 +22033,24 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: -7,
 		flags: {mirror: 1},
-
-		onHit(source) {
-			this.field.removePseudoWeather('trickroom');
-
-			this.field.addPseudoWeather('trickroom', source);
-
-			const effect = this.field.getPseudoWeather('trickroom');
-			if (effect) effect.duration = 3;
-
-			this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+		pseudoWeather: "trickyreception",
+		
+		condition: {
+			duration: 3,
+		
+			onFieldStart(field, source) {
+				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
+			},
+		
+			onFieldRestart() {
+				return false;
+			},
+		
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Trick Room');
+			},
 		},
-
+	
 		selfSwitch: 'copyvolatile',
 		target: "all",
 		type: "Psychic",
