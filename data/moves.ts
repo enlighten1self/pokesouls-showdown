@@ -22034,6 +22034,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: -7,
 		flags: { mirror: 1 },
 		pseudoWeather: "trickyreception",
+		duration: 3,
 		condition: {
 			duration: 3,
 			durationCallback(source, effect) {
