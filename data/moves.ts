@@ -22035,19 +22035,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { mirror: 1 },
 		pseudoWeather: "trickroom",
 		condition: {
-			duration: 2,
+			duration: 3,
 			durationCallback(source, effect) {
 				if (source?.hasAbility("persistent")) {
-					this.add("-activate", source, "ability: Persistent", "[move] Trick Room");
-					return 4;
+					this.add("-activate", source, "ability: Persistent", "[move] Tricky Reception");
+					return 5;
 				}
-				return 2;
+				return 3;
 			},
 			onFieldStart(target, source) {
 				if (source?.hasAbility("persistent")) {
-					this.add("-fieldstart", "move: Trick Room", "[of] " + source, "[persistent]");
+					this.add("-fieldstart", "move: Tricky Reception", "[of] " + source, "[persistent]");
 				} else {
-					this.add("-fieldstart", "move: Trick Room", "[of] " + source);
+					this.add("-fieldstart", "move: Tricky Reception", "[of] " + source);
 				}
 			},
 			onFieldRestart(target, source) {
@@ -22056,7 +22056,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 1,
 			onFieldEnd() {
-				this.add("-fieldend", "move: Trick Room");
+				this.add("-fieldend", "move: Tricky Reception");
 			}
 		},
 		selfSwitch: true,
@@ -22117,19 +22117,19 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { snatch: 1, metronome: 1, wind: 1 },
 		sideCondition: 'tailwind',
 		condition: {
-			duration: 2,
+			duration: 3,
 			durationCallback(target, source, effect) {
 				if (source?.hasAbility('persistent')) {
-					this.add('-activate', source, 'ability: Persistent', '[move] Tailwind');
-					return 3;
+					this.add('-activate', source, 'ability: Persistent', '[move] Altitude');
+					return 5;
 				}
-				return 2;
+				return 3;
 			},
 			onSideStart(side, source) {
 				if (source?.hasAbility('persistent')) {
-					this.add('-sidestart', side, 'move: Tailwind', '[persistent]');
+					this.add('-sidestart', side, 'move: Altitude', '[persistent]');
 				} else {
-					this.add('-sidestart', side, 'move: Tailwind');
+					this.add('-sidestart', side, 'move: Altitude');
 				}
 			},
 			onModifySpe(spe, pokemon) {
@@ -22138,7 +22138,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 			onSideResidualOrder: 26,
 			onSideResidualSubOrder: 5,
 			onSideEnd(side) {
-				this.add('-sideend', side, 'move: Tailwind');
+				this.add('-sideend', side, 'move: Altitude');
 			},
 		},
 		selfSwitch: true,
