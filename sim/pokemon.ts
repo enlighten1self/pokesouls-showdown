@@ -607,6 +607,8 @@ export class Pokemon {
 		let speed = this.getStat('spe', false, false);
 		if (this.battle.field.getPseudoWeather('trickroom')) {
 			speed = 10000 - speed;
+		} else if (this.battle.field.getPseudoWeather('trickyreception')){
+			speed = 10000 - speed;
 		}
 		return this.battle.trunc(speed, 13);
 	}

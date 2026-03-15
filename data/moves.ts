@@ -22033,7 +22033,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: -7,
 		flags: { mirror: 1 },
-		pseudoWeather: "trickroom",
+		pseudoWeather: "trickyreception",
 		condition: {
 			duration: 3,
 			durationCallback(source, effect) {
@@ -22051,7 +22051,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				}
 			},
 			onFieldRestart(target, source) {
-				this.field.removePseudoWeather("trickroom");
+				this.field.removePseudoWeather("trickyreception");
 			},
 			onFieldResidualOrder: 27,
 			onFieldResidualSubOrder: 1,

@@ -4905,10 +4905,15 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickroom')) {
 				pokemon.useItem();
 			}
+			else if (!pokemon.ignoringItem() && this.field.getPseudoWeather('trickyreception')) {
+				pokemon.useItem();
+			}
 		},
 		onAnyPseudoWeatherChange() {
 			const pokemon = this.effectState.target;
 			if (this.field.getPseudoWeather('trickroom')) {
+				pokemon.useItem(pokemon);
+			} else if (this.field.getPseudoWeather('trickyreception')) {
 				pokemon.useItem(pokemon);
 			}
 		},
