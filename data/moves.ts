@@ -22032,36 +22032,18 @@ export const Moves: { [moveid: string]: MoveData } = {
 		name: "Tricky Reception",
 		pp: 10,
 		priority: -7,
-		flags: { mirror: 1 },
-		pseudoWeather: "trickyreception",
-		duration: 3,
-		condition: {
-			duration: 3,
-			durationCallback(source, effect) {
-				if (source?.hasAbility("persistent")) {
-					this.add("-activate", source, "ability: Persistent", "[move] Tricky Reception");
-					return 5;
-				}
-				return 3;
-			},
-			onFieldStart(target, source) {
-				if (source?.hasAbility("persistent")) {
-					this.add("-fieldstart", "move: Tricky Reception", "[of] " + source, "[persistent]");
-				} else {
-					this.add("-fieldstart", "move: Tricky Reception", "[of] " + source);
-				}
-			},
-			onFieldRestart(target, source) {
-				this.field.removePseudoWeather("trickyreception");
-			},
-			onFieldResidualOrder: 27,
-			onFieldResidualSubOrder: 1,
-			onFieldEnd() {
-				this.add("-fieldend", "move: Tricky Reception");
-			}
+		flags: {mirror: 1},
+		
+		onHit(source) {
+			this.field.addPseudoWeather('trickroom', source);
+		
+			const effect = this.field.getPseudoWeather('trickroom');
+			if (effect) effect.duration = 3;
+		
+			this.add('-fieldstart', 'move: Tricky Reception', '[of] ' + source);
 		},
+	
 		selfSwitch: true,
-		secondary: null,
 		target: "all",
 		type: "Psychic",
 	},
