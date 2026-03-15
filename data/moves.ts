@@ -20679,7 +20679,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 		condition: {
 			duration: 5,
 			durationCallback(source, effect) {
-				if (source?.hasAbility('persistent')) {
+				if (effect && 'id' in effect && effect.id === 'trickyreception') {
+					this.add('-activate', source, '[move] Tricky Reception');
+					return 3;
+				}
+				else if (source?.hasAbility('persistent')) {
 					this.add('-activate', source, 'ability: Persistent', '[move] Trick Room');
 					return 7;
 				}
@@ -22033,24 +22037,20 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		priority: -7,
 		flags: {mirror: 1},
-		pseudoWeather: "trickyreception",
-		
+		pseudoWeather: "trickroom",
 		condition: {
 			duration: 3,
-		
 			onFieldStart(field, source) {
 				this.add('-fieldstart', 'move: Trick Room', '[of] ' + source);
 			},
-		
 			onFieldRestart() {
 				return false;
 			},
-		
 			onFieldEnd() {
 				this.add('-fieldend', 'move: Trick Room');
 			},
 		},
-	
+
 		selfSwitch: 'copyvolatile',
 		target: "all",
 		type: "Psychic",
