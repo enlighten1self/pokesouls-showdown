@@ -10799,7 +10799,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					this.debug('Nothing to leech into');
 					return;
 				}
-				const damage = this.damage(pokemon.baseMaxhp / 16, pokemon, target);
+				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
 				if (damage) {
 					this.heal(damage, target, pokemon);
 				}
@@ -22758,7 +22758,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 					this.debug('Nothing to Torment');
 					return;
 				}
-				const damage = this.damage(pokemon.baseMaxhp / 16, pokemon, target);
+				const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
 				if (damage) {
 					this.heal(damage, target, pokemon);
 				}
