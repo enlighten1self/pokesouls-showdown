@@ -12297,7 +12297,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	floettemega: {
 		num: 670,
 		name: "Floette-Mega",
-		baseSpecies: "Floette",
+		baseSpecies: "Floette-Eternal",
 		forme: "Mega",
 		types: ["Fairy"],
 		gender: "F",
