@@ -12308,7 +12308,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Undiscovered"],
 		requiredItem: "Floettite",
-		battleOnly: "Floette-Eternal",
 	},
 	florges: {
 		num: 671,
@@ -12463,7 +12462,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		eggGroups: ["Field"],
 		requiredItem: "Meowsticite",
-		battleOnly: "Meowstic",
 	},
 	meowsticfmega: {
 		num: 678,
@@ -12479,7 +12477,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "White",
 		eggGroups: ["Field"],
 		requiredItem: "Meowsticite",
-		battleOnly: "Meowstic-F",
 	},
 	honedge: {
 		num: 679,
