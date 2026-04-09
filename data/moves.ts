@@ -5672,7 +5672,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	firelash: {
 		num: 680,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Fire Lash",
 		pp: 15,
@@ -8309,7 +8309,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		},
 		secondary: null,
 		target: "self",
-		type: "Normal",
+		type: "Grass",
 		zMove: { boost: { spa: 1 } },
 		contestType: "Beautiful",
 	},
@@ -10069,7 +10069,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	infernalparade: {
 		num: 844,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 65,
 		basePowerCallback(pokemon, target, move) {
 			if (target.status || target.hasAbility('comatose')) return move.basePower * 2;
 			return move.basePower;
@@ -13008,7 +13008,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	mountaingale: {
 		num: 836,
 		accuracy: 85,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Mountain Gale",
 		pp: 10,
@@ -13335,7 +13335,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	nightdaze: {
 		num: 539,
 		accuracy: 95,
-		basePower: 85,
+		basePower: 90,
 		category: "Special",
 		name: "Night Daze",
 		pp: 10,
@@ -15020,7 +15020,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	psyshieldbash: {
 		num: 828,
 		accuracy: 90,
-		basePower: 70,
+		basePower: 90,
 		category: "Physical",
 		name: "Psyshield Bash",
 		pp: 10,
@@ -18652,7 +18652,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	spiritshackle: {
 		num: 662,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		name: "Spirit Shackle",
 		pp: 10,
