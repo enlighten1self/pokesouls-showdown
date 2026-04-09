@@ -6271,10 +6271,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
-	titanios: {
-		tier: "Illegal",
-		natDexTier: "Illegal",
-	},
 	ultigigas: {
 		tier: "Illegal",
 		natDexTier: "OU",
@@ -6294,10 +6290,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	phroggeistjimengo: {
 		tier: "Illegal",
 		natDexTier: "UU",
-	},
-	zytias: {
-		tier: "Illegal",
-		natDexTier: "Illegal",
 	},
 	cereblaze: {
 		tier: "Illegal",
