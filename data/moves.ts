@@ -1155,7 +1155,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	beakblast: {
 		num: 690,
 		accuracy: 100,
-		basePower: 100,
+		basePower: 120,
 		category: "Physical",
 		name: "Beak Blast",
 		pp: 15,
