@@ -2468,8 +2468,9 @@ export const Chat = new class {
 			buf += `<span class="col labelcol"><em>Power</em><br>${typeof move.basePower === 'number' ? move.basePower : '—'}</span> `;
 		}
 		buf += `<span class="col widelabelcol"><em>Accuracy</em><br>${typeof move.accuracy === 'number' ? (move.accuracy + '%') : '—'}</span> `;
-		const basePP = move.pp || 1;
-		const pp = Math.floor(move.noPPBoosts ? basePP : basePP * 8 / 5);
+		// Prefer ppOverride if provided; otherwise use base pp (with Gen 1/No-PP-boost handling)
+		const rawBasePP = (move.ppOverride !== undefined ? move.ppOverride : (move.pp || 1));
+		const pp = (move.ppOverride !== undefined) ? rawBasePP : Math.floor(move.noPPBoosts ? rawBasePP : rawBasePP * 8 / 5);
 		buf += `<span class="col pplabelcol"><em>PP</em><br>${pp}</span> `;
 		buf += `<span class="col movedesccol">${move.shortDesc || move.desc}</span> `;
 		buf += `</li><li style="clear:both"></li></ul>`;

@@ -12429,8 +12429,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Espurr",
 		evoLevel: 25,
 		eggGroups: ["Field"],
-		otherFormes: ["Meowstic-F", "Meowstic-M-Mega", "Meowstic-F-Mega"],
-		formeOrder: ["Meowstic", "Meowstic-F", "Meowstic-M-Mega", "Meowstic-F-Mega"],
+		otherFormes: ["Meowstic-F", "Meowstic-Mega"],
+		formeOrder: ["Meowstic", "Meowstic-F", "Meowstic-Mega" ],
 	},
 	meowsticf: {
 		num: 678,
