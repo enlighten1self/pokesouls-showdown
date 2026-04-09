@@ -1362,8 +1362,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	direclaw: {
 		name: "Dire Claw",
-		desc: "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
-		shortDesc: "50% chance to sleep, poison, or paralyze target.",
+		desc: "Has a 30% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
+		shortDesc: "30% chance to sleep, poison, or paralyze target.",
 	},
 	disable: {
 		name: "Disable",
@@ -3363,8 +3363,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	ironhead: {
 		name: "Iron Head",
-		desc: "Has a 30% chance to make the target flinch.",
-		shortDesc: "30% chance to make the target flinch.",
+		desc: "Has a 20% chance to make the target flinch.",
+		shortDesc: "20% chance to make the target flinch.",
 	},
 	irontail: {
 		name: "Iron Tail",
@@ -3536,13 +3536,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	leechseed: {
 		name: "Leech Seed",
-		desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Mortal Spin or Rapid Spin successfully, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
-		shortDesc: "1/8 of target's HP is restored to user every turn.",
+		desc: "The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Mortal Spin or Rapid Spin successfully, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
+		shortDesc: "1/16 of target's HP is restored to user every turn.",
 		gen8: {
-			desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin successfully, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
+			desc: "The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin successfully, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
 		},
 		gen3: {
-			desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
+			desc: "The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down, at the end of each turn. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out or uses Rapid Spin, the effect ends. Grass-type Pokemon are immune to this move on use, but not its effect.",
 		},
 		gen1: {
 			desc: "At the end of each of the target's turns, The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down and multiplied by the target's current Toxic counter if it has one, even if the target currently has less than that amount of HP remaining. If the target switches out or any Pokemon uses Haze, this effect ends. Grass-type Pokemon are immune to this move.",
@@ -4236,8 +4236,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	moonblast: {
 		name: "Moonblast",
-		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
-		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+		desc: "Has a 10% chance to lower the target's Special Attack by 1 stage.",
+		shortDesc: "10% chance to lower the target's Sp. Atk by 1.",
 	},
 	moongeistbeam: {
 		name: "Moongeist Beam",
@@ -5424,8 +5424,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	saltcure: {
 		name: "Salt Cure",
-		desc: "Causes damage to the target equal to 1/8 of its maximum HP (1/4 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
-		shortDesc: "Deals 1/8 max HP each turn; 1/4 on Steel, Water.",
+		desc: "Causes damage to the target equal to 1/16 of its maximum HP (1/8 if the target is Steel or Water type), rounded down, at the end of each turn during effect. This effect ends when the target is no longer active.",
+		shortDesc: "Deals 1/8 max HP each turn; 1/8 on Steel, Water.",
 
 		start: "  [POKEMON] is being salt cured!",
 		damage: "  [POKEMON] is hurt by Salt Cure!",
@@ -6988,8 +6988,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	toxicthread: {
 		name: "Toxic Thread",
-		desc: "Lowers the target's Speed by 1 stage and poisons it.",
-		shortDesc: "Lowers the target's Speed by 1 and poisons it.",
+		desc: "Lowers the target's Speed by 2 stage and poisons it.",
+		shortDesc: "Lowers the target's Speed by 2 and poisons it.",
 	},
 	trailblaze: {
 		name: "Trailblaze",
@@ -7597,8 +7597,8 @@ export const MovesText: {[k: string]: MoveText} = {
 
 	endlesstorment: {
 		name: "Endless Torment",
-		desc: "The Pokemon at the user's position steals 1/8 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out, the effect ends. Dark-type Pokemon are immune to this move on use, but not its effect.",
-		shortDesc: "1/8 of target's HP is restored to user every turn.",
+		desc: "The Pokemon at the user's position steals 1/16 of the target's maximum HP, rounded down, at the end of each turn. If Big Root is held by the recipient, the HP recovered is 1.3x normal, rounded half down. If the target uses Baton Pass, the replacement will continue being leeched. If the target switches out, the effect ends. Dark-type Pokemon are immune to this move on use, but not its effect.",
+		shortDesc: "1/16 of target's HP is restored to user every turn.",
 
 		start: "  [POKEMON] was tormented!",
 		end: "  [POKEMON] was freed from Endless Torment!",

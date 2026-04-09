@@ -335,7 +335,12 @@ export class Pokemon {
 				if (!set.hpType) set.hpType = move.type;
 				move = this.battle.dex.moves.get('hiddenpower');
 			}
-			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+			let basepp: number;
+			if (move.ppOverride !== undefined) {
+				basepp = move.ppOverride;
+			} else {
+				basepp = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+			}
 			if (this.battle.gen < 3) basepp = Math.min(61, basepp);
 			this.baseMoveSlots.push({
 				move: move.name,
@@ -2082,6 +2087,7 @@ export class Pokemon {
 		case 'primordialsea':
 			if (this.hasItem('utilityumbrella')) return '';
 		}
+		if (this.hasAbility('megasol') && this.battle.activePokemon === this) return 'sunnyday';
 		return weather;
 	}
 

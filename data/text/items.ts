@@ -2517,4 +2517,84 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Tempervianite",
 		desc: "If held by a Tempervian, this item allows it to Mega Evolve in battle.",
 	},
+	chandelurite: {
+		name: "Chandelurite",
+		desc: "If held by a Chandelure, this item allows it to Mega Evolve in battle.",
+	},
+	chimechite: {
+		name: "Chimechite",
+		desc: "If held by a Chimecho, this item allows it to Mega Evolve in battle.",
+	},
+	clefablite: {
+		name: "Clefablite",
+		desc: "If held by a Clefable, this item allows it to Mega Evolve in battle.",
+	},
+	crabominite: {
+		name: "Crabominite",
+		desc: "If held by a Crabominable, this item allows it to Mega Evolve in battle.",
+	},
+	dragoninite: {
+		name: "Dragoninite",
+		desc: "If held by a Dragonite, this item allows it to Mega Evolve in battle.",
+	},
+	drampanite: {
+		name: "Drampanite",
+		desc: "If held by a Drampa, this item allows it to Mega Evolve in battle.",
+	},
+	emboarite: {
+		name: "Emboarite",
+		desc: "If held by a Emboar, this item allows it to Mega Evolve in battle.",
+	},
+	excadrite: {
+		name: "Excadrite",
+		desc: "If held by a Excadrill, this item allows it to Mega Evolve in battle.",
+	},
+	feraligite: {
+		name: "Feraligite",
+		desc: "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
+	},
+	floettite: {
+		name: "Floettite",
+		desc: "If held by a Floette-Eternal, this item allows it to Mega Evolve in battle.",
+	},
+	froslassite: {
+		name: "Froslassite",
+		desc: "If held by a Froslass, this item allows it to Mega Evolve in battle.",
+	},
+	glimmoranite: {
+		name: "Glimmoranite",
+		desc: "If held by a Glimmora, this item allows it to Mega Evolve in battle.",
+	},
+	golurkite: {
+		name: "Golurkite",
+		desc: "If held by a Golurk, this item allows it to Mega Evolve in battle.",
+	},
+	hawluchanite: {
+		name: "Hawluchanite",
+		desc: "If held by a Hawlucha, this item allows it to Mega Evolve in battle.",
+	},
+	meganiumite: {
+		name: "Meganiumite",
+		desc: "If held by a Meganium, this item allows it to Mega Evolve in battle.",
+	},
+	meowsticite: {
+		name: "Meowsticite",
+		desc: "If held by a Meowstic, this item allows it to Mega Evolve in battle.",
+	},
+	scovillainite: {
+		name: "Scovillainite",
+		desc: "If held by a Scovillain, this item allows it to Mega Evolve in battle.",
+	},
+	skarmorite: {
+		name: "Skarmorite",
+		desc: "If held by a Skarmory, this item allows it to Mega Evolve in battle.",
+	},
+	Starminite: {
+		name: "Starminite",
+		desc: "If held by a Starmie, this item allows it to Mega Evolve in battle.",
+	},
+	victreebelite: {
+		name: "Victreebelite",
+		desc: "If held by a Victreebel, this item allows it to Mega Evolve in battle.",
+	},
 };

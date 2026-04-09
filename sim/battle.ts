@@ -2507,11 +2507,17 @@ export class Battle {
 				const ironHead = pokemon.baseMoves.indexOf('ironhead');
 				if (ironHead >= 0) {
 					const move = this.dex.moves.get(behemothMove[rawSpecies.name]);
+					let behemothPP: number;
+					if (move.ppOverride !== undefined) {
+						behemothPP = move.ppOverride;
+					} else {
+						behemothPP = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+					}
 					pokemon.baseMoveSlots[ironHead] = {
 						move: move.name,
 						id: move.id,
-						pp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
-						maxpp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+						pp: behemothPP,
+						maxpp: behemothPP,
 						target: move.target,
 						disabled: false,
 						disabledSource: '',

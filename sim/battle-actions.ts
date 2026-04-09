@@ -1856,7 +1856,18 @@ export class BattleActions {
 			pokemon.baseMoves.includes(toID(altForme.requiredMove)) && !item.zMove) {
 			return altForme.name;
 		}
-		// a hacked-in Megazard X can mega evolve into Megazard Y, but not into Megazard X
+		// If the item specifies `itemUser`, require an exact species/form match.
+		// Example: itemUser: ["Slowbro"] should NOT allow Slowbro-Galar to mega.
+		if (item.itemUser) {
+			// itemUser entries are species names (may include forme suffixes).
+			if (item.itemUser.includes(pokemon.species.name)) return item.megaStone;
+			// Keep old behavior for Tauros: if itemUser lists the base species "Tauros",
+			// allow any Tauros forme to Mega evolve (preserve legacy Tauros mechanics).
+			if (item.itemUser.includes(pokemon.baseSpecies.name) && pokemon.baseSpecies.name === 'Tauros') return item.megaStone;
+			return null;
+		}
+		// Fallback: legacy behavior where item.megaEvolves matches base species.
+		// This supports older items that used `megaEvolves` instead of `itemUser`.
 		if (item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
 			return item.megaStone;
 		}

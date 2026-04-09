@@ -153,6 +153,11 @@ export interface MoveData extends EffectData, MoveEventMethods, HitEffect {
 	basePower: number;
 	accuracy: true | number;
 	pp: number;
+	/** Optional override for PP that does not scale with PP Ups (PP Ups are ignored).
+	 * When present, this value is used as the move's PP/maxPP instead of `pp` and
+	 * it will not be multiplied by 8/5.
+	 */
+	ppOverride?: number;
 	category: 'Physical' | 'Special' | 'Status';
 	type: string;
 	priority: number;

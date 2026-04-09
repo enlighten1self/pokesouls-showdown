@@ -6455,4 +6455,84 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
+	clefablemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	victreebelmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	starmiemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	dragonitemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	meganiummega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	feraligatrmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	skarmorymega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	chimechomega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	froslassmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	emboarmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	excadrillmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	chandeluremega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	golurkmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	floettemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	meowsticmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	hawluchamega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	crabominablemega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	drampamega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	scovillainmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	glimmoramega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 };

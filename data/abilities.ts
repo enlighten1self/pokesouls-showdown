@@ -5189,6 +5189,13 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onModifyMove(move) {
 			if (move.flags['contact']) delete move.flags['protect'];
 		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (!move || !move.flags) return;
+			if (!move.flags['contact']) return;
+			if (target.volatiles['protect']) {
+				return this.chainModify(0.25);
+			}
+		},
 		flags: {},
 		name: "Unseen Fist",
 		rating: 2,
@@ -6154,5 +6161,57 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Seismic",
 		rating: 2,
 		num: -16,
+	},
+	piercingdrill: {
+		onModifyMove(move) {
+			if (move.flags['contact']) delete move.flags['protect'];
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (!move || !move.flags) return;
+			if (!move.flags['contact']) return;
+			if (target.volatiles['protect']) {
+				return this.chainModify(0.25);
+			}
+		},
+		flags: {},
+		name: "Piercing Drill",
+		rating: 2,
+		num: -17,
+	},
+	spicyspray: {
+		onDamagingHit(damage, target, source, move) {
+			source.trySetStatus('brn', target);
+		},
+		flags: {},
+		name: "Spicy Spray",
+		rating: 2,
+		num: -18,
+	},
+	dragonize: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Dragon';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Dragonize",
+		rating: 4,
+		num: -19,
+	},
+	megasol: {
+		flags: {},
+		name: "Mega Sol",
+		rating: 4,
+		num: -19,
 	},
 };

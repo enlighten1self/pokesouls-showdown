@@ -4106,4 +4106,64 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	phroggeistjimengo: {
 		name: "Phroggeist-Jimengo",
 	},
+	clefablemega: {
+		name: "Clefable-Mega",
+	},
+	victreebelmega: {
+		name: "Victreebel-Mega",
+	},
+	starmiemega: {
+		name: "Starmie-Mega",
+	},
+	dragonitemega: {
+		name: "Dragonite-Mega",
+	},
+	meganiummega: {
+		name: "Meganium-Mega",
+	},
+	feraligatrmega: {
+		name: "Feraligatr-Mega",
+	},
+	skarmorymega: {
+		name: "Skarmory-Mega",
+	},
+	chimechomega: {
+		name: "Chimecho-Mega",
+	},
+	froslassmega: {
+		name: "Froslass-Mega",
+	},
+	emboarmega: {
+		name: "Emboar-Mega",
+	},
+	excadrillmega: {
+		name: "Excadrill-Mega",
+	},
+	chandeluremega: {
+		name: "Chandelure-Mega",
+	},
+	golurkmega: {
+		name: "Golurk-Mega",
+	},
+	floettemega: {
+		name: "Floette-Mega",
+	},
+	meowsticmega: {
+		name: "Meowstic-Mega",
+	},
+	hawluchamega: {
+		name: "Hawlucha-Mega",
+	},
+	crabominablemega: {
+		name: "Crabominable-Mega",
+	},
+	drampamega: {
+		name: "Drampa-Mega",
+	},
+	scovillainmega: {
+		name: "Scovillain-Mega",
+	},
+	glimmoramega: {
+		name: "Glimmora-Mega",
+	},
 };

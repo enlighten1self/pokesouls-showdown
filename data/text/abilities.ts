@@ -2120,7 +2120,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	unseenfist: {
 		name: "Unseen Fist",
-		shortDesc: "This Pokemon's contact moves ignore the target's protection, except Max Guard.",
+		shortDesc: "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
 	},
 	vesselofruin: {
 		name: "Vessel of Ruin",
@@ -2384,5 +2384,26 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its Ground-type attacks have their power multiplied by 1.5.",
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Ground-type attacks have 1.5x power.",
 		},
+	},
+	piercingdrill: {
+		name: "Piercing Drill",
+		desc: "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
+	},
+	dragonize: {
+		name: "Dragonize",
+		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+		gen6: {
+			desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+			shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.3x power.",
+		},
+	},
+	megasol: {
+		name: "Mega Sol",
+		shortDesc: "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
+	},
+	spicyspray: {
+		name: "Spicy Spray",
+		shortDesc: "When the Pokémon takes damage from a move, it burns the attacker.",
 	},
 };

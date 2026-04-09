@@ -7985,4 +7985,264 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 10025,
 		gen: 9
 	},
+	chandelurite: {
+		name: "Chandelurite",
+		spritenum: 785,
+		megaStone: "Chandelure-Mega",
+		megaEvolves: "Chandelure",
+		itemUser: ["Chandelure"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10026,
+		gen: 9
+	},
+	chimechite: {
+		name: "Chimechite",
+		spritenum: 786,
+		megaStone: "Chimecho-Mega",
+		megaEvolves: "Chimecho",
+		itemUser: ["Chimecho"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10027,
+		gen: 9
+	},
+	clefablite: {
+		name: "Clefablite",
+		spritenum: 787,
+		megaStone: "Clefable-Mega",
+		megaEvolves: "Clefable",
+		itemUser: ["Clefable"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10028,
+		gen: 9
+	},
+	crabominite: {
+		name: "Crabominite",
+		spritenum: 788,
+		megaStone: "Crabominable-Mega",
+		megaEvolves: "Crabominable",
+		itemUser: ["Crabominable"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10029,
+		gen: 9
+	},
+	dragoninite: {
+		name: "Dragoninite",
+		spritenum: 789,
+		megaStone: "Dragonite-Mega",
+		megaEvolves: "Dragonite",
+		itemUser: ["Dragonite"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10030,
+		gen: 9
+	},
+	drampanite: {
+		name: "Drampanite",
+		spritenum: 790,
+		megaStone: "Drampa-Mega",
+		megaEvolves: "Drampa",
+		itemUser: ["Drampa"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10031,
+		gen: 9
+	},
+	emboarite: {
+		name: "Emboarite",
+		spritenum: 791,
+		megaStone: "Emboar-Mega",
+		megaEvolves: "Emboar",
+		itemUser: ["Emboar"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10032,
+		gen: 9
+	},
+	excadrite: {
+		name: "Excadrite",
+		spritenum: 792,
+		megaStone: "Excadrill-Mega",
+		megaEvolves: "Excadrill",
+		itemUser: ["Excadrill"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10033,
+		gen: 9
+	},
+	feraligite: {
+		name: "Feraligite",
+		spritenum: 793,
+		megaStone: "Feraligatr-Mega",
+		megaEvolves: "Feraligatr",
+		itemUser: ["Feraligatr"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10034,
+		gen: 9
+	},
+	floettite: {
+		name: "Floettite",
+		spritenum: 794,
+		megaStone: "Floette-Mega",
+		megaEvolves: "Floette-Eternal",
+		itemUser: ["Floette-Eternal"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10035,
+		gen: 9
+	},
+	froslassite: {
+		name: "Froslassite",
+		spritenum: 795,
+		megaStone: "Froslass-Mega",
+		megaEvolves: "Froslass",
+		itemUser: ["Froslass"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10036,
+		gen: 9
+	},
+	glimmoranite: {
+		name: "Glimmoranite",
+		spritenum: 796,
+		megaStone: "Glimmora-Mega",
+		megaEvolves: "Glimmora",
+		itemUser: ["Glimmora"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10037,
+		gen: 9
+	},
+	golurkite: {
+		name: "Golurkite",
+		spritenum: 797,
+		megaStone: "Golurk-Mega",
+		megaEvolves: "Golurk",
+		itemUser: ["Golurk"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10038,
+		gen: 9
+	},
+	hawluchanite: {
+		name: "Hawluchanite",
+		spritenum: 798,
+		megaStone: "Hawlucha-Mega",
+		megaEvolves: "Hawlucha",
+		itemUser: ["Hawlucha"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10039,
+		gen: 9
+	},
+	meganiumite: {
+		name: "Meganiumite",
+		spritenum: 799,
+		megaStone: "Meganium-Mega",
+		megaEvolves: "Meganium",
+		itemUser: ["Meganium"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10040,
+		gen: 9
+	},
+	meowsticite: {
+		name: "Meowsticite",
+		spritenum: 800,
+		megaStone: "Meowstic-Mega",
+		megaEvolves: "Meowstic",
+		itemUser: ["Meowstic", "Meowstic-F"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10041,
+		gen: 9
+	},
+	scovillainite: {
+		name: "Scovillainite",
+		spritenum: 801,
+		megaStone: "Scovillain-Mega",
+		megaEvolves: "Scovillain",
+		itemUser: ["Scovillain"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10042,
+		gen: 9
+	},
+	skarmorite: {
+		name: "Skarmorite",
+		spritenum: 802,
+		megaStone: "Skarmory-Mega",
+		megaEvolves: "Skarmory",
+		itemUser: ["Skarmory"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10043,
+		gen: 9
+	},
+	starminite: {
+		name: "Starminite",
+		spritenum: 803,
+		megaStone: "Starmie-Mega",
+		megaEvolves: "Starmie",
+		itemUser: ["Starmie"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10044,
+		gen: 9
+	},
+	victreebelite: {
+		name: "Victreebelite",
+		spritenum: 804,
+		megaStone: "Victreebel-Mega",
+		megaEvolves: "Victreebel",
+		itemUser: ["Victreebel"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10039,
+		gen: 9
+	},
 };
