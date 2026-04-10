@@ -427,7 +427,7 @@ export const Formats: FormatList = [
 			"Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Fur Coat", "Good as Gold", 'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 'Imposter', 
 			'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base", 'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", 
 			'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", "Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", "Ursaluna-Bloodmoon", "Baxcalibur", "Naganadel", 
-			"Genesect", "Zygarde-Base", "Pheromosa", "Tectonic Shift", "Restorative Film", "Sweet Insulation",
+			"Genesect", "Zygarde-Base", "Pheromosa", "Tectonic Shift", "Restorative Film", "Sweet Insulation", "Spicy Spray", "Mega Sol"
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
@@ -473,7 +473,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 
 			'Fishious Rend', 'Geomancy', 'Gigaton Hammer', 'No Retreat', 'Rage Fist', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Thousand Arrows', 'Trick-or-Treat', 'Triple Arrows', 'V-create', 
-			'Victory Dance', 'Spectral Tail', 'Photon Haymaker', 'Endless Torment', 'Torch Song', 'Ceaseless Edge', 'Stainless Slash'
+			'Victory Dance', 'Spectral Tail', 'Photon Haymaker', 'Endless Torment', 'Torch Song', 'Ceaseless Edge', 'Stainless Slash', 'Mountain Gale'
 		],
 	},
 	{
@@ -492,7 +492,7 @@ export const Formats: FormatList = [
 			'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Flutter Mane', 'Giratina', 'Gouging Fire', 'Ho-Oh', 'Iron Bundle', 'Lugia',
 			'Lunala', 'Manaphy', 'Mewtwo', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram', 'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 
 			'Urshifu-Single-Strike', 'Walking Wake', 'Zacian', 'Zekrom', 'Darmanitan-Galar', 'Huesotops', 'Ultigigas', 'Xurkitree', 'Spectrier', 
-			'Naganadel', 'Pheromosa', 'Boomkeldurr', 'Arceus', 'Elysian Dance'
+			'Naganadel', 'Pheromosa', 'Boomkeldurr', 'Arceus', 'Elysian Dance', 'Scovillainite', 'Starminite', 'Meganiumite'
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -577,7 +577,7 @@ export const Formats: FormatList = [
 			'Wyrmperionite', 'Yveltal', 'Darmanitan-Galar', 'Fishious Rend', 'Bolt Beak', 'Victory Dance', 'Geomancy', 'No Retreat', 'Huge Power',
 			'Garchomp', 'Dragapult', 'Mawilite', 'Light of Ruin', 'Rising Voltage', 'Gouging Fire', 'Abyssal Void', 'Bulking Blade', 'Tail Glow', 'Tough Claws', 'Celebrate',
 			'Happy Hour', 'Conversion', 'Protean', 'Adaptability', 'Furfrou', 'Blissey', 'Chansey', 'Moltres-Galar', 'Iron Jugulis', 'Dire Claw', 'Mew', 'Iron Boulder',
-			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer'
+			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer', 
 		],
 	},
 	{
@@ -595,7 +595,7 @@ export const Formats: FormatList = [
 		restricted: [
 			'Belly Drum', 'Ceaseless Edge', 'Clangorous Soul', 'Dire Claw', 'Extreme Speed', 'Fillet Away', 'Glacial Lance', 'Glare', 'Lumina Crash', 'Rage Fist', 'Revival Blessing',
 			'Sacred Fire', 'Salt Cure', 'Shell Smash', 'Shift Gear', 'Surging Strikes', 'Tail Glow', 'Triple Arrows', 'Quiver Dance', 'Victory Dance', 'Stainless Slash',
-			'Gigaton Hammer', 'Thousand Arrows', 'Double Iron Bash'
+			'Gigaton Hammer', 'Thousand Arrows', 'Double Iron Bash', 'Mountain Gale'
 		],
 	},
 	//{
