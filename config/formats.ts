@@ -598,6 +598,70 @@ export const Formats: FormatList = [
 			'Gigaton Hammer', 'Thousand Arrows', 'Double Iron Bash', 'Mountain Gale'
 		],
 	},
+	{
+		name: "[Gen 9] Frantic Fusions",
+		desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get their stats buffed by 1/4 of that Pok&eacute;mon's stats, barring HP, and access to one of their abilities.`,
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic Fusions Mod', 'Terastal Clause'],
+		banlist: [
+			'Annihilape', 'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga-Base', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina-Base', 
+			'Giratina-Origin', 'Groudon-Base', 'Ho-Oh', 'Koraidon', 'Kyogre-Base', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo-Base', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 
+			'Palkia-Base', 'Palkia-Origin', 'Rayquaza-Base', 'Shaymin-Sky', 'Zacian', 'Zacian-Crowned', 'Zekrom', 'Arena Trap', 'Contrary', 'Moody', 'Shadow Tag', 'Damp Rock', 'Heat Rock', 'King\'s Rock', 
+			'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail', 'Assist', 'Power Construct', 'Xerneas', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago-Mega', 'Cereblaze-Mega', 
+			'Gorilla Tactics', 'Forrogue-Mega', 'Frostiken-Mega', 'Groudon-Primal', 'Kangaskhan-Mega', 'Kyogre-Primal', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Marshadow', 'Necrozma-Ultra', 'Salamence-Mega', 
+			'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Yveltal', 'Rayquaza-Mega', 'Huge Power', 'Pure Power', 'Gengar-Mega', 'Fishious Rend', 'Bolt Beak', 'Espathra',
+		],
+		restricted: [
+			'Genesect', 'Meganium-Mega', 'Lucario-Mega', 'Beedrill-Mega', 'Abyssal Void', 'Elysian Dance', 'Naganadel', 'Pheromosa', 'Boomkeldurr', 'Kartana', 'Poison Heal', 'Water Bubble',
+			'Comfey', 'Cresselia', 'Darkrai', 'Deoxys-Speed', 'Iron Moth', 'Iron Valiant', 'Keldeo', 'Hoopa-Unbound', 'Iron Boulder', 'Kyurem-Base', 'Simple', 'Regigigas', 'Palafin',
+			'Regieleki', 'Slaking', 'Sneasler', 'Ogerpon-Wellspring', 'Fur Coat', 'Toxapex', 'Ice Scales', 'Magnet Pull', 'Illusion', 'Weavile', 'Stench', 'Stakeout', 'Speed Boost', 'Unburden', 
+			'Ditto', 'Dragapult', 'Enamorus-Base', 'Komala', 'Landorus-Base', 'Magearna', 'Volcarona', 'Walking Wake', 'Solgaleo', 'Neutralizing Gas', 'Ogerpon-Hearthflame', 'Urshifu-Base',
+			'Urshifu-Rapid-Strike', 'Gouging Fire', 'Iron Bundle', 'Chandelure-Mega', 'Despharos-Mega', 'Drampa-Mega', 'Floette-Mega', 'Froslass-Mega', 'Aerodactyl-Mega', 'Aggron-Mega',
+			'Glimmora-Mega', 'Greninja-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Scovillain-Mega', 'Stratozone', 'Corruption', 'Spectoise-Mega', 'Electric Surge', 'Misty Surge', 'Psychic Surge',
+			'Stampede', 'Scorn', 'Ultigigas', 'Zapoleon-Mega', 'Tectonic Shift', 'Dragonite', 'Kommo-o', 'Noivern', 'Feraligatr-Mega', 'Ampharos-Mega', 'Banette-Mega', 'Delphox-Mega', 'Zamazenta-Crowned',
+			'Chien-Pao', 'Reshiram', 'Typhtesla-Mega', 'Zamazenta', 'Charizard-Mega-Y', 'Camerupt-Mega', 'Diancie-Mega', 'Excadrill-Mega', 'Gallade-Mega', 'Garchomp-Mega', 'Gardevoir-Mega',
+			'Geyserupt-Mega', 'Gyarados-Mega', 'Heracross-Mega', 'Latios-Mega', 'Metagross-Mega', 'Pinsir-Mega', 'Scizor-Mega', 'Melmetal', 'Slowbro-Mega', 'Steelix-Mega', 'Swampert-Mega', 
+			'Tyranitar-Mega', 'Blacephalon', 'Stakataka', 'Xurkitree', 'Spectrier', 'Flaming Wrath', 'Chrono Venom'
+		],
+		onValidateTeam(team) {
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+				const ability = this.dex.abilities.get(set.ability);
+				const naturalAbilities = Object.values(species.abilities || {}).filter(Boolean);
+			
+				if (
+					this.ruleTable.isRestrictedSpecies(species) &&
+					set.name && set.name !== species.name
+				) {
+					return [
+						`"${species.name}" is restricted and cannot be fused.`,
+					];
+				}
+			
+				if (set.name && set.name !== species.name) {
+					const nickSpecies = this.dex.species.get(set.name);
+				
+					if (
+						nickSpecies.exists &&
+						this.ruleTable.isRestrictedSpecies(nickSpecies)
+					) {
+						return [
+							`You cannot fuse with restricted Pokémon like "${nickSpecies.name}".`,
+						];
+					}
+				}
+			
+				if (
+					this.ruleTable.isRestricted(`ability:${ability.id}`) &&
+					!naturalAbilities.includes(ability.name)
+				) {
+					return [
+						`"${ability.name}" is restricted and may only be used by Pokémon that naturally have it.`,
+					];
+				}
+			}
+		},
+	},
 	//{
 	//	name: "[Gen 9] Custom Game",
 	//	mod: 'gen9',
