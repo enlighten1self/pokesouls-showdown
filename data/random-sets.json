@@ -9139,7 +9139,7 @@
         "role": "Bulky Attacker",
         "movepool": [
           "drainpunch",
-          "earthquake",
+          "headlongrush",
           "firepunch",
           "icepunch",
           "knockoff",
@@ -9875,7 +9875,8 @@
           "icepunch",
           "knockoff",
           "stoneedge",
-          "thunderpunch"
+          "thunderpunch",
+          "headlongrush"
         ],
         "abilities": ["Iron Fist", "Mold Breaker"]
       }
@@ -9893,7 +9894,11 @@
           "suckerpunch",
           "thunderwave",
           "toxic",
-          "uturn"
+          "uturn",
+          "icefang",
+          "crunch",
+          "psychicfangs",
+          "firefang",
         ],
         "abilities": ["Fur Coat"]
       }

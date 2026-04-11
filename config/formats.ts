@@ -619,8 +619,8 @@ export const Formats: FormatList = [
 			'Corruption', 'Electric Surge', 'Misty Surge', 'Psychic Surge', 'Ultigigas', 'Tectonic Shift', 'Dragonite', 'Kommo-o', 'Noivern', 'Zamazenta-Crowned', 'Chien-Pao', 'Reshiram', 'Zamazenta', 'Melmetal', 'Blacephalon', 
 			'Stakataka', 'Xurkitree', 'Spectrier', 'Flaming Wrath', 'Chrono Venom', 'Lucario-Mega', 'Beedrill-Mega', 'Ditto', 'Metagross-Mega', 'Heracross-Mega', 'Tyranitar-Mega', 'Latios-Mega', 'Garchomp-Mega', 'Gallade-Mega', 
 			'Excadrill-Mega', 'Diancie-Mega', 'Charizard-Mega-Y', 'Typhtesla-Mega', 'Swampert-Mega', 'Scizor-Mega', 'Gyarados-Mega', 'Delphox-Mega', 'Withorde-Mega', 'Roaring Moon', 'Shuckle', 'Bastiodon', 'Deoxys-Defense',
-			'Diancie', 'Rampardos', 'Hoopa', 'Ninjask', 'Electrode', 'Electrode-Hisui', 'Accelgor', 'Zeraora', 'Regice', 'Florges', 'Carbink', 'Diancie', 'Goodra', 'Goodra-Hisui', 'Probopass', 'Registeel', 'Regirock', 'Steelix', 
-			'Steelix-Mega', 'Avalugg', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity',
+			'Rampardos', 'Hoopa-Base', 'Ninjask', 'Electrode-Base', 'Electrode-Hisui', 'Accelgor', 'Zeraora', 'Regice', 'Florges', 'Carbink', 'Diancie-Base', 'Goodra-Base', 'Goodra-Hisui', 'Probopass', 'Registeel', 'Regirock', 'Steelix-Base', 
+			'Steelix-Mega', 'Avalugg-Base', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity',
 		],
 		onValidateTeam(team) {
 			for (const set of team) {
