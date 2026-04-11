@@ -1762,7 +1762,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onResidualSubOrder: 3,
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
-				if (allyActive.status && this.randomChance(3, 10)) {
+				if (allyActive.status && this.randomChance(1, 2)) {
 					this.add('-activate', pokemon, 'ability: Healer');
 					allyActive.cureStatus();
 				}
