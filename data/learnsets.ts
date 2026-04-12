@@ -107110,6 +107110,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chronovenom: {
 		learnset: {
+			fakeout: ["9M"],
 			acid: ["9M"],
 			acidspray: ["9M"],
 			bulkup: ["9M"],
@@ -107765,6 +107766,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	resurgentjustice: {
 		learnset: {
+			stoneedge: ["9M"],
+			futuresight: ["9M"],
 			hydropump: ["9M"],
 			scald: ["9M"],
 			liquidation: ["9M"],
@@ -108306,6 +108309,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	flamingwrath: {
 		learnset: {
+			stoneedge: ["9M"],
 			dragondance: ["9M"],
 			knockoff: ["9M"],
 			nightslash : ["9M"],
@@ -108373,6 +108377,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	bulkingblade: {
 		learnset: {
+			scaleshot: ["9M"],
 			sacredsword: ["9M"],
 			secretsword: ["9M"],
 			closecombat: ["9M"],
@@ -108492,6 +108497,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	barbedchaos: {
 		learnset: {
+			calmmind: ["8M"],
 			moonblast: ["8M"],
 			barbbarrage: ["8M"],
 			sludgewave: ["8M"],
