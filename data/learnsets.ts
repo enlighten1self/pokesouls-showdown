@@ -69888,6 +69888,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	floetteeternal: {
 		learnset: {
 			hyperbeam: ["9M"],
+			chillingwater: ["9M"],
 			alluringvoice: ["9M"],
 			batonpass: ["9M"],
 			drainingkiss: ["9M"],
