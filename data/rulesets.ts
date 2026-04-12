@@ -2748,9 +2748,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Useless Moves Clause',
 		// implemented in /mods/moderngen1/rulesets.ts
 	},
-	franticfusionslegality: {
+	franticmovepoolslegality: {
 		effectType: 'ValidatorRule',
-		name: "Frantic Fusions Legality",
+		name: "Frantic Movepools Mod",
 		desc: `Fusion mons gain donor movepools and abilities. Restricted Pokémon cannot fuse. Banned Pokémon cannot be used at all. Restricted moves/abilities are base-only.`,
 		onValidateSet(set) {
 			const baseSpecies = this.dex.species.get(set.species);

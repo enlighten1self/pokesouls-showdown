@@ -661,18 +661,38 @@ export const Formats: FormatList = [
 			}
 		},
 	},
-	{
-		name: "[Gen 9] National Dex Frantic Movepools",
-		desc: `Pokémon nicknamed after another Pokémon gain access to that Pokémon's movepool and abilities.`,
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic MovePools Mod', 'Terastal Clause'],
-		banlist: [
-			''
-		],
-		restricted: [
-			''
-		],
-	},
+	//{
+	//	name: "[Gen 9] National Dex Frantic Movepools",
+	//	desc: `Pokémon nicknamed after another Pokémon gain access to that Pokémon's movepool and abilities.`,
+	//	mod: 'gen9',
+	//	ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic Movepools Mod', 'Terastal Clause'],
+	//	banlist: [
+	//		'Calyrex-Shadow', 'Gengar-Mega', 'Koraidon', 'Miraidon', 'Rayquaza-Mega', 'Alakazam-Mega', 'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago-Mega', 'Calyrex-Ice',
+	//		'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga-Base', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Forrogue-Mega',
+	//		'Frostiken-Mega', 'Giratina-Base', 'Giratina-Origin', 'Greninja-Mega', 'Groudon-Base', 'Groudon-Primal', 'Ho-Oh', 'Kangaskhan-Mega', 'Kyogre-Base', 'Kyogre-Primal', 'Kyurem-Black',
+	//		'Kyurem-White', 'Landorus-Base', 'Lopunny-Mega', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mewtwo-Base', 'Mewtwo-Mega-X', 'Mewtwo-Mega-Y', 'Naganadel', 'Necrozma-Dawn-Wings',
+	//		'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia-Base', 'Palkia-Origin', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Salamence-Mega', 'Shaymin-Sky', 'Solgaleo', 'Spectrier', 'Tempervian-Mega',
+	//		'Ursaluna-Bloodmoon', 'Urshifu-Base', 'Xerneas', 'Yveltal', 'Zacian-Base', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Zygarde-Base', 'Power Construct', 'Fishious Rend',
+	//		'Bolt Beak', 'Speed Boost', 'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 'Last Respects', 'Revival Blessing', 
+	//		'Shed Tail', 'Atlascross-Mega', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Scovillain-Mega', 'Beads of Ruin', 'Triage',
+	//	],
+	//	restricted: [
+	//		'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Ogerpon-Hearthflame', 'Abyssal Void', 'Boomkeldurr', 'Caimanrago', 'Darkrai', 'Deoxys-Speed', 'Diancie-Mega', 'Excadrill-Mega',
+	//		'Garchomp-Base', 'Garchomp-Mega', 'Melmetal', 'Metagross-Mega', 'Ogerpon-Wellspring', 'Quantum Syphon', 'Roaring Moon', 'Spectoise-Mega', 'Starmie-Mega', 'Rising Voltage', 'Expanding Force',
+	//		'Electric Surge', 'Psychic Surge', 'Poison Heal', 'Basculegion', 'Basculegion-F', 'Beedrill-Mega', 'Eeveeon', 'Porygon-Z', 'Glimmora-Mega', 'Toxic Debris', 'Corrosion', 'Fur Coat',
+	//		'Ice Scales', 'Blissey', 'Chansey', 'Alomomola', 'Audino-Base', 'Volcarona', 'Withorde-Mega', 'Zamazenta-Base', 'Wyrmperior-Base', 'Wyrmperior-Mega', 'Ghoulizard-Mega', 'Aggron-Mega',
+	//		'Atlascross-Base', 'Azumarill', 'Mawile-Mega', 'Medicham-Mega', 'Huge Power', 'Pure Power', 'Extreme Speed', 'Boomburst', 'Dragonite', 'Zygarde-10%', 'Smeargle', 'Mew', 'Mountain Gale',
+	//		'Neutralizing Gas', 'Palafin', 'Ultigigas', 'Chrono Venom', 'Population Bomb', 'Tidy Up', 'Cloyster', 'Shell Smash', 'Fillet Away', 'Victini', 'Power Trip', 'Stored Power',
+	//		'Mystical Power', 'Ceaseless Edge', 'Stone Axe', 'Stainless Slash', 'Regenerator', 'Glare', 'Quiver Dance', 'Victory Dance', 'Eruption', 'Water Spout', 'Dragon Energy', 
+	//		'Dragon\'s Maw', 'Regieleki', 'Shedinja', 'Flower Trick', 'Urshifu-Rapid-Strike', 'Gear Grind', 'Gigaton Hammer', 'Floette-Eternal', 'Mind Blown', 'No Retreat', 'Photon Haymaker',
+	//		'Titanium Delta', 'Archaludon', 'Hydro Steam', 'Sulphuric Downpour', 'Psycho Boost', 'Pumpkin Mash', 'Revelation Dance', 'Shift Gear', 'Spirit Shackle', 'Soul Anchor', 'Tail Glow',
+	//		'Take Heart', 'Xurkitree', 'Kartana', 'Torch Song', 'Tremor Turn', 'Triple Arrows', 'Aura Wheel', 'Celebrate', 'Happy Hour', 'Conversion', 'Tricky Reception', 'Altitude', 'Hoopa-Unbound',
+	//		'Latios-Mega', 'Charizard-Mega-Y', 'Blacephalon', 'Zapoleon-Mega', 'Typhtesla-Mega', 'Sceptile-Mega', 'Thundurus-Therian', 'Meganium-Mega', 'Froslass-Mega', 'Hawlucha-Mega',
+	//		'Pidgeot-Mega', 'Electrode-Hisui', 'Reuniclus', 'Alakazam', 'Magic Guard', 'Comatose', 'Beast Boost', 'Anger Shell', 'Ditto', 'Libero', 'Protean', 'Protomorphosis',
+	//		'Protosynthesis', 'Quark Drive', 'Neuro Drive', 'Corrupted Spirit', 'Toxic Chain', 'Sharpness', 'Vessel of Ruin', 'Tablets of Ruin', 'Weavile', 'Chien-Pao', 'Ogerpon-Cornerstone',
+	//		'Storm Throw'
+	//	],
+	//},
 	//{
 	//	name: "[Gen 9] Custom Game",
 	//	mod: 'gen9',
