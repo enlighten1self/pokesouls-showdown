@@ -90586,7 +90586,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	flamigo: {
 		learnset: {
 			tripleaxel: ["9M"],
-			breakbreak: ["9M"],
+			brickbreak: ["9M"],
 			knockoff: ["9M"],
 			whirlwind: ["9M"],
 			waterfall: ["9M"],
