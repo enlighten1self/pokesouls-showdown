@@ -2748,77 +2748,81 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Useless Moves Clause',
 		// implemented in /mods/moderngen1/rulesets.ts
 	},
-	franticmovepoolslegality: {
+	franticmovepools: {
 	    effectType: 'Rule',
-	    name: "Frantic Movepools Mod",
+	    name: "Frantic MovePools",
 	    desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get access to all of that Pok&eacute;mon's moves and abilities in addition to their own. Certain Pok&eacute;mon, moves, and abilities may be restricted.`,
+		
 	    onBegin() {
-	        this.add('rule', 'Frantic Movepools Mod: Pok\u00e9mon nicknamed after another Pok\u00e9mon get access to that Pok\u00e9mon\'s movepool and abilities.');
+	        this.add('rule', 'Frantic MovePools: Pok\u00e9mon nicknamed after another Pok\u00e9mon get access to that Pok\u00e9mon\'s movepool and abilities.');
 	    },
-
-	    onValidateSet(set, format) {
-	        const restricted = new Set<string>(format.restricted ?? []);
+	
+	    onValidateSet(set) {
 	        const species = this.dex.species.get(set.species);
 	        const fusion = this.dex.species.get(set.name);
-
+		
 	        if (fusion.exists && fusion.name !== species.name) {
 	            // Restricted base Pokemon cannot receive a donor movepool
-	            if (restricted.has(species.name)) {
+	            if (this.ruleTable.isRestrictedSpecies(species)) {
 	                return [`${species.name} is restricted and cannot inherit another Pok\u00e9mon's movepool or abilities.`];
 	            }
-
-	            // Restricted donor Pokemon cannot be used as a donor
-	            if (restricted.has(fusion.name)) {
+			
+	            // Restricted donor cannot donate
+	            if (this.ruleTable.isRestrictedSpecies(fusion)) {
 	                return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 	            }
+			
+	            // Banned donor cannot donate
+	            if (this.ruleTable.isBannedSpecies(fusion)) {
+	                return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
+	            }
+	            if (fusion.isNonstandard &&
+	                !(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
+	                    this.ruleTable.has(`+pokemon:${fusion.id}`) ||
+	                    this.ruleTable.has(`+basepokemon:${this.toID(fusion.baseSpecies)}`))) {
+	                return [`${fusion.name} is marked as ${fusion.isNonstandard} and cannot be used as a movepool donor.`];
+	            }
+	            if (fusion.battleOnly) {
+	                return [`${fusion.name} is a battle-only form and cannot be used as a movepool donor.`];
+	            }
 	        }
-
+		
 	        // Build ability pool, filtering restricted abilities from donor
 	        const abilityPool = new Set<string>(Object.values(species.abilities));
 	        if (fusion.exists && fusion.name !== species.name) {
 	            for (const ability of Object.values(fusion.abilities)) {
-	                if (!restricted.has(ability)) {
+	                if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
 	                    abilityPool.add(ability);
 	                }
 	            }
 	        }
 	        const ability = this.dex.abilities.get(set.ability);
-	        if (!abilityPool.has(ability.name)) {
+	        const naturalAbilities = Object.values(species.abilities || {}).filter(Boolean);
+	        // If the ability is restricted, only allow it if the base species naturally has it
+	        if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
+	            if (!naturalAbilities.includes(ability.name)) {
+	                return [`${ability.name} is restricted and may only be used by Pok\u00e9mon that naturally have it.`];
+	            }
+	        } else if (!abilityPool.has(ability.name)) {
 	            return [`${species.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`];
 	        }
-
-			// Banned Pokemon cannot be used as donors
-			if (fusion.exists && fusion.name !== species.name) {
-			    if (this.ruleTable.isBannedSpecies(fusion)) {
-			        return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
-			    }
-			    if (fusion.isNonstandard &&
-			        !(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
-			            this.ruleTable.has(`+pokemon:${fusion.id}`) ||
-			            this.ruleTable.has(`+basepokemon:${this.toID(fusion.baseSpecies)}`))) {
-			        return [`${fusion.name} is marked as ${fusion.isNonstandard} and cannot be used as a movepool donor.`];
-			    }
-			    if (fusion.battleOnly) {
-			        return [`${fusion.name} is a battle-only form and cannot be used as a movepool donor.`];
-			    }
-			}
+		
 	        // Validate moves against combined movepool, filtering restricted moves from donor
 	        if (fusion.exists && fusion.name !== species.name) {
 	            const learnsetData = this.dex.species.getLearnsetData(species.id);
 	            const fusionLearnsetData = this.dex.species.getLearnsetData(fusion.id);
-
+			
 	            const combinedLearnset: {[k: string]: any} = { ...learnsetData.learnset };
 	            for (const [moveId, sources] of Object.entries(fusionLearnsetData.learnset ?? {})) {
-	                const move = this.dex.moves.get(moveId);
-	                if (!restricted.has(move.name)) {
+	                if (!this.ruleTable.isRestricted(`move:${moveId}`)) {
 	                    combinedLearnset[moveId] = sources;
 	                }
 	            }
-
+			
 	            for (const moveName of set.moves) {
 	                const move = this.dex.moves.get(moveName);
 	                if (!combinedLearnset[move.id]) {
-	                    if (restricted.has(move.name)) {
+	                    if (this.ruleTable.isRestricted(`move:${move.id}`)) {
 	                        return [`${move.name} is restricted and cannot be inherited.`];
 	                    }
 	                    return [`${species.name} fused with ${fusion.name} cannot learn ${move.name}.`];
@@ -2826,8 +2830,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 	            }
 	        }
 	    },
-
-	    onValidateTeam(team, format) {
+	
+	    onValidateTeam(team) {
 	        const donors = new Utils.Multiset<string>();
 	        for (const set of team) {
 	            const species = this.dex.species.get(set.species);
@@ -2849,6 +2853,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 	            if (this.ruleTable.isBannedSpecies(fusion) || fusion.battleOnly) {
 	                return [`Pok\u00e9mon can't fuse with banned Pok\u00e9mon.`, `(${fusionName} is banned.)`];
 	            }
+	            if (this.ruleTable.isRestrictedSpecies(fusion)) {
+	                return [`Pok\u00e9mon can't fuse with restricted Pok\u00e9mon.`, `(${fusionName} is restricted.)`];
+	            }
 	            if (fusion.isNonstandard &&
 	                !(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
 	                    this.ruleTable.has(`+pokemon:${fusion.id}`) ||
@@ -2857,7 +2864,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 	            }
 	        }
 	    },
-
+	
 	    onModifySpecies(species, target, source, effect) {
 	        if (!target) return;
 	        const newSpecies = this.dex.deepClone(species);
@@ -2865,14 +2872,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 	        if (!fusionName || fusionName === newSpecies.name) return;
 	        const fusionSpecies = this.dex.species.get(fusionName);
 	        if (!fusionSpecies.exists) return;
-
-	        // Read restricted list from the format at runtime
-	        const restricted = new Set<string>(this.format.restricted ?? []);
-
+		
 	        // Merge abilities, filtering restricted abilities from donor
 	        const abilityPool = new Set<string>(Object.values(newSpecies.abilities));
 	        for (const ability of Object.values(fusionSpecies.abilities)) {
-	            if (!restricted.has(ability)) {
+	            if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
 	                abilityPool.add(ability);
 	            }
 	        }
@@ -2881,22 +2885,19 @@ export const Rulesets: {[k: string]: FormatData} = {
 	        for (let i = 0; i < abilityArray.length; i++) {
 	            newSpecies.abilities[i] = abilityArray[i];
 	        }
-
+		
 	        // Merge learnsets, filtering restricted moves from donor
 	        const baseLearnset = this.dex.species.getLearnsetData(newSpecies.id);
 	        const fusionLearnset = this.dex.species.getLearnsetData(fusionSpecies.id);
 	        const mergedLearnset: {[k: string]: any} = { ...baseLearnset.learnset };
 	        for (const [moveId, sources] of Object.entries(fusionLearnset.learnset ?? {})) {
-	            const move = this.dex.moves.get(moveId);
-	            if (!restricted.has(move.name)) {
+	            if (!this.ruleTable.isRestricted(`move:${moveId}`)) {
 	                mergedLearnset[moveId] = sources;
 	            }
 	        }
 	        newSpecies.learnset = mergedLearnset;
-
+		
 	        return newSpecies;
 	    },
 	},
-
-
 };
