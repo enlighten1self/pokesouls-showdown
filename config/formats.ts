@@ -661,6 +661,18 @@ export const Formats: FormatList = [
 			}
 		},
 	},
+	{
+		name: "[Gen 9] National Dex Frantic Movepools",
+		desc: `Pokémon nicknamed after another Pokémon gain access to that Pokémon's movepool and abilities.`,
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic MovePools Mod', 'Terastal Clause'],
+		banlist: [
+			''
+		],
+		restricted: [
+			''
+		],
+	},
 	//{
 	//	name: "[Gen 9] Custom Game",
 	//	mod: 'gen9',

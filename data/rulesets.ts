@@ -2748,4 +2748,97 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Useless Moves Clause',
 		// implemented in /mods/moderngen1/rulesets.ts
 	},
+	franticfusionslegality: {
+		effectType: 'ValidatorRule',
+		name: "Frantic Fusions Legality",
+		desc: `Fusion mons gain donor movepools and abilities. Restricted Pokémon cannot fuse. Banned Pokémon cannot be used at all. Restricted moves/abilities are base-only.`,
+		onValidateSet(set) {
+			const baseSpecies = this.dex.species.get(set.species);
+			const fusionSpecies = (set.name && set.name !== baseSpecies.name)
+				? this.dex.species.get(set.name)
+				: null;
+
+			const ability = this.dex.abilities.get(set.ability);
+			if (this.ruleTable.isBannedSpecies(baseSpecies)) {
+				return [`"${baseSpecies.name}" is banned and cannot be used.`];
+			}
+
+			if (fusionSpecies?.exists && this.ruleTable.isBannedSpecies(fusionSpecies)) {
+				return [`"${fusionSpecies.name}" is banned and cannot be fused with.`];
+			}
+			if (
+				this.ruleTable.isRestrictedSpecies(baseSpecies) &&
+				fusionSpecies
+			) {
+				return [
+					`"${baseSpecies.name}" is restricted and cannot use fusion.`,
+				];
+			}
+			if (fusionSpecies?.exists) {
+				if (this.ruleTable.isRestrictedSpecies(fusionSpecies)) {
+					return [
+						`You cannot fuse with restricted Pokémon like "${fusionSpecies.name}".`,
+					];
+				}
+			}
+			const abilityPool = new Set();
+
+			for (const ability of Object.values(baseSpecies.abilities || {})) {
+				if (ability) abilityPool.add(this.toID(ability));
+			}
+			if (fusionSpecies?.exists && fusionSpecies.name !== baseSpecies.name) {
+				for (const ability of Object.values(fusionSpecies.abilities || {})) {
+					if (ability) abilityPool.add(this.toID(ability));
+				}
+			}
+			if (this.ruleTable.isBanned(`ability:${ability.id}`)) {
+				return [`"${ability.name}" is banned.`];
+			}
+			if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
+				const naturalAbilities = Object.values(baseSpecies.abilities || {}).map(a => this.toID(a));
+				if (!naturalAbilities.includes(ability.id)) {
+					return [
+						`"${ability.name}" is restricted and may only be used by Pokémon that naturally have it.`,
+					];
+				}
+			}
+			if (!abilityPool.has(ability.id)) {
+				return [
+					`${baseSpecies.name} does not have access to ${ability.name}.`,
+				];
+			}
+		},
+		checkCanLearn(move, species, setSources, set) {
+			const baseSpecies = this.dex.species.get(set.species);
+			if (this.ruleTable.isBannedSpecies(baseSpecies)) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			if (!set.name || set.name === baseSpecies.name) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			const fusionSpecies = this.dex.species.get(set.name);
+			if (fusionSpecies?.exists && this.ruleTable.isBannedSpecies(fusionSpecies)) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			if (this.ruleTable.isRestrictedSpecies(baseSpecies)) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			if (fusionSpecies?.exists && this.ruleTable.isRestrictedSpecies(fusionSpecies)) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			if (this.ruleTable.isBanned(`move:${move.id}`)) {
+				return `${move.name} is banned.`;
+			}
+			if (this.ruleTable.isRestricted(`move:${move.id}`)) {
+				return this.checkCanLearn(move, baseSpecies, setSources, set);
+			}
+			const baseCheck = this.checkCanLearn(move, baseSpecies, setSources, set);
+			if (baseCheck === null) return null;
+			if (fusionSpecies?.exists && fusionSpecies.name !== baseSpecies.name) {
+				const fusionCheck = this.checkCanLearn(move, fusionSpecies, setSources, set);
+				if (fusionCheck === null) return null;
+			}
+			return baseCheck;
+		},
+	},
 };
