@@ -2752,39 +2752,40 @@ export const Rulesets: {[k: string]: FormatData} = {
 	    effectType: 'Rule',
 	    name: "Frantic MovePools",
 	    desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get access to all of that Pok&eacute;mon's moves and abilities in addition to their own. Certain Pok&eacute;mon, moves, and abilities may be restricted.`,
-
+		
 	    onBegin() {
 	        this.add('rule', 'Frantic MovePools: Pok\u00e9mon nicknamed after another Pok\u00e9mon get access to that Pok\u00e9mon\'s movepool and abilities.');
 	    },
-
+	
 	    onValidateSet(set) {
 	        const species = this.dex.species.get(set.species);
 	        const fusion = this.dex.species.get(set.name);
-
+			// Check if donor is holding a mega stone that would result in a restricted/banned mega form
+			if (set.item) {
+			    const item = this.dex.items.get(set.item);
+			    if (item.megaStone) {
+			        const megaForm = this.dex.species.get(item.megaStone);
+			        if (megaForm.exists) {
+			            if (this.ruleTable.isRestrictedSpecies(megaForm)) {
+			                return [`${fusion.name} cannot hold ${item.name} because ${megaForm.name} is restricted.`];
+			            }
+			            if (this.ruleTable.isBannedSpecies(megaForm)) {
+			                return [`${fusion.name} cannot hold ${item.name} because ${megaForm.name} is banned.`];
+			            }
+			        }
+			    }
+			}
 	        if (fusion.exists && fusion.name !== species.name) {
-				// Check if donor is a base form that can mega evolve into a restricted form
-				const fusionMegaForms = (fusion.otherFormes ?? [])
-    			    .map(f => this.dex.species.get(f))
-    			    .filter(f => f.requiredItem && this.dex.items.get(f.requiredItem).megaStone);
-
-    			for (const megaForm of fusionMegaForms) {
-    			    if (this.ruleTable.isRestrictedSpecies(megaForm)) {
-    			        return [`${fusion.name} is restricted because its Mega Evolution (${megaForm.name}) is restricted.`];
-    			    }
-    			    if (this.ruleTable.isBannedSpecies(megaForm)) {
-    			        return [`${fusion.name} is restricted because its Mega Evolution (${megaForm.name}) is banned.`];
-    			    }
-    			}
 	            // Restricted base Pokemon cannot receive a donor movepool
 	            if (this.ruleTable.isRestrictedSpecies(species)) {
 	                return [`${species.name} is restricted and cannot inherit another Pok\u00e9mon's movepool or abilities.`];
 	            }
-
+			
 	            // Restricted donor cannot donate
 	            if (this.ruleTable.isRestrictedSpecies(fusion)) {
 	                return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 	            }
-
+			
 	            // Banned donor cannot donate
 	            if (this.ruleTable.isBannedSpecies(fusion)) {
 	                return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
@@ -2799,7 +2800,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 	                return [`${fusion.name} is a battle-only form and cannot be used as a movepool donor.`];
 	            }
 	        }
-
+		
 	        // Build ability pool, filtering restricted abilities from donor
 	        const abilityPool = new Set<string>(Object.values(species.abilities).filter(Boolean) as string[]);
 	        if (fusion.exists && fusion.name !== species.name) {
@@ -2819,26 +2820,26 @@ export const Rulesets: {[k: string]: FormatData} = {
 	            return [`${species.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`];
 	        }
 	    },
-
+	
 	    checkCanLearn(move, species, setSources, set) {
 	        // Always check if the base species can learn it first
 	        const baseCanLearn = this.checkCanLearn(move, species, setSources, set);
 	        if (baseCanLearn === null) return null;
-
+		
 	        // If not, check if the donor (nickname) can learn it
 	        if (!set?.name) return baseCanLearn;
 	        const fusion = this.dex.species.get(set.name);
 	        if (!fusion.exists || fusion.name === species.name) return baseCanLearn;
-
+		
 	        // Don't allow inheriting restricted moves
 	        if (this.ruleTable.isRestricted(`move:${move.id}`)) return baseCanLearn;
-
+		
 	        const fusionCanLearn = this.checkCanLearn(move, fusion, setSources, set);
 	        if (fusionCanLearn === null) return null;
-
+		
 	        return baseCanLearn;
 	    },
-
+	
 	    onValidateTeam(team) {
 	        const donors = new Utils.Multiset<string>();
 	        for (const set of team) {
@@ -2858,19 +2859,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 	                return [`You can only fuse with any Pok\u00e9mon once.`, `(You have ${number} Pok\u00e9mon fused with ${fusionName}.)`];
 	            }
 	            const fusion = this.dex.species.get(fusionName);
-
-				// Check mega evolutions of donor
-				const fusionMegaForms = (fusion.otherFormes ?? [])
-				    .map(f => this.dex.species.get(f))
-				    .filter(f => f.requiredItem && this.dex.items.get(f.requiredItem).megaStone);
-							
-				for (const megaForm of fusionMegaForms) {
-				    if (this.ruleTable.isRestrictedSpecies(megaForm) || this.ruleTable.isBannedSpecies(megaForm)) {
-				        return [
-				            `Pok\u00e9mon can't fuse with ${fusionName} because its Mega Evolution (${megaForm.name}) is restricted or banned.`,
-				        ];
-				    }
-				}
 	            if (this.ruleTable.isBannedSpecies(fusion) || fusion.battleOnly) {
 	                return [`Pok\u00e9mon can't fuse with banned Pok\u00e9mon.`, `(${fusionName} is banned.)`];
 	            }
