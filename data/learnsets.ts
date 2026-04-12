@@ -1,3 +1,5 @@
+import { ratedtours } from "../config/config-example";
+
 export const Learnsets: {[k: string]: LearnsetData} = {
 	missingno: {
 		learnset: {
@@ -135,6 +137,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ivysaur: {
 		learnset: {
+			sludgewave: ["9M"],
 			acidspray: ["9M"],
 			amnesia: ["8M"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -824,6 +827,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	wartortle: {
 		learnset: {
+			ironhead: ["9M"],
 			aquatail: ["9L30", "8L30", "7T", "7L33", "6T", "6L32", "5T", "5L32", "4T", "4L32"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			aurasphere: ["8M"],
@@ -4875,6 +4879,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	clefairy: {
 		learnset: {
+			healblock: ["9M"],
 			afteryou: ["9L12", "8L12", "7T", "7L58", "6T", "6L1", "5T", "5L52"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M"],
@@ -5040,6 +5045,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	clefable: {
 		learnset: {
+			healblock: ["9M"],
 			airslash: ["9M"],
 			afteryou: ["9L1", "8L1", "7T", "6T", "5T"],
 			alluringvoice: ["9M"],
@@ -5690,6 +5696,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	jigglypuff: {
 		learnset: {
+			moonblast: ["9M"],
+			fakeout: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T"],
 			amnesia: ["9M"],
@@ -5847,6 +5855,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	wigglytuff: {
 		learnset: {
+			moonblast: ["9M"],
+			fakeout: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T"],
 			amnesia: ["9M"],
@@ -6097,6 +6107,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	golbat: {
 		learnset: {
+			skyattack: ["9M"],
+			xscissor: ["9M"],
 			absorb: ["8L1", "8V", "7L1"],
 			acrobatics: ["8M", "7M", "6M", "6L33", "5M", "5L33"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
@@ -6189,6 +6201,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crobat: {
 		learnset: {
+			nightslash: ["9M"],
+			knockoff: ["9M"],
+			psychicfangs: ["9M"],
 			absorb: ["8L1", "7L1"],
 			acrobatics: ["8M", "7M", "6M", "6L33", "5M", "5L33"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
@@ -7652,6 +7667,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	persian: {
 		learnset: {
+			spikes: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M"],
 			amnesia: ["9M", "8M", "8V"],
@@ -7770,6 +7786,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	persianalola: {
 		learnset: {
+			spikes: ["9M"],
+			toxicspikes: ["9M"],
 			aerialace: ["9M", "7M"],
 			agility: ["9M"],
 			amnesia: ["9M", "8M", "8V"],
@@ -7871,6 +7889,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	perrserker: {
 		learnset: {
+			hypnosis: ["9M"],
+			outrage: ["9M"],
+			thunderwave: ["9M"],
+			bulkup: ["9M"],
+			liquidation: ["9M"],
+			spikes: ["9M"],
 			aerialace: ["9M"],
 			amnesia: ["9M", "8M"],
 			assurance: ["8M"],
@@ -8222,6 +8246,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mankey: {
 		learnset: {
+			knockoff: ["9M"],
+			roar: ["9M"],
 			acrobatics: ["9M", "7M", "6M", "5M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			assurance: ["9L26", "7L26", "6L25", "5L25", "4L25"],
@@ -8348,6 +8374,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	primeape: {
 		learnset: {
+			knockoff: ["9M"],
+			roar: ["9M"],
 			acrobatics: ["9M", "7M", "6M", "5M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			assurance: ["9L26", "7L26", "6L25", "5L25", "4L25"],
@@ -8474,6 +8502,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	annihilape: {
 		learnset: {
+			roar: ["9M"],
+			knockoff: ["9M"],
 			acrobatics: ["9M"],
 			assurance: ["9L26"],
 			bodyslam: ["9M"],
@@ -9618,6 +9648,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	machop: {
 		learnset: {
+			drainpunch: ["9M"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			bide: ["8V", "7V"],
 			bodyslam: ["8M", "7V", "3T"],
@@ -9721,6 +9752,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	machoke: {
 		learnset: {
+			drainpunch: ["9M"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			bide: ["8V", "7V"],
 			bodyslam: ["8M", "7V", "3T"],
@@ -9822,6 +9854,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	machamp: {
 		learnset: {
+			machpunch: ["8M"],
 			drainpunch: ["8M"],
 			assurance: ["8M"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -10031,6 +10064,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	weepinbell: {
 		learnset: {
+			toxicspikes: ["9M"],
 			acid: ["9L24", "8V", "7L24", "7V", "6L23", "5L23", "4L23", "3L24"],
 			acidspray: ["9M"],
 			attract: ["7M", "7V", "6M", "5M", "4M", "3M"],
@@ -11442,6 +11476,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	slowbro: {
 		learnset: {
+			ancientpower: ["9M"],
+			powergem: ["9M"],
+			healblock: ["9M"],
 			aerialace: ["7M", "6M", "5M"],
 			afteryou: ["7T", "6T", "5T"],
 			amnesia: ["9M", "9L27", "8M", "8L27", "8V", "7L43", "7V", "6L43", "5L43", "4L47", "3L36"],
@@ -11593,6 +11630,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	slowbrogalar: {
 		learnset: {
+			ancientpower: ["9M"],
+			firepunch: ["9M"],
+			healblock: ["9M"],
+			thunderpunch: ["9M"],
 			toxicspikes: ["9M"],
 			acid: ["9L1", "8L1"],
 			acidspray: ["9M"],
@@ -11706,6 +11747,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	slowking: {
 		learnset: {
+			ancientpower: ["9M"],
+			healblock: ["9M"],
 			afteryou: ["7T", "6T", "5T"],
 			allyswitch: ["7T"],
 			amnesia: ["9M", "9L27", "8M", "8L27"],
@@ -11845,6 +11888,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	slowkinggalar: {
 		learnset: {
+			ancientpower: ["9M"],
 			acid: ["9L1", "8L1"],
 			acidspray: ["9M"],
 			amnesia: ["9M", "9L27", "8M", "8L27"],
@@ -12215,6 +12259,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	farfetchd: {
 		learnset: {
+			trailblaze: ["9M"],
 			acrobatics: ["8M", "7M", "7L37", "6M", "6L37", "5M", "5L37"],
 			aerialace: ["8L20", "7M", "7L9", "6M", "6L9", "5M", "5L13", "4M", "4L13", "3M", "3S1"],
 			agility: ["8M", "8L60", "8V", "7L31", "7V", "6L31", "5L31", "4L31", "3L36"],
@@ -12324,6 +12369,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	farfetchdgalar: {
 		learnset: {
+			featherdance: ["9M"],
+			agility: ["9M"],
+			uturn: ["9M"],
+			irontail: ["9M"],
+			firstimpression: ["9M"],
 			assurance: ["8M"],
 			attract: ["8M"],
 			bodyslam: ["8M"],
@@ -12378,6 +12428,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sirfetchd: {
 		learnset: {
+			agility: ["9M"],
+			uturn: ["9M"],
+			irontail: ["9M"],
 			assurance: ["8M"],
 			attract: ["8M"],
 			bodyslam: ["8M"],
@@ -13409,6 +13462,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gastly: {
 		learnset: {
+			shadowsneak: ["9M"],
 			acidspray: ["9M"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["9E", "8E", "7E", "6E", "5E", "4E", "3E"],
@@ -13512,6 +13566,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	haunter: {
 		learnset: {
+			shadowsneak: ["9M"],
 			acidspray: ["9M"],
 			allyswitch: ["8M", "7T"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -13623,6 +13678,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gengar: {
 		learnset: {
+			shadowsneak: ["9M"],
 			acidspray: ["9M"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["6S4"],
@@ -15190,6 +15246,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	marowakalola: {
 		learnset: {
+			perishsong: ["9M"],
+			poweruppunch: ["9M"],
+			curse: ["9M"],
+			ancientpower: ["9M"],
+			fissure: ["9M"],
 			aerialace: ["7M"],
 			allyswitch: ["8M", "7T"],
 			attract: ["8M", "7M"],
@@ -17735,6 +17796,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	staryu: {
 		learnset: {
+			aquajet: ["9M"],
+			selfdestruct: ["9M"],
+			safeguard: ["9M"],
 			attract: ["7V"],
 			bide: ["7V"],
 			blizzard: ["8M", "8V", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -17822,6 +17886,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	starmie: {
 		learnset: {
+			tripleaxel: ["9M"],
+			healblock: ["9M"],
 			ancientpower: ["9M"],
 			aquajet: ["9M"],
 			bulkup: ["9M"],
@@ -18025,6 +18091,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mrmime: {
 		learnset: {
+			haze: ["9M"],
+			stealthrock: ["9M"],
+			playrough: ["9M"],
+			firstimpression: ["9M"],
+			tripleaxel: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M"],
 			allyswitch: ["8M", "7T"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -18163,6 +18234,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mrmimegalar: {
 		learnset: {
+			haze: ["9M"],
+			infestation: ["9M"],
+			stealthrock: ["9M"],
+			thunderpunch: ["9M"],
+			chargebeam: ["9M"],
+			frostbreath: ["9M"],
+			firstimpression: ["9M"],
 			allyswitch: ["8M", "8L16"],
 			attract: ["8M"],
 			avalanche: ["8M"],
@@ -18259,6 +18337,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mrrime: {
 		learnset: {
+			infestation: ["9M"],
+			stealthrock: ["9M"],
+			thunderpunch: ["9M"],
+			chargebeam: ["9M"],
+			firstimpression: ["9M"],
 			frostbreath: ["9M"],
 			haze: ["9M"],
 			icespinner: ["9M"],
@@ -19468,6 +19551,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pinsir: {
 		learnset: {
+			circlethrow: ["9M"],
+			dualwingbeat: ["9M"],
 			lunge: ["9M"],
 			hardpress: ["9M"],
 			aerialace: ["9M"],
@@ -20266,6 +20351,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	vaporeon: {
 		learnset: {
+			taunt: ["9M"],
 			acidarmor: ["9L45", "8L45", "8V", "7L29", "7V", "6L29", "5L29", "4L64", "3L47"],
 			alluringvoice: ["9M"],
 			aquaring: ["9L35", "8L35", "7L25", "6L25", "5L25", "4L43"],
@@ -20480,6 +20566,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	flareon: {
 		learnset: {
+			swordsdance: ["9M"],
+			flamewheel: ["9M"],
+			taunt: ["9M"],
 			alluringvoice: ["9M"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
 			babydolleyes: ["9L15", "8L15", "7L9"],
@@ -20584,6 +20673,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	espeon: {
 		learnset: {
+			healblock: ["9M"],
 			safeguard: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T"],
@@ -20697,6 +20787,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	umbreon: {
 		learnset: {
+			knockoff: ["9M"],
 			alluringvoice: ["9M"],
 			assurance: ["9L25", "8M", "8L25", "7L25", "6L25", "5L25", "4L43"],
 			attract: ["8M", "7M", "7V", "6M", "5M", "4M", "3M"],
@@ -20806,6 +20897,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	leafeon: {
 		learnset: {
+			taunt: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M"],
 			alluringvoice: ["9M"],
 			attract: ["8M", "7M", "6M", "5M", "4M"],
@@ -20904,6 +20996,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	glaceon: {
 		learnset: {
+			taunt: ["9M"],
 			alluringvoice: ["9M"],
 			aquatail: ["7T", "6T", "5T", "4T"],
 			attract: ["8M", "7M", "6M", "5M", "4M"],
@@ -21000,6 +21093,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	porygon: {
 		learnset: {
+			selfdestruct: ["9M"],
+			voltswitch: ["9M"],
+			flashcannon: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L30", "8M", "8L30", "8V", "7L12", "7V", "6L12", "5L12", "4L12", "3L9"],
 			allyswitch: ["8M", "7T"],
@@ -21098,6 +21194,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	porygon2: {
 		learnset: {
+			selfdestruct: ["9M"],
+			voltswitch: ["9M"],
+			flashcannon: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L30", "8M", "8L30", "7L12", "7V", "6L12", "5L12", "4L12", "3L9"],
 			allyswitch: ["8M", "7T"],
@@ -21183,6 +21282,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	porygonz: {
 		learnset: {
+			voltswitch: ["9M"],
+			flashcannon: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M"],
 			agility: ["9M", "9L30", "8M", "8L30", "7L12", "6L12", "5L12", "4L12"],
 			allyswitch: ["8M", "7T"],
@@ -22732,6 +22833,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dragonite: {
 		learnset: {
+			vacuumwave: ["9M"],
 			whirlwind: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L20", "8M", "8L20", "8V", "7L25", "7V", "6L25", "6S8", "5L25", "4L25", "3L38", "3S0"],
@@ -22892,6 +22994,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mewtwo: {
 		learnset: {
+			vacuumwave: ["9M"],
+			discharge: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "8M", "8V"],
 			allyswitch: ["8M"],
@@ -23574,6 +23678,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	bayleef: {
 		learnset: {
+			earthpower: ["9M"],
+			dazzlinggleam: ["9M"],
+			bulldoze: ["9M"],
 			ancientpower: ["4T"],
 			aromatherapy: ["7L50", "6L50", "5L50", "4L50"],
 			attract: ["7M", "7V", "6M", "5M", "4M", "3M"],
@@ -24208,6 +24315,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	croconaw: {
 		learnset: {
+			outrage: ["9M"],
+			bulldoze: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["4T"],
 			aquatail: ["9L47", "7T", "7L51", "6T", "6L51", "5T", "5L51", "4L42"],
@@ -24310,6 +24419,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	feraligatr: {
 		learnset: {
+			iciclespear: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L1", "7L1", "6L30", "5L30", "4L30"],
 			ancientpower: ["4T"],
@@ -25601,6 +25711,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	togekiss: {
 		learnset: {
+			calmmind: ["8M"],
+			moonblast: ["8M"],
 			aerialace: ["7M", "6M", "5M", "4M"],
 			afteryou: ["8L1", "7T", "7L1", "6T", "6L1"],
 			aircutter: ["4T"],
@@ -26095,6 +26207,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ampharos: {
 		learnset: {
+			flashcannon: ["9M"],
 			paraboliccharge: ["9M"],
 			risingvoltage: ["9M"],
 			afteryou: ["7T", "6T", "5T"],
@@ -29343,6 +29456,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	qwilfishhisui: {
 		learnset: {
+			thunderwave: ["9M"],
 			acidspray: ["9M", "9E"],
 			acupressure: ["9L52"],
 			agility: ["9M"],
@@ -29415,6 +29529,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	overqwil: {
 		learnset: {
+			mortalspin: ["9M"],
+			thunderwave: ["9M"],
 			acidspray: ["9M"],
 			acupressure: ["9L52"],
 			agility: ["9M"],
@@ -29572,6 +29688,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	heracross: {
 		learnset: {
+			outrage: ["9M"],
+			circlethrow: ["9M"],
 			aerialace: ["9M", "9L15", "8L15", "7M", "7L10", "6M", "6L10", "5M", "5L10", "4M", "4L13"],
 			armthrust: ["9L1", "7L1", "6L1"],
 			assurance: ["8M"],
@@ -31583,6 +31701,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	skarmory: {
 		learnset: {
+			scaleshot: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "9L16", "8M", "8L16", "7L31", "7V", "6L12", "5L12", "4L12", "3L16"],
 			aircutter: ["9M", "9E", "8E", "7L12", "6L12", "5L23", "4T", "4L23", "3L29"],
@@ -32861,6 +32980,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	tyranitar: {
 		learnset: {
+			scaleshot: ["9M"],
+			scorchingsands: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -33508,6 +33629,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	grovyle: {
 		learnset: {
+			dragonrush: ["9M"],
+			dragonclaw: ["9M"],
+			dragonpulse: ["9M"],
 			absorb: ["7L1", "6L1", "5L1", "4L1", "3L1"],
 			acrobatics: ["9M", "8M", "7M", "6M", "5M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
@@ -33607,6 +33731,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sceptile: {
 		learnset: {
+			dragonrush: ["9M"],
 			absorb: ["7L1", "6L1", "5L1", "4L1", "3L1"],
 			acrobatics: ["9M", "8M", "7M", "6M", "5M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
@@ -33924,6 +34049,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	blaziken: {
 		learnset: {
+			drainpunch: ["9M"],
+			circlethrow: ["9M"],
 			acrobatics: ["9M", "8M", "7M", "6M", "5M"],
 			aerialace: ["9M", "9L20", "8L20", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "8M"],
@@ -34144,6 +34271,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	marshtomp: {
 		learnset: {
+			sludgebomb: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -34238,6 +34366,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	swampert: {
 		learnset: {
+			sludgebomb: ["9M"],
+			fissure: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -36268,6 +36398,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gardevoir: {
 		learnset: {
+			icebeam: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T", "5M"],
 			attract: ["8M", "7M", "6M", "5M", "4M", "3M"],
@@ -38291,6 +38422,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sableye: {
 		learnset: {
+			healblock: ["9M"],
+			partingshot: ["9M"],
 			nightslash: ["9M"],
 			safeguard: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
@@ -38441,6 +38574,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mawile: {
 		learnset: {
+			dazzlinggleam: ["9M"],
 			ancientpower: ["8E", "7E", "6E", "5E", "4T", "4E", "3E"],
 			assurance: ["8M"],
 			astonish: ["8L1", "7L1", "6L1", "5L1", "4L1", "3L1", "3S0"],
@@ -38715,6 +38849,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	aggron: {
 		learnset: {
+			scorchingsands: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["4T"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -39151,6 +39286,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	manectric: {
 		learnset: {
+			flamecharge: ["9M"],
 			supercellslam: ["9M"],
 			trailblaze: ["9M"],
 			agility: ["8M"],
@@ -39758,6 +39894,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	roserade: {
 		learnset: {
+			mortalspin: ["9M"],
 			trailblaze: ["9M"],
 			absorb: ["8L1"],
 			aromatherapy: ["8L1"],
@@ -40737,6 +40874,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	grumpig: {
 		learnset: {
+			hypnosis: ["9M"],
 			allyswitch: ["7T"],
 			amnesia: ["9M"],
 			attract: ["7M", "6M", "5M", "4M", "3M"],
@@ -41576,6 +41714,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	altaria: {
 		learnset: {
+			petaldance: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M", "3S1"],
 			agility: ["9M", "8M", "6S3"],
@@ -41686,6 +41825,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	zangoose: {
 		learnset: {
+			fakeout: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M"],
 			attract: ["7M", "6M", "5M", "4M", "3M"],
@@ -41819,6 +41959,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	seviper: {
 		learnset: {
+			scaleshot: ["9M"],
 			acidspray: ["9M"],
 			aquatail: ["7T", "6T", "5T", "5D", "4T"],
 			assurance: ["9E", "7E", "6E", "5E", "4E"],
@@ -43072,6 +43213,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	milotic: {
 		learnset: {
+			calmmind: ["9M"],
+			liquidation: ["9M"],
+			dazzlinggleam: ["9M"],
 			alluringvoice: ["9M"],
 			aquaring: ["9L12", "8L12", "7L17", "6L21", "5L49", "4L49"],
 			aquatail: ["9L32", "8L32", "7T", "7L31", "6T", "6L29", "5T", "5L29", "4T", "4L29"],
@@ -43243,6 +43387,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	kecleon: {
 		learnset: {
+			conversion: ["9M"],
+			shedtail: ["9M"],
+			conversion2: ["9M"],
+			powerwhip: ["9M"],
+			gigaimpact: ["9M"],
+			firstimpression: ["9M"],
+			scaleshot: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M", "3M"],
 			afteryou: ["7T", "6T", "5T"],
 			ancientpower: ["7L21", "6L1", "5L55", "4T", "4L55", "3L49"],
@@ -43453,6 +43604,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	banette: {
 		learnset: {
+			iciclespear: ["9M"],
+			vacuumwave: ["9M"],
+			healblock: ["9M"],
+			slash: ["9M"],
 			zenheadbutt: ["9M"],
 			allyswitch: ["7T"],
 			attract: ["7M", "6M", "5M", "4M", "3M"],
@@ -44049,6 +44204,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chimecho: {
 		learnset: {
+			amnesia: ["9M"],
+			waterpulse: ["9M"],
+			meteorbeam: ["9M"],
 			boomburst: ["9M"],
 			flashcannon: ["9M"],
 			selfdestruct: ["9M"],
@@ -44436,6 +44594,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	froslass: {
 		learnset: {
+			healblock: ["9M"],
 			nastyplot: ["9M"],
 			phantomforce: ["9M"],
 			allyswitch: ["8M", "7T"],
@@ -45239,6 +45398,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	salamence: {
 		learnset: {
+			scaleshot: ["9M"],
+			flamecharge: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "5S3", "4M", "3M", "3S1"],
 			aircutter: ["4T"],
 			airslash: ["9M", "8M"],
@@ -46027,6 +46188,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	latios: {
 		learnset: {
+			workup: ["9M"],
+			wish: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			agility: ["9M", "8M"],
 			aircutter: ["9M"],
@@ -46163,6 +46326,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	kyogre: {
 		learnset: {
+			iciclespear: ["9M"],
 			ancientpower: ["9L1", "8L1", "7L1", "6L1", "5L45", "5S3", "4T", "4L15", "4S2", "3L15"],
 			aquaring: ["9L54", "9S12", "8L54", "8S11", "7L30", "6L30", "6S5", "5L30", "4L30", "4S2"],
 			aquatail: ["9L9", "8L9", "7T", "7L15", "6T", "6L15", "5T", "5L65", "4T", "4L65"],
@@ -46256,6 +46420,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	groudon: {
 		learnset: {
+			powergem: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			ancientpower: ["9L1", "8L1", "7L1", "6L1", "5L45", "5S3", "4T", "4L15", "4S2", "3L15"],
 			block: ["7T", "6T", "5T", "4T"],
@@ -46384,6 +46549,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	rayquaza: {
 		learnset: {
+			dragonrush: ["9M"],
+			whirlwind: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],
 			airslash: ["9M", "9L1", "8M", "8L1", "7L30", "6L30", "5L35", "4L35", "4S1"],
 			ancientpower: ["9L1", "8L1", "7L15", "6L15", "5L45", "5S2", "4T", "4L15", "4S1", "3L15"],
@@ -47798,6 +47965,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	staravia: {
 		learnset: {
+			knockoff: ["9M"],
+			vacuumwave: ["9M"],
+			skyattack: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M", "9L28", "7M", "7L28", "6M", "6L28", "5M", "5L28", "4M", "4L28"],
 			agility: ["9M", "9L38", "7L38", "6L38", "5L38", "4L38"],
@@ -47863,6 +48033,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	staraptor: {
 		learnset: {
+			knockoff: ["9M"],
+			brickbreak: ["9M"],
+			bulkup: ["9M"],
+			outrage: ["9M"],
+			lowsweep: ["9M"],
+			blazekick: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M", "9L28", "7M", "7L28", "6M", "6L28", "5M", "5L28", "4M", "4L28"],
 			agility: ["9M", "9L41", "7L41", "6L41", "5L41", "4L41"],
@@ -51049,6 +51225,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gabite: {
 		learnset: {
+			spikes: ["9M"],
+			brickbreak: ["9M"],
+			poisonjab: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M"],
 			attract: ["8M", "7M", "6M", "5M", "4M"],
 			bite: ["9L27", "8L27"],
@@ -51134,6 +51313,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	garchomp: {
 		learnset: {
+			nastyplot: ["9M"],
+			vacuumwave: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M"],
 			aquatail: ["7T", "6T", "5T", "4T"],
 			attract: ["8M", "7M", "6M", "5M", "4M"],
@@ -51911,6 +52092,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	toxicroak: {
 		learnset: {
+			earthpower: ["9M"],
 			acidspray: ["9M"],
 			aerialace: ["9M"],
 			assurance: ["8M"],
@@ -52431,6 +52613,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	rotom: {
 		learnset: {
+			paraboliccharge: ["9M"],
+			partingshot: ["9M"],
+			taunt: ["9M"],
+			agility: ["9M"],
+			curse: ["9M"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["9L1", "8L1", "7L1", "6L1", "6S1", "5L1", "5S0", "4L1"],
 			charge: ["9M", "9L15", "8L15", "7L1", "6L1", "5L57", "4L43"],
@@ -53103,6 +53290,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	heatran: {
 		learnset: {
+			firstimpression: ["9M"],
 			ancientpower: ["9L12", "8L12", "7L1", "6L1", "5L1", "4T", "4L1", "4S2"],
 			attract: ["8M", "7M", "6M", "5M", "4M"],
 			bodypress: ["9M", "8M"],
@@ -53682,6 +53870,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	darkrai: {
 		learnset: {
+			shadowsneak: ["9M"],
+			futuresight: ["9M"],
+			crunch: ["9M"],
+			iciclespear: ["9M"],
+			vacuumwave: ["9M"],
 			aerialace: ["7M", "6M", "5M", "4M"],
 			blizzard: ["9M", "7M", "6M", "5M", "4M"],
 			brickbreak: ["9M", "7M", "6M", "5M", "4M"],
@@ -54560,6 +54753,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pignite: {
 		learnset: {
+			flamewheel: ["9M"],
 			armthrust: ["9L0", "7L1", "6L17", "5L17"],
 			assurance: ["9L36", "7L36", "6L36", "5L36"],
 			attract: ["7M", "6M", "5M"],
@@ -54652,6 +54846,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	emboar: {
 		learnset: {
+			vacuumwave: ["9M"],
+			flamewheel: ["9M"],
 			solarblade: ["9M"],
 			scorchingsands: ["9M"],
 			armthrust: ["9L1", "7L1", "6L17", "5L17"],
@@ -55505,6 +55701,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	liepard: {
 		learnset: {
+			partingshot: ["9M"],
+			swordsdance: ["9M"],
+			agility: ["9M"],
+			xscissor: ["9M"],
+			firstimpression: ["9M"],
 			crunch: ["9M"],
 			firefang: ["9M"],
 			icefang: ["9M"],
@@ -55678,6 +55879,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			belch: ["9M"],
 			endure: ["9M"],
+			drainpunch: ["9M"],
 			fakeout: ["9M"],
 			grassyglide: ["9M"],
 			solarblade: ["9M"],
@@ -55830,6 +56032,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	simisear: {
 		learnset: {
+			flamewheel: ["9M"],
 			blazekick: ["9M"],
 			burningjealousy: ["9M"],
 			fakeout: ["9M"],
@@ -56150,6 +56353,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	musharna: {
 		learnset: {
+			triattack: ["9M"],
 			afteryou: ["7T", "6T", "5T"],
 			allyswitch: ["8M", "7T"],
 			amnesia: ["8M"],
@@ -56894,6 +57098,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	drilbur: {
 		learnset: {
+			agility: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M"],
 			attract: ["8M", "7M", "6M", "5M"],
 			brickbreak: ["9M", "8M", "7M", "6M", "5M"],
@@ -56961,6 +57166,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	excadrill: {
 		learnset: {
+			agility: ["9M"],
 			megahorn: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M"],
 			attract: ["8M", "7M", "6M", "5M"],
@@ -57043,6 +57249,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	audino: {
 		learnset: {
+			triattack: ["9M"],
 			afteryou: ["8L28", "7T", "7L41", "6T", "6L40", "5T", "5L40"],
 			allyswitch: ["8M", "7T"],
 			amnesia: ["8M", "7E", "6E", "5E"],
@@ -57601,6 +57808,15 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	throh: {
 		learnset: {
+			rockblast: ["9M"],
+			amnesia: ["9M"],
+			outrage: ["9M"],
+			dynamicpunch: ["9M"],
+			ironhead: ["9M"],
+			gunkshot: ["9M"],
+			irondefense: ["9M"],
+			closecombat: ["9M"],
+			seedbomb: ["9M"],
 			attract: ["8M", "7M", "6M", "5M"],
 			bide: ["7L1", "6L5", "5L5"],
 			bind: ["8L1", "7T", "7L1", "6T", "6L1", "5T", "5L1", "5D"],
@@ -57675,6 +57891,14 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sawk: {
 		learnset: {
+			machpunch: ["9M"],
+			outrage: ["9M"],
+			dynamicpunch: ["9M"],
+			swordsdance: ["9M"],
+			bodyslam: ["9M"],
+			ironhead: ["9M"],
+			drainpunch: ["9M"],
+			blazekick: ["9M"],
 			attract: ["8M", "7M", "6M", "5M"],
 			bide: ["7L1", "6L5", "5L5"],
 			block: ["7T", "6T", "5T"],
@@ -58028,6 +58252,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	whirlipede: {
 		learnset: {
+			mortalspin: ["9M"],
+			rocktomb: ["9M"],
 			agility: ["8M", "8L38", "7L32", "6L32", "5L32"],
 			attract: ["8M", "7M", "6M", "5M"],
 			bugbite: ["8L20", "7T", "7L23", "6T", "6L23", "5T", "5L23"],
@@ -58081,6 +58307,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	scolipede: {
 		learnset: {
+			mortalspin: ["9M"],
+			trailblaze: ["9M"],
+			firstimpression: ["9M"],
+			uturn: ["8M"],
+			gunkshot: ["8M"],
 			agility: ["8M", "8L42", "7L33", "6L33", "5L33"],
 			aquatail: ["7T", "6T", "5T"],
 			assurance: ["8M"],
@@ -59653,6 +59884,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	scrafty: {
 		learnset: {
+			dynamicpunch: ["9M"],
+			partingshot: ["9M"],
 			acidspray: ["9M"],
 			amnesia: ["9M", "8M"],
 			assurance: ["8M"],
@@ -59979,6 +60212,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	cofagrigus: {
 		learnset: {
+			psyshock: ["9M"],
+			partingshot: ["9M"],
+			thunderwave: ["9M"],
+			stealthrock: ["9M"],
+			icywind: ["9M"],
 			selfdestruct: ["9M"],
 			gigadrain: ["9M"],
 			afteryou: ["7T", "6T", "5T"],
@@ -60068,6 +60306,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	runerigus: {
 		learnset: {
+			infestation: ["9M"],
+			partingshot: ["9M"],
+			thunderwave: ["9M"],
+			knockoff: ["9M"],
+			icywind: ["9M"],
 			gigadrain: ["9M"],
 			psyshock: ["9M"],
 			selfdestruct: ["9M"],
@@ -60522,7 +60765,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	garbodor: {
 		learnset: {
-			ancientpower: ["9M"],
+			bulletseed: ["9M"],
+			healblock: ["9M"],
 			poisonjab: ["9M"],
 			acidspray: ["8L1", "7L12", "6L12", "5L12"],
 			amnesia: ["8M", "8L9", "7L46", "6L46", "5L46"],
@@ -62312,6 +62556,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	foongus: {
 		learnset: {
+			dazzlinggleam: ["9M"],
+			toxicspikes: ["9M"],
+			firstimpression: ["9M"],
 			absorb: ["9L1", "8L1", "7L1", "6L1", "5L1"],
 			afteryou: ["7T", "6T", "5T"],
 			astonish: ["9L1", "8L1", "7L8", "6L8", "5L8"],
@@ -62372,6 +62619,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	amoonguss: {
 		learnset: {
+			toxicspikes: ["9M"],
+			dazzlinggleam: ["9M"],
+			firstimpression: ["9M"],
 			absorb: ["9L1", "8L1", "7L1", "6L1", "5L1"],
 			afteryou: ["7T", "6T", "5T"],
 			astonish: ["9L1", "8L1", "7L1", "6L1", "5L1"],
@@ -63225,6 +63475,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	eelektross: {
 		learnset: {
+			poisonfang: ["9M"],
+			psychicfangs: ["9M"],
+			waterfall: ["9M"],
 			acid: ["9L1", "7L1", "6L1", "5L1"],
 			acidspray: ["9M"],
 			acrobatics: ["9M", "7M", "6M", "5M"],
@@ -63576,6 +63829,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	lampent: {
 		learnset: {
+			flamewheel: ["9M"],
+			healblock: ["9M"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["9L1", "8L1", "7L1", "6L1", "5L1"],
 			attract: ["8M", "7M", "6M", "5M"],
@@ -63651,6 +63906,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chandelure: {
 		learnset: {
+			healblock: ["9M"],
+			flamewheel: ["9M"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["9L1", "8L1"],
 			attract: ["8M", "7M", "6M", "5M"],
@@ -64388,6 +64645,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	stunfisk: {
 		learnset: {
+			irondefense: ["9M"],
+			crunch: ["9M"],
+			icefang: ["9M"],
+			flashcannon: ["9M"],
 			aquatail: ["7T", "6T", "5T"],
 			astonish: ["8E", "7E", "6E", "5E"],
 			attract: ["8M", "7M", "6M", "5M"],
@@ -64466,6 +64727,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	stunfiskgalar: {
 		learnset: {
+			toxic: ["9M"],
 			astonish: ["8E"],
 			attract: ["8M"],
 			bind: ["8E"],
@@ -66396,6 +66658,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	terrakion: {
 		learnset: {
+			headsmash: ["9M"],
+			heavyslam: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M"],
 			airslash: ["9M", "8M"],
 			aurasphere: ["9M"],
@@ -66485,6 +66749,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	virizion: {
 		learnset: {
+			stealthrock: ["9M"],
+			hornleech: ["9M"],
+			poisonjab: ["9M"],
+			irondefense: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M"],
 			airslash: ["9M", "8M"],
 			aurasphere: ["9M"],
@@ -67407,6 +67675,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	keldeo: {
 		learnset: {
+			earthpower: ["9M"],
+			icebeam: ["9M"],
+			lightscreen: ["9M"],
+			stealthrock: ["9M"],
+			zenheadbutt: ["9M"],
+			whirlpool: ["9M"],
+			waterfall: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M"],
 			airslash: ["9M", "8M"],
 			aquajet: ["9L1", "8L1", "7L1", "6L1", "6S2", "6S3", "5L1", "5S0", "5S1"],
@@ -67503,6 +67778,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	meloetta: {
 		learnset: {
+			flipturn: ["9M"],
+			powergem: ["9M"],
+			agility: ["9M"],
 			acrobatics: ["9M", "9L26", "7M", "7L26", "6M", "6L26", "5M", "5L26"],
 			alluringvoice: ["9M"],
 			allyswitch: ["7T"],
@@ -67621,6 +67899,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	genesect: {
 		learnset: {
+			lunge: ["9M"],
+			shadowball: ["9M"],
+			ancientpower: ["9M"],
 			aerialace: ["7M", "6M", "5M"],
 			allyswitch: ["8M", "7T"],
 			assurance: ["8M"],
@@ -67827,6 +68108,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	quilladin: {
 		learnset: {
+			growth: ["9M"],
 			aerialace: ["9M", "7M", "6M"],
 			attract: ["7M", "6M"],
 			bite: ["9L11", "7L11", "6L11"],
@@ -67925,6 +68207,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chesnaught: {
 		learnset: {
+			solarblade: ["9M"],
 			growth: ["9M"],
 			steelroller: ["9M"],
 			aerialace: ["9M", "7M", "6M"],
@@ -68213,6 +68496,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	delphox: {
 		learnset: {
+			chargebeam: ["9M"],
 			agility: ["9M"],
 			allyswitch: ["7T"],
 			attract: ["7M", "6M"],
@@ -68404,6 +68688,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	frogadier: {
 		learnset: {
+			shadowsneak: ["9M"],
+			brickbreak: ["9M"],
+			nightslash: ["9M"],
+			nastyplot: ["9M"],
+			flipturn: ["9M"],
 			acrobatics: ["9M", "7M", "6M"],
 			aerialace: ["9M", "7M", "6M"],
 			attract: ["7M", "6M"],
@@ -68482,6 +68771,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	greninja: {
 		learnset: {
+			vacuumwave: ["9M"],
+			nastyplot: ["9M"],
+			psyshock: ["9M"],
 			flipturn: ["9M"],
 			skittersmack: ["9M"],
 			acrobatics: ["9M", "7M", "6M"],
@@ -68747,6 +69039,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	diggersby: {
 		learnset: {
+			drainpunch: ["9M"],
 			fissure: ["9M"],
 			trailblaze: ["9M"],
 			agility: ["8M", "7L1", "6L1"],
@@ -68903,6 +69196,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	fletchinder: {
 		learnset: {
+			vacuumwave: ["9M"],
+			flamewheel: ["9M"],
+			whirlwind: ["9M"],
 			acrobatics: ["9M", "9L22", "8M", "8L22", "7M", "7L42", "6M", "6L42"],
 			aerialace: ["9M", "9L36", "8L36", "7M", "6M"],
 			agility: ["9M", "9L29", "8M", "8L29", "7L13", "6L13"],
@@ -68973,6 +69269,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	talonflame: {
 		learnset: {
+			flamewheel: ["9M"],
 			blazekick: ["9M"],
 			skyattack: ["9M"],
 			whirlwind: ["9M"],
@@ -69075,6 +69372,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	vivillon: {
 		learnset: {
 			whirlwind: ["9M"],
+			dazzlinggleam: ["9M"],
 			acrobatics: ["9M", "7M", "6M"],
 			aerialace: ["7M", "6M"],
 			aircutter: ["9M"],
@@ -69363,6 +69661,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pyroar: {
 		learnset: {
+			earthpower: ["9M"],
 			acrobatics: ["9M"],
 			attract: ["7M", "6M"],
 			bodyslam: ["9M"],
@@ -69588,6 +69887,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	floetteeternal: {
 		learnset: {
+			hyperbeam: ["9M"],
 			alluringvoice: ["9M"],
 			batonpass: ["9M"],
 			drainingkiss: ["9M"],
@@ -69802,6 +70102,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gogoat: {
 		learnset: {
+			solarblade: ["9M"],
+			megahorn: ["9M"],
 			aerialace: ["9M", "9L0", "7M", "7L1", "6M", "6L1"],
 			attract: ["7M", "6M"],
 			bodyslam: ["9M"],
@@ -69982,6 +70284,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pangoro: {
 		learnset: {
+			gigadrain: ["9M"],
 			comeuppance: ["9M"],
 			headlongrush: ["9M"],
 			aerialace: ["7M", "6M"],
@@ -70111,6 +70414,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			psychicfangs: ["9M"],
 			thunderfang: ["9M"],
 			trailblaze: ["9M"],
+			hyperbeam: ["9M"],
 			attract: ["7M", "6M"],
 			babydolleyes: ["7L9", "6L9"],
 			bite: ["7L22", "6L22"],
@@ -70172,6 +70476,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	espurr: {
 		learnset: {
+			teleport: ["9M"],
 			allyswitch: ["8M", "7T"],
 			assist: ["7E", "6E"],
 			attract: ["8M", "7M", "6M"],
@@ -70253,6 +70558,14 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	meowstic: {
 		learnset: {
+			moonblast: ["9M"],
+			teleport: ["9M"],
+			triattack: ["9M"],
+			healblock: ["9M"],
+			spikes: ["9M"],
+			taunt: ["9M"],
+			toxicspikes: ["9M"],
+			stealthrock: ["9M"],
 			wish: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T"],
@@ -70350,6 +70663,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	meowsticf: {
 		learnset: {
+			moonblast: ["9M"],
+			teleport: ["9M"],
+			triattack: ["9M"],
+			waterpulse: ["9M"],
+			earthpower: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M", "7T"],
 			attract: ["8M", "7M", "6M"],
@@ -70503,6 +70821,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	doublade: {
 		learnset: {
+			zenheadbutt: ["9M"],
 			aerialace: ["8L12", "7M", "7L22", "6M", "6L22"],
 			afteryou: ["7T", "6T"],
 			attract: ["8M", "7M", "6M"],
@@ -70633,6 +70952,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	spritzee: {
 		learnset: {
+			healblock: ["9M"],
+			hypnosis: ["9M"],
 			afteryou: ["8E", "7T", "6T"],
 			allyswitch: ["8M", "7T"],
 			aromatherapy: ["8L12", "7L25", "6L25"],
@@ -70700,6 +71021,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	aromatisse: {
 		learnset: {
+			healblock: ["9M"],
 			alluringvoice: ["9M"],
 			hypnosis: ["9M"],
 			afteryou: ["7T", "6T"],
@@ -70777,6 +71099,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	swirlix: {
 		learnset: {
+			swordsdance: ["9M"],
+			selfdestruct: ["9M"],
 			afteryou: ["8E", "7T", "7E", "6T", "6E"],
 			amnesia: ["8M"],
 			aromatherapy: ["8L9", "7L26", "6L26"],
@@ -70839,6 +71163,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	slurpuff: {
 		learnset: {
+			swordsdance: ["9M"],
+			selfdestruct: ["9M"],
 			afteryou: ["7T", "6T"],
 			amnesia: ["8M"],
 			aromatherapy: ["8L9", "7L26", "6L26"],
@@ -70996,6 +71322,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	malamar: {
 		learnset: {
+			octolock: ["9M"],
+			closecombat: ["9M"],
+			bulkup: ["9M"],
+			healblock: ["9M"],
+			poisonjab: ["9M"],
+			zenheadbutt: ["9M"],
+			stealthrock: ["9M"],
 			aerialace: ["9M", "7M", "6M"],
 			allyswitch: ["8M", "7T"],
 			attract: ["8M", "7M", "6M"],
@@ -71181,6 +71514,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	barbaracle: {
 		learnset: {
+			closecombat: ["9M"],
+			waterfall: ["9M"],
 			aerialace: ["7M", "6M"],
 			ancientpower: ["8L20", "7L28", "6L28"],
 			assurance: ["8M"],
@@ -71359,6 +71694,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dragalge: {
 		learnset: {
+			poisonjab: ["9M"],
 			acid: ["9L1", "8L1", "7L15", "6L15"],
 			acidspray: ["9M"],
 			aquatail: ["9L45", "8L45", "7T", "7L35", "6T", "6L35"],
@@ -71656,6 +71992,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	heliolisk: {
 		learnset: {
+			seedbomb: ["9M"],
 			morningsun: ["9M"],
 			shedtail: ["9M"],
 			trailblaze: ["9M"],
@@ -71989,6 +72326,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	aurorus: {
 		learnset: {
+			icehammer: ["9M"],
 			icespinner: ["9M"],
 			ancientpower: ["8L1", "7L26", "6L26"],
 			aquatail: ["7T", "6T"],
@@ -72072,6 +72410,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sylveon: {
 		learnset: {
+			taunt: ["9M"],
 			alluringvoice: ["9M"],
 			attract: ["8M", "7M", "6M"],
 			babydolleyes: ["9L15", "8L15", "7L9", "6S1"],
@@ -72275,6 +72614,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dedenne: {
 		learnset: {
+			fakeout: ["9M"],
 			aerialace: ["7M", "6M"],
 			agility: ["9M"],
 			allyswitch: ["8M", "7T"],
@@ -72354,6 +72694,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	carbink: {
 		learnset: {
+			selfdestruct: ["9M"],
 			afteryou: ["7T", "6T"],
 			allyswitch: ["8M", "7T"],
 			ancientpower: ["9L20", "8L20", "7L31", "6L31"],
@@ -72494,6 +72835,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sliggoo: {
 		learnset: {
+			surf: ["9M"],
 			absorb: ["9L1", "8L1", "7L1", "6L5"],
 			acidarmor: ["9L1"],
 			acidspray: ["9M", "9L0", "8L0"],
@@ -72552,6 +72894,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sliggoohisui: {
 		learnset: {
+			irondefense: ["9M"],
+			surf: ["9M"],
 			absorb: ["9L1"],
 			acidarmor: ["9L1"],
 			acidspray: ["9M"],
@@ -72691,6 +73035,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	goodrahisui: {
 		learnset: {
+			irondefense: ["9M"],
 			ancientpower: ["9M"],
 			absorb: ["9L1"],
 			acidspray: ["9M", "9L1"],
@@ -72920,6 +73265,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	trevenant: {
 		learnset: {
+			healblock: ["8M", "7T"],
 			allyswitch: ["8M", "7T"],
 			astonish: ["9L1", "8L1", "7L1", "6L5"],
 			attract: ["8M", "7M", "6M"],
@@ -73109,6 +73455,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gourgeist: {
 		learnset: {
+			firespin: ["9M"],
+			shadowclaw: ["9M"],
 			hypnosis: ["9M"],
 			selfdestruct: ["9M"],
 			allyswitch: ["8M", "7T"],
@@ -73336,6 +73684,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	avalugghisui: {
 		learnset: {
+			hydropump: ["9M"],
 			ancientpower: ["9M"],
 			avalanche: ["9M", "9L18"],
 			bite: ["9L21"],
@@ -73468,6 +73817,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	noivern: {
 		learnset: {
+			scaleshot: ["9M"],
 			absorb: ["9L1", "8L1", "7L1"],
 			acrobatics: ["9M", "8M", "7M", "6M"],
 			aerialace: ["9M", "7M", "6M"],
@@ -73558,6 +73908,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	xerneas: {
 		learnset: {
+			trailblaze: ["9M"],
+			solarblade: ["9M"],
+			seedbomb: ["9M"],
 			aromatherapy: ["8L25", "7L1", "6L1", "6S1"],
 			aurorabeam: ["8L10", "7L10", "6L10"],
 			block: ["7T", "6T"],
@@ -73640,6 +73993,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	yveltal: {
 		learnset: {
+			vacuumwave: ["9M"],
+			healblock: ["9M"],
 			acrobatics: ["8M", "7M", "6M"],
 			aerialace: ["7M", "6M"],
 			airslash: ["8M", "8L35", "7L10", "6L10"],
@@ -73719,6 +74074,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	zygarde: {
 		learnset: {
+			ironhead: ["9M"],
+			psychicfangs: ["9M"],
 			bind: ["8L1", "8S9", "7T", "7L18", "7S2", "7S3", "7S4", "6T", "6L18"],
 			bite: ["8L1", "7L1", "6L1"],
 			block: ["7T", "6T"],
@@ -73931,6 +74288,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	hoopa: {
 		learnset: {
+			psychicfangs: ["9M"],
+			healblock: ["9M"],
 			allyswitch: ["9L1", "7T", "7L1", "6L1"],
 			astonish: ["9L6", "7L6", "6L6", "6S0"],
 			block: ["7T", "6T"],
@@ -75620,6 +75979,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crabrawler: {
 		learnset: {
+			machpunch: ["9M"],
+			taunt: ["9M"],
+			firstimpression: ["9M"],
 			amnesia: ["9M", "7E"],
 			attract: ["7M"],
 			bodyslam: ["9M"],
@@ -75697,6 +76059,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crabominable: {
 		learnset: {
+			firstimpression: ["9M"],
+			taunt: ["9M"],
 			iciclespear: ["9M"],
 			machpunch: ["9M"],
 			amnesia: ["9M"],
@@ -78282,6 +78646,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	golisopod: {
 		learnset: {
+			nightslash: ["9M"],
+			agility: ["9M"],
+			uturn: ["9M"],
+			gunkshot: ["9M"],
 			aerialace: ["7M"],
 			assurance: ["8M"],
 			attract: ["8M", "7M"],
@@ -78443,6 +78811,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	palossand: {
 		learnset: {
+			darkpulse: ["9M"],
+			powergem: ["9M"],
+			fakeout: ["9M"],
+			nastyplot: ["9M"],
 			absorb: ["9L1", "8L1", "7L1"],
 			afteryou: ["7T"],
 			amnesia: ["9M", "8M"],
@@ -79365,6 +79737,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	drampa: {
 		learnset: {
+			chargebeam: ["9M"],
 			bodyslam: ["9M"],
 			earthpower: ["9M"],
 			triattack: ["9M"],
@@ -81082,6 +81455,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	magearna: {
 		learnset: {
+			powergem: ["9M"],
+			vacuumwave: ["9M"],
+			solarblaze: ["9M"],
 			afteryou: ["7T"],
 			agility: ["9M", "8M"],
 			aurasphere: ["9M", "9L66", "8M", "8L66", "7L81"],
@@ -81285,6 +81661,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	marshadow: {
 		learnset: {
+			machpunch: ["9M"],
+			vacuumwave: ["9M"],
+			poweruppunch: ["9M"],
 			acrobatics: ["8M", "7M"],
 			agility: ["8M"],
 			assurance: ["8M", "8L36", "7L1"],
@@ -81656,6 +82035,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	zeraora: {
 		learnset: {
+			dynamicpunch: ["9M"],
+			vacuumwave: ["9M"],
 			acrobatics: ["8M", "7M"],
 			aerialace: ["7M"],
 			agility: ["8M", "8L80"],
@@ -82560,6 +82941,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	corvisquire: {
 		learnset: {
+			featherdance: ["9M"],
 			aerialace: ["9M"],
 			agility: ["9M", "8M"],
 			aircutter: ["9M"],
@@ -82825,6 +83207,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	thievul: {
 		learnset: {
+			roar: ["9M"],
+			icywind: ["9M"],
+			willowisp: ["9M"],
+			trailblaze: ["9M"],
+			fakeout: ["9M"],
+			firstimpression: ["9M"],
 			acrobatics: ["8M"],
 			agility: ["8M"],
 			assurance: ["8M", "8L16"],
@@ -83855,6 +84243,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	toxtricity: {
 		learnset: {
+			zapcannon: ["9M"],
 			acid: ["9L1", "8L1"],
 			acidspray: ["9M", "9L1", "8L1"],
 			attract: ["8M"],
@@ -84164,6 +84553,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	grapploct: {
 		learnset: {
+			machpunch: ["9M"],
+			bulletpunch: ["9M"],
+			knockoff: ["9M"],
+			vacuumwave: ["9M"],
 			attract: ["8M"],
 			bind: ["8L1"],
 			bodyslam: ["8M"],
@@ -84838,6 +85231,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	falinks: {
 		learnset: {
+			lowsweep: ["9M"],
+			seedbomb: ["9M"],
+			fakeout: ["9M"],
 			agility: ["9M", "8M"],
 			assurance: ["8M"],
 			beatup: ["8M"],
@@ -85166,6 +85562,12 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	indeedee: {
 		learnset: {
+			moonlight: ["9M"],
+			wish: ["9M"],
+			moonblast: ["9M"],
+			heatwave: ["9M"],
+			chargebeam: ["9M"],
+			vacuumwave: ["9M"],
 			afteryou: ["9L25", "8L25"],
 			allyswitch: ["8M"],
 			aromatherapy: ["8L30"],
@@ -85227,6 +85629,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	indeedeef: {
 		learnset: {
+			moonlight: ["9M"],
+			triattack: ["9M"],
+			wish: ["9M"],
+			moonblast: ["9M"],
+			sing: ["9M"],
 			alluringvoice: ["9M"],
 			allyswitch: ["8M"],
 			aromatherapy: ["8L30"],
@@ -88239,6 +88646,10 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	houndstone: {
 		learnset: {
+			seedbomb: ["9M"],
+			zenheadbutt: ["9M"],
+			shadowclaw: ["9M"],
+			workup: ["9M"],
 			bite: ["9L6"],
 			bodypress: ["9M"],
 			bulldoze: ["9M"],
@@ -88574,6 +88985,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dondozo: {
 		learnset: {
+			whirlpool: ["9M"],
+			irontail: ["9M"],
 			aquatail: ["9L40"],
 			avalanche: ["9M"],
 			bodypress: ["9M"],
@@ -88966,6 +89379,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	scovillain: {
 		learnset: {
+			outrage: ["9M"],
+			nastyplot: ["9M"],
 			flareblitz: ["9M"],
 			swagger: ["9M"],
 			thunderfang: ["9M"],
@@ -89567,6 +89982,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	baxcalibur: {
 		learnset: {
+			icehammer: ["9M"],
+			psychicfangs: ["9M"],
 			aerialace: ["9M"],
 			avalanche: ["9M"],
 			bite: ["9L24"],
@@ -89627,6 +90044,15 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	tatsugiri: {
 		learnset: {
+			icebeam: ["9M"],
+			dragonrush: ["9M"],
+			calmmind: ["9M"],
+			flipturn: ["9M"],
+			darkpulse: ["9M"],
+			waterfall: ["9M"],
+			ancientpower: ["9M"],
+			tripleaxel: ["9M"],
+			scald: ["9M"],
 			batonpass: ["9M", "9E"],
 			chillingwater: ["9M"],
 			counter: ["9E"],
@@ -89681,6 +90107,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	cyclizar: {
 		learnset: {
+			flamecharge: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -90099,6 +90526,13 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	squawkabilly: {
 		learnset: {
+			ironhead: ["9M"],
+			lunge: ["9M"],
+			bulkup: ["9M"],
+			knockoff: ["9M"],
+			workup: ["9M"],
+			seedbomb: ["9M"],
+			skyattack: ["9M"],
 			aerialace: ["9M", "9L13"],
 			aircutter: ["9M"],
 			airslash: ["9M"],
@@ -90150,6 +90584,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	flamigo: {
 		learnset: {
+			tripleaxel: ["9M"],
+			breakbreak: ["9M"],
+			knockoff: ["9M"],
+			whirlwind: ["9M"],
+			waterfall: ["9M"],
 			acrobatics: ["9M"],
 			aerialace: ["9M"],
 			agility: ["9M"],
@@ -90313,6 +90752,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	naclstack: {
 		learnset: {
+			rocktomb: ["9M"],
 			bodypress: ["9M"],
 			bodyslam: ["9M"],
 			bulldoze: ["9M"],
@@ -90577,6 +91017,11 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	grafaiai: {
 		learnset: {
+			seedbomb: ["9M"],
+			firstimpression: ["9M"],
+			lightscreen: ["9M"],
+			reflect: ["9M"],
+			toxicspikes: ["9M"],
 			acidspray: ["9M", "9L5"],
 			acrobatics: ["9M"],
 			batonpass: ["9M"],
@@ -90692,6 +91137,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	dachsbun: {
 		learnset: {
+			seedbomb: ["9M"],
+			flamecharge: ["9M"],
 			agility: ["9M"],
 			alluringvoice: ["9M"],
 			babydolleyes: ["9L15"],
@@ -90744,6 +91191,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	maschiff: {
 		learnset: {
+			lunge: ["9M"],
+			knockoff: ["9M"],
+			seedbomb: ["9M"],
 			bite: ["9L14"],
 			bodyslam: ["9M"],
 			charm: ["9M"],
@@ -90791,6 +91241,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	mabosstiff: {
 		learnset: {
+			knockoff: ["9M"],
+			lunge: ["9M"],
+			seedbomb: ["9M"],
 			bite: ["9L14"],
 			bodyslam: ["9M"],
 			charm: ["9M"],
@@ -90939,6 +91392,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gimmighoul: {
 		learnset: {
+			facade: ["9M"],
 			astonish: ["9L1", "9S2", "9S0"],
 			confuseray: ["9M"],
 			endure: ["9M"],
@@ -90967,6 +91421,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	gholdengo: {
 		learnset: {
+			surf: ["9M"],
 			astonish: ["9L1"],
 			chargebeam: ["9M"],
 			confuseray: ["9M", "9L14"],
@@ -92378,6 +92833,9 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	tinkatuff: {
 		learnset: {
+			bulkup: ["9M"],
+			poweruppunch: ["9M"],
+			bulldoze: ["9M"],
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
 			brickbreak: ["9M"],
@@ -92426,6 +92884,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	tinkaton: {
 		learnset: {
+			bulkup: ["9M"],
+			poweruppunch: ["9M"],
 			woodhammer: ["9M"],
 			astonish: ["9L1"],
 			babydolleyes: ["9L5"],
@@ -92517,6 +92977,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	armarouge: {
 		learnset: {
+			futuresight: ["9M"],
 			burnup: ["9M"],
 			acidspray: ["9M"],
 			allyswitch: ["9L42"],
@@ -92580,6 +93041,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	ceruledge: {
 		learnset: {
+			stoneedge: ["9M"],
 			burnup: ["9M"],
 			allyswitch: ["9L42"],
 			astonish: ["9L1"],
@@ -99902,6 +100364,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chocotomp: {
 		learnset: {
+			sludgebomb: ["9M"],
 			moonblast: ["9M"],
 			dazzlinggleam: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
@@ -100000,6 +100463,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	chocopert: {
 		learnset: {
+			sludgebomb: ["9M"],
+			fissure: ["9M"],
 			moonblast: ["9M"],
 			dazzlinggleam: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
@@ -104234,6 +104699,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	zeranheit: {
 		learnset: {
+			dynamicpunch: ["9M"],
+			vacuumwave: ["9M"],
 			flareblitz: ["7M"],
 			highjumpkick: ["7M"],
 			acrobatics: ["8M", "7M"],
@@ -105625,6 +106092,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	fugitile: {
 		learnset: {
+			dragonrush: ["9M"],
 			stoneedge: ["9M"],
 			spikes: ["9M"],
 			stealthrock: ["9M"],
@@ -105867,6 +106335,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	atlascross: {
 		learnset: {
+			outrage: ["9M"],
+			circlethrow: ["9M"],
 			leechlife: ["8M"],
 			aerialace: ["9M", "9L15", "8L15", "7M", "7L10", "6M", "6L10", "5M", "5L10", "4M", "4L13"],
 			armthrust: ["9L1", "7L1", "6L1"],
@@ -106782,6 +107252,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	titaniumdelta: {
 		learnset: {
+			workup: ["9M"],
+			wish: ["9M"],
 			steelbeam: ["9M"],
 			flashcannon: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M", "3M"],

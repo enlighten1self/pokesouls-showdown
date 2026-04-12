@@ -427,7 +427,7 @@ export const Formats: FormatList = [
 			"Water Bubble", "Wonder Guard", "Armored Poncho", "Corruption", "Stampede", "Pure Flux", "Antarctic Power", "Fur Coat", "Good as Gold", 'Comatose', 'Contrary', 'Ice Scales', 'Illusion', 'Imposter', 
 			'Huge Power', 'Abyssal Void', 'Iron Bundle', 'Magearna', 'Spectrier', 'Dragapult', "Beast Boost", "Urshifu-Base", 'Solgaleo', 'Kyurem', "Corrupted Spirit", "Eclipse Flare", "Scorn", "Neuro Engine", 
 			'Apex Predator', "As One (Withorde Mega)", "From Ashes", "Masquerade", "Hadron Engine", "Intrepid Sword", "Parental Bond", "Orichalcum Pulse", "Reshiram", "Ursaluna-Bloodmoon", "Baxcalibur", "Naganadel", 
-			"Genesect", "Zygarde-Base", "Pheromosa", "Tectonic Shift", "Restorative Film", "Sweet Insulation", "Spicy Spray", "Mega Sol"
+			"Genesect", "Zygarde-Base", "Pheromosa", "Tectonic Shift", "Restorative Film", "Sweet Insulation", "Spicy Spray", "Mega Sol", "Shedinja"
 		],
 		onValidateTeam(team, format) {
 			for (const set of team) {
@@ -620,7 +620,7 @@ export const Formats: FormatList = [
 			'Stakataka', 'Xurkitree', 'Spectrier', 'Flaming Wrath', 'Chrono Venom', 'Lucario-Mega', 'Beedrill-Mega', 'Ditto', 'Metagross-Mega', 'Heracross-Mega', 'Tyranitar-Mega', 'Latios-Mega', 'Garchomp-Mega', 'Gallade-Mega', 
 			'Excadrill-Mega', 'Diancie-Mega', 'Charizard-Mega-Y', 'Typhtesla-Mega', 'Swampert-Mega', 'Scizor-Mega', 'Gyarados-Mega', 'Delphox-Mega', 'Withorde-Mega', 'Roaring Moon', 'Shuckle', 'Bastiodon', 'Deoxys-Defense',
 			'Rampardos', 'Hoopa-Base', 'Ninjask', 'Electrode-Base', 'Electrode-Hisui', 'Accelgor', 'Zeraora', 'Regice', 'Florges', 'Carbink', 'Diancie-Base', 'Goodra-Base', 'Goodra-Hisui', 'Probopass', 'Registeel', 'Regirock', 'Steelix-Base', 
-			'Steelix-Mega', 'Avalugg-Base', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity',
+			'Steelix-Mega', 'Avalugg-Base', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity', 'Shedinja',
 		],
 		onValidateTeam(team) {
 			for (const set of team) {

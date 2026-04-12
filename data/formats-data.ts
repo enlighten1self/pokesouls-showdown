@@ -3828,7 +3828,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	greninjamega: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	bunnelby: {
 		isNonstandard: "Past",
