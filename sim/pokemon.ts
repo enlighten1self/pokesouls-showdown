@@ -963,6 +963,9 @@ export class Pokemon {
 				target = 'adjacentFoe';
 			}
 			let disabled = moveSlot.disabled;
+			if (moveSlot.id === 'fakeout' && this.activeMoveActions > 1) {
+			    disabled = 'hidden';
+			}
 			if (this.volatiles['dynamax']) {
 				// if each of a Pokemon's base moves are disabled by one of these effects, it will Struggle
 				const canCauseStruggle = ['Encore', 'Disable', 'Taunt', 'Assault Vest', 'Belch', 'Stuff Cheeks'];

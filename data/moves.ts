@@ -5097,16 +5097,27 @@ export const Moves: { [moveid: string]: MoveData } = {
 				let move: Move | ActiveMove | null = target.lastMove;
 				if (!move || target.volatiles['dynamax']) return false;
 
+				// Encore only works on Max Moves if the base move is not itself a Max Move
 				if (move.isMax && move.baseMove) move = this.dex.moves.get(move.baseMove);
-				const moveIndex = target.moves.indexOf(move.id);
-				if (move.isZ || move.flags['failencore'] || !target.moveSlots[moveIndex] || target.moveSlots[moveIndex].pp <= 0) {
+				const moveSlot = target.getMoveData(move.id);
+				if (move.isZ || move.isMax || move.flags['failencore'] || !moveSlot || moveSlot.pp <= 0) {
 					// it failed
 					return false;
 				}
 				this.effectState.move = move.id;
 				this.add('-start', target, 'Encore');
-				if (!this.queue.willMove(target)) {
-					this.effectState.duration++;
+				const action = this.queue.willMove(target);
+				if (!action) {
+					this.effectState.duration!++;
+					// TODO: this is a quick fix, check if move priority is changed when Mental Herb cures Encore
+				} else if (!target.hasItem('mentalherb')) {
+					this.queue.changeAction(target, {
+						choice: 'move',
+						// target: undefined,
+						// targetLoc: undefined,
+						moveid: move.id,
+						order: action.order, // TODO: check Quash + Encore interaction
+					});
 				}
 			},
 			onOverrideAction(pokemon, target, move) {
@@ -5484,12 +5495,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		ppOverride: 12,
 		priority: 3,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
-		onTry(source) {
-			if (source.activeMoveActions > 1) {
-				this.hint("Fake Out only works on your first turn out.");
-				return false;
-			}
-		},
+		//Implementation in pokemon.ts
 		secondary: {
 			chance: 100,
 			volatileStatus: 'flinch',
@@ -10748,12 +10754,10 @@ export const Moves: { [moveid: string]: MoveData } = {
 			}
 		},
 		onAfterHit(target, source) {
-			if (source.hp) {
 				const item = target.takeItem();
 				if (item) {
 					this.add('-enditem', target, item.name, '[from] move: Knock Off', '[of] ' + source);
 				}
-			}
 		},
 		secondary: null,
 		target: "normal",
@@ -15851,32 +15855,32 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 		onAfterHit(target, pokemon, move) {
 			if (!move.hasSheerForce) {
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				if (pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
 				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					if (pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
 					}
 				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				if (pokemon.volatiles['partiallytrapped']) {
 					pokemon.removeVolatile('partiallytrapped');
 				}
 			}
 		},
 		onAfterSubDamage(damage, target, pokemon, move) {
 			if (!move.hasSheerForce) {
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				if (pokemon.removeVolatile('leechseed')) {
 					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
 				}
 				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
 				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					if (pokemon.side.removeSideCondition(condition)) {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
 					}
 				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				if (pokemon.volatiles['partiallytrapped']) {
 					pokemon.removeVolatile('partiallytrapped');
 				}
 			}

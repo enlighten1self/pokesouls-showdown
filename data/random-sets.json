@@ -1665,6 +1665,25 @@
       }
     ]
   },
+  "starmiemega": {
+    "level": 74,
+      "sets": [
+        {
+          "role": "Fast Attacker",
+          "movepool": [
+            "flipturn",
+            "liquidation",
+            "tripleaxel",
+            "zenheadbutt",
+            "thunderbolt",
+            "rapidspin",
+            "aquajet",
+            "bulkup"
+          ],
+          "abilities": ["Natural Cure"]
+        }
+      ]
+  },
   "mrmime": {
     "level": 93,
     "sets": [
@@ -5238,6 +5257,26 @@
           "calmmind",
           "dazzlinggleam",
           "grassknot"
+        ],
+        "abilities": ["Levitate"]
+      }
+    ]
+  },
+  "chimechomega": {
+    "level": 81,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "toxic",
+          "thunderwave",
+          "taunt",
+          "flashcannon",
+          "psychicnoise",
+          "knockoff",
+          "encore",
+          "futuresight",
+          "recover"
         ],
         "abilities": ["Levitate"]
       }
@@ -9684,8 +9723,49 @@
       }
     ]
   },
+  "chesnaughtmega": {
+    "level": 73,
+    "sets": [
+      {
+        "role": "Bulky Support",
+        "movepool": [
+          "bodypress",
+          "bulkup",
+          "drainpunch",
+          "earthquake",
+          "irondefense",
+          "knockoff",
+          "leechseed",
+          "seedbomb",
+          "spikes",
+          "spikyshield",
+          "taunt"
+        ],
+        "abilities": ["Bulletproof"]
+      }
+    ]
+  },
   "delphox": {
     "level": 83,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "flamethrower",
+          "focusblast",
+          "grassknot",
+          "hiddenpowerice",
+          "nastyplot",
+          "psyshock",
+          "scorchingsands",
+          "shadowball"
+        ],
+        "abilities": ["Blaze"]
+      }
+    ]
+  },
+  "delphoxmega": {
+    "level": 73,
     "sets": [
       {
         "role": "Fast Attacker",
@@ -9716,6 +9796,27 @@
           "sludgewave",
           "spikes",
           "uturn",
+          "nastyplot",
+          "watershuriken"
+        ],
+        "abilities": ["Protean"]
+      }
+    ]
+  },
+  "greninjamega": {
+    "level": 73,
+    "sets": [
+      {
+        "role": "Fast Attacker",
+        "movepool": [
+          "darkpulse",
+          "grassknot",
+          "hydropump",
+          "icebeam",
+          "sludgewave",
+          "spikes",
+          "uturn",
+          "nastyplot",
           "watershuriken"
         ],
         "abilities": ["Protean"]
