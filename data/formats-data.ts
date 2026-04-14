@@ -33,7 +33,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	charizardmegax: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	charizardmegay: {
 		isNonstandard: "Past",
@@ -1066,12 +1066,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gyarados: {
 		tier: "NUBL",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	gyaradosmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	lapras: {
 		tier: "UU",
@@ -1762,7 +1762,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	blaziken: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	blazikenmega: {
 		isNonstandard: "Past",
@@ -2010,7 +2010,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	mawilemega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	aron: {
 		isNonstandard: "Past",
@@ -2043,7 +2043,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	medichammega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	electrike: {
 		isNonstandard: "Past",
@@ -2920,7 +2920,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	manaphy: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	darkrai: {
 		tier: "OU",
@@ -3819,7 +3819,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	greninjabond: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	greninjaash: {
 		isNonstandard: "Past",
@@ -4162,7 +4162,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	hoopaunbound: {
 		tier: "NUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	volcanion: {
 		tier: "UU",
@@ -4506,7 +4506,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kommoo: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	kommoototem: {
 		isNonstandard: "Past",
@@ -4576,7 +4576,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	kartana: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	guzzlord: {
 		isNonstandard: "Past",
@@ -5155,7 +5155,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	meowscarada: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	fuecoco: {
 		tier: "LC",
@@ -5245,7 +5245,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	dondozo: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	veluza: {
 		tier: "PU",
@@ -5488,7 +5488,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironhands: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	ironjugulis: {
 		tier: "NUBL",
@@ -5640,7 +5640,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ogerponcornerstone: {
 		tier: "UU",
 		doublesTier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	archaludon: {
 		tier: "OU",
@@ -6165,7 +6165,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	bellzong: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	plaguekrow: {
 		tier: "Illegal",
@@ -6325,7 +6325,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	lordfetchd: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	stratozone: {
 		tier: "Illegal",
@@ -6405,11 +6405,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	chronovenom: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	celestialorbit: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	weepingwoods: {
 		tier: "Illegal",
@@ -6421,7 +6421,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	bulkingblade: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	abyssalvoid: {
 		tier: "Illegal",
@@ -6441,7 +6441,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	flamingwrath: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	resurgentjustice: {
 		tier: "Illegal",

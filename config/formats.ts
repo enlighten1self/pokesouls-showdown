@@ -121,7 +121,8 @@ export const Formats: FormatList = [
 		banlist: [
 			"ND OU",
 			"ND UUBL",
-			"Drizzle"
+			"Drizzle",
+			"Heat Rock"
 		],
 	},
 	{
