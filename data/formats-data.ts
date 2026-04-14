@@ -1216,7 +1216,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	moltres: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	moltresgalar: {
 		tier: "UU",
@@ -4663,7 +4663,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rillaboom: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	rillaboomgmax: {
 		isNonstandard: "Past",
@@ -4918,7 +4918,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	hatterene: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	hatterenegmax: {
 		isNonstandard: "Past",
@@ -5478,7 +5478,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	irontreads: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	ironmoth: {
 		tier: "UU",
@@ -5513,7 +5513,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	tinglu: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	chienpao: {
 		tier: "Uber",
@@ -5582,7 +5582,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	clodsire: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	annihilape: {
 		tier: "Uber",
@@ -5660,7 +5660,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ragingbolt: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	ironboulder: {
 		tier: "OU",
