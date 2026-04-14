@@ -964,7 +964,7 @@ export class Pokemon {
 			}
 			let disabled = moveSlot.disabled;
 			if (moveSlot.id === 'fakeout' && this.activeMoveActions > 1) {
-			    disabled = 'hidden';
+			    disabled = true;
 			}
 			if (this.volatiles['dynamax']) {
 				// if each of a Pokemon's base moves are disabled by one of these effects, it will Struggle
