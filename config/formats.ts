@@ -572,12 +572,14 @@ export const Formats: FormatList = [
 			'Umbreon', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Walking Wake', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap', 
 			'Comatose', 'Contrary', 'Drizzle', 'Drought', 'Imposter', 'Moody', 'Pure Power', 'Shadow Tag', 'Speed Boost', 'Unburden',
 			'King\'s Rock', 'Light Clay', 'Razor Fang', 'Baton Pass', 'Belly Drum', 'Boomburst', 'Extreme Speed', 'Final Gambit', 'Last Respects', 'Population Bomb',
-			'Quiver Dance', 'Rage Fist', 'Shed Tail', 'Shell Smash', 'Transform', 'Assist', 'Xerneas', 'Tempervianite', 'Forroguite', 'Caimanragonite',
-			'Tricky Reception', 'Gengarite', 'Alakazite', 'Blastoisinite', 'Blazikenite', 'Cereblazite', 'Frostikenite', 'Kangaskhanite', 'Lucarionite', 'Salamencite',
+			'Quiver Dance', 'Rage Fist', 'Shed Tail', 'Shell Smash', 'Transform', 'Assist', 'Xerneas', 'Tempervian-Mega', 'Forrogue-Mega', 'Caimanrago',
+			'Tricky Reception', 'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Cereblaze-Mega', 'Frostiken-Mega', 'Kangaskhan-Mega', 'Lucario-Mega', 'Salamence-Mega',
 			'Wyrmperionite', 'Yveltal', 'Darmanitan-Galar', 'Fishious Rend', 'Bolt Beak', 'Victory Dance', 'Geomancy', 'No Retreat', 'Huge Power',
 			'Garchomp', 'Dragapult', 'Mawilite', 'Light of Ruin', 'Rising Voltage', 'Gouging Fire', 'Abyssal Void', 'Bulking Blade', 'Tail Glow', 'Tough Claws', 'Celebrate',
 			'Happy Hour', 'Conversion', 'Protean', 'Adaptability', 'Furfrou', 'Blissey', 'Chansey', 'Moltres-Galar', 'Iron Jugulis', 'Dire Claw', 'Mew', 'Iron Boulder',
-			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer',
+			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer', 'Gengar-Mega',
+			'Delphox-Mega', 'Greninja-Mega', 'Lopunny-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Sneasler', 'Starmie-Mega', 'Ursaluna-Bloodmoon',
+			'Tempervian-Mega-Ashen', 'Zygarde-Complete', 'Power Construct'
 		],
 	},
 	{
