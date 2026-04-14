@@ -5495,6 +5495,12 @@ export const Moves: { [moveid: string]: MoveData } = {
 		ppOverride: 12,
 		priority: 3,
 		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		onTry(source) {
+    	    if (source.activeMoveActions > 1) {
+    	        this.hint("Fake Out only works on your first turn out.");
+    	        return false;
+    	    }
+    	},
 		//Implementation in pokemon.ts
 		secondary: {
 			chance: 100,
