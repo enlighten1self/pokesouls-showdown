@@ -4680,7 +4680,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cinderace: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "OU",
 	},
 	cinderacegmax: {
 		isNonstandard: "Past",
@@ -5564,7 +5564,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ceruledge: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "UUBL",
 	},
 	toedscool: {
 		tier: "LC",
