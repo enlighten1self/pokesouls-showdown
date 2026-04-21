@@ -1038,7 +1038,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurospaldeacombatmega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	taurospaldeablaze: {
 		tier: "UU",
@@ -6318,6 +6318,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	tempervianmega: {
 		tier: "Illegal",
 		natDexTier: "Uber",
+	},
+	tempervianmegaashen: {
 	},
 	boarbeque: {
 		tier: "Illegal",
