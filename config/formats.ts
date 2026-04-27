@@ -598,7 +598,7 @@ export const Formats: FormatList = [
 		],
 		restricted: [
 			'Belly Drum', 'Ceaseless Edge', 'Clangorous Soul', 'Dire Claw', 'Extreme Speed', 'Fillet Away', 'Glacial Lance', 'Glare', 'Lumina Crash', 'Rage Fist', 'Revival Blessing',
-			'Sacred Fire', 'Salt Cure', 'Shell Smash', 'Shift Gear', 'Surging Strikes', 'Tail Glow', 'Triple Arrows', 'Quiver Dance', 'Victory Dance', 'Stainless Slash',
+			'Sacred Fire', 'Shell Smash', 'Shift Gear', 'Surging Strikes', 'Tail Glow', 'Triple Arrows', 'Quiver Dance', 'Victory Dance', 'Stainless Slash',
 			'Gigaton Hammer', 'Thousand Arrows', 'Double Iron Bash', 'Mountain Gale'
 		],
 	},
@@ -679,25 +679,24 @@ export const Formats: FormatList = [
 			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 
 		],
 		restricted: [
-			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Ogerpon-Hearthflame', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Diancie-Mega', 'Excadrill-Mega', 'Garchomp', 'Melmetal', 
-			'Metagross-Mega', 'Ogerpon-Wellspring', 'Quantum Syphon', 'Roaring Moon', 'Spectoise-Mega', 'Rising Voltage', 'Expanding Force', 'Electric Surge', 'Psychic Surge', 'Poison Heal', 'Basculegion', 
-			'Eeveeon', 'Porygon-Z', 'Glimmora-Mega', 'Toxic Debris', 'Corrosion', 'Fur Coat', 'Ice Scales', 'Volcarona', 'Withorde-Mega', 'Zamazenta', 'Ghoulizard-Mega', 'Atlascross-Base', 'Mawile-Mega', 
-			'Medicham-Mega', 'Huge Power', 'Pure Power', 'Extreme Speed', 'Boomburst', 'Dragonite', 'Zygarde-10%', 'Smeargle', 'Mew', 'Neutralizing Gas', 'Palafin', 'Ultigigas', 'Chrono Venom', 'Population Bomb', 
-			'Cloyster', 'Shell Smash', 'Fillet Away', 'Victini', 'Power Trip', 'Stored Power', 'Mystical Power', 'Ceaseless Edge', 'Stone Axe', 'Stainless Slash', 'Regenerator', 'Quiver Dance', 'Victory Dance', 
-			'Eruption', 'Water Spout', 'Dragon Energy', 'Dragon\'s Maw', 'Regieleki', 'Shedinja', 'Urshifu', 'Gear Grind', 'Gigaton Hammer', 'Light of Ruin', 'No Retreat', 'Titanium Delta', 'Electro Shot', 
-			'Walking Wake', 'Sulphuric Downpour', 'Psycho Boost', 'Shift Gear', 'Tail Glow', 'Take Heart', 'Xurkitree', 'Torch Song', 'Triple Arrows', 'Ditto', 'Celebrate', 'Happy Hour', 'Conversion', 'Tricky Reception', 
-			'Hoopa-Unbound', 'Blacephalon', 'Typhtesla-Mega', 'Comatose', 'Thundurus-Therian', 'Growth', 'Froslass-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Chloroblast', 'Magic Guard', 'Kartana', 'Anger Shell', 'Libero', 
-			'Protean', 'Protomorphosis', 'Protosynthesis', 'Quark Drive', 'Neuro Drive', 'Weavile', 'Chien-Pao', 'Ogerpon-Cornerstone', 'Storm Throw', 'Iron Valiant', 'Beast Boost', 'Iron Moth', 'Drought', 'Drizzle', 
-			'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 'Simple', 'Zapoleon-Mega', 'Swift Swim', 'Chlorophyll', 
-			'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde-Base', 'Caimanrago-Base', 'Kyurem-Base', 'Scovillain-Mega', 'Triage', 'Kommo-o', 'Celesteela'
+			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Hearthflame Mask', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Diancite', 'Excadrite', 'Garchomp', 'Melmetal', 'Wellspring Mask', 
+			'Quantum Syphon', 'Roaring Moon', 'Spectoisite', 'Rising Voltage', 'Expanding Force', 'Electric Surge', 'Psychic Surge', 'Poison Heal', 'Basculegion', 'Eeveeon', 'Porygon-Z', 'Glimmoranite', 'Toxic Debris', 
+			'Corrosion', 'Fur Coat', 'Ice Scales', 'Volcarona', 'Withordite', 'Zamazenta', 'Ghoulizardite', 'Atlascross-Base', 'Mawilite', 'Medichamite', 'Huge Power', 'Pure Power', 'Extreme Speed', 'Boomburst', 
+			'Dragonite', 'Zygarde-10%', 'Smeargle', 'Mew', 'Neutralizing Gas', 'Palafin', 'Ultigigas', 'Chrono Venom', 'Population Bomb', 'Cloyster', 'Shell Smash', 'Fillet Away', 'Victini', 'Power Trip', 'Stored Power', 
+			'Mystical Power', 'Ceaseless Edge', 'Stone Axe', 'Stainless Slash', 'Regenerator', 'Quiver Dance', 'Victory Dance', 'Eruption', 'Water Spout', 'Dragon Energy', 'Dragon\'s Maw', 'Regieleki', 'Shedinja',
+			'Urshifu', 'Gear Grind', 'Gigaton Hammer', 'Light of Ruin', 'No Retreat', 'Titanium Delta', 'Electro Shot', 'Walking Wake', 'Sulphuric Downpour', 'Psycho Boost', 'Shift Gear', 'Tail Glow', 'Take Heart', 
+			'Xurkitree', 'Torch Song', 'Triple Arrows', 'Ditto', 'Celebrate', 'Happy Hour', 'Conversion', 'Tricky Reception', 'Hoopa-Unbound', 'Blacephalon', 'Typhteslatite', 'Comatose', 'Hawluchanite', 'Pidgeotite', 
+			'Chloroblast', 'Magic Guard', 'Kartana', 'Anger Shell', 'Libero', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Quark Drive', 'Neuro Drive', 'Weavile', 'Chien-Pao', 'Cornerstone Mask', 'Storm Throw', 
+			'Iron Valiant', 'Beast Boost', 'Iron Moth', 'Drought', 'Drizzle', 'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 
+			'Simple', 'Zapoleonite', 'Swift Swim', 'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde-Base', 'Caimanrago-Base', 'Kyurem-Base', 'Scovillainite', 'Triage', 'Kommo-o', 
+			'Celesteela', 'Great Tusk', 'Elysian Dance','Floettite', 'Adaptability', 'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele', 'Mega Sol', 'Armored Poncho', 'Pure Flux', 'Scorn', 
+			'Antarctic Power', 'Metagrossite', 'Spicy Spray', 'Fairy Aura', 'Rusted Shield', 'Burn Drive', 'Chill Drive', 'Douse Drive', 'Shock Drive', 'Dragoninite'
 		],
 	},
 	//{
 	//	name: "[Gen 9] Custom Game",
 	//	mod: 'gen9',
 	//	searchShow: false,
-	//	debug: true,
-	//	battle: {trunc: Math.trunc},
 	//	ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	//}
 ];

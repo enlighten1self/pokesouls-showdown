@@ -102722,6 +102722,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	bloodtales: {
 		learnset: {
+			mist: ["9M"],
+			spikes: ["9M"],
 			poltergeist: ["9M", "8T"],
 			shadowsneak: ["9M"],
 			shadowclaw: ["9M"],

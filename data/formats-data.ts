@@ -6217,7 +6217,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	frostiken: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	frostikenmega: {
 		tier: "Illegal",
@@ -6281,7 +6281,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	phroggeistyoseigo: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	phroggeistbushigo: {
 		tier: "Illegal",
@@ -6519,7 +6519,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	drampamega: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	scovillainmega: {
 		tier: "Illegal",
