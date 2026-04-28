@@ -5610,7 +5610,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	okidogi: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	munkidori: {
 		tier: "UU",
@@ -6331,7 +6331,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	stratozone: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	scoundrowl: {
 		tier: "Illegal",
