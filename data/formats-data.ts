@@ -876,7 +876,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	chansey: {
 		tier: "UU",
 		doublesTier: "NFE",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	blissey: {
 		tier: "UU",
@@ -2402,7 +2402,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	salamence: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	salamencemega: {
 		isNonstandard: "Past",
@@ -4113,7 +4113,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	noivern: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "RU",
 	},
 	xerneas: {
 		isNonstandard: "Past",
@@ -6331,7 +6331,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	stratozone: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	scoundrowl: {
 		tier: "Illegal",
@@ -6379,7 +6379,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	drownoir: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	jelliclus: {
 		tier: "Illegal",
