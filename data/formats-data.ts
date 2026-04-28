@@ -5615,7 +5615,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	munkidori: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "BU",
 	},
 	fezandipiti: {
 		tier: "UU",
