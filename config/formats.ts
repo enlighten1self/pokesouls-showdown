@@ -690,7 +690,7 @@ export const Formats: FormatList = [
 			'Iron Valiant', 'Beast Boost', 'Iron Moth', 'Drought', 'Drizzle', 'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 
 			'Simple', 'Zapoleonite', 'Swift Swim', 'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde-Base', 'Caimanrago-Base', 'Kyurem-Base', 'Scovillainite', 'Triage', 'Kommo-o', 
 			'Celesteela', 'Great Tusk', 'Elysian Dance','Floettite', 'Adaptability', 'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele', 'Mega Sol', 'Armored Poncho', 'Pure Flux', 'Scorn', 
-			'Antarctic Power', 'Metagrossite', 'Spicy Spray', 'Fairy Aura', 'Rusted Shield', 'Burn Drive', 'Chill Drive', 'Douse Drive', 'Shock Drive', 'Dragoninite'
+			'Antarctic Power', 'Metagrossite', 'Spicy Spray', 'Fairy Aura', 'Rusted Shield', 'Burn Drive', 'Chill Drive', 'Douse Drive', 'Shock Drive', 'Dragoninite', 'Zeranheit', 'Tapu Koko', 'Manaphy'
 		],
 	},
 	//{

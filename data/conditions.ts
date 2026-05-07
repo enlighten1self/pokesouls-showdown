@@ -48,14 +48,15 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Status',
 		onStart(target, source, sourceEffect) {
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
-				this.add('-status', target, 'slp', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+				this.add('-status', target, 'slp', '[from] ability: ' + sourceEffect.name, `[of] ${source}`);
 			} else if (sourceEffect && sourceEffect.effectType === 'Move') {
-				this.add('-status', target, 'slp', '[from] move: ' + sourceEffect.name);
+				this.add('-status', target, 'slp', `[from] move: ${sourceEffect.name}`);
 			} else {
 				this.add('-status', target, 'slp');
 			}
-			// 1-2 turns; second turn has a 1/3 chance to wake early
-			this.effectState.startTime = this.random(1, 3);
+
+			// 1/3 chance for a Pokemon to wake up on turn 2
+			this.effectState.startTime = this.sample([2, 3, 3]);
 			this.effectState.time = this.effectState.startTime;
 
 			if (target.removeVolatile('nightmare')) {
@@ -64,48 +65,19 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onBeforeMovePriority: 10,
 		onBeforeMove(pokemon, target, move) {
-			// Early Bird halves sleep duration (handled as an extra decrement)
 			if (pokemon.hasAbility('earlybird')) {
 				pokemon.statusState.time--;
 			}
-			// Determine behavior based on the original start time
-			const startTime = this.effectState.startTime;
-			// If this was a 2-turn sleep, the first turn simply decrements
-			if (startTime === 2) {
-				if (pokemon.statusState.time > 1) {
-					pokemon.statusState.time--;
-					this.add('cant', pokemon, 'slp');
-					if (move.sleepUsable) return;
-					return false;
-				}
-				// pokemon.statusState.time === 1: this is the second turn
-				// 1/3 chance to wake and act; otherwise, fail to wake and cure after the turn
-				if (pokemon.statusState.time === 1) {
-					if (this.randomChance(1, 3)) {
-						pokemon.cureStatus();
-						return;
-					}
-					// failed to wake: spend this turn asleep, then cure
-					pokemon.statusState.time--;
-					this.add('cant', pokemon, 'slp');
-					if (move.sleepUsable) return;
-					pokemon.cureStatus();
-					return false;
-				}
-			}
-			// startTime === 1 or any fallback: sleep for one turn then cure
-			if (pokemon.statusState.time === 1) {
-				pokemon.statusState.time--;
-				this.add('cant', pokemon, 'slp');
-				if (move.sleepUsable) return;
-				pokemon.cureStatus();
-				return false;
-			}
-			// Safety: if time is 0 or less, cure
+			pokemon.statusState.time--;
 			if (pokemon.statusState.time <= 0) {
 				pokemon.cureStatus();
 				return;
 			}
+			this.add('cant', pokemon, 'slp');
+			if (move.sleepUsable) {
+				return;
+			}
+			return false;
 		},
 	},
 	frz: {

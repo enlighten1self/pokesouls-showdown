@@ -2286,8 +2286,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	freezedry: {
 		name: "Freeze-Dry",
-		desc: "Has a 10% chance to freeze the target. This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
-		shortDesc: "10% chance to freeze. Super effective on Water.",
+		desc: "This move's type effectiveness against Water is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Water.",
 	},
 	freezeshock: {
 		name: "Freeze Shock",

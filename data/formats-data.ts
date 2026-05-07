@@ -1028,7 +1028,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurosmega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	taurospaldeacombat: {
 		tier: "ZU",
@@ -1048,7 +1048,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	taurospaldeablazemega: {
 		tier: "Illegal",
 		doublesTier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "BUBL",
 	},
 	taurospaldeaaqua: {
 		tier: "UU",
@@ -1384,7 +1384,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	azumarill: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "BUBL",
 	},
 	bonsly: {
 		tier: "LC",
@@ -1669,7 +1669,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	donphan: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	stantler: {
 		tier: "NFE",
@@ -2116,7 +2116,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	sharpedomega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	wailmer: {
 		isNonstandard: "Past",
@@ -3211,7 +3211,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	lilliganthisui: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	basculin: {
 		tier: "PU",
@@ -4472,7 +4472,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	mimikyu: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	mimikyutotem: {
 		isNonstandard: "Past",
@@ -5605,7 +5605,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	sinistcha: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	okidogi: {
 		tier: "UU",
@@ -5615,7 +5615,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	munkidori: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	fezandipiti: {
 		tier: "UU",
@@ -5665,7 +5665,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironboulder: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "BU",
+		natDexTier: "BUBL",
 	},
 	ironcrown: {
 		tier: "OU",

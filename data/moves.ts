@@ -6646,10 +6646,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Water') return 1;
 		},
-		secondary: {
-			chance: 10,
-			status: 'frz',
-		},
 		target: "normal",
 		type: "Ice",
 		contestType: "Beautiful",

@@ -610,12 +610,12 @@ export class Pokemon {
 
 	getActionSpeed() {
 		let speed = this.getStat('spe', false, false);
-		if (this.battle.field.getPseudoWeather('trickroom')) {
-			speed = 10000 - speed;
-		} else if (this.battle.field.getPseudoWeather('trickyreception')){
-			speed = 10000 - speed;
+		const trickRoomCheck = this.battle.ruleTable.has('twisteddimensionmod') ?
+			!this.battle.field.getPseudoWeather('trickroom') : this.battle.field.getPseudoWeather('trickroom');
+		if (trickRoomCheck) {
+			speed = -speed;
 		}
-		return this.battle.trunc(speed, 13);
+		return speed;
 	}
 
 	/**
