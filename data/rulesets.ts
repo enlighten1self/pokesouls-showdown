@@ -92,12 +92,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-
-				// Also reject if the base form of the recipient is restricted
-				const baseRecipient = this.dex.species.get(species.baseSpecies);
-				if (baseRecipient.exists && this.ruleTable.isRestrictedSpecies(baseRecipient)) {
-					return [`${species.name} (base form ${baseRecipient.name}) is restricted and cannot be used.`];
-				}
 			if (species.natDexTier === 'Illegal') {
 				if (this.ruleTable.has(`+pokemon:${species.id}`)) return;
 				return [`${set.name || set.species} does not exist in the National Dex.`];
