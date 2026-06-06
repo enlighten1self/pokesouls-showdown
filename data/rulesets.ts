@@ -2766,11 +2766,17 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
 
-				// Reject using restricted recipient species (can't bypass by nicknaming)
 				if (this.ruleTable.isRestrictedSpecies(species)) {
 					return [`${species.name} is restricted and cannot be used.`];
 				}
-			let fusion = this.dex.species.get(set.name);
+				const namedSpecies = this.dex.species.get(set.name);
+				if (namedSpecies.exists) {
+					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
+						return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
+					}
+				}
+				let fusion = this.dex.species.get(set.name);
 
 			if (!fusion.exists) fusion = species;
 
@@ -2779,22 +2785,14 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(fusion.name === species.name ||
 				 fusion.baseSpecies === species.baseSpecies);
 
-
-
-			// =========================
-			// DONOR VALIDATION
-			// =========================
-
 			const item = this.dex.items.get(set.item);
 			if (fusion.exists && !isSelf) {
-					// Reject using restricted donor species (including base forms)
 					const baseFusion = this.dex.species.get(fusion.baseSpecies);
 					if (this.ruleTable.isRestrictedSpecies(fusion) || (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion))) {
 						return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 					}
 				
                 
-				// ❌ Restricted MEGAS cannot be used as donors
 				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
 					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
 				}
@@ -2803,22 +2801,15 @@ export const Rulesets: {[k: string]: FormatData} = {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 				}
 
-				// ❌ Other restricted Pokémon cannot be donors
 				if (!fusion.isMega && this.ruleTable.isRestrictedSpecies(fusion)) {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 				}
 
-				// ❌ Banned Pokémon cannot be donors
 				if (this.ruleTable.isBannedSpecies(fusion)) {
 					return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
 				}
-
-								// Event/nonstandard checks intentionally skipped for Frantic MovePools
 			}
 
-			// =========================
-			// ABILITY POOL BUILDING
-			// =========================
 			const abilityPool = new Set<string>(
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);
@@ -2864,7 +2855,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			if (this.ruleTable.isRestricted(`move:${move.id}`)) return baseCheck;
 
-			// If the donor species is restricted, don't allow inheriting its moves
 			if (this.ruleTable.isRestrictedSpecies(fusion)) return baseCheck;
 
 			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
@@ -2878,11 +2868,13 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-
-					// Reject restricted recipient species on the team (can't bypass by nicknaming)
-					const baseRecipientTeam = this.dex.species.get(species.baseSpecies);
-					if (this.ruleTable.isRestrictedSpecies(species) || (baseRecipientTeam.exists && this.ruleTable.isRestrictedSpecies(baseRecipientTeam))) {
-						return [`${species.name} is restricted and cannot be used.`];
+					const namedSpeciesTeam = this.dex.species.get(set.name);
+					if (namedSpeciesTeam.exists) {
+						if (this.ruleTable.isRestrictedSpecies(species)) {
+							if (set.species !== set.name) {
+								return [`You may not name a Pokémon after restricted species (${namedSpeciesTeam.name}).`];
+							}
+						}
 					}
 
 
@@ -2920,8 +2912,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (this.ruleTable.isRestrictedSpecies(fusion)) {
 					return [`Pokémon can't fuse with restricted Pokémon.`, `(${fusionName} is restricted.)`];
 				}
-
-								// Event/nonstandard checks intentionally skipped for Frantic MovePools
 			}
 		},
 	},
