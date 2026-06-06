@@ -2767,13 +2767,17 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const species = this.dex.species.get(set.species);
 
 				if (this.ruleTable.isRestrictedSpecies(species)) {
-					return [`${species.name} is restricted and cannot be used.`];
+					if (set.species !== set.name){
+						return [`${species.name} is restricted and cannot be Named.`];
+					}
 				}
 				const namedSpecies = this.dex.species.get(set.name);
 				if (namedSpecies.exists) {
 					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
 					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
-						return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
+						if (set.species !== set.name){
+							return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
+						}
 					}
 				}
 				let fusion = this.dex.species.get(set.name);
@@ -2872,7 +2876,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					if (namedSpeciesTeam.exists) {
 						if (this.ruleTable.isRestrictedSpecies(species)) {
 							if (set.species !== set.name) {
-								return [`You may not name a Pokémon after restricted species (${namedSpeciesTeam.name}).`];
+								return [`You may not name a Pokémon if Restricted.`];
 							}
 						}
 					}
