@@ -2760,28 +2760,30 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
 
-				if (this.ruleTable.isRestrictedSpecies(species)) {
+			if (this.ruleTable.isRestrictedSpecies(species)) {
+				if (set.species !== set.name){
+					return [`${species.name} is restricted and cannot be Named.`];
+				}
+			}
+			const namedSpecies = this.dex.species.get(set.name);
+			if (namedSpecies.exists) {
+				const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+				if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
 					if (set.species !== set.name){
-						return [`${species.name} is restricted and cannot be Named.`];
+						return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
 					}
 				}
-				const namedSpecies = this.dex.species.get(set.name);
-				if (namedSpecies.exists) {
-					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
-					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
-						if (set.species !== set.name){
-							return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
-						}
-					}
+			}
+			const item = this.dex.items.get(set.item);
+			if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
+				return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
+			}
+			if (item.megaStone || item.forcedForme && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
+				if (item.megaEvolves !== species.baseSpecies || item.forcedForme !== species.name) {
+					return [`${set.species} is restricted and cannot be used if named a different pokemon.`];
 				}
-				const item = this.dex.items.get(set.item);
-				if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
-					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
-				}
-				if (item.megaStone && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
-					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
-				}
-				let fusion = this.dex.species.get(set.name);
+			}
+			let fusion = this.dex.species.get(set.name);
 
 			if (!fusion.exists) fusion = species;
 
