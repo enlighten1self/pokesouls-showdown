@@ -2768,12 +2768,21 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(fusion.name === species.name ||
 				 fusion.baseSpecies === species.baseSpecies);
 
+			// Reject using restricted recipient species
+			if (this.ruleTable.isRestrictedSpecies(species)) {
+				return [`${species.name} is restricted and cannot be used.`];
+			}
+
 			// =========================
 			// DONOR VALIDATION
 			// =========================
 
 			const item = this.dex.items.get(set.item);
 			if (fusion.exists && !isSelf) {
+				// Reject using restricted donor species
+				if (this.ruleTable.isRestrictedSpecies(fusion)) {
+					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
+				}
 				
 				const baseFusion = this.dex.species.get(fusion.baseSpecies);
 
@@ -2811,9 +2820,12 @@ export const Rulesets: {[k: string]: FormatData} = {
 			);
 
 			if (fusion.exists && !isSelf) {
-				for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
-					if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
-						abilityPool.add(ability);
+				// If the donor is restricted, its abilities shouldn't be inherited (donor check above also prevents this)
+				if (!this.ruleTable.isRestrictedSpecies(fusion)) {
+					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
+						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
+							abilityPool.add(ability);
+						}
 					}
 				}
 			}
@@ -2847,6 +2859,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			if (this.ruleTable.isRestricted(`move:${move.id}`)) return baseCheck;
 
+			// If the donor species is restricted, don't allow inheriting its moves
+			if (this.ruleTable.isRestrictedSpecies(fusion)) return baseCheck;
+
 			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
 			if (fusionCheck === null) return null;
 
@@ -2858,6 +2873,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
+
+					// Reject restricted recipient species on the team level
+					if (this.ruleTable.isRestrictedSpecies(species)) {
+						return [`${species.name} is restricted and cannot be used.`];
+					}
 				let fusion = this.dex.species.get(set.name);
 
 				if (!fusion.exists) {
