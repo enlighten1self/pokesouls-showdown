@@ -2767,12 +2767,12 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			const namedSpecies = this.dex.species.get(set.name);
 			if (namedSpecies.exists) {
-				const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
-				if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
-					if (set.species !== set.name){
-						return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
-					}
-				}
+				//const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+				//if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
+				//	if (set.species !== set.name){
+				//		return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
+				//	}
+				//}
 			}
 			const item = this.dex.items.get(set.item);
 			//if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
