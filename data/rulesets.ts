@@ -2793,12 +2793,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 						return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 					}
 				
-				const baseFusion = this.dex.species.get(fusion.baseSpecies);
-
-				// ❌ Restricted base species check (handles forms properly)
-				if (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion)) {
-					return [`${baseFusion.name} (base form) is restricted and cannot be used as a movepool donor.`];
-				}
+                
 				// ❌ Restricted MEGAS cannot be used as donors
 				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
 					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
