@@ -2775,9 +2775,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 				}
 			}
 			const item = this.dex.items.get(set.item);
-			if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
-				return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
-			}
+			//if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
+			//	return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
+			//}
 			if (item.megaStone || item.forcedForme && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
 				if (item.megaEvolves !== species.baseSpecies || item.forcedForme !== species.name) {
 					return [`${set.species} is restricted and cannot be used if named a different pokemon.`];
