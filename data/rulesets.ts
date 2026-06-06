@@ -2749,7 +2749,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		// implemented in /mods/moderngen1/rulesets.ts
 	},
 	franticmovepools: {
-		effectType: 'Rule',
+		effectType: 'ValidatorRule',
 		name: "Frantic MovePools",
 		desc: `Pokémon nicknamed after another Pokémon get access to all of that Pokémon's moves and abilities in addition to their own. Certain Pokémon, moves, and abilities may be restricted.`,
 
@@ -2800,13 +2800,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
 				}
 
-				// ❌ Nonstandard restriction check
-				if (fusion.isNonstandard &&
-					!(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
-					  this.ruleTable.has(`+pokemon:${fusion.id}`) ||
-					  this.ruleTable.has(`+basepokemon:${this.toID(fusion.baseSpecies)}`))) {
-					return [`${fusion.name} is marked as ${fusion.isNonstandard} and cannot be used as a movepool donor.`];
-				}
+								// Event/nonstandard checks intentionally skipped for Frantic MovePools
 			}
 
 			// =========================
@@ -2899,12 +2893,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 					return [`Pokémon can't fuse with restricted Pokémon.`, `(${fusionName} is restricted.)`];
 				}
 
-				if (fusion.isNonstandard &&
-					!(this.ruleTable.has(`+pokemontag:${this.toID(fusion.isNonstandard)}`) ||
-					  this.ruleTable.has(`+pokemon:${fusion.id}`) ||
-					  this.ruleTable.has(`+basepokemon:${this.toID(fusion.baseSpecies)}`))) {
-					return [`${fusion.name} is marked as ${fusion.isNonstandard}, which is banned.`];
-				}
+								// Event/nonstandard checks intentionally skipped for Frantic MovePools
 			}
 		},
 	},

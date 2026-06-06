@@ -1816,7 +1816,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	obstagoon: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	wurmple: {
 		isNonstandard: "Past",
@@ -3318,7 +3318,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	runerigus: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	tirtouga: {
 		isNonstandard: "Past",
@@ -4147,7 +4147,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	diancie: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	dianciemega: {
 		isNonstandard: "Past",
@@ -5330,7 +5330,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	tatsugiri: {
 		tier: "UU",
 		doublesTier: "DUber",
-		natDexTier: "RU",
+		natDexTier: "NU",
 	},
 	cyclizar: {
 		tier: "UU",
@@ -6499,7 +6499,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	golurkmega: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "RU",
 	},
 	floettemega: {
 		tier: "Illegal",
