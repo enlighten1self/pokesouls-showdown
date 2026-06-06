@@ -2772,7 +2772,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				}
 			}
 			if (item.megaStone && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
-				if (item.megaStone !== species.name || species.baseSpecies) {
+				if (item.megaEvolves !== set.name) {
 					return [`${set.species} is restricted and cannot be used if named a different pokemon.`];
 				}
 			}
