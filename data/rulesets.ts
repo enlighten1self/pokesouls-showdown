@@ -2760,23 +2760,21 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
 
-			if (this.ruleTable.isRestrictedSpecies(species)) {
-				if (set.species !== set.name){
-					return [`${species.name} is restricted and cannot be Named.`];
+				if (this.ruleTable.isRestrictedSpecies(species)) {
+					if (set.species !== set.name){
+						return [`${species.name} is restricted and cannot be Named.`];
+					}
 				}
-			}
-			const item = this.dex.items.get(set.item);
-			if (item.forcedForme && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.forcedForme))) {
-				if (item.forcedForme !== species.name) {
-					return [`${set.species} is restricted and cannot be used if named a different pokemon.`];
+				const namedSpecies = this.dex.species.get(set.name);
+				if (namedSpecies.exists) {
+					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
+						if (set.species !== set.name){
+							return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
+						}
+					}
 				}
-			}
-			if (item.megaStone && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
-				if (item.megaEvolves !== set.name) {
-					return [`${set.species} is restricted and cannot be used if named a different pokemon.`];
-				}
-			}
-			let fusion = this.dex.species.get(set.name);
+				let fusion = this.dex.species.get(set.name);
 
 			if (!fusion.exists) fusion = species;
 
@@ -2785,11 +2783,18 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(fusion.name === species.name ||
 				 fusion.baseSpecies === species.baseSpecies);
 
+			const item = this.dex.items.get(set.item);
 			if (fusion.exists && !isSelf) {
 					const baseFusion = this.dex.species.get(fusion.baseSpecies);
 					if (this.ruleTable.isRestrictedSpecies(fusion) || (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion))) {
 						return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 					}
+				
+                
+				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
+					if (this.ruleTable.isRestrictedSpecies(fusion))
+					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
+				}
 
 				if (fusion.isMega && this.ruleTable.isRestrictedSpecies(fusion)) {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
