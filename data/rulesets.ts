@@ -2774,6 +2774,13 @@ export const Rulesets: {[k: string]: FormatData} = {
 						}
 					}
 				}
+				const item = this.dex.items.get(set.item);
+				if (set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
+					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
+				}
+				if (item.megaStone && this.ruleTable.isRestrictedSpecies(this.dex.species.get(item.megaStone))) {
+					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
+				}
 				let fusion = this.dex.species.get(set.name);
 
 			if (!fusion.exists) fusion = species;
@@ -2783,17 +2790,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(fusion.name === species.name ||
 				 fusion.baseSpecies === species.baseSpecies);
 
-			const item = this.dex.items.get(set.item);
 			if (fusion.exists && !isSelf) {
 					const baseFusion = this.dex.species.get(fusion.baseSpecies);
 					if (this.ruleTable.isRestrictedSpecies(fusion) || (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion))) {
 						return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 					}
-				
-                
-				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
-					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
-				}
 
 				if (fusion.isMega && this.ruleTable.isRestrictedSpecies(fusion)) {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
@@ -2813,7 +2814,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 			);
 
 			if (fusion.exists && !isSelf) {
-				// If the donor is restricted, its abilities shouldn't be inherited (donor check above also prevents this)
 				const baseFusionForAbilities = this.dex.species.get(fusion.baseSpecies);
 				if (!this.ruleTable.isRestrictedSpecies(fusion) && !(baseFusionForAbilities.exists && this.ruleTable.isRestrictedSpecies(baseFusionForAbilities))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {

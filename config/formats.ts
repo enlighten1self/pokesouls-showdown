@@ -679,7 +679,7 @@ export const Formats: FormatList = [
 			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 
 		],
 		restricted: [
-			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Hearthflame Mask', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Diancite', 'Excadrite', 'Garchomp', 'Melmetal', 'Wellspring Mask', 
+			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Hearthflame Mask', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Diancie-Mega', 'Excadrite', 'Garchomp', 'Melmetal', 'Wellspring Mask', 
 			'Quantum Syphon', 'Roaring Moon', 'Spectoisite', 'Rising Voltage', 'Expanding Force', 'Electric Surge', 'Psychic Surge', 'Poison Heal', 'Basculegion', 'Eeveeon', 'Porygon-Z', 'Glimmoranite', 'Toxic Debris', 
 			'Corrosion', 'Fur Coat', 'Ice Scales', 'Volcarona', 'Withordite', 'Zamazenta', 'Ghoulizardite', 'Atlascross-Base', 'Mawilite', 'Medichamite', 'Huge Power', 'Pure Power', 'Extreme Speed', 'Boomburst', 
 			'Dragonite', 'Zygarde-10%', 'Smeargle', 'Mew', 'Neutralizing Gas', 'Palafin', 'Ultigigas', 'Chrono Venom', 'Population Bomb', 'Cloyster', 'Shell Smash', 'Fillet Away', 'Victini', 'Power Trip', 'Stored Power', 
