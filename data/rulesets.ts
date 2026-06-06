@@ -2768,10 +2768,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				(fusion.name === species.name ||
 				 fusion.baseSpecies === species.baseSpecies);
 
-			// Reject using restricted recipient species
-			if (this.ruleTable.isRestrictedSpecies(species)) {
-				return [`${species.name} is restricted and cannot be used.`];
-			}
+
 
 			// =========================
 			// DONOR VALIDATION
@@ -2874,10 +2871,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
 
-					// Reject restricted recipient species on the team level
-					if (this.ruleTable.isRestrictedSpecies(species)) {
-						return [`${species.name} is restricted and cannot be used.`];
-					}
+
 				let fusion = this.dex.species.get(set.name);
 
 				if (!fusion.exists) {
