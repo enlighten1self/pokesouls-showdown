@@ -2761,11 +2761,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const species = this.dex.species.get(set.species);
 
 				if (this.ruleTable.isRestrictedSpecies(species)) {
-					if (set.species !== set.name){
+					if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
 						return [`${species.name} is restricted and cannot be Named.`];
 					}
 				}
-				if (set.name && this.toID(set.name) !== this.toID(set.species)) {
+				if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
 					const namedSpecies = this.dex.species.get(set.name);
 					if (namedSpecies.exists) {
 						const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
@@ -2887,7 +2887,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-					if (set.name && this.toID(set.name) !== this.toID(set.species)) {
+					if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
 						// If the team member has an explicit different name, disallow naming
 						// if the base species itself is restricted.
 						if (this.ruleTable.isRestrictedSpecies(species)) {
