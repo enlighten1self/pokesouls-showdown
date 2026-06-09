@@ -2765,11 +2765,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 						return [`${species.name} is restricted and cannot be Named.`];
 					}
 				}
-				const namedSpecies = this.dex.species.get(set.name);
-				if (namedSpecies.exists) {
-					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
-					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
-						if (set.species !== set.name){
+				if (set.name && this.toID(set.name) !== this.toID(set.species)) {
+					const namedSpecies = this.dex.species.get(set.name);
+					if (namedSpecies.exists) {
+						const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+						if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
 							return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
 						}
 					}
@@ -2887,12 +2887,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-					const namedSpeciesTeam = this.dex.species.get(set.name);
-					if (namedSpeciesTeam.exists) {
+					if (set.name && this.toID(set.name) !== this.toID(set.species)) {
+						// If the team member has an explicit different name, disallow naming
+						// if the base species itself is restricted.
 						if (this.ruleTable.isRestrictedSpecies(species)) {
-							if (set.species !== set.name) {
-								return [`You may not name a Pokémon if Restricted.`];
-							}
+							return [`You may not name a Pokémon if Restricted.`];
 						}
 					}
 
