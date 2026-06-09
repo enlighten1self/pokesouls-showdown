@@ -2761,15 +2761,15 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const species = this.dex.species.get(set.species);
 
 				if (this.ruleTable.isRestrictedSpecies(species)) {
-					if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
+					if (set.species !== set.name){
 						return [`${species.name} is restricted and cannot be Named.`];
 					}
 				}
-				if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
-					const namedSpecies = this.dex.species.get(set.name);
-					if (namedSpecies.exists) {
-						const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
-						if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
+				const namedSpecies = this.dex.species.get(set.name);
+				if (namedSpecies.exists) {
+					const baseNamed = this.dex.species.get(namedSpecies.baseSpecies);
+					if (this.ruleTable.isRestrictedSpecies(namedSpecies) || (baseNamed.exists && this.ruleTable.isRestrictedSpecies(baseNamed))) {
+						if (set.species !== set.name){
 							return [`You may not name a Pokémon after restricted species (${namedSpecies.name}).`];
 						}
 					}
@@ -2790,38 +2790,16 @@ export const Rulesets: {[k: string]: FormatData} = {
 						return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 					}
 				
-				let itemRestricted = false;
-				if (fusion.exists && set.item) {
-					itemRestricted = this.ruleTable.isRestricted(`item:${item?.id}`);
-					if (!itemRestricted) {
-						const itemId = this.toID(set.item);
-						for (const spId in this.dex.data.Pokedex) {
-							const s = this.dex.species.get(spId);
-							const sReq = s.requiredItems || (s.requiredItem ? [s.requiredItem] : undefined);
-							if (!sReq) continue;
-							for (const req of sReq) {
-								if (this.toID(req) === itemId) {
-									if (this.ruleTable.isRestrictedSpecies(s) || (s.baseSpecies && this.ruleTable.isRestrictedSpecies(this.dex.species.get(s.baseSpecies)))) {
-										itemRestricted = true;
-										break;
-									}
-								}
-							}
-							if (itemRestricted) break;
-						}
-					}
-				}
-				const fusionRequiredItems = fusion.requiredItems || (fusion.requiredItem ? [fusion.requiredItem] : undefined);
-				if (fusionRequiredItems && set.item) {
-					const held = this.toID(set.item);
-					for (const reqItem of fusionRequiredItems) {
-						if (held === this.toID(reqItem) && itemRestricted) {
-							return [`${fusion.name} transforms with ${reqItem}; a Pokémon holding that item cannot be used as a movepool donor.`];
-						}
-					}
+                
+				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
+					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
 				}
 
-				if (this.ruleTable.isRestrictedSpecies(fusion)) {
+				if (fusion.isMega && this.ruleTable.isRestrictedSpecies(fusion)) {
+					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
+				}
+
+				if (!fusion.isMega && this.ruleTable.isRestrictedSpecies(fusion)) {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
 				}
 
@@ -2887,11 +2865,12 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			for (const set of team) {
 				const species = this.dex.species.get(set.species);
-					if (set.name && this.toID(set.name) !== this.toID(set.species) && this.toID(set.name) !== this.toID(species.baseSpecies)) {
-						// If the team member has an explicit different name, disallow naming
-						// if the base species itself is restricted.
+					const namedSpeciesTeam = this.dex.species.get(set.name);
+					if (namedSpeciesTeam.exists) {
 						if (this.ruleTable.isRestrictedSpecies(species)) {
-							return [`You may not name a Pokémon if Restricted.`];
+							if (set.species !== set.name) {
+								return [`You may not name a Pokémon if Restricted.`];
+							}
 						}
 					}
 
@@ -2910,31 +2889,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 				if (isSelf) continue;
 
-					const fusionRequiredItems = fusion.requiredItems || (fusion.requiredItem ? [fusion.requiredItem] : undefined);
-					if (fusionRequiredItems && set.item) {
-						const held = this.toID(set.item);
-						let itemRestricted = false;
-						const itemId = this.toID(set.item);
-						for (const spId in this.dex.data.Pokedex) {
-							const s = this.dex.species.get(spId);
-							const sReq = s.requiredItems || (s.requiredItem ? [s.requiredItem] : undefined);
-							if (!sReq) continue;
-							for (const req of sReq) {
-								if (this.toID(req) === itemId) {
-									if (this.ruleTable.isRestrictedSpecies(s) || (s.baseSpecies && this.ruleTable.isRestrictedSpecies(this.dex.species.get(s.baseSpecies)))) {
-										itemRestricted = true;
-										break;
-									}
-								}
-							}
-							if (itemRestricted) break;
-						}
-						if (fusionRequiredItems.some(req => held === this.toID(req)) && itemRestricted) {
-							return [`Pokémon holding ${set.item} cannot be used as a movepool donor (${fusion.name}).`];
-						}
-					}
-
-					donors.add(fusion.name);
+				donors.add(fusion.name);
 			}
 
 			for (const [fusionName, number] of donors) {
