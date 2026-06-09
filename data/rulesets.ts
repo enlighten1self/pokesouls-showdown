@@ -2792,7 +2792,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 				
                 
 				if (fusion.exists && set.item && this.ruleTable.isRestricted(`item:${item.id}`)){
-					if (this.ruleTable.isRestrictedSpecies(fusion))
 					return [`${item.id} is restricted and cannot be used if named a different pokemon.`];
 				}
 
