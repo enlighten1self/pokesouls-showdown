@@ -3788,8 +3788,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	makeitrain: {
 		name: "Make It Rain",
-		desc: "Lowers the user's Special Attack by 1 stage.",
-		shortDesc: "Lowers the user's Sp. Atk by 1. Hits foe(s).",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2. Hits foe(s).",
 
 		activate: "#payday",
 	},
@@ -5032,8 +5032,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	ragefist: {
 		name: "Rage Fist",
-		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the battle, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
-		shortDesc: "+50 power for each time user was hit. Max 6 hits.",
+		desc: "Power is equal to 50+(X*50), where X is the total number of times the user has been hit by a damaging attack during the time its been out, even if the user did not lose HP from the attack. X cannot be greater than 6 and does not reset upon switching out or fainting. Each hit of a multi-hit attack is counted, but confusion damage is not counted.",
+		shortDesc: "+50 power for each time user was hit. Max 6 hits. Does not persist on Switch-Out.",
 	},
 	ragepowder: {
 		name: "Rage Powder",

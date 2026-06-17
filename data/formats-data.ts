@@ -261,6 +261,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
 	},
+	raichumegax: {
+		natDexTier: "UU",
+	},
+	raichumegay: {
+		natDexTier: "Uber",
+	},
 	sandshrew: {
 		tier: "LC",
 	},
@@ -2563,6 +2569,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
 	},
+	staraptormega: {
+		natDexTier: "OU",
+	},
 	bidoof: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -3192,6 +3201,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "NU",
 	},
+	scolipedemega: {
+		natDexTier: "NU",
+	},
 	cottonee: {
 		tier: "LC",
 	},
@@ -3294,6 +3306,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "DUU",
 		natDexTier: "NU",
+	},
+	scraftymega: {
+		natDexTier: "BU",
 	},
 	sigilyph: {
 		isNonstandard: "Past",
@@ -3514,6 +3529,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "PU",
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
+	},
+	eelektrossmega: {
+		natDexTier: "BU",
 	},
 	elgyem: {
 		isNonstandard: "Past",
@@ -3870,6 +3888,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
 	},
+	pyroarmega: {
+		natDexTier: "OU",
+	},
 	flabebe: {
 		tier: "LC",
 	},
@@ -3963,6 +3984,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DUU",
 		natDexTier: "NU",
 	},
+	malamarmega: {
+		natDexTier: "NU",
+	},
 	binacle: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -3973,6 +3997,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	barbaraclemega: {
+		natDexTier: "UU",
+	},
 	skrelp: {
 		tier: "LC",
 	},
@@ -3980,6 +4007,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
+	},
+	dragalgemega: {
+		natDexTier: "OU",
 	},
 	clauncher: {
 		tier: "LC",
@@ -4955,6 +4985,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "ZUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
+	},
+	falinksmega: {
+		natDexTier: "UU",
 	},
 	pincurchin: {
 		tier: "ZU",

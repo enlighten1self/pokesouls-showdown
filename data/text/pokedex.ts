@@ -167,6 +167,12 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	raichualola: {
 		name: "Raichu-Alola",
 	},
+	raichumegax: {
+		name: "Raichu-Mega-X",
+	},
+	raichumegay: {
+		name: "Raichu-Mega-Y",
+	},
 	sandshrew: {
 		name: "Sandshrew",
 	},
@@ -1568,6 +1574,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	staraptor: {
 		name: "Staraptor",
 	},
+	staraptormega: {
+		name: "Staraptor-Mega",
+	},
 	bidoof: {
 		name: "Bidoof",
 	},
@@ -2120,6 +2129,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	scolipede: {
 		name: "Scolipede",
 	},
+	scolipedemega: {
+		name: "Scolipede-Mega",
+	},
 	cottonee: {
 		name: "Cottonee",
 	},
@@ -2185,6 +2197,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	scrafty: {
 		name: "Scrafty",
+	},
+	scraftymega: {
+		name: "Scrafty-Mega",
 	},
 	sigilyph: {
 		name: "Sigilyph",
@@ -2329,6 +2344,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	eelektross: {
 		name: "Eelektross",
+	},
+	eelektrossmega: {
+		name: "Eelektross-Mega",
 	},
 	elgyem: {
 		name: "Elgyem",
@@ -2573,6 +2591,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	pyroar: {
 		name: "Pyroar",
 	},
+	pyroarmega: {
+		name: "Pyroar-Mega",
+	},
 	flabebe: {
 		name: "Flabe\u0301be\u0301",
 	},
@@ -2639,17 +2660,26 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	malamar: {
 		name: "Malamar",
 	},
+	malamarmega: {
+		name: "Malamar-Mega",
+	},
 	binacle: {
 		name: "Binacle",
 	},
 	barbaracle: {
 		name: "Barbaracle",
 	},
+	barbaraclemega: {
+		name: "Barbaracle-Mega",
+	},
 	skrelp: {
 		name: "Skrelp",
 	},
 	dragalge: {
 		name: "Dragalge",
+	},
+	dragalgemega: {
+		name: "Dragalge-Mega",
 	},
 	clauncher: {
 		name: "Clauncher",
@@ -3415,6 +3445,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	falinks: {
 		name: "Falinks",
+	},
+	falinksmega: {
+		name: "Falinks-Mega",
 	},
 	pincurchin: {
 		name: "Pincurchin",

@@ -2569,6 +2569,10 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Golurkite",
 		desc: "If held by a Golurk, this item allows it to Mega Evolve in battle.",
 	},
+	greninjite: {
+		name: "Greninjite",
+		desc: "If held by a Greninja, this item allows it to Mega Evolve in battle.",
+	},
 	hawluchanite: {
 		name: "Hawluchanite",
 		desc: "If held by a Hawlucha, this item allows it to Mega Evolve in battle.",
@@ -2596,5 +2600,49 @@ export const ItemsText: {[k: string]: ItemText} = {
 	victreebelite: {
 		name: "Victreebelite",
 		desc: "If held by a Victreebel, this item allows it to Mega Evolve in battle.",
+	},
+	raichunitex: {
+		name: "Raichunite-X",
+		desc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
+	},
+	raichunitey: {
+		name: "Raichunite-Y",
+		desc: "If held by a Raichu, this item allows it to Mega Evolve in battle.",
+	},
+	staraptite: {
+		name: "Staraptite",
+		desc: "If held by a Staraptor, this item allows it to Mega Evolve in battle.",
+	},
+	scolipite: {
+		name: "Scolipite",
+		desc: "If held by a Scolipede, this item allows it to Mega Evolve in battle.",
+	},
+	scraftinite: {
+		name: "Scraftinite",
+		desc: "If held by a Scrafty, this item allows it to Mega Evolve in battle.",
+	},
+	eelektrossite: {
+		name: "Eelektrossite",
+		desc: "If held by a Eelektross, this item allows it to Mega Evolve in battle.",
+	},
+	pyroarite: {
+		name: "Pyroarite",
+		desc: "If held by a Pyroar, this item allows it to Mega Evolve in battle.",
+	},
+	malamarite: {
+		name: "Malamarite",
+		desc: "If held by a Malamar, this item allows it to Mega Evolve in battle.",
+	},
+	barbaracite: {
+		name: "Barbaracite",
+		desc: "If held by a Barbaracle, this item allows it to Mega Evolve in battle.",
+	},
+	dragalgite: {
+		name: "Dragalgite",
+		desc: "If held by a Dragalge, this item allows it to Mega Evolve in battle.",
+	},
+	falinksite: {
+		name: "Falinksite",
+		desc: "If held by a Falinks, this item allows it to Mega Evolve in battle.",
 	},
 };

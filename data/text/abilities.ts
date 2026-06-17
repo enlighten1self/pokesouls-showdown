@@ -2406,4 +2406,13 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Spicy Spray",
 		shortDesc: "When the Pokémon takes damage from a move, it burns the attacker.",
 	},
+	eelevate: {
+		name: "Eelevate",
+		desc: "This Pokemon is immune to Ground-type attacks and the effects of Spikes, Toxic Spikes, Sticky Web, and the Arena Trap Ability. The effects of Gravity, Ingrain, Smack Down, Thousand Arrows, and Iron Ball nullify the immunity. Thousand Arrows can hit this Pokemon as if it did not have this Ability. This Pokemon's highest stat is also raised by 1 stage if it attacks and knocks out another Pokemon. Stat stage changes are not considered. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order.",
+		shortDesc: "This Pokemon is immune to Ground; Gravity/Ingrain/Smack Down/Iron Ball nullify it. Also This Pokemon's highest stat is raised by 1 if it attacks and KOes another Pokemon.",
+	},
+	firemane: {
+		name: "Fire Mane",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
+	},
 };

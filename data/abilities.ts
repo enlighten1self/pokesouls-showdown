@@ -6214,4 +6214,36 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4,
 		num: -19,
 	},
+	eelevate: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				const bestStat = source.getBestStat(true, true);
+				this.boost({ [bestStat]: length }, source);
+			}
+		},
+		flags: {},
+		name: "Eelevate",
+		rating: 3.5,
+		num: -20,
+	},
+	firemane: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Mane boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Fire') {
+				this.debug('Fire Mane boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Fire Mane",
+		rating: 3.5,
+		num: -21,
+	},
 };

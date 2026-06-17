@@ -33731,6 +33731,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sceptile: {
 		learnset: {
+			earthpower: ["9M"],
 			dragonrush: ["9M"],
 			absorb: ["7L1", "6L1", "5L1", "4L1", "3L1"],
 			acrobatics: ["9M", "8M", "7M", "6M", "5M"],
@@ -34366,6 +34367,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	swampert: {
 		learnset: {
+			wavecrash: ["9M"],
 			sludgebomb: ["9M"],
 			fissure: ["9M"],
 			amnesia: ["9M", "9L35", "8M", "8L35"],
@@ -58310,6 +58312,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			mortalspin: ["9M"],
 			trailblaze: ["9M"],
 			firstimpression: ["9M"],
+			leechlife: ["9M"],
 			uturn: ["8M"],
 			gunkshot: ["8M"],
 			agility: ["8M", "8L42", "7L33", "6L33", "5L33"],
@@ -63475,6 +63478,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	eelektross: {
 		learnset: {
+			risingvoltage: ["9M"],
 			poisonfang: ["9M"],
 			psychicfangs: ["9M"],
 			waterfall: ["9M"],
@@ -69661,6 +69665,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	pyroar: {
 		learnset: {
+			scorchingsands: ["9M"],
 			earthpower: ["9M"],
 			acrobatics: ["9M"],
 			attract: ["7M", "6M"],
@@ -71515,6 +71520,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	barbaracle: {
 		learnset: {
+			aquacutter: ["9M"],
 			closecombat: ["9M"],
 			waterfall: ["9M"],
 			aerialace: ["7M", "6M"],
@@ -88647,6 +88653,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	houndstone: {
 		learnset: {
+			swagger: ["9M"],
 			seedbomb: ["9M"],
 			zenheadbutt: ["9M"],
 			shadowclaw: ["9M"],

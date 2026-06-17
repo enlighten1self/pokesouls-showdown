@@ -219,6 +219,7 @@ export const Formats: FormatList = [
 			"Palafin",
 			"Palkia",
 			"Pheromosa",
+			"Raichu-Mega-Y",
 			"Rayquaza",
 			"Reshiram",
 			"Salamence-Mega",
@@ -420,7 +421,7 @@ export const Formats: FormatList = [
 			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 
 			'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Mewtwo', "Last Respects", "Shed Tail", "Caimanragonite", "Cereblazite", "Forroguite", "Frostikenite", "Tempervianite", 
 			"Tricky Reception", "Rising Voltage", "Speed Boost", "Gorilla Tactics", "Alakazite", "Blastoisinite", "Blazikenite", "Dracovish", "Kangaskhanite", "Lucarionite", "Marshadow", "Necrozma-Dusk-Mane", 
-			"Necrozma-Dawn-Wings", "Palkia", "Salamencite", "Shaymin-Sky", "Xerneas", "Yveltal", "Zekrom", "Miraidon", "Zacian", "Rayquaza", "Gengarite", "Shadow Tag", "Power Construct",
+			"Necrozma-Dawn-Wings", "Palkia", "Salamencite", "Shaymin-Sky", "Xerneas", "Yveltal", "Zekrom", "Miraidon", "Zacian", "Rayquaza", "Gengarite", "Shadow Tag", "Power Construct", 'Raichunite-Y'
 		],
 		restricted : [
 			'Ceruledge', 'Darkrai', 'Dragonite', 'Gouging Fire', 'Hoopa-Unbound', 'Iron Valiant', 'Keldeo', 'Noivern', 'Regigigas', 'Slaking', 'Sneasler', 'Urshifu-Rapid-Strike', 'Volcarona', 
@@ -471,6 +472,7 @@ export const Formats: FormatList = [
 			'Zekrom', 'Zygarde-50%', 'Arena Trap', 'Moody', 'Shadow Tag', 'Power Construct', 'Damp Rock', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Wicked Blow', 
 			'Wicked Torque', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervianite', 'Ultigigas', 'Tricky Reception', 'Stratozone', 'Typhtesla', 'Chrono Venom',
 			'Alakazam-Mega', 'Caimanrago', 'Delphox-Mega', 'Deoxys-Speed', 'Greninja-Mega', 'Lopunny-Mega', 'Palafin', 'Roaring Moon', 'Sneasler', 'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen',
+			'Staraptor-Mega', 'Raichu-Mega-Y'
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 
@@ -494,7 +496,8 @@ export const Formats: FormatList = [
 			'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Eternatus', 'Flutter Mane', 'Giratina', 'Gouging Fire', 'Ho-Oh', 'Iron Bundle', 'Lugia',
 			'Lunala', 'Manaphy', 'Mewtwo', 'Palkia', 'Rayquaza', 'Regigigas', 'Reshiram', 'Slaking', 'Sneasler', 'Solgaleo', 'Ursaluna-Bloodmoon', 
 			'Urshifu-Single-Strike', 'Walking Wake', 'Zacian', 'Zekrom', 'Darmanitan-Galar', 'Huesotops', 'Ultigigas', 'Xurkitree', 'Spectrier', 
-			'Naganadel', 'Pheromosa', 'Boomkeldurr', 'Arceus', 'Elysian Dance', 'Scovillainite', 'Starminite', 'Meganiumite'
+			'Naganadel', 'Pheromosa', 'Boomkeldurr', 'Arceus', 'Elysian Dance', 'Scovillainite', 'Starminite', 'Meganiumite', 'Eelektrossite',
+			'Staraptite', 'Raichunite-Y'
 		],
 		onValidateTeam(team) {
 			const itemTable = new Set<ID>();
@@ -581,7 +584,7 @@ export const Formats: FormatList = [
 			'Happy Hour', 'Conversion', 'Protean', 'Adaptability', 'Furfrou', 'Blissey', 'Chansey', 'Moltres-Galar', 'Iron Jugulis', 'Dire Claw', 'Mew', 'Iron Boulder',
 			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer', 'Gengar-Mega',
 			'Delphox-Mega', 'Greninja-Mega', 'Lopunny-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Sneasler', 'Starmie-Mega', 'Ursaluna-Bloodmoon',
-			'Tempervian-Mega-Ashen', 'Zygarde-Complete', 'Power Construct'
+			'Tempervian-Mega-Ashen', 'Zygarde-Complete', 'Power Construct', 'Staraptor-Mega'
 		],
 	},
 	{
@@ -624,7 +627,7 @@ export const Formats: FormatList = [
 			'Stakataka', 'Xurkitree', 'Spectrier', 'Flaming Wrath', 'Chrono Venom', 'Lucario-Mega', 'Beedrill-Mega', 'Ditto', 'Metagross-Mega', 'Heracross-Mega', 'Tyranitar-Mega', 'Latios-Mega', 'Garchomp-Mega', 'Gallade-Mega', 
 			'Excadrill-Mega', 'Diancie-Mega', 'Charizard-Mega-Y', 'Typhtesla-Mega', 'Swampert-Mega', 'Scizor-Mega', 'Gyarados-Mega', 'Delphox-Mega', 'Withorde-Mega', 'Roaring Moon', 'Shuckle', 'Bastiodon', 'Deoxys-Defense',
 			'Rampardos', 'Hoopa-Base', 'Ninjask', 'Electrode-Base', 'Electrode-Hisui', 'Accelgor', 'Zeraora', 'Regice', 'Florges', 'Carbink', 'Diancie-Base', 'Goodra-Base', 'Goodra-Hisui', 'Probopass', 'Registeel', 'Regirock', 'Steelix-Base', 
-			'Steelix-Mega', 'Avalugg-Base', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity', 'Shedinja',
+			'Steelix-Mega', 'Avalugg-Base', 'Avalugg-Hisui', 'Aggron-Mega', 'Cloyster', 'Gemix', 'Onix', 'Doublade', 'Toxtricity', 'Shedinja', 'Eelevate',
 		],
 		onValidateTeam(team) {
 			for (const set of team) {
@@ -676,7 +679,7 @@ export const Formats: FormatList = [
 			'Ho-Oh', 'Kangaskhan-Mega', 'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lopunny-Mega', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 
 			'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia', 'Pheromosa', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 'Tempervian-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zekrom', 
 			'Power Construct', 'Fishious Rend', 'Bolt Beak', 'Speed Boost', 'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 
-			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 
+			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 'Raichu-Mega-Y'
 		],
 		restricted: [
 			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Hearthflame Mask', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Diancite', 'Excadrite', 'Garchomp', 'Melmetal', 'Wellspring Mask', 
@@ -690,7 +693,8 @@ export const Formats: FormatList = [
 			'Iron Valiant', 'Beast Boost', 'Iron Moth', 'Drought', 'Drizzle', 'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 
 			'Simple', 'Zapoleonite', 'Swift Swim', 'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde-Base', 'Caimanrago-Base', 'Kyurem-Base', 'Scovillainite', 'Triage', 'Kommo-o', 
 			'Celesteela', 'Great Tusk', 'Elysian Dance','Floettite', 'Adaptability', 'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele', 'Mega Sol', 'Armored Poncho', 'Pure Flux', 'Scorn', 
-			'Antarctic Power', 'Metagrossite', 'Spicy Spray', 'Fairy Aura', 'Rusted Shield', 'Burn Drive', 'Chill Drive', 'Douse Drive', 'Shock Drive', 'Dragoninite', 'Zeranheit', 'Tapu Koko', 'Manaphy'
+			'Antarctic Power', 'Metagrossite', 'Spicy Spray', 'Fairy Aura', 'Rusted Shield', 'Burn Drive', 'Chill Drive', 'Douse Drive', 'Shock Drive', 'Dragoninite', 'Zeranheit', 'Tapu Koko', 'Manaphy', 'Barbaracite',
+			'Eelevate'
 		],
 	},
 	//{
