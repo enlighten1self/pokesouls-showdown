@@ -2787,12 +2787,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 		checkCanLearn(move, species, setSources, set) {
 			const baseCheck = this.checkCanLearn(move, species, setSources, set),
 			fusion = this.dex.species.get(set.name);
-			if (baseCheck === null) return null;
 
 			if (this.ruleTable.isRestricted(`move:${move.id}`) || (fusion.name === species.name)) return baseCheck;
 
 			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
-			if (fusionCheck === null) return null;
+			if (fusionCheck === null || baseCheck === null) return null;
 
 			return baseCheck;
 		},
