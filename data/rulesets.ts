@@ -2769,6 +2769,10 @@ export const Rulesets: {[k: string]: FormatData} = {
 				}
 			}
 
+			if (fusion.battleOnly) {
+		        return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
+		    }
+
 			if (fusion.exists) {
 				const baseFusion = this.dex.species.get(fusion.baseSpecies);
 				if (this.ruleTable.isRestrictedSpecies(fusion) || (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion))) {
