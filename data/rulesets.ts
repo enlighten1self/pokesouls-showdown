@@ -2767,15 +2767,15 @@ export const Rulesets: {[k: string]: FormatData} = {
 				if (this.ruleTable.isRestrictedSpecies(species)) return [`You may not name (${species.name}) as its Restricted.`];
 				if (this.ruleTable.isRestrictedSpecies(fusion)) return [`${species.name} can't fuse with restricted Pokémon.`, `(${fusion.name} is restricted.)`];
 				if (this.ruleTable.isBannedSpecies(fusion)) return [`${species.name} can't fuse with banned Pokémon.`, `(${fusion.name} is banned.)`];
-				
-				if (this.ruleTable.isRestrictedSpecies(this.dex.species.get(fusion.baseSpecies))) {
+
+				if (!this.ruleTable.isRestrictedSpecies(this.dex.species.get(fusion.baseSpecies))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
-						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
+						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`) || !this.ruleTable.isBanned(`ability:${this.toID(ability)}`)) {
 							abilityPool.add(ability);
 						}
 					}
 				}
-			}
+			} 
 			const ability = this.dex.abilities.get(set.ability), naturalAbilities = Object.values(species.abilities || {}).filter(Boolean) as string[];	
 			if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
 				if (!naturalAbilities.includes(ability.name)) {
