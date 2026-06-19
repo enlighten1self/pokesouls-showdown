@@ -2761,7 +2761,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 			const abilityPool = new Set<string>(
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);	
-	
 			if (fusion.name !== species.name) {
 				if (fusion.battleOnly) return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
 				if (this.ruleTable.isRestrictedSpecies(species)) return [`You may not name (${species.name}) as its Restricted.`];
@@ -2790,14 +2789,13 @@ export const Rulesets: {[k: string]: FormatData} = {
 			fusion = this.dex.species.get(set.name);
 			if (baseCheck === null) return null;
 
-			if (this.ruleTable.isRestricted(`move:${move.id}`) || fusion.name === species.name) return baseCheck;
+			if (this.ruleTable.isRestricted(`move:${move.id}`) || (fusion.name === species.name)) return baseCheck;
 
 			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
 			if (fusionCheck === null) return null;
 
 			return baseCheck;
 		},
-
 		onValidateTeam(team) {
 			const donors = new Utils.Multiset<string>();
 			for (const set of team) {
@@ -2809,8 +2807,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				}
 			}
 			for (const [fusionName, number] of donors) {
-				if (number > 1) {
-					return [
+				if (number > 1) { return [
 						`You can only fuse with any Pokémon once.`,
 						`(You have ${number} Pokémon fused with ${fusionName}.)`
 					];
