@@ -2773,7 +2773,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		        return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
 		    }
 
-			if (fusion.exists) {
+			if (fusion.exists && fusion.name !== species.name) {
 				const baseFusion = this.dex.species.get(fusion.baseSpecies);
 				if (this.ruleTable.isRestrictedSpecies(fusion) || (baseFusion.exists && this.ruleTable.isRestrictedSpecies(baseFusion))) {
 					return [`${fusion.name} is restricted and cannot be used as a movepool donor.`];
@@ -2788,7 +2788,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);
 
-			if (fusion.exists) {
+			if (fusion.exists && fusion.name !== species.name) {
 				const baseFusionForAbilities = this.dex.species.get(fusion.baseSpecies);
 				if (!this.ruleTable.isRestrictedSpecies(fusion) && !(baseFusionForAbilities.exists && this.ruleTable.isRestrictedSpecies(baseFusionForAbilities))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
