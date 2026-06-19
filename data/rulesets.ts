@@ -2783,7 +2783,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 					return [`${fusion.name} is banned and cannot be used as a movepool donor.`];
 				}
 			}
-
 			const abilityPool = new Set<string>(
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);
