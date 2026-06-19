@@ -2758,7 +2758,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
 			let fusion = this.dex.species.get(set.name), fusionCheck = fusion.name !== species.name;
-			const ability = this.dex.abilities.get(set.ability), naturalAbilities = Object.values(species.abilities || {}).filter(Boolean) as string[];	
 
 			if (fusion.battleOnly) {
 			    return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
@@ -2780,9 +2779,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);	
 
-			if (fusionCheck && fusion.name !== species.name) {
+			if (fusionCheck) {
 				const baseFusionForAbilities = this.dex.species.get(fusion.baseSpecies);
-				if (!baseFusionForAbilities.exists) {
+				if (!this.ruleTable.isRestrictedSpecies(fusion) && !(baseFusionForAbilities.exists && this.ruleTable.isRestrictedSpecies(baseFusionForAbilities))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
 						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
 							abilityPool.add(ability);
@@ -2790,6 +2789,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 					}
 				}
 			}
+
+			const ability = this.dex.abilities.get(set.ability), naturalAbilities = Object.values(species.abilities || {}).filter(Boolean) as string[];	
 			
 			if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
 				if (!naturalAbilities.includes(ability.name)) {
@@ -2807,10 +2808,10 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 			if (this.ruleTable.isRestrictedSpecies(fusion) || 
 				this.ruleTable.isRestricted(`move:${move.id}`) || 
-				fusion.name === species.name) return baseCheck;
+				fusion.name === species.name
+			) return baseCheck;
 
 			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
-
 			if (fusionCheck === null) return null;
 
 			return baseCheck;
@@ -2829,11 +2830,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 
 				donors.add(fusion.name);
 			}
-			for (const [fusion, number] of donors) {
+			for (const [fusionName, number] of donors) {
 				if (number > 1) {
 					return [
 						`You can only fuse with any Pokémon once.`,
-						`(You have ${number} Pokémon fused with ${fusion}.)`
+						`(You have ${number} Pokémon fused with ${fusionName}.)`
 					];
 				}
 			}
