@@ -2757,29 +2757,20 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-			let fusion = this.dex.species.get(set.name), fusionCheck = fusion.name !== species.name;
-
-			if (fusion.battleOnly) {
-			    return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
-			}
-
-			if (fusionCheck && this.ruleTable.isRestrictedSpecies(species)) {
-				return [`You may not name (${species.name}) as its Restricted.`];
-			}
-
-			if (fusionCheck && this.ruleTable.isRestrictedSpecies(fusion)) {
-				return [`${species.name} can't fuse with restricted Pokémon.`, `(${fusion.name} is restricted.)`];
-			}
-
-			if (fusionCheck && this.ruleTable.isBannedSpecies(fusion)) {
-				return [`${species.name} can't fuse with banned Pokémon.`, `(${fusion.name} is banned.)`];
-			}
-
+			let fusion = this.dex.species.get(set.name);
 			const abilityPool = new Set<string>(
 				Object.values(species.abilities).filter(Boolean) as string[]
 			);	
 
-			if (fusionCheck) {
+			if (fusion.battleOnly) return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
+			
+			if (fusion.name !== species.name) {
+				if (this.ruleTable.isRestrictedSpecies(species)) return [`You may not name (${species.name}) as its Restricted.`];
+
+				if (this.ruleTable.isRestrictedSpecies(fusion)) return [`${species.name} can't fuse with restricted Pokémon.`, `(${fusion.name} is restricted.)`];
+
+				if (this.ruleTable.isBannedSpecies(fusion)) return [`${species.name} can't fuse with banned Pokémon.`, `(${fusion.name} is banned.)`];
+
 				const baseFusionForAbilities = this.dex.species.get(fusion.baseSpecies);
 				if (!this.ruleTable.isRestrictedSpecies(fusion) && !(baseFusionForAbilities.exists && this.ruleTable.isRestrictedSpecies(baseFusionForAbilities))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
@@ -2820,15 +2811,12 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateTeam(team) {
 			const donors = new Utils.Multiset<string>();
 			for (const set of team) {
-				const species = this.dex.species.get(set.species);
-				let fusion = this.dex.species.get(set.name);
+				const species = this.dex.species.get(set.species),
+				fusion = this.dex.species.get(set.name);
 
-				if (fusion.name == species.name) {
-					fusion = species;
-					continue;
+				if (fusion.name !== species.name){
+					donors.add(fusion.name);
 				}
-
-				donors.add(fusion.name);
 			}
 			for (const [fusionName, number] of donors) {
 				if (number > 1) {

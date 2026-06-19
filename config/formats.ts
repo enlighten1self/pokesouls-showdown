@@ -675,13 +675,13 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic MovePools', 'Terastal Clause'],
 		banlist: [
 			'Calyrex-Shadow', 'Gengar-Mega', 'Koraidon', 'Miraidon', 'Alakazam-Mega', 'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago-Mega', 'Calyrex-Ice', 'Cereblaze-Mega', 
-			'Deoxys-Base', 'Deoxys-Attack', 'Dialga',  'Eternatus', 'Flutter Mane', 'Forrogue-Mega', 'Frostiken-Mega', 'Giratina', 'Groudon', 'Zen Mode', 'Gorilla Tactics',
-			'Ho-Oh', 'Kangaskhan-Mega', 'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 
-			'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia', 'Pheromosa', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 'Tempervian-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zekrom', 
-			'Power Construct', 'Fishious Rend', 'Bolt Beak', 'Speed Boost', 'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 
-			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 'Raichu-Mega-Y', 'Ogerpon-Hearthflame', 
-			'Ogerpon-Wellspring', 'Diancie-Mega', 'Glimmora-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Ghoulizard-Mega', 'Withorde-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Ogerpon-Cornerstone', 'Zapoleon-Mega',
-			'Barbaracle-Mega', 'Lopunny-Mega', 'Delphox-Mega', 'Greninja-Mega', 'Metagross-Mega', 'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Zamazenta-Crowned'
+			'Deoxys-Base', 'Deoxys-Attack', 'Dialga',  'Eternatus', 'Flutter Mane', 'Forrogue-Mega', 'Frostiken-Mega', 'Giratina', 'Groudon', 'Zen Mode', 'Gorilla Tactics', 'Ho-Oh', 'Kangaskhan-Mega', 
+			'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia', 
+			'Pheromosa', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 'Tempervian-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zekrom', 'Power Construct', 'Fishious Rend', 'Bolt Beak', 'Speed Boost', 
+			'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 
+			'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 'Raichu-Mega-Y', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Diancie-Mega', 'Glimmora-Mega', 'Mawile-Mega', 'Medicham-Mega', 
+			'Ghoulizard-Mega', 'Withorde-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Ogerpon-Cornerstone', 'Zapoleon-Mega', 'Barbaracle-Mega', 'Lopunny-Mega', 'Delphox-Mega', 'Greninja-Mega', 'Metagross-Mega', 
+			'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Zamazenta-Crowned'
 		],
 		restricted: [
 			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Garchomp', 'Melmetal', 'Quantum Syphon', 'Roaring Moon', 'Electric Surge', 
