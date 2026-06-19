@@ -681,7 +681,7 @@ export const Formats: FormatList = [
 			'Power Construct', 'Fishious Rend', 'Bolt Beak', 'Speed Boost', 'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 
 			'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 'Raichu-Mega-Y', 'Ogerpon-Hearthflame', 
 			'Ogerpon-Wellspring', 'Diancie-Mega', 'Glimmora-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Ghoulizard-Mega', 'Withorde-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Ogerpon-Cornerstone', 'Zapoleon-Mega',
-			'Barbaracle-Mega', 'Lopunny-Mega', 'Delphox-Mega', 'Greninja-Mega', 'Metagross-Mega', 'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge'
+			'Barbaracle-Mega', 'Lopunny-Mega', 'Delphox-Mega', 'Greninja-Mega', 'Metagross-Mega', 'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Zamazenta-Crowned'
 		],
 		restricted: [
 			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Garchomp', 'Melmetal', 'Quantum Syphon', 'Roaring Moon', 'Electric Surge', 
@@ -693,7 +693,7 @@ export const Formats: FormatList = [
 			'Magic Guard', 'Kartana', 'Anger Shell', 'Libero', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Quark Drive', 'Neuro Drive', 'Weavile', 'Chien-Pao', 'Storm Throw', 'Iron Valiant', 'Beast Boost', 
 			'Iron Moth', 'Drought', 'Drizzle', 'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 'Simple', 'Swift Swim', 
 			'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde', 'Caimanrago', 'Kyurem', 'Triage', 'Kommo-o', 'Celesteela', 'Great Tusk', 'Elysian Dance', 'Adaptability', 
-			'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele','Zeranheit', 'Tapu Koko', 'Manaphy',
+			'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele','Zeranheit', 'Tapu Koko', 'Manaphy', 'Water Bubble', 'Iron Boulder',
 		],
 	},
 	//{
