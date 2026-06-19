@@ -2801,43 +2801,6 @@ export const Rulesets: {[k: string]: FormatData} = {
 		    } else if (!abilityPool.has(ability.name)) {
 		        return [`${species.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`];
 		    }
-		
-		    if (fusion.exists && fusion.name !== species.name) {
-		        const fusionMovePool = new Set<string>();
-			
-		        let fusionCheck: Species | null = fusion;
-		        while (fusionCheck) {
-		            const learnsetData = this.dex.species.getLearnsetData(fusionCheck.id);
-		            for (const moveId of Object.keys(learnsetData.learnset ?? {})) {
-		                if (!this.ruleTable.isRestricted(`move:${moveId}`)) {
-		                    fusionMovePool.add(moveId);
-		                }
-		            }
-		            fusionCheck = fusionCheck.prevo ? this.dex.species.get(fusionCheck.prevo) : null;
-		        }
-			
-		        const baseMovePool = new Set<string>();
-		        let baseCheck: Species | null = species;
-		        while (baseCheck) {
-		            const learnsetData = this.dex.species.getLearnsetData(baseCheck.id);
-		            for (const moveId of Object.keys(learnsetData.learnset ?? {})) {
-		                baseMovePool.add(moveId);
-		            }
-		            baseCheck = baseCheck.prevo ? this.dex.species.get(baseCheck.prevo) : null;
-		        }
-			
-		        const combinedMovePool = new Set([...baseMovePool, ...fusionMovePool]);
-			
-		        for (const moveName of set.moves) {
-		            const move = this.dex.moves.get(moveName);
-		            if (!combinedMovePool.has(move.id)) {
-		                if (this.ruleTable.isRestricted(`move:${move.id}`)) {
-		                    return [`${move.name} is restricted and cannot be inherited.`];
-		                }
-		                return [`${species.name} fused with ${fusion.name} cannot learn ${move.name}.`];
-		            }
-		        }
-		    }
 		},
 	
 	    onValidateTeam(team) {
@@ -2873,38 +2836,26 @@ export const Rulesets: {[k: string]: FormatData} = {
 	            }
 	        }
 	    },
-	
-	    onModifySpecies(species, target, source, effect) {
-	        if (!target) return;
-	        const newSpecies = this.dex.deepClone(species);
-	        const fusionName = target.set.name;
-	        if (!fusionName || fusionName === newSpecies.name) return;
-	        const fusionSpecies = this.dex.species.get(fusionName);
-	        if (!fusionSpecies.exists) return;
-		
-	        const abilityPool = new Set<string>(Object.values(newSpecies.abilities));
-	        for (const ability of Object.values(fusionSpecies.abilities)) {
-	            if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`)) {
-	                abilityPool.add(ability);
-	            }
-	        }
-	        const abilityArray = Array.from(abilityPool);
-	        newSpecies.abilities = {};
-	        for (let i = 0; i < abilityArray.length; i++) {
-	            newSpecies.abilities[i] = abilityArray[i];
-	        }
-		
-	        const baseLearnset = this.dex.species.getLearnsetData(newSpecies.id);
-	        const fusionLearnset = this.dex.species.getLearnsetData(fusionSpecies.id);
-	        const mergedLearnset: {[k: string]: any} = { ...baseLearnset.learnset };
-	        for (const [moveId, sources] of Object.entries(fusionLearnset.learnset ?? {})) {
-	            if (!this.ruleTable.isRestricted(`move:${moveId}`)) {
-	                mergedLearnset[moveId] = sources;
-	            }
-	        }
-	        newSpecies.learnset = mergedLearnset;
-		
-	        return newSpecies;
-	    },
+
+		checkCanLearn(move, species, setSources, set) {
+			const baseCheck = this.checkCanLearn(move, species, setSources, set);
+			if (baseCheck === null) return null;
+
+			let fusion = this.dex.species.get(set.name);
+			if (!fusion.exists) return baseCheck;
+
+			if (set.name = fusion.name) return baseCheck;
+
+			if (this.ruleTable.isRestricted(`move:${move.id}`)) return baseCheck;
+
+			if (this.ruleTable.isRestrictedSpecies(fusion)) return baseCheck;
+
+			if (this.ruleTable.isBannedSpecies(fusion)) return baseCheck;
+
+			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
+			if (fusionCheck === null) return null;
+
+			return baseCheck;
+		},
 	},
 };
