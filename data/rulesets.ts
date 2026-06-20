@@ -2137,7 +2137,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			return {...species, types: [...typesSet]};
 		},
 		onModifyMove(move, pokemon, target) {
-			if (move.id == 'Tera Blast') {
+			if (move.id == 'terablast') {
 				move.type = pokemon.teraType
 			}
 		},
