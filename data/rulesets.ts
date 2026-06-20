@@ -2138,7 +2138,12 @@ export const Rulesets: {[k: string]: FormatData} = {
 		},
 		onModifyMove(move, pokemon, target) {
 			if (move.id == 'terablast') {
-				move.type = pokemon.teraType
+				move.type = pokemon.teraType;
+			}
+			if (pokemon.types.includes('stellar')) {
+				if (pokemon.types.includes(move.type)){
+					move.basePower = move.basePower * 1.25
+				}
 			}
 		},
 		onSwitchIn(pokemon) {

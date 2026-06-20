@@ -479,8 +479,31 @@ export const Formats: FormatList = [
 			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause", "Bonus Type Mod",
 		],
 		banlist: [
+			"Volcarona", 'Ultigigas', 'Tricky Reception', 'Kingambit', 'Elysian Dance', 'Regieleki',
 			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
 			"Shed Tail",
+		],
+	},
+	{
+		name: "[Gen 9] National Dex STABonusMons ",
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', "Bonus Type Mod", 'STABmons Move Legality', 'Sleep Moves Clause', 'Terastal Clause', "Baton Pass Stat Trap Clause",],
+		banlist: [
+			'Araquanid', 'Arceus', 'Azumarill', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Basculegion', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Cloyster', 'Darkrai', 
+			'Darmanitan-Galar', 'Deoxys-Attack', 'Deoxys-Base', 'Dialga', 'Dialga-Origin', 'Dracovish', 'Dragapult', 'Dragonite', 'Enamorus-Base', 'Espathra', 'Eternatus', 'Flutter Mane', 'Garchomp', 
+			'Gengar-Mega', 'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Gouging Fire', 'Ho-Oh', 'Iron Bundle', 'Kangaskhan-Mega', 'Kartana', 'Koraidon', 'Komala', 'Kyogre', 'Kyurem-Black', 
+			'Kyurem-White', 'Landorus-Base', 'Lilligant-Hisui', 'Lucario-Mega', 'Lugia', 'Lunala', 'Magearna', 'Manaphy', 'Marshadow', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 
+			'Necrozma-Dawn-Wings', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia', 'Palkia-Origin', 'Porygon-Z', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Salamence-Mega', 'Shaymin-Sky', 'Silvally', 
+			'Solgaleo', 'Spectrier', 'Tapu Koko', 'Tapu Lele', 'Terapagos', 'Ursaluna-Bloodmoon', 'Walking Wake', 'Xerneas', 'Xurkitree', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 
+			'Zekrom', 'Zygarde-50%', 'Arena Trap', 'Moody', 'Shadow Tag', 'Power Construct', 'Damp Rock', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Last Respects', 'Shed Tail', 'Wicked Blow', 
+			'Wicked Torque', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervianite', 'Ultigigas', 'Tricky Reception', 'Stratozone', 'Typhtesla', 'Chrono Venom',
+			'Alakazam-Mega', 'Caimanrago', 'Delphox-Mega', 'Deoxys-Speed', 'Greninja-Mega', 'Lopunny-Mega', 'Palafin', 'Roaring Moon', 'Sneasler', 'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen',
+			'Staraptor-Mega', 'Raichu-Mega-Y'
+		],
+		restricted: [
+			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 
+			'Fishious Rend', 'Geomancy', 'Gigaton Hammer', 'No Retreat', 'Rage Fist', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Thousand Arrows', 'Trick-or-Treat', 'Triple Arrows', 'V-create', 
+			'Victory Dance', 'Spectral Tail', 'Photon Haymaker', 'Endless Torment', 'Torch Song', 'Ceaseless Edge', 'Stainless Slash', 'Mountain Gale'
 		],
 	},
 	//{
