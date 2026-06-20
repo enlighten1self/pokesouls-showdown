@@ -441,26 +441,35 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic MovePools', 'Terastal Clause'],
 		banlist: [
-			'Calyrex-Shadow', 'Gengar-Mega', 'Koraidon', 'Miraidon', 'Alakazam-Mega', 'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago-Mega', 'Calyrex-Ice', 'Cereblaze-Mega', 
-			'Deoxys-Base', 'Deoxys-Attack', 'Dialga',  'Eternatus', 'Flutter Mane', 'Forrogue-Mega', 'Frostiken-Mega', 'Giratina', 'Groudon', 'Zen Mode', 'Gorilla Tactics', 'Ho-Oh', 'Kangaskhan-Mega', 
-			'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia', 
-			'Pheromosa', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 'Tempervian-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zekrom', 'Power Construct', 'Fishious Rend', 'Bolt Beak', 'Speed Boost', 
-			'Shadow Tag', 'Arena Trap', 'Assist', 'Quick Claw', 'Razor Fang', 'Bright Powder', 'King\'s Rock', 'Moody', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Zygarde-Complete', 'Rage Fist', 'Contrary', 
-			'Beads of Ruin', 'Sheer Force', 'Starmie-Mega', 'Tempervian-Mega-Ashen', 'Raichu-Mega-Y', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Diancie-Mega', 'Glimmora-Mega', 'Mawile-Mega', 'Medicham-Mega', 
-			'Ghoulizard-Mega', 'Withorde-Mega', 'Hawlucha-Mega', 'Pidgeot-Mega', 'Ogerpon-Cornerstone', 'Zapoleon-Mega', 'Barbaracle-Mega', 'Lopunny-Mega', 'Delphox-Mega', 'Greninja-Mega', 'Metagross-Mega', 
-			'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Zamazenta-Crowned',
+			//Pokemon Bans
+			'Alakazam-Mega', 'Arceus', 'Barbaracle-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Baxcalibur', 'Caimanrago-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Cereblaze-Mega', 'Delphox-Mega', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 
+			'Diancie-Mega', 'Espathra', 'Eternatus', 'Forrogue-Mega', 'Frostiken-Mega', 'Floette-Mega', 'Flutter Mane', 'Gengar-Mega', 'Ghoulizard-Mega', 'Giratina', 'Glimmora-Mega', 'Greninja-Mega', 'Groudon', 'Hawlucha-Mega', 'Ho-Oh', 
+			'Kangaskhan-Mega', 'Koraidon', 'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lopunny-Mega', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mawile-Mega', 'Medicham-Mega', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 
+			'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Ogerpon-Cornerstone', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia', 'Pheromosa', 'Pidgeot-Mega', 'Raichu-Mega-Y', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 
+			'Staraptor-Mega', 'Starmie-Mega', 'Swampert-Mega', 'Tempervian-Mega', 'Withorde-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta-Crowned', 'Zapoleon-Mega', 'Zekrom', 'Zygarde-Complete',
+			//Ability Bans
+			'Arena Trap', 'Beads of Ruin', 'Gorilla Tactics', 'Moody', 'Power Construct', 'Shadow Tag', 'Zen Mode',
+			//Move Bans
+			'Assist', 'Baton Pass', 'Bolt Beak', 'Fishious Rend', 'Last Respects', 'Rage Fist', 'Shed Tail', 
+			//Item Bans
+			'Bright Powder', 'King\'s Rock', 'Quick Claw', 'Razor Fang',
+			//Combo Bans:
+			'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Comatose + Sleep Talk',
 		],
 		restricted: [
-			'Dragapult', 'Genesect', 'Iron Bundle', 'Magearna', 'Abyssal Void', 'Boomkeldurr', 'Darkrai', 'Deoxys-Speed', 'Garchomp', 'Melmetal', 'Quantum Syphon', 'Roaring Moon', 'Electric Surge', 
-			'Psychic Surge', 'Poison Heal', 'Basculegion', 'Eeveeon', 'Porygon-Z', 'Toxic Debris', 'Corrosion', 'Fur Coat', 'Ice Scales', 'Volcarona', 'Zamazenta', 'Atlascross', 'Huge Power', 'Pure Power', 
-			'Extreme Speed', 'Boomburst', 'Dragonite', 'Smeargle', 'Mew', 'Neutralizing Gas', 'Palafin', 'Ultigigas', 'Chrono Venom', 'Population Bomb', 'Cloyster', 'Shell Smash', 'Fillet Away', 'Victini', 
-			'Power Trip', 'Stored Power', 'Mystical Power', 'Ceaseless Edge', 'Stone Axe', 'Stainless Slash', 'Regenerator', 'Quiver Dance', 'Victory Dance', 'Eruption', 'Water Spout', 'Regidrago', 'Regieleki', 
-			'Shedinja', 'Urshifu', 'Gear Grind', 'Gigaton Hammer', 'Floette-Eternal', 'No Retreat', 'Titanium Delta', 'Electro Shot', 'Walking Wake', 'Sulphuric Downpour', 'Psycho Boost', 'Shift Gear', 
-			'Tail Glow', 'Take Heart', 'Xurkitree', 'Torch Song', 'Triple Arrows', 'Imposter', 'Celebrate', 'Happy Hour', 'Conversion', 'Tricky Reception', 'Hoopa-Unbound', 'Blacephalon', 'Komala', 'Chloroblast', 
-			'Magic Guard', 'Kartana', 'Anger Shell', 'Libero', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Quark Drive', 'Neuro Drive', 'Weavile', 'Chien-Pao', 'Storm Throw', 'Iron Valiant', 'Beast Boost', 
-			'Iron Moth', 'Drought', 'Drizzle', 'Sand Stream', 'Snow Warning', 'Magnet Pull', 'Revival Blessing', 'Solgaleo', 'Reshiram', 'Regigigas', 'Slaking', 'Clangorous Soul', 'Terapagos', 'Simple', 'Swift Swim', 
-			'Chlorophyll', 'Sand Rush', 'Slush Rush', 'Bulking Blade', 'Ursaluna-Bloodmoon', 'Zygarde', 'Caimanrago', 'Kyurem', 'Triage', 'Kommo-o', 'Celesteela', 'Great Tusk', 'Elysian Dance', 'Adaptability', 
-			'Good as Gold', 'Klinklang', 'Haxorus', 'Heal Order', 'Serene Grace', 'Tapu Lele', 'Zeranheit', 'Tapu Koko', 'Manaphy', 'Water Bubble', 'Iron Boulder',
+			//Pokemon Restrictions
+			'Abyssal Void', 'Atlascross', 'Basculegion', 'Blacephalon', 'Boomkeldurr', 'Bulking Blade', 'Caimanrago', 'Celesteela', 'Chien-Pao', 'Chrono Venom', 'Cloyster', 'Darkrai', 'Deoxys-Speed', 'Dragapult', 'Dragonite', 'Eeveeon', 
+			'Elysian Dance', 'Enamorus-Base', 'Frostiken', 'Garchomp', 'Genesect', 'Great Tusk', 'Haxorus', 'Hoopa-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Moth', 'Iron Valiant', 'Kartana', 'Klinklang', 'Kommo-o', 'Kyurem', 'Landorus-Base', 
+			'Magearna', 'Manaphy', 'Melmetal', 'Mew', 'Palafin', 'Porygon-Z', 'Quantum Syphon', 'Regidrago', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Tapu Koko', 
+			'Tapu Lele', 'Terapagos', 'Titanium Delta', 'Ultigigas', 'Ursaluna-Bloodmoon', 'Urshifu', 'Victini', 'Volcarona', 'Walking Wake', 'Weavile', 'Xurkitree', 'Zamazenta', 'Zeranheit', 'Zygarde-Base',
+			//Ability Bans
+			'Adaptability', 'Anger Shell', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 
+			'Neuro Drive', 'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush',
+			'Snow Warning', 'Speed Boost', 'Steely Spirit', 'Steelworker', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble',
+			//Move Bans
+			'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 
+			'No Retreat', 'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Sulphuric Downpour', 'Tail Glow', 
+			'Take Heart', 'Thousand Arrows', 'Thousand Waves', 'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout',  
 		],
 	},
 	//{

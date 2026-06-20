@@ -2756,17 +2756,14 @@ export const Rulesets: {[k: string]: FormatData} = {
 			this.add('rule', 'Frantic MovePools: Pokémon nicknamed after another Pokémon get access to that Pokémon\'s movepool and abilities.');
 		},
 		onValidateSet(set) {
-			const species = this.dex.species.get(set.species);
-			let fusion = this.dex.species.get(set.name);
-			const abilityPool = new Set<string>(
-				Object.values(species.abilities).filter(Boolean) as string[]
-			);	
+			const species = this.dex.species.get(set.species), fusion = this.dex.species.get(set.name),
+			abilityPool = new Set<string>(Object.values(species.abilities).filter(Boolean) as string[]);	
+
 			if (fusion.name !== species.name) {
 				if (fusion.battleOnly) return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
 				if (this.ruleTable.isRestrictedSpecies(species)) return [`You may not name (${species.name}) as its Restricted.`];
 				if (this.ruleTable.isRestrictedSpecies(fusion)) return [`${species.name} can't fuse with restricted Pokémon.`, `(${fusion.name} is restricted.)`];
 				if (this.ruleTable.isBannedSpecies(fusion)) return [`${species.name} can't fuse with banned Pokémon.`, `(${fusion.name} is banned.)`];
-
 				if (!this.ruleTable.isRestrictedSpecies(this.dex.species.get(fusion.baseSpecies))) {
 					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
 						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`) || !this.ruleTable.isBanned(`ability:${this.toID(ability)}`)) {
@@ -2785,8 +2782,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 		checkCanLearn(move, species, setSources, set) {
-			const baseCheck = this.checkCanLearn(move, species, setSources, set),
-			fusion = this.dex.species.get(set.name);
+			const baseCheck = this.checkCanLearn(move, species, setSources, set), fusion = this.dex.species.get(set.name);
 
 			if (this.ruleTable.isRestricted(`move:${move.id}`) || (fusion.name === species.name)) return baseCheck;
 
@@ -2798,8 +2794,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		onValidateTeam(team) {
 			const donors = new Utils.Multiset<string>();
 			for (const set of team) {
-				const species = this.dex.species.get(set.species),
-				fusion = this.dex.species.get(set.name);
+				const species = this.dex.species.get(set.species), fusion = this.dex.species.get(set.name);
 
 				if (fusion.name !== species.name){
 					donors.add(fusion.name);
