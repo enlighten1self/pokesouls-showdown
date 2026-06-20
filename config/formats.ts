@@ -476,7 +476,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex Bonus Type",
 		mod: "gen9",
 		ruleset: [
-			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause", "Bonus Type Mod", "Team Preview"
+			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause", "Bonus Type Mod",
 		],
 		banlist: [
 			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
