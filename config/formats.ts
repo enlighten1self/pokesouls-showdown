@@ -487,7 +487,7 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 9] National Dex STABonusMons ",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Standard OMs', "Bonus Type Mod", 'STABmons Move Legality', 'Sleep Moves Clause', 'Terastal Clause', "Baton Pass Stat Trap Clause",],
+		ruleset: ['Standard NatDex', 'Standard OMs', 'STABonusMons Move Legality', 'Sleep Moves Clause', 'Terastal Clause', "Baton Pass Stat Trap Clause",],
 		banlist: [
 			'Araquanid', 'Arceus', 'Azumarill', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Basculegion', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Cloyster', 'Darkrai', 
 			'Darmanitan-Galar', 'Deoxys-Attack', 'Deoxys-Base', 'Dialga', 'Dialga-Origin', 'Dracovish', 'Dragapult', 'Dragonite', 'Enamorus-Base', 'Espathra', 'Eternatus', 'Flutter Mane', 'Garchomp', 
