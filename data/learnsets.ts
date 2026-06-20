@@ -81450,7 +81450,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 		learnset: {
 			powergem: ["9M"],
 			vacuumwave: ["9M"],
-			solarblaze: ["9M"],
+			solarblade: ["9M"],
 			afteryou: ["7T"],
 			agility: ["9M", "8M"],
 			aurasphere: ["9M", "9L66", "8M", "8L66", "7L81"],
