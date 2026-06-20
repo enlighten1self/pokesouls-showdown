@@ -2136,6 +2136,11 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (bonusType.exists) typesSet.add(bonusType.name);
 			return {...species, types: [...typesSet]};
 		},
+		onModifyMove(move, pokemon, target) {
+			if (move.id == 'Tera Blast') {
+				move.type = pokemon.teraType
+			}
+		},
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
 		},
