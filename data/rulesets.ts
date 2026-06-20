@@ -2854,6 +2854,9 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
 				const speciesTypes: string[] = [];
 				const moveTypes: string[] = [];
+				if (set?.teraType) {
+					speciesTypes.push(set.teraType);
+				}
 				const minObtainableSpeciesGen = this.dex.currentMod === 'gen8bdsp' ||
 					(this.dex.gen === 9 && !this.ruleTable.has('standardnatdex')) ?
 					this.dex.gen : species.gen;
@@ -2879,7 +2882,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 							}
 						}
 					} else {
-						speciesTypes.push(...pokemon.types);
+						speciesTypes.push(...pokemon.types );
 					}
 
 					let prevo = pokemon.prevo;
