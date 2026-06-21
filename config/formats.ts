@@ -497,7 +497,7 @@ export const Formats: FormatList = [
 			'Xurkitree', 'Yveltal', 'Zacian', 'Zamazenta-Crowned', 'Zekrom', 'Zygarde-50%', 'Arena Trap', 'Moody', 'Shadow Tag', 'Power Construct', 'Damp Rock', 'King\'s Rock', 'Quick Claw', 'Razor Fang',  'Assist', 
 			'Last Respects', 'Shed Tail', 'Wicked Blow', 'Wicked Torque', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervian-Mega', 'Ultigigas', 'Tricky Reception', 'Typhtesla', 'Chrono Venom', 'Alakazam-Mega', 
 			'Caimanrago', 'Delphox-Mega', 'Deoxys-Speed', 'Greninja-Mega', 'Lopunny-Mega', 'Palafin', 'Roaring Moon', 'Sneasler', 'Starmie-Mega', 'Staraptor-Mega', 'Raichu-Mega-Y', 'Weavile', 'Melmetal', 'Heat Rock', 
-			'Smooth Rock', 'Icy Rock', 'Light Clay'
+			'Smooth Rock', 'Icy Rock', 'Light Clay', 'Serperior', 'Volcarona'
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Bolt Beak', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 
