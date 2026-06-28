@@ -492,21 +492,22 @@ export const Formats: FormatList = [
 			'Arceus', 'Baxcalibur', 'Blastoise-Mega', 'Blaziken-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Cloyster', 'Darkrai', 'Darmanitan-Galar', 'Barbaracle-Mega', 'Polteageist',
 			'Deoxys-Attack', 'Deoxys-Base', 'Dialga', 'Dragapult', 'Dragonite', 'Enamorus-Base', 'Espathra', 'Eternatus', 'Flutter Mane', 'Gengar-Mega', 'Genesect', 'Giratina', 'Groudon', 'Elysian Dance',
 			'Gouging Fire', 'Ho-Oh', 'Iron Bundle', 'Kangaskhan-Mega', 'Kartana', 'Koraidon', 'Komala', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Base', 'Lucario-Mega', 'Lugia', 'Lunala', 'Pyroar-Mega',
-			'Magearna', 'Manaphy', 'Marshadow', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia', 'Palkia-Origin', 
+			'Magearna', 'Manaphy', 'Marshadow', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia',
 			'Porygon-Z', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Salamence-Mega', 'Shaymin-Sky', 'Silvally', 'Solgaleo', 'Spectrier', 'Tapu Koko', 'Tapu Lele', 'Ursaluna-Bloodmoon', 'Walking Wake', 'Xerneas', 
 			'Xurkitree', 'Yveltal', 'Zacian', 'Zekrom', 'Zygarde-50%', 'Arena Trap', 'Moody', 'Shadow Tag', 'Power Construct', 'Damp Rock', 'King\'s Rock', 'Quick Claw', 'Razor Fang',  'Assist', 'Hoopa-Unbound', 
 			'Last Respects', 'Shed Tail', 'Wicked Blow', 'Wicked Torque', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Tempervian-Mega', 'Ultigigas', 'Tricky Reception', 'Chrono Venom', 'Alakazam-Mega', 
 			'Caimanrago', 'Delphox-Mega', 'Deoxys-Speed', 'Greninja-Mega', 'Lopunny-Mega', 'Palafin', 'Roaring Moon', 'Sneasler', 'Starmie-Mega', 'Staraptor-Mega', 'Raichu-Mega-Y', 'Melmetal', 'Heat Rock', 
 			'Smooth Rock', 'Icy Rock', 'Light Clay', 'Serperior', 'Volcarona', 'Fishious Rend', 'Bolt Beak', 'Zamazenta', 'Regieleki', 'Terrain Extender', 'Garchomp', 'Iron Valiant', 'Bulking Blade', 'Shedinja',
-			'Acideon', 'Zeranheit', 'Transform', 'Quantum Syphon'
+			'Acideon', 'Zeranheit', 'Quantum Syphon', 'Annihilape', 'Hawlucha', 'Withorde', 'Blacephalon', 'Aerodactyl-Mega', 'Necrozma-Ultra', 'Tempervian-Mega-Ashen'
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 'Geomancy', 'Gigaton Hammer', 
 			'No Retreat', 'Rage Fist', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Thousand Arrows', 'Trick-or-Treat', 'Triple Arrows', 'V-create', 'Victory Dance', 'Spectral Tail', 'Photon Haymaker', 'Endless Torment', 
 			'Torch Song', 'Ceaseless Edge', 'Stainless Slash', 'Mountain Gale', 'Aqua Step', 'Soul Anchor', 'Dragon Dance', 'Quiver Dance', 'Population Bomb', 'Primal Rage', 'Storm Throw', 'Altitude', 'Coil', 'Thousand Waves', 
 			'Bonemerang', 'Diamond Storm', 'Tail Glow', 'Pumpkin Mash', 'Spectral Thief', 'Spirit Shackle', 'Gear Grind', 'Blue Flare', 'Eruption', 'Magma Storm', 'Mind Blown', 'Sacred Fire', 'Sulphuric Downpour', 'Hydro Steam', 
-			'Surging Strikes', 'Water Shuriken', 'Water Spout', 'Chloroblast', 'Flower Trick', 'Bolt Strike', 'Electro Shot', 'Thunderclap', 'Esper Wing', 'Lumina Crash', 'Mystical Power', 'Psycho Boost', 'Psystrike', 
-			'Stored Power', 'Power Trip', 'Glacial Lance', 'Glaive Rush', 'Tidy Up', 'Fleur Cannon', 'Light of Ruin', 'Celebrate', 'Happy Hour', 'Conversion', 'Cotton Guard', 'Blood Moon', 'Boomburst', 'Jet Punch', 'Rising Voltage'
+			'Surging Strikes', 'Water Shuriken', 'Water Spout', 'Chloroblast', 'Flower Trick', 'Bolt Strike', 'Electro Shot', 'Thunderclap', 'Esper Wing', 'Lumina Crash', 'Mystical Power', 'Psycho Boost', 'Psystrike', 'Davy Smash',
+			'Stored Power', 'Power Trip', 'Glacial Lance', 'Glaive Rush', 'Tidy Up', 'Fleur Cannon', 'Light of Ruin', 'Celebrate', 'Happy Hour', 'Conversion', 'Cotton Guard', 'Blood Moon', 'Boomburst', 'Jet Punch', 'Rising Voltage',
+			'Transform', 'Glare'
 		],
 	},
 	//{
