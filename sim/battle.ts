@@ -3129,6 +3129,7 @@ export class Battle {
 		return this.sides[parseInt(sideid[1]) - 1];
 	}
 
+	
 	destroy() {
 		// deallocate ourself
 
