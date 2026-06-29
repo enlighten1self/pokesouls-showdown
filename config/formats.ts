@@ -584,7 +584,7 @@ export const Formats: FormatList = [
 				const [abilityName, thresholdText] = banEntry.split('>').map((part: string) => part.trim());
 				const abilityID = this.toID(abilityName);
 				const threshold = Number(thresholdText);
-				if (abilityID && setAbilityID === abilityID && !Number.isNaN(threshold) && availableAbilityIDs.size > threshold) {
+				if (abilityID && availableAbilityIDs.has(abilityID) && !Number.isNaN(threshold) && availableAbilityIDs.size > threshold) {
 					return [`${set.name}'s ability combination ${banEntry} is banned.`];
 				}
 			}
