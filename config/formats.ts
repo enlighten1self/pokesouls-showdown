@@ -529,17 +529,18 @@ export const Formats: FormatList = [
 			'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
 			'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail', 'Stored Power', 'Protomorphosis + Sand Rush',
-			'Neuro Drive + Psychic Surge', 
+			'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine',
 			//ND Bans
 			'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago', 'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Dracovish', 'Forrogue-Mega', 'Frostiken-Mega', 
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
 			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
-			'Eclipse Flare', 'Blissey', 'Chansey', 'Celesteela', 'Expanding Force', 'Rising Voltage', 'Xurkitree', 'Ultigigas'
+			'Blissey', 'Chansey', 'Celesteela', 'Expanding Force', 'Rising Voltage', 'Xurkitree', 'Ultigigas', 'Plaguekrow', 'Charizard-Mega-Y', 'Victini'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
 			'Parental Bond', 'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage',
-			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane'
+			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane', 'Apex Predator', 'Stampede',
+			'Spicy Spray'
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -642,7 +643,58 @@ export const Formats: FormatList = [
 			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
 				pokemon.removeVolatile(innate);
 			}
-			pokemon.m.innates = undefined;
+		
+			const megaSpecies = pokemon.species;
+			const baseSpecies = megaSpecies.baseSpecies
+				? this.dex.species.get(megaSpecies.baseSpecies)
+				: megaSpecies;
+		
+			const innates: string[] = [];
+			const seen = new Set<string>();
+		
+			if (pokemon.baseAbility) {
+				const aaaAbility = this.toID(pokemon.baseAbility);
+				const megaAbility = this.toID(pokemon.getAbility().id);
+			
+				if (aaaAbility && aaaAbility !== megaAbility) {
+					seen.add(aaaAbility);
+					innates.push(aaaAbility);
+				}
+			}
+		
+			for (const key of Object.keys(baseSpecies.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !baseSpecies.unreleasedHidden))) {
+				
+				const ability = baseSpecies.abilities[key as "0" | "1" | "H" | "S"];
+				if (!ability) continue;
+				
+				const id = this.toID(ability);
+				if (id === pokemon.ability || seen.has(id)) continue;
+				
+				seen.add(id);
+				innates.push(id);
+			}
+		
+			for (const key of Object.keys(megaSpecies.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !megaSpecies.unreleasedHidden))) {
+				
+				const ability = megaSpecies.abilities[key as "0" | "1" | "H" | "S"];
+				if (!ability) continue;
+				
+				const id = this.toID(ability);
+				if (id === pokemon.ability || seen.has(id)) continue;
+				
+				seen.add(id);
+				innates.push(id);
+			}
+		
+			pokemon.m.innates = innates;
+		
+			for (const innate of innates) {
+				if (!pokemon.hasAbility(innate)) {
+					pokemon.addVolatile('ability:' + innate, pokemon);
+				}
+			}
 		},
 	},
 	//{
