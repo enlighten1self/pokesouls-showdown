@@ -518,14 +518,14 @@ export const Formats: FormatList = [
 		banlist: [
 			'Annihilape', 'Arcanine-Hisui', 'Arceus', 'Archaludon', 'Azumarill', 'Basculegion', 'Basculin', 'Baxcalibur', 'Blaziken', 'Braviary-Hisui', 'Calyrex-Ice',
 			'Calyrex-Shadow', 'Ceruledge', 'Chi-Yu', 'Chien-Pao', 'Cinccino', 'Clefable', 'Cloyster', 'Conkeldurr', 'Darkrai', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga',
-			'Dragapult', 'Dragonite', 'Enamorus-Base', 'Espathra', 'Eternatus', 'Excadrill', 'Flutter Mane', 'Gholdengo', 'Giratina', 'Gouging Fire', 'Groudon', 'Hawlucha', 
+			'Dragapult', 'Dragonite', 'Enamorus-Base', 'Espathra', 'Eternatus', 'Excadrill', 'Flutter Mane', 'Giratina', 'Gouging Fire', 'Groudon', 'Hawlucha', 
 			'Ho-Oh', 'Hoopa-Unbound', 'Iron Bundle', 'Iron Valiant', 'Kingambit', 'Kleavor', 'Koraidon', 'Kyogre', 'Kyurem', 'Landorus-Base', 'Lugia', 'Lunala', 'Magearna', 
 			'Manaphy', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Ultra', 'Necrozma-Dusk-Mane', 'Noivern', 'Ogerpon-Hearthflame', 'Palkia', 'Porygon-Z', 'Raging Bolt', 
 			'Rayquaza', 'Reshiram', 'Reuniclus', 'Roaring Moon', 'Serperior', 'Shaymin-Sky', 'Sneasler', 'Solgaleo', 'Spectrier', 'Ursaluna', 'Ursaluna-Bloodmoon', 'Urshifu', 
 			'Volcarona', 'Walking Wake', 'Weavile', 'Yanmega', 'Zacian', 'Zapdos-Galar', 'Zekrom', 'Zoroark-Hisui', 'Arena Trap', 'Magnet Pull', 'Moody', 'Neutralizing Gas',
 			'Shadow Tag',
 
-			'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Regenerator > 2', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
+			'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
 			'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
 			'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
 			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail', 'Stored Power', 'Protomorphosis + Sand Rush',
@@ -534,7 +534,7 @@ export const Formats: FormatList = [
 			'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago', 'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Dracovish', 'Forrogue-Mega', 'Frostiken-Mega', 
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
 			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
-			'Sweet Insulation', 'Eclipse Flare', 'Blissey', 'Chansey'
+			'Eclipse Flare', 'Blissey', 'Chansey'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
@@ -567,7 +567,7 @@ export const Formats: FormatList = [
 			}
 
 			const comboBans = [
-				'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Regenerator > 2', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
+				'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
 				'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
 				'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
 				'Protomorphosis + Sand Rush', 'Neuro Drive + Psychic Surge',
