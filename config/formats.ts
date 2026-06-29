@@ -566,15 +566,30 @@ export const Formats: FormatList = [
 					.filter(ability => ability !== pokemon.ability);
 			}
 		},
-		//onBeforeSwitchIn(pokemon) {
-		//	if (pokemon.m.innates) {
-		//		for (const innate of pokemon.m.innates) {
-		//			if (pokemon.hasAbility(innate)) continue;
-		//			const effect = 'ability:' + this.toID(innate);
-		//			pokemon.volatiles[effect] = this.runEvent( effect, pokemon );
-		//		}
-		//	}
-		//},
+		onBeforeSwitchIn(pokemon) {
+			// Abilities that must be applied before both sides trigger onSwitchIn to correctly
+			// handle switch-in ability-to-ability interactions, e.g. Intimidate counters
+			const neededBeforeSwitchInIDs = [
+				'clearbody', 'competitive', 'contrary', 'defiant', 'fullmetalbody', 'hypercutter', 'innerfocus',
+				'mirrorarmor', 'oblivious', 'owntempo', 'rattled', 'scrappy', 'simple', 'whitesmoke',
+			];
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					if (!neededBeforeSwitchInIDs.includes(innate)) continue;
+					if (pokemon.hasAbility(innate)) continue;
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					if (pokemon.hasAbility(innate)) continue;
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
 		onSwitchOut(pokemon) {
 			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
 				pokemon.removeVolatile(innate);
