@@ -533,25 +533,59 @@ export const Formats: FormatList = [
 			//ND Bans
 			'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago', 'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Dracovish', 'Forrogue-Mega', 'Frostiken-Mega', 
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
-			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross'
+			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
+			'Sweet Insulation', 'Eclipse Flare',
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
 			'Parental Bond', 'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage',
-			'Unburden', 'Water Bubble', 'Wonder Guard',
+			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane'
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
+			const setAbilityID = this.toID(set.ability);
+			const availableAbilityIDs = new Set<string>();
+			for (const abilityName of Object.keys(species.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !species.unreleasedHidden))
+				.map(key => species.abilities[key as "0" | "1" | "H" | "S"])) {
+				if (!abilityName) continue;
+				availableAbilityIDs.add(this.toID(abilityName));
+			}
+			if (setAbilityID) availableAbilityIDs.add(setAbilityID);
+
 			const unSeenAbilities = Object.keys(species.abilities)
 				.filter(key => key !== 'S' && (key !== 'H' || !species.unreleasedHidden))
 				.map(key => species.abilities[key as "0" | "1" | "H" | "S"])
 				.filter(ability => ability !== set.ability);
-			if (unSeenAbilities.length && this.toID(set.ability) !== this.toID(species.abilities['S'])) {
+			if (unSeenAbilities.length && setAbilityID !== this.toID(species.abilities['S'])) {
 				for (const abilityName of unSeenAbilities) {
 					const banReason = this.ruleTable.check('ability:' + this.toID(abilityName));
 					if (banReason) {
 						return [`${set.name}'s ability ${abilityName} is ${banReason}.`];
 					}
+				}
+			}
+
+			const comboBans = [
+				'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Regenerator > 2', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
+				'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
+				'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
+				'Protomorphosis + Sand Rush', 'Neuro Drive + Psychic Surge',
+			];
+			for (const banEntry of comboBans) {
+				if (!banEntry.includes('+') && !banEntry.includes('>')) continue;
+				if (banEntry.includes('+')) {
+					const [firstAbility, secondAbility] = banEntry.split('+').map((part: string) => this.toID(part.trim()));
+					if (firstAbility && secondAbility && availableAbilityIDs.has(firstAbility) && availableAbilityIDs.has(secondAbility)) {
+						return [`${set.name}'s ability combination ${banEntry} is banned.`];
+					}
+					continue;
+				}
+				const [abilityName, thresholdText] = banEntry.split('>').map((part: string) => part.trim());
+				const abilityID = this.toID(abilityName);
+				const threshold = Number(thresholdText);
+				if (abilityID && availableAbilityIDs.has(abilityID) && !Number.isNaN(threshold) && availableAbilityIDs.size > threshold) {
+					return [`${set.name}'s ability combination ${banEntry} is banned.`];
 				}
 			}
 		},
