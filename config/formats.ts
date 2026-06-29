@@ -534,7 +534,7 @@ export const Formats: FormatList = [
 			'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago', 'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Dracovish', 'Forrogue-Mega', 'Frostiken-Mega', 
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
 			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
-			'Sweet Insulation', 'Eclipse Flare',
+			'Sweet Insulation', 'Eclipse Flare', 'Blissey', 'Chansey'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
@@ -584,7 +584,7 @@ export const Formats: FormatList = [
 				const [abilityName, thresholdText] = banEntry.split('>').map((part: string) => part.trim());
 				const abilityID = this.toID(abilityName);
 				const threshold = Number(thresholdText);
-				if (abilityID && availableAbilityIDs.has(abilityID) && !Number.isNaN(threshold) && availableAbilityIDs.size > threshold) {
+				if (abilityID && setAbilityID === abilityID && !Number.isNaN(threshold) && availableAbilityIDs.size > threshold) {
 					return [`${set.name}'s ability combination ${banEntry} is banned.`];
 				}
 			}
