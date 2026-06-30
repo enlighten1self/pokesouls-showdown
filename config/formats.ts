@@ -535,13 +535,13 @@ export const Formats: FormatList = [
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
 			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
 			'Blissey', 'Chansey', 'Celesteela', 'Expanding Force', 'Rising Voltage', 'Xurkitree', 'Ultigigas', 'Plaguekrow', 'Charizard-Mega-Y', 'Victini', 'Froslass-Mega',
-			'Swampert-Mega', 'Houndoom-Mega', 'Crystalix-Mega'
+			'Swampert-Mega', 'Houndoom-Mega', 'Crystalix-Mega', 'Gengar-Mega', 'Floette-Mega', 'Mawile-Mega', 'Medicham-Mega'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
 			'Parental Bond', 'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage',
 			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane', 'Apex Predator', 'Stampede',
-			'Spicy Spray'
+			'Spicy Spray', 'Antarctic Power'
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -596,9 +596,12 @@ export const Formats: FormatList = [
 		},
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
+				pokemon.m.aaaAbility = pokemon.ability;
+			
 				if (pokemon.ability === this.toID(pokemon.species.abilities['S'])) {
 					continue;
 				}
+			
 				pokemon.m.innates = Object.keys(pokemon.species.abilities)
 					.filter(key => key !== 'S' && (key !== 'H' || !pokemon.species.unreleasedHidden))
 					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
@@ -653,11 +656,10 @@ export const Formats: FormatList = [
 			const innates: string[] = [];
 			const seen = new Set<string>();
 		
-			if (pokemon.baseAbility) {
-				const aaaAbility = this.toID(pokemon.baseAbility);
-				const megaAbility = this.toID(pokemon.getAbility().id);
-			
-				if (aaaAbility && aaaAbility !== megaAbility) {
+			if (pokemon.m.aaaAbility) {
+				const aaaAbility = this.toID(pokemon.m.aaaAbility);
+						
+				if (aaaAbility !== pokemon.ability && !seen.has(aaaAbility)) {
 					seen.add(aaaAbility);
 					innates.push(aaaAbility);
 				}
