@@ -909,6 +909,13 @@ export const Aliases: {[alias: string]: string} = {
 	vicegrip: "Vise Grip",
 	web: "Sticky Web",
 	wow: "Will-O-Wisp",
+	knock: "Knock Off",
+	axel: "Triple Axel",
+	tclap: "Thunder Clap",
+	ceaseless: "Ceaseless Edge",
+	diamond: "Diamond Storm",
+	chilly: "Chilly Reception",
+	plot: "Nasty Plot",
 
 	// z-moves
 	"10mv": "10,000,000 Volt Thunderbolt",
@@ -1861,4 +1868,8 @@ export const Aliases: {[alias: string]: string} = {
 	zugadoon: "Blacephalon",
 	merutan: "Meltan",
 	merumetaru: "Melmetal",
+	ribboo: "Phroggeist",
+	ribboofairy: "Phroggeist-Yoseigo",
+	ribboofighting: "Phroggeist-Bushigo",
+	ribbooground: "Phroggeist-Jimengo",
 };

@@ -336,12 +336,12 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Standard OMs', 'Ability Clause = 2', 'Sleep Moves Clause', 'Convergence Legality', 'Terastal Clause', '!Obtainable Abilities'],
 		banlist: [
-			'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Comfey', 'Darkrai', 'Deoxys-Normal', 'Deoxys-Attack', 'Deoxys-Speed',
-			'Dialga', 'Dialga-Origin', 'Dondozo', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon', 'Haxorus', 'Ho-oh', 'Inteleon',
+			'Arceus', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Chien-Pao', 'Comfey', 'Darkrai', 'Deoxys-Base', 'Deoxys-Attack', 'Deoxys-Speed',
+			'Dialga', 'Dondozo', 'Eternatus', 'Flutter Mane', 'Giratina', 'Groudon', 'Haxorus', 'Ho-oh', 'Inteleon',
 			'Iron Bundle', 'Iron Hands', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Base', 'Lugia', 'Lunala',
-			'Magearna', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin',
+			'Magearna', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 
 			'Rayquaza', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Shaymin-Sky', 'Solgaleo', 'Slaking', 'Smeargle', 'Spectrier', 
-			'Umbreon', 'Urshifu-Single-Strike', 'Urshifu-Rapid-Strike', 'Walking Wake', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap', 
+			'Umbreon', 'Urshifu', 'Walking Wake', 'Zacian', 'Zamazenta', 'Zekrom', 'Arena Trap', 
 			'Comatose', 'Contrary', 'Drizzle', 'Drought', 'Imposter', 'Moody', 'Pure Power', 'Shadow Tag', 'Speed Boost', 'Unburden',
 			'King\'s Rock', 'Light Clay', 'Razor Fang', 'Baton Pass', 'Belly Drum', 'Boomburst', 'Extreme Speed', 'Final Gambit', 'Last Respects', 'Population Bomb',
 			'Quiver Dance', 'Rage Fist', 'Shed Tail', 'Shell Smash', 'Transform', 'Assist', 'Xerneas', 'Tempervian-Mega', 'Forrogue-Mega', 'Caimanrago',
@@ -351,7 +351,7 @@ export const Formats: FormatList = [
 			'Happy Hour', 'Conversion', 'Protean', 'Adaptability', 'Furfrou', 'Blissey', 'Chansey', 'Moltres-Galar', 'Iron Jugulis', 'Dire Claw', 'Mew', 'Iron Boulder',
 			'Sheer Force', 'Shift Gear', 'Malabyss', 'Storm Throw', 'Expanding Force', 'Take Heart', 'Zygarde-Base', 'Melmetal', 'Gigaton Hammer', 'Gengar-Mega',
 			'Delphox-Mega', 'Greninja-Mega', 'Lopunny-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Sneasler', 'Starmie-Mega', 'Ursaluna-Bloodmoon',
-			'Tempervian-Mega-Ashen', 'Zygarde-Complete', 'Power Construct', 'Staraptor-Mega'
+			'Tempervian-Mega-Ashen', 'Zygarde-Complete', 'Power Construct', 'Staraptor-Mega', 'Genesect', 'Raichu-Mega-Y', 'Necrozma-Ultra', 'Xurkitree', 'Multi-Attack'
 		],
 	},
 	{
@@ -535,13 +535,13 @@ export const Formats: FormatList = [
 			'Genesect', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lopunny-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa', 'Raichu-Mega-Y', 'Salamence-Mega',
 			'Starmie-Mega', 'Tempervian-Mega', 'Tempervian-Mega-Ashen', 'Xerneas', 'Yveltal', 'Zygarde', 'Shedinja', 'Atlascross', 'As One (Withorde Mega)', 'Corrupted Spirit',
 			'Blissey', 'Chansey', 'Celesteela', 'Expanding Force', 'Rising Voltage', 'Xurkitree', 'Ultigigas', 'Plaguekrow', 'Charizard-Mega-Y', 'Victini', 'Froslass-Mega',
-			'Swampert-Mega', 'Houndoom-Mega', 'Crystalix-Mega', 'Gengar-Mega', 'Floette-Mega', 'Mawile-Mega', 'Medicham-Mega'
+			'Swampert-Mega', 'Houndoom-Mega', 'Crystalix-Mega', 'Gengar-Mega', 'Floette-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Lokix', 'Gallade-Mega'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
 			'Parental Bond', 'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage',
 			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane', 'Apex Predator', 'Stampede',
-			'Spicy Spray', 'Antarctic Power'
+			'Spicy Spray', 'Antarctic Power', 'Corrosion'
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -658,7 +658,181 @@ export const Formats: FormatList = [
 		
 			if (pokemon.m.aaaAbility) {
 				const aaaAbility = this.toID(pokemon.m.aaaAbility);
-						
+
+				if (aaaAbility !== pokemon.ability && !seen.has(aaaAbility)) {
+					seen.add(aaaAbility);
+					innates.push(aaaAbility);
+				}
+			}
+		
+			for (const key of Object.keys(baseSpecies.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !baseSpecies.unreleasedHidden))) {
+				
+				const ability = baseSpecies.abilities[key as "0" | "1" | "H" | "S"];
+				if (!ability) continue;
+				
+				const id = this.toID(ability);
+				if (id === pokemon.ability || seen.has(id)) continue;
+				
+				seen.add(id);
+				innates.push(id);
+			}
+		
+			for (const key of Object.keys(megaSpecies.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !megaSpecies.unreleasedHidden))) {
+				
+				const ability = megaSpecies.abilities[key as "0" | "1" | "H" | "S"];
+				if (!ability) continue;
+				
+				const id = this.toID(ability);
+				if (id === pokemon.ability || seen.has(id)) continue;
+				
+				seen.add(id);
+				innates.push(id);
+			}
+		
+			pokemon.m.innates = innates;
+		
+			for (const innate of innates) {
+				if (!pokemon.hasAbility(innate)) {
+					pokemon.addVolatile('ability:' + innate, pokemon);
+				}
+			}
+		},
+	},
+	{
+		name: "[Gen 9] National Dex Pokebilities STAAABonusMons",
+		desc: `Pok&eacute;mon have all of their released abilities simultaneously, as well as one ability they cannot normally use.`,
+		mod: 'pokebilities',
+		ruleset: ['Standard NatDex', 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'AAA Restricted Abilities', 'Evasion Items Clause', 'Sleep Moves Clause', 'Terastal Clause', 'Bonus Type Mod', 'STABmons Move Legality',],
+		banlist: [
+			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
+			"Shed Tail",
+			'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
+			'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
+			'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
+			'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail', 'Stored Power', 'Protomorphosis + Sand Rush',
+			'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage',
+		],
+		restricted: [
+			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
+			'Parental Bond', 'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage',
+			'Unburden', 'Water Bubble', 'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane', 'Apex Predator', 'Stampede',
+			'Spicy Spray', 'Antarctic Power', 'Corrosion'
+		],
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species);
+			const setAbilityID = this.toID(set.ability);
+			const availableAbilityIDs = new Set<string>();
+			for (const abilityName of Object.keys(species.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !species.unreleasedHidden))
+				.map(key => species.abilities[key as "0" | "1" | "H" | "S"])) {
+				if (!abilityName) continue;
+				availableAbilityIDs.add(this.toID(abilityName));
+			}
+			if (setAbilityID) availableAbilityIDs.add(setAbilityID);
+			const unSeenAbilities = Object.keys(species.abilities)
+				.filter(key => key !== 'S' && (key !== 'H' || !species.unreleasedHidden))
+				.map(key => species.abilities[key as "0" | "1" | "H" | "S"])
+				.filter(ability => ability !== set.ability);
+			if (unSeenAbilities.length && setAbilityID !== this.toID(species.abilities['S'])) {
+				for (const abilityName of unSeenAbilities) {
+					const banReason = this.ruleTable.check('ability:' + this.toID(abilityName));
+					if (banReason) {
+						return [`${set.name}'s ability ${abilityName} is ${banReason}.`];
+					}
+				}
+			}
+			const comboBans = [
+				'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
+				'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
+				'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
+				'Protomorphosis + Sand Rush', 'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine',
+			];
+			for (const banEntry of comboBans) {
+				if (!banEntry.includes('+') && !banEntry.includes('>')) continue;
+				if (banEntry.includes('+')) {
+					const [firstAbility, secondAbility] = banEntry.split('+').map((part: string) => this.toID(part.trim()));
+					if (firstAbility && secondAbility && availableAbilityIDs.has(firstAbility) && availableAbilityIDs.has(secondAbility)) {
+						return [`${set.name}'s ability combination ${banEntry} is banned.`];
+					}
+					continue;
+				}
+				const [abilityName, thresholdText] = banEntry.split('>').map((part: string) => part.trim());
+				const abilityID = this.toID(abilityName);
+				const threshold = Number(thresholdText);
+				if (abilityID && availableAbilityIDs.has(abilityID) && !Number.isNaN(threshold)) {
+					const abilityCount = Array.from(availableAbilityIDs).filter(id => id === abilityID).length;
+					if (abilityCount > threshold) {
+						return [`${set.name}'s ability combination ${banEntry} is banned.`];
+					}
+				}
+			}
+		},
+		onBegin() {
+			for (const pokemon of this.getAllPokemon()) {
+				pokemon.m.aaaAbility = pokemon.ability;
+			
+				if (pokemon.ability === this.toID(pokemon.species.abilities['S'])) {
+					continue;
+				}
+			
+				pokemon.m.innates = Object.keys(pokemon.species.abilities)
+					.filter(key => key !== 'S' && (key !== 'H' || !pokemon.species.unreleasedHidden))
+					.map(key => this.toID(pokemon.species.abilities[key as "0" | "1" | "H" | "S"]))
+					.filter(ability => ability !== pokemon.ability);
+			}
+		},
+		onBeforeSwitchIn(pokemon) {
+			// Abilities that must be applied before both sides trigger onSwitchIn to correctly
+			// handle switch-in ability-to-ability interactions, e.g. Intimidate counters
+			const neededBeforeSwitchInIDs = [
+				'clearbody', 'competitive', 'contrary', 'defiant', 'fullmetalbody', 'hypercutter', 'innerfocus',
+				'mirrorarmor', 'oblivious', 'owntempo', 'rattled', 'scrappy', 'simple', 'whitesmoke',
+			];
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					if (!neededBeforeSwitchInIDs.includes(innate)) continue;
+					if (pokemon.hasAbility(innate)) continue;
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onSwitchInPriority: 2,
+		onSwitchIn(pokemon) {
+			if (pokemon.m.innates) {
+				for (const innate of pokemon.m.innates) {
+					if (pokemon.hasAbility(innate)) continue;
+					pokemon.addVolatile("ability:" + innate, pokemon);
+				}
+			}
+		},
+		onSwitchOut(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+		},
+		onFaint(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				const innateEffect = this.dex.conditions.get(innate) as Effect;
+				this.singleEvent('End', innateEffect, null, pokemon);
+			}
+		},
+		onAfterMega(pokemon) {
+			for (const innate of Object.keys(pokemon.volatiles).filter(i => i.startsWith('ability:'))) {
+				pokemon.removeVolatile(innate);
+			}
+		
+			const megaSpecies = pokemon.species;
+			const baseSpecies = megaSpecies.baseSpecies
+				? this.dex.species.get(megaSpecies.baseSpecies)
+				: megaSpecies;
+		
+			const innates: string[] = [];
+			const seen = new Set<string>();
+		
+			if (pokemon.m.aaaAbility) {
+				const aaaAbility = this.toID(pokemon.m.aaaAbility);
 				if (aaaAbility !== pokemon.ability && !seen.has(aaaAbility)) {
 					seen.add(aaaAbility);
 					innates.push(aaaAbility);

@@ -1471,7 +1471,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
 				const speciesTypes: string[] = [];
 				const moveTypes: string[] = [];
-				if (this.format.name.includes('STABonusMons')) {
+				if (this.format.name.includes('STABonusMons') || (this.format.name.includes('STAAABonusMons')) {
 					if (set?.teraType) {
 						speciesTypes.push(set.teraType);
 					}
