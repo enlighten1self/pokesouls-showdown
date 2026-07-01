@@ -706,8 +706,7 @@ export const Formats: FormatList = [
 		mod: 'pokebilities',
 		ruleset: ['Standard NatDex', 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'AAA Restricted Abilities', 'Evasion Items Clause', 'Sleep Moves Clause', 'Terastal Clause', 'Bonus Type Mod', 'STABmons Move Legality',],
 		banlist: [
-			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
-			"Shed Tail",
+			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "Assist",
 			'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
 			'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
 			'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
