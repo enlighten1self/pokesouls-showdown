@@ -714,7 +714,7 @@ export const Formats: FormatList = [
 			'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage', 
 
 			'Lokix', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 'Tricky Reception', 'Atlascross', 'Rage Fist', 'Charizard-Mega-Y', 'Swampert-Mega',
-			'Houndoom-Mega', 'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega',
+			'Houndoom-Mega', 'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
@@ -729,7 +729,7 @@ export const Formats: FormatList = [
 			'Stored Power', 'Power Trip', 'Glacial Lance', 'Glaive Rush', 'Tidy Up', 'Fleur Cannon', 'Light of Ruin', 'Celebrate', 'Happy Hour', 'Conversion', 'Cotton Guard', 'Blood Moon', 'Boomburst', 'Jet Punch', 'Rising Voltage',
 			'Transform', 'Glare'
 		],
-		unbanlist: ['Dracovish', 'Espathra', 'Urshifu-Base', 'Annihilape', 'Deoxys-Speed', 'Magearna', 'Iron Bundle', 'Ogerpon-Hearthflame', 'Walking Wake', 'Greninja-Mega', 'Delphox-Mega', 'Palafin'],
+		unbanlist: ['Dracovish', 'Espathra', 'Urshifu-Base', 'Annihilape', 'Deoxys-Speed', 'Magearna', 'Ogerpon-Hearthflame', 'Walking Wake', 'Greninja-Mega', 'Delphox-Mega', 'Palafin'],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
 			const setAbilityID = this.toID(set.ability);
