@@ -324,7 +324,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	clefable: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	vulpix: {
 		tier: "ZUBL",
@@ -625,12 +625,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	slowbro: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	slowbromega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "(OU)",
+		natDexTier: "UU",
 	},
 	slowbrogalar: {
 		tier: "UU",
@@ -968,7 +968,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	scizor: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	scizormega: {
 		isNonstandard: "Past",
@@ -1789,7 +1789,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	swampertmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	poochyena: {
 		tier: "LC",
@@ -3479,7 +3479,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	jellicent: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	alomomola: {
 		tier: "UU",
@@ -3803,7 +3803,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	chesnaughtmega: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	fennekin: {
 		tier: "LC",
@@ -4710,7 +4710,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cinderace: {
 		tier: "OU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	cinderacegmax: {
 		isNonstandard: "Past",
@@ -6138,11 +6138,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	typhtesla: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	typhteslamega: {
 		tier: "Illegal",
-		natDexTier: "(OU)",
+		natDexTier: "UU",
 	},
 	flareshroom: {
 		tier: "Illegal",
@@ -6306,7 +6306,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	ultigigas: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	phroggeist: {
 		tier: "Illegal",
@@ -6334,11 +6334,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	wyrmperior: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	wyrmperiormega: {
 		tier: "Illegal",
-		natDexTier: "(OU)",
+		natDexTier: "UU",
 	},
 	zeranheit: {
 		tier: "Illegal",
@@ -6512,7 +6512,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	chimechomega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	froslassmega: {
 		tier: "Illegal",
@@ -6536,7 +6536,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	floettemega: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	meowsticmega: {
 		tier: "Illegal",
