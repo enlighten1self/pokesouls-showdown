@@ -21227,6 +21227,8 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.4,
 		weightkg: 40,
 		color: "Black",
+		prevo: "Corvisquire",
+		evoLevel: 38,
 		otherFormes: ["Tempervian-Mega"],
 		formeOrder: ["Tempervian", "Tempervian-Mega","Tempervian-Mega-Ashen"],	
 		eggGroups: ["Undiscovered"],
