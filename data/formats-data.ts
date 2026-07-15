@@ -6562,4 +6562,37 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "UU",
 	},
+
+	excalibird: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	excalihawk: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	faeowulf: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	skewrpion: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	emberolith: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	galviathan: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	frostirichu: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	megalanice: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
 };

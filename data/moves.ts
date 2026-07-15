@@ -23352,4 +23352,231 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Ghost",
 		contestType: "Tough",
 	},
+	powderburst: {
+		num: 1017,
+		accuracy: 100,
+		basePower: 33,
+		category: "Special",
+		name: "Powder Burst",
+		pp: 5,
+		ppOverride: 8,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, noparentalbond: 1 },
+		multihit: 3,
+		smartTarget: true,
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		zMove: { basePower: 180 },
+		maxMove: { basePower: 140 },
+		contestType: "Clever",
+	},
+	doubleironblast: {
+		num: 1018,
+		accuracy: 100,
+		basePower: 55,
+		category: "Special",
+		isNonstandard: "Past",
+		name: "Double Iron Blast",
+		pp: 5,
+		ppOverride: 8,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, distance: 1, metronome: 1, pulse: 1 },
+		multihit: 2,
+		secondary: {
+			chance: 15,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Steel",
+		zMove: { basePower: 170 },
+		maxMove: { basePower: 140 },
+		contestType: "Clever",
+	},
+	triplesparks: {
+		num: 1019,
+		accuracy: 90,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			return 20 * move.hit;
+		},
+		category: "Physical",
+		name: "Triple Sparks",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		multihit: 3,
+		multiaccuracy: true,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		zMove: { basePower: 120 },
+		maxMove: { basePower: 140 },
+	},
+	volcanthrash: {
+		num: 1020,
+		accuracy: 100,
+		basePower: 40,
+		basePowerCallback(pokemon, target, move) {
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Volcan Thrash damage boost');
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+		category: "Physical",
+		name: "Volcan Thrash",
+		pp: 20,
+		ppOverride: 20,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('volcanthrash', pokemon);
+				const data = side.getSideConditionData('volcanthrash');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('volcanthrash');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Volcan Thrash start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Volcan Thrash');
+						alreadyAdded = true;
+					}
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
+					}
+					this.actions.runMove('volcanthrash', source, source.getLocOf(pokemon));
+				}
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Clever",
+	},
+	thunderquil: {
+		num: 1021,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		name: "Thunder Quil",
+		pp: 10,
+		ppOverride: 12,
+		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1, nonsky: 1, metronome: 1 },
+		onEffectiveness(typeMod, target, type, move) {
+			return typeMod + this.dex.getEffectiveness('Electric', type);
+		},
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) this.boost({ spa: 3 }, pokemon, pokemon, move);
+		},
+		priority: 0,
+		secondary: null,
+		target: "any",
+		type: "Ice",
+		zMove: { basePower: 180 },
+		contestType: "Tough",
+	},
+	toxicfangs: {
+		num: 1022,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Toxic Fangs",
+		pp: 15,
+		ppOverride: 16,
+		priority: 0,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bite: 1 },
+		secondary: {
+			chance: 30,
+			status: 'tox',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Clever",
+	},
+	faeflame: {
+		num: 1023,
+		accuracy: 100,
+		basePower: 75,
+		category: "Special",
+		name: "Fae Flame",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		type: "Fairy",
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			this.actions.tryMoveHit(
+				target,
+				pokemon,
+				{
+					...move,
+					id: toID('faeflame'),
+					name: 'Fae Flame',
+					basePower: 25,
+					smartTarget: true,
+					secondaries: [{
+						chance: 20,
+						status: 'brn',
+					}],
+				}
+			);
+		},
+		secondary: null,
+		target: "normal",
+		contestType: "Beautiful",
+	},
+	abyssalflood: {
+		num: 1024,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Abyssal Flood",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, dance: 1, metronome: 1 },
+		onModifyType(move, pokemon) {
+			let type = pokemon.getTypes()[1];
+			if (type === "Bird") type = "???";
+			if (type === "Stellar") type = pokemon.getTypes(false, true)[1];
+			move.type = type;
+		},
+		onHit(target, source, move) {
+			switch (move.type) {
+				case "Electric":
+					if (this.randomChance(1, 10)) {
+						target.trySetStatus('par', source, move);
+					}
+					break;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Fighting",
+		contestType: "Beautiful",
+	},
 };

@@ -7647,4 +7647,44 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Has a 20% chance to make the target flinch.",
 		},
 	},
+	powderburst: {
+		name: "Powder Burst",
+		shortDesc: "Hits 3 Times.",
+	},
+	doubleironblast: {
+		name: "Double Iron Blast",
+		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 15% chance to make the target paralyze.",
+		shortDesc: "Hits twice. 15% chance to make the target paralyze.",
+	},
+	triplesparks: {
+		name: "Triple Sparks",
+		desc: "Hits three times. Power increases to 40 for the second hit and 60 for the third. This move checks accuracy for each hit, and the attack ends if the target avoids a hit. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit three times.",
+		shortDesc: "Hits 3 times. Each hit can miss, but power rises.",
+	},
+	volcanthrash: {
+		name: "Volcan Thrash",
+		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Power doubles and no accuracy check is done if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn.",
+		shortDesc: "If a foe is switching out, hits it at 2x power.",
+		activate: "  ([TARGET] is being withdrawn...)",
+	},
+	thunderquil: {
+		name: "Thunderquil",
+		desc: "This move combines Electric in its type effectiveness against the target. Damage doubles and no accuracy check is done if the target has used Minimize while active.",
+		shortDesc: "Combines Electric in its type effectiveness.",
+	},
+	toxicfangs: {
+		name: "Toxic Fang",
+		desc: "Has a 30% chance to badly poison the target.",
+		shortDesc: "30% chance to badly poison the target.",
+	},
+	faeflame: {
+		name: "Fae Flame",
+		desc: "Hits Twice. Second hit is 25 BP and 20% Burn Chance",
+		shortDesc: "Hits Twice. Second hit is 25 BP and 20% Burn Chance",
+	},
+	abyssalflood: {
+		name: "Abyssal Flood",
+		desc: "Type is Based on Secondary Type. Electric has a 10% to Paralyze",
+		shortDesc: "Type is Based on Secondary Type. Electric has a 10% to Paralyze",
+	},
 };

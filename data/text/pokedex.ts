@@ -4199,4 +4199,31 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	glimmoramega: {
 		name: "Glimmora-Mega",
 	},
+	excalibird: {
+		name: "Excalibird",
+	},
+	excalihawk: {
+		name: "Excalihawk",
+	},
+	faeowulf: {
+		name: "Faeowulf",
+	},
+	skewrpion: {
+		name: "Skewrpion",
+	},
+	emberolith: {
+		name: "Emberolith",
+	},
+	galviathan: {
+		name: "Galviathan",
+	},
+	galviathanpulse: {
+		name: "Galviathan-Pulse",
+	},
+	frostirichu: {
+		name: "Frostirichu",
+	},
+	megalanice: {
+		name: "Megalanice",
+	},
 };

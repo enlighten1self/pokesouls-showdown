@@ -2415,4 +2415,34 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Fire Mane",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
 	},
+	mossinfection: {
+		name: "Moss Infection",
+		shortDesc: "When the Pokémon takes damage from a move, it Leech Seeds the attacker.",
+	},
+	liquify: {
+		name: "Liquify",
+		shortDesc: "This Pokemon's Normal-type moves become Water type and have 1.2x power.",
+	},
+	gloomize: {
+		name: "Gloomize",
+		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
+	},
+	battlecry: {
+		name: "Battle Cry",
+		shortDesc: "On switch-in, this Pokemon lowers the Special Attack of opponents by 1 stage.",
+	},
+	callofthedeep: {
+		name: "Call of the Deep",
+		shortDesc: "When you use a Electric Move you will change to Pulse Mode. Reverts if using a Fighting Move",
+		transform: "Changed to No-Pulse Forme!",
+		transformEnd: "Changed to Pulse Forme!",
+	},
+	devour: {
+		name: "Devour",
+		shortDesc: "Heals 1/3 of the opponents HP in Recovery on KO",
+	},
+	perilouspowder: {
+		name: "Perilous Powder",
+		shortDesc: "When hit. It will get a Powder buff and Deal 2x Bug Dmg next hit.",
+	},
 };

@@ -6246,4 +6246,145 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 3.5,
 		num: -21,
 	},
+	battlecry: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Battle Cry', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({ spa: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		flags: {},
+		name: "Battle Cry",
+		rating: 3.5,
+		num: -22,
+	},
+	callofthedeep: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			let form = '';
+			if (move.type === 'Electric') return form = 'Galviathan-Pulse';
+			if (move.type === 'Fighting') return form = 'Galviathan';
+			if (attacker.species.name !== form) attacker.formeChange(form);
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
+		name: "Call of the Deep",
+		rating: 4,
+		num: -23,
+	},
+	devour: {
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) {
+				this.heal(target.baseMaxhp / 3, pokemon, pokemon)
+			}
+		},
+		flags: {},
+		name: "Devour",
+		rating: 4,
+		num: -23,
+	},
+	perilouspowder: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			target.addVolatile('perilouspowder');
+		},
+		flags: {},
+		name: "Perilous Powder",
+		rating: 3,
+		num: -24,
+		condition: {
+			onStart(pokemon, source, effect) {
+				if (effect && ['Perilous Powder'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Perilous Powder', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Perilous Powder');
+				}
+			},
+			onRestart(pokemon, source, effect) {
+				if (effect && ['Perilous Powder'].includes(effect.name)) {
+					this.add('-start', pokemon, 'Perilous Powder', this.activeMove!.name, '[from] ability: ' + effect.name);
+				} else {
+					this.add('-start', pokemon, 'Perilous Powder');
+				}
+			},
+			onBasePowerPriority: 9,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Bug') {
+					this.debug('perilous powder boost');
+					return this.chainModify(2);
+				}
+			},
+			onMoveAborted(pokemon, target, move) {
+				if (move.type === 'Bug') {
+					pokemon.removeVolatile('perilouspowder');
+				}
+			},
+			onAfterMove(pokemon, target, move) {
+				if (move.type === 'Bug') {
+					pokemon.removeVolatile('perilouspowder');
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Perilous Powder', '[silent]');
+			},
+		},
+	},
+	liquify: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Water';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Liquify",
+		rating: 4,
+		num: -25,
+	},
+	gloomize: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && !noModifyType.includes(move.id) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Dark';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Gloomize",
+		rating: 4,
+		num: -26,
+	},
+	mossinfection: {
+		onDamagingHit(damage, target, source, move) {
+			target.addVolatile('leechseed');
+		},
+		flags: {},
+		name: "Moss Infection",
+		rating: 2,
+		num: -27,
+	},
 };

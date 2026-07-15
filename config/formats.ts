@@ -712,7 +712,8 @@ export const Formats: FormatList = [
 			'Revival Blessing', 'Shed Tail', 'Stored Power', 'Protomorphosis + Sand Rush', 'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage', 'Power Trip',
 
 			'Lokix', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 'Tricky Reception', 'Atlascross', 'Rage Fist', 'Charizard-Mega-Y', 'Swampert-Mega', 'Shedinja', 'Alakazam', 'Houndoom-Mega', 'Ursaluna', 'Excadrill-Mega',
-			'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta', 'Aerodactyl-Mega', 'Ceruledge', 'Manaphy', 'Ultigigas', 'Scolipede-Mega'
+			'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta', 'Aerodactyl-Mega', 'Ceruledge', 'Manaphy', 'Ultigigas', 'Scolipede-Mega',
+			'Kommo-o'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse', 'Parental Bond', 
