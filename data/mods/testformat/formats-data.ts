@@ -3199,10 +3199,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	scolipede: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "RU",
 	},
 	scolipedemega: {
-		natDexTier: "NU",
+		natDexTier: "RUBL",
 	},
 	cottonee: {
 		tier: "LC",
