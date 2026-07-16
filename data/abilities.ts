@@ -6268,11 +6268,19 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	callofthedeep: {
 		onModifyMovePriority: 1,
-		onModifyMove(move, attacker, defender) {
-			let form = '';
-			if (move.type === 'Electric') return form = 'Galviathan-Pulse';
-			if (move.type === 'Fighting') return form = 'Galviathan';
-			if (attacker.species.name !== form) attacker.formeChange(form);
+		onModifyMove(move, attacker) {
+			let form: string | null = null;
+		
+			if (move.type === 'Electric') {
+				form = 'Galviathan-Pulse';
+			} else if (move.type === 'Fighting') {
+				form = 'Galviathan';
+			}
+		
+			if (!form) return;
+			if (attacker.species.name === form) return;
+		
+			attacker.formeChange(form, this.effect, true);
 		},
 		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		name: "Call of the Deep",
