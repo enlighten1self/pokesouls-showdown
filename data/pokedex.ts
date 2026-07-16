@@ -21864,7 +21864,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Emberolith",
 		types: ["Fire", "Fairy"],
 		genderRatio: { M: 0.875, F: 0.125 },
-		baseStats: { hp: 115, atk: 90, def: 95, spa: 130, spd: 95, spe: 75 },
+		baseStats: { hp: 115, atk: 110, def: 95, spa: 110, spd: 95, spe: 75 },
 		abilities: { 0: "Flame Body", 1: "Bulletproof", H: "Natural Cure" },
 		heightm: 1.6,
 		weightkg: 150,

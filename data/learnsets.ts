@@ -109116,6 +109116,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	megalanice: {
 		learnset: {
+			icefang: ["9M"],
 			toxicfangs: ["9M"],
 			agility: ["9M"],
 			bodyslam: ["9M"],
