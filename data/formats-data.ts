@@ -6594,4 +6594,24 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "Illegal",
 	},
+	lapragon: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	residreigon: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	melmortar: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	kiluegon: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	weavolt: {
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
 };

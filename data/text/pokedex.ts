@@ -4226,4 +4226,19 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	megalanice: {
 		name: "Megalanice",
 	},
+	lapragon: {
+		name: "Lapragon",
+	},
+	residreigon: {
+		name: "Residreigon",
+	},
+	melmortar: {
+		name: "Melmortar",
+	},
+	kiluegon: {
+		name: "Kiluegon",
+	},
+	weavolt: {
+		name: "Weavolt",
+	},
 };
