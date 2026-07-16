@@ -21975,7 +21975,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Dragon"],
 	},
 	weavolt: {
-		num: 461,
+		num: -10092,
 		name: "Weavolt",
 		types: ["Dark", "Electric"],
 		baseStats: {hp: 70, atk: 110, def: 75, spa: 65, spd: 63, spe: 127},
