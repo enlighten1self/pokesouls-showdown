@@ -897,34 +897,34 @@ export const Formats: FormatList = [
 	{
 		name: "[Gen 9] National Dex Frantier Moveshift",
 		desc: `Pokémon nicknamed after another Pokémon gain access to that Pokémon's movepool and abilities. + Tier Shift`,
-		mod: 'testformat',
+		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic MovePools', 'Terastal Clause', 'Tier Shift Mod', "Mega Rayquaza Clause"],
 		banlist: [
 			//Pokemon Bans
 			'Arceus', 'Barbaracle-Mega', 'Blaziken-Mega', 'Caimanrago-Mega', 'Cereblaze-Mega', 'Forrogue-Mega', 'Frostiken-Mega', 'Gengar-Mega', 'Kangaskhan-Mega', 'Pidgeot-Mega', 'Salamence-Mega', 'Shaymin-Sky', 'Staraptor-Mega', 
-			'Starmie-Mega', 'Tempervian-Mega', 'Xerneas', 'Zacian', 'Zygarde-Complete', 'Marshadow', 'Calyrex-Shadow', 'Deoxys-Attack', 'Groudon-Primal', 'Kyogre-Primal', 'Miraidon',
+			'Starmie-Mega', 'Tempervian-Mega', 'Xerneas', 'Zacian', 'Zygarde-Complete', 'Marshadow', 'Calyrex-Shadow', 'Deoxys-Attack', 'Groudon-Primal', 'Kyogre-Primal', 'Miraidon', 'Koraidon',
 			//Ability Bans
 			'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag',
-			//Move Bans
+			//Move Bansd
 			'Assist', 'Baton Pass', 'Bolt Beak', 'Fishious Rend', 'Last Respects', 'Rage Fist', 'Shed Tail', 'Expanding Force', 'Rising Voltage',
 			//Item Bans
 			'Bright Powder', 'King\'s Rock', 'Quick Claw', 'Razor Fang',
-			//Combo Bans:
+			//Combo Bans:d
 			'Comatose + Sleep Talk',
 		],
 		restricted: [
 			//Pokemon Restrictions
-			'Calyrex-Ice', 'Deoxys-Base', 'Espathra', 'Eternatus', 'Flutter Mane', 'Giratina', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Naganadel', 'Pheromosa', 'Rayquaza', 'Spectrier', 'Yveltal', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings',
-			'Atlascross', 'Basculegion', 'Blacephalon', 'Cloyster', 'Eeveeon', 'Elysian Dance', 'Enamorus-Base', 'Iron Moth', 'Kartana', 'Klinklang', 'Mew', 'Porygon-Z', 'Regidrago', 'Regieleki', 'Regigigas', 'Serperior', 'Shedinja', 'Slaking', 
-			'Smeargle', 'Victini', 'Xurkitree', 'Honchkrow',
+			'Calyrex-Ice', 'Deoxys-Base', 'Espathra', 'Eternatus', 'Flutter Mane', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyogre', 'Naganadel', 'Pheromosa', 'Rayquaza', 'Spectrier', 'Yveltal', 'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Atlascross', 
+			'Basculegion', 'Blacephalon', 'Cloyster', 'Eeveeon', 'Elysian Dance', 'Enamorus-Base', 'Iron Moth', 'Kartana', 'Klinklang', 'Mew', 'Porygon-Z', 'Regidrago', 'Regieleki', 'Regigigas', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 
+			'Victini', 'Xurkitree', 'Honchkrow',
 			//Ability Restrictions
 			'Adaptability', 'Anger Shell', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 
 			'Neuro Drive', 'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush',
-			'Snow Warning', 'Speed Boost', 'Steely Spirit', 'Steelworker', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble', 'Beads of Ruin', 'Moss Infection',
+			'Snow Warning', 'Speed Boost', 'Steely Spirit', 'Steelworker', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble', 'Beads of Ruin', 
 			//Move Restrictions
 			'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 
 			'No Retreat', 'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Sulphuric Downpour', 'Tail Glow', 
-			'Take Heart', 'Thousand Arrows', 'Thousand Waves', 'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout', 'Hydro Steam', 'Transform'
+			'Take Heart', 'Thousand Arrows', 'Thousand Waves', 'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout', 'Hydro Steam', 'Transform', 'Double Iron Bash',
 		],
 	},
 	//{
