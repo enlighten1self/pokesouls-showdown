@@ -6267,16 +6267,33 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: -22,
 	},
 	callofthedeep: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric') {
+				if (!this.boost({ spa: 1 })) {
+					this.add('-immune', target, '[from] ability: Call of the Deep');
+				}
+				return null;
+			}
+		},
+		onAnyRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric' || move.flags['pledgecombo']) return;
+			const redirectTarget = ['randomNormal', 'adjacentFoe'].includes(move.target) ? 'normal' : move.target;
+			if (this.validTarget(this.effectState.target, source, redirectTarget)) {
+				if (move.smartTarget) move.smartTarget = false;
+				if (this.effectState.target !== target) {
+					this.add('-activate', this.effectState.target, 'ability: Call of the Deep');
+				}
+				return this.effectState.target;
+			}
+		},
 		onModifyMovePriority: 1,
 		onModifyMove(move, attacker) {
 			let form: string | null = null;
-		
 			if (move.type === 'Electric') {
 				form = 'Galviathan-Pulse';
 			} else if (move.type === 'Fighting') {
 				form = 'Galviathan';
 			}
-		
 			if (!form) return;
 			if (attacker.species.name === form) return;
 		
