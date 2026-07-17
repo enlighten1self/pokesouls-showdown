@@ -21927,7 +21927,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -10088,
 		name: "Lapragon",
 		types: ["Ice", "Dragon"],
-		baseStats: {hp: 112, atk: 106, def: 132, spa: 59, spd: 65, spe: 49},
+		baseStats: {hp: 130, atk: 105, def: 105, spa: 105, spd: 95, spe: 35},
 		abilities: {0: "Sturdy", 1: "Thick Fat", H: "Regenerator"},
 		heightm: 3.5,
 		weightkg: 320,
