@@ -21933,7 +21933,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 320,
 		color: "Blue",
 		prevo: "Lapras",
-		evos: ["Lapragon"],
 		evoLevel: 50,
 		eggGroups: ["Monster", "Water 1"],
 	},
