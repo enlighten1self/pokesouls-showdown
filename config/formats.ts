@@ -935,16 +935,16 @@ export const Formats: FormatList = [
 			"Mega Rayquaza Clause",
 		],
 		banlist: [
-			"ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "Assist", 'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 
+			"ND AG", "Arena Trap", "Moody", "Shadow Tag", "Assist", 'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 
 			'Drought + Chlorophyll', 'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive', 'Drought + Protosynthesis', 
 			'Sand Stream + Sand Rush', 'Snow Warning + Slush Rush', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 
 			'Revival Blessing', 'Shed Tail', 'Stored Power', 'Protomorphosis + Sand Rush', 'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage', 'Power Trip',
 			'Fishious Rend', 'Bolt Beak', 'Wicked Torque', 'Tricky Reception', 'Huge Power', 'Rage Fist', 'Ditto', 'Shedinja', 'Magic Guard', 'Sheer Force', 'Pure Power',
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Ice Scales', 'Illusion', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse',
 			'Poison Heal', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage', 'Unburden', 'Water Bubble', 
-			'Beast Boost', 'Corrosion', 'Serene Grace', 
-			'excalibird', 'excalihawk', 'faeowulf', 'skewrpion', 'emberolith', 'galviathan', 'frostirichu', 
-			'megalanice', 'lapragon', 'residreigon', 'melmortar', 'kiluegon', 'weavolt'
+			'Beast Boost', 'Corrosion', 'Serene Grace', 'Neutralizing Gas',
+			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 
+			'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 'Kiluegon', 'Weavolt'
 		],
 		restricted: [
 			'Astral Barrage', 'Belly Drum', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 'Geomancy', 
