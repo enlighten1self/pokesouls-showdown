@@ -22988,7 +22988,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		priority: -7,
 		flags: {mirror: 1},
 		pseudoWeather: "trickroom",
-		selfSwitch: 'copyvolatile',
+		selfSwitch: true,
 		target: "all",
 		type: "Psychic",
 	},

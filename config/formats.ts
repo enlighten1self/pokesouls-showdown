@@ -104,7 +104,13 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex NU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex RU"],
-		banlist: ["ND RU", "ND NUBL"],
+		banlist: ["ND RU", "ND NUBL", "Unburden"],
+	},
+	{
+		name: "[Gen 9] National Dex PU",
+		mod: "gen9",
+		ruleset: ["[Gen 9] National Dex NU"],
+		banlist: ["ND PU", "ND PUBL"],
 	},
 	{
 		name: "[Gen 9] National Dex LC",
@@ -1166,17 +1172,19 @@ export const Formats: FormatList = [
 		restricted: [
 			//Pokemon Restrictions
 			'Abyssal Void', 'Atlascross', 'Basculegion', 'Blacephalon', 'Boomkeldurr', 'Bulking Blade', 'Caimanrago', 'Celesteela', 'Chien-Pao', 'Chrono Venom', 'Cloyster', 'Darkrai', 'Deoxys-Speed', 'Dragapult', 'Dragonite', 'Eeveeon', 
-			'Elysian Dance', 'Enamorus-Base', 'Frostiken', 'Garchomp', 'Genesect', 'Great Tusk', 'Haxorus', 'Hoopa-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Moth', 'Iron Valiant', 'Kartana', 'Klinklang', 'Kommo-o', 'Kyurem', 'Landorus-Base', 
-			'Magearna', 'Manaphy', 'Melmetal', 'Mew', 'Palafin', 'Porygon-Z', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Tapu Koko', 'Tapu Lele', 'Terapagos', 'Ultigigas', 
+			'Elysian Dance', 'Enamorus-Base', 'Frostiken', 'Garchomp', 'Genesect', 'Haxorus', 'Hoopa-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Moth', 'Iron Valiant', 'Kartana', 'Klinklang', 'Kommo-o', 'Kyurem', 'Landorus-Base', 'Magearna', 
+			'Manaphy', 'Melmetal', 'Mew', 'Palafin', 'Porygon-Z', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Tapu Koko', 'Tapu Lele', 'Terapagos', 'Ultigigas', 
 			'Ursaluna-Bloodmoon', 'Urshifu', 'Victini', 'Volcarona', 'Walking Wake', 'Weavile', 'Xurkitree', 'Zamazenta', 'Zeranheit', 'Zygarde-Base',
 			//Ability Restrictions
-			'Adaptability', 'Anger Shell', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 
-			'Neuro Drive', 'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush',
-			'Snow Warning', 'Speed Boost', 'Steely Spirit', 'Steelworker', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble',
+			'Adaptability', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 'Neuro Drive', 
+			'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush', 'Snow Warning', 
+			'Speed Boost', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble', 'Download',
 			//Move Restrictions
-			'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 
-			'No Retreat', 'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Sulphuric Downpour', 'Tail Glow', 
-			'Take Heart', 'Thousand Arrows', 'Thousand Waves', 'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout',  
+			'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 'No Retreat', 
+			'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Tail Glow', 'Take Heart', 'Thousand Arrows', 'Thousand Waves', 
+			'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout', 'Dragon Dance',
+			//Test Mons
+			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 'Kiluegon', 'Weavolt'
 		]
 	}
 	//{
