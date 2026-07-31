@@ -20970,7 +20970,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Poison"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 110, atk: 60, def: 95, spa: 65, spd: 130, spe: 65},
-		abilities: {0: "Poison Point", H: "Corrosion"},
+		abilities: {0: "Poison Point", H: "Sticky Hold"},
 		heightm: 1.1,
 		weightkg: 30,
 		color: "Black",

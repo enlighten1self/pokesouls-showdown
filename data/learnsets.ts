@@ -103300,6 +103300,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	acideon: {
 		learnset: {
+			knockoff: ["9M"],
 			bite: ["9M"],
 			growl: ["9M"],
 			faketears: ["9M"],

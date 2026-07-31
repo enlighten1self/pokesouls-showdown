@@ -104,13 +104,13 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex NU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex RU"],
-		banlist: ["ND RU", "ND NUBL", "Unburden"],
+		banlist: ["ND RU", "ND NUBL", "Unburden", "Celebrate"],
 	},
 	{
 		name: "[Gen 9] National Dex PU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex NU"],
-		banlist: ["ND PU", "ND PUBL"],
+		banlist: ["ND NU"],
 	},
 	{
 		name: "[Gen 9] National Dex LC",

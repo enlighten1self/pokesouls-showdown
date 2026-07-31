@@ -265,7 +265,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	raichualola: {
 		tier: "PU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NUBL",
 	},
 	raichumegax: {
 		natDexTier: "UU",
@@ -834,7 +834,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	hitmonlee: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "NU",
+		natDexTier: "PU",
 	},
 	hitmonchan: {
 		tier: "PU",
@@ -1128,7 +1128,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	espeon: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "NUBL",
+		natDexTier: "NU",
 	},
 	umbreon: {
 		tier: "UU",
@@ -1156,7 +1156,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	porygon2: {
 		tier: "PU",
 		doublesTier: "NFE",
-		natDexTier: "NFE",
+		natDexTier: "NUBL",
 	},
 	porygonz: {
 		tier: "UU",
@@ -3980,7 +3980,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	slurpuff: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "PU",
 	},
 	inkay: {
 		tier: "LC",
@@ -5442,7 +5442,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	grafaiai: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "PU",
 	},
 	fidough: {
 		tier: "LC",
@@ -6284,7 +6284,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	eeveeon: {
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "PU",
 	},
 	hiveon: {
 		tier: "Illegal",
