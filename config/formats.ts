@@ -1,3 +1,5 @@
+import {Utils} from '../lib';
+
 // Note: This is the list of formats
 // The rules that formats use are stored in data/rulesets.ts
 /*
@@ -1186,7 +1188,117 @@ export const Formats: FormatList = [
 			//Test Mons
 			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 'Kiluegon', 'Weavolt'
 		]
-	}
+	},
+	{
+		name: "[Gen 9] National Dex Trademarked",
+		desc: `Sacrifice your Pok&eacute;mon's ability for a status move that activates on switch-in.`,
+		mod: 'trademarked',
+		ruleset: ['Standard NatDex', 'Standard OMs', 'Sleep Moves Clause', 'Terastal Clause'],
+		banlist: [
+			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Deoxys-Attack', 'Deoxys-Base', 'Dialga', 'Eternatus', 'Flutter Mane',
+			'Giratina', 'Groudon', 'Ho-Oh', 'Hoopa-Unbound', 'Keldeo', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala',
+			'Mew', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palkia', 'Rayquaza', 'Reshiram',
+			'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Spectrier', 'Urshifu', 'Volcarona', 'Weavile', 'Zacian', 'Zamazenta',
+			'Shaymin-Sky', 'Zekrom', 'Arena Trap', 'Moody', 'Shadow Tag', 'Light Clay', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail',
+			'Alakazam-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Caimanrago', 'Cereblaze-Mega', 'Darmanitan-Galar', 'Delphox-Mega', 'Dracovish', 'Dragapult', 
+			'Forrogue-Mega', 'Frostiken-Mega', 'Greninja-Mega', 'Kangaskhan-Mega', 'Lucario-Mega', 'Marshadow', 'Metagross-Mega', 'Naganadel', 'Pheromosa',
+			'Salamence-Mega', 'Starmie-Mega', 'Tempervian-Mega', 'Xerneas', 'Yveltal', 'Zygarde-Base', 'Power Construct', 'Gengar-Mega', 'Assist', 'Rising Voltage',
+			'Expanding Force', 'Stored Power', 'Power Trip', 'Thalassigon', 'Darkrai', 'Staraptor-Mega'
+		],
+		restricted: [
+			'Agility', 'Baneful Bunker', 'Belly Drum', 'Block', 'Burning Bulwark', 'Chilly Reception', 'Confuse Ray', 'Copycat', 'Dragon Dance', 'Detect', 'Destiny Bond',
+			'Endure', 'Encore', 'Fairy Lock', 'Flatter', 'Focus Energy', 'Glare', 'Heal Bell', 'Ingrain', 'Instruct', 'Mean Look', 'Nasty Plot', 'Parting Shot',
+			'Poison Gas', 'Poison Powder', 'Protect', 'Roar', 'Silk Trap', 'Spiky Shield', 'Sleep Talk', 'Shell Smash', 'Stun Spore', 'Substitute', 'Supersonic', 'Swagger',
+			'Sweet Kiss', 'Switcheroo', 'Swords Dance', 'Tail Glow', 'Tailwind', 'Taunt', 'Teeter Dance', 'Teleport', 'Thunder Wave', 'Toxic', 'Toxic Thread', 'Trick',
+			'Trick Room', 'Will-O-Wisp', 'Wish', 'Whirlwind', 'Mist', 'Embargo', 'Flash', 'Sand Attack', 'Heal Block', 'Heart Swap', 'Spider Web', 'Kinesis', 'Psycho Shift',
+			'move:Metronome', 'Rock Polish', 'Shift Gear', 'Imprison', 'Disable'
+		],
+		onValidateTeam(team, format, teamHas) {
+			const problems = [];
+			for (const trademark in teamHas.trademarks) {
+				if (teamHas.trademarks[trademark] > 1) {
+					problems.push(`You are limited to 1 of each Trademark.`, `(You have ${teamHas.trademarks[trademark]} Pok\u00e9mon with ${trademark} as a Trademark.)`);
+				}
+			}
+			return problems;
+		},
+		validateSet(set, teamHas) {
+			const dex = this.dex;
+			const ability = dex.moves.get(set.ability);
+			if (!ability.exists) { // Not even a real move
+				return this.validateSet(set, teamHas);
+			}
+			// Absolute trademark bans
+			if (ability.category !== 'Status') {
+				return [`${ability.name} is not a status move and cannot be used as a trademark.`];
+			}
+			// Contingent trademark bans
+			//if (this.ruleTable.isBanned(`move:${ability.id}`)) {
+			//	return [`${ability.name} is restricted from being used as a trademark.`];
+			//}
+			if (this.ruleTable.isRestricted(`move:${ability.id}`)) {
+				return [`${ability.name} is restricted from being used as a trademark.`];
+			}
+			if (set.moves.map(this.toID).includes(ability.id)) {
+				return [`${set.name} may not use ${ability.name} as both a trademark and one of its moves simultaneously.`];
+			}
+			const customRules = this.format.customRules || [];
+			if (!customRules.includes('!obtainableabilities')) customRules.push('!obtainableabilities');
+			if (!customRules.includes('+noability')) customRules.push('+noability');
+
+			const TeamValidator: typeof import('../sim/team-validator').TeamValidator =
+				require('../sim/team-validator').TeamValidator;
+
+			const validator = new TeamValidator(dex.formats.get(`${this.format.id}@@@${customRules.join(',')}`));
+			const moves = set.moves;
+			set.moves = [ability.id];
+			set.ability = 'No Ability';
+			let problems = validator.validateSet(set, {}) || [];
+			if (problems.length) return problems;
+			set.moves = moves;
+			set.ability = 'No Ability';
+			problems = problems.concat(validator.validateSet(set, teamHas) || []);
+			set.ability = ability.id;
+			if (!teamHas.trademarks) teamHas.trademarks = {};
+			teamHas.trademarks[ability.name] = (teamHas.trademarks[ability.name] || 0) + 1;
+			return problems.length ? problems : null;
+		},
+	},
+	{
+		name: "[Gen 9] National Dex Metamorph Mons",
+		desc: ``,
+		mod: 'gen9',
+		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Metamorph Mons', 'Terastal Clause'],
+		banlist: [
+			//Tiers
+			"ND Uber", "ND AG", 
+			//Abilities
+			"Arena Trap", "Moody", "Power Construct", "Shadow Tag", 'Contrary', 'Huge Power', 'Pure Power', 'Unburden',
+			//Items
+			"King's Rock", "Quick Claw", "Razor Fang", "Thick Club",
+			//Moves
+			'Assist', "Last Respects", "Shed Tail", "Rising Voltage", "Expanding Force", "Bolt Beak", "Fishious Rend", "Rage Fist", 'Stored Power', 'Power Trip', 
+			'Tail Glow', 'Shell Smash',
+			//Pokemon
+			'Mawile-Mega', "Staraptor-Mega", 'Medicham-Mega', 'Clefable-Mega', 'Aerodactyl-Mega',
+		],
+		restricted: [
+			//Move Restrictions
+			'Eruption', 'Light of Ruin', 'Population Bomb', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Tricky Reception', 'Victory Dance', 
+			'Belly Drum', 'Dire Claw', 
+			//Ability Restrictions
+			'Fur Coat', 'Ice Scales', 'Magnet Pull', 'Neutralizing Gas', 'Serene Grace', 'Simple', 'Speed Boost', 'Toxic Debris', 'Triage', 'Magic Bounce',
+			//Pokemon
+			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", "Toxapex", 'Porygon-Z', 'Slaking', 'Zamazenta',
+			//Test Mons
+			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 
+			'Kiluegon', 'Weavolt'
+		],
+		unbanlist: [
+			'Roaring Moon', 'Dracovish', 'Magearna', 'Raichu-Mega-Y', 'Annihilape', 'Genesect', 'Lopunny-Mega', 'Walking Wake', 'Sneasler', 'Espathra', 'Dragapult', 
+			'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 'Blastoise-Mega',
+		],
+	},
 	//{
 	//	name: "[Gen 9] National Dex Custom Game",
 	//	mod: 'gen9',

@@ -20723,7 +20723,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		forme: "Mega",
 		types: ["Rock","Dragon"],
 		baseStats: {hp: 75, atk: 160, def: 165, spa: 50, spd: 125, spe: 35},
-		abilities: {0: "Sand Force"},
+		abilities: {0: "Sahara Stream"},
 		heightm: 9.2,
 		weightkg: 400,
 		color: "Gray",

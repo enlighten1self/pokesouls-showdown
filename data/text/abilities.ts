@@ -2445,4 +2445,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Perilous Powder",
 		shortDesc: "When hit. It will get a Powder buff and Deal 2x Bug Dmg next hit.",
 	},
+	saharastream: {
+		name: "Sahara Stream",
+		shortDesc: "On switch-in, summons Sandstorm. During Sandstorm, Attack is 1.3333x.",
+
+		start: "  [POKEMON] summoned a Sandstorm, sending its ancient stream into a frenzy!",
+		activate: "  [POKEMON] basked in the Sandstorm, sending its ancient stream into a frenzy!",
+	},
 };

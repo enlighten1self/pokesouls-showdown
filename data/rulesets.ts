@@ -2824,4 +2824,93 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 		},
 	},
+	metamorphmons: {
+		effectType: 'ValidatorRule',
+		name: "Metamorph Mons",
+		onValidateSet(set) {
+			const species = this.dex.species.get(set.species), fusion = this.dex.species.get(set.name),
+			abilityPool = new Set<string>(Object.values(species.abilities).filter(Boolean) as string[]);	
+			if (fusion.name !== species.name) {
+				if (fusion.battleOnly) return [`${fusion.name} is a battle-only form and cannot be used as a donor.`];
+				if (this.ruleTable.isRestrictedSpecies(species)) return [`You may not name (${species.name}) as its Restricted.`];
+				if (this.ruleTable.isRestrictedSpecies(fusion)) return [`${species.name} can't fuse with restricted Pokémon.`, `(${fusion.name} is restricted.)`];
+				if (this.ruleTable.isBannedSpecies(fusion)) return [`${species.name} can't fuse with banned Pokémon.`, `(${fusion.name} is banned.)`];
+				if (!this.ruleTable.isRestrictedSpecies(this.dex.species.get(fusion.baseSpecies))) {
+					for (const ability of Object.values(fusion.abilities).filter(Boolean) as string[]) {
+						if (!this.ruleTable.isRestricted(`ability:${this.toID(ability)}`) || !this.ruleTable.isBanned(`ability:${this.toID(ability)}`)) {
+							abilityPool.add(ability);
+						}
+					}
+				}
+			} 
+			const ability = this.dex.abilities.get(set.ability), naturalAbilities = Object.values(species.abilities || {}).filter(Boolean) as string[];	
+			if (this.ruleTable.isRestricted(`ability:${ability.id}`)) {
+				if (!naturalAbilities.includes(ability.name)) {
+					return [`${ability.name} is restricted and may only be used by Pokémon that naturally have it.`];
+				}
+			} else if (!abilityPool.has(ability.name)) {
+				return [`${species.name} only has access to the following abilities: ${Array.from(abilityPool).join(', ')}.`];
+			}
+		},
+		onModifySpecies(species, target, source, effect) {
+			if (!target) return;
+			const newSpecies = this.dex.deepClone(species), fusionName = target.set.name;
+			if (!fusionName || fusionName === newSpecies.name) return;
+			const fusionSpecies = this.dex.deepClone(this.dex.species.get(fusionName));
+			newSpecies.bst = 0;
+			for (const stat in newSpecies.baseStats) {
+				const addition = Math.floor((newSpecies.baseStats[stat] / 2) + (fusionSpecies.baseStats[stat] / 2));
+				newSpecies.baseStats[stat] = this.clampIntRange(addition, 1, 255);
+				newSpecies.bst += newSpecies.baseStats[stat];
+			}
+			const primary = newSpecies.types[0];
+			let secondary: string | undefined;
+					
+			// Try donor secondary first
+			if (fusionSpecies.types[1]) {
+				secondary = fusionSpecies.types[1];
+			}
+			
+			// If missing or duplicates primary, try donor primary
+			if (!secondary || secondary === primary) {
+				if (fusionSpecies.types[0] !== primary) {
+					secondary = fusionSpecies.types[0];
+				}
+			}
+			
+			// If still invalid, try base secondary
+			if ((!secondary || secondary === primary) && newSpecies.types[1] !== primary) {
+				secondary = newSpecies.types[1];
+			}
+			
+			newSpecies.types = secondary && secondary !== primary
+				? [primary, secondary]
+				: [primary];
+			
+			return newSpecies;
+		},
+		checkCanLearn(move, species, setSources, set) {
+			const baseCheck = this.checkCanLearn(move, species, setSources, set), fusion = this.dex.species.get(set.name);
+			if (this.ruleTable.isRestricted(`move:${move.id}`) || (fusion.name === species.name)) return baseCheck;
+			const fusionCheck = this.checkCanLearn(move, fusion, setSources, set);
+			if (fusionCheck === null || baseCheck === null) return null;
+			return baseCheck;
+		},
+		onValidateTeam(team) {
+			const donors = new Utils.Multiset<string>();
+			for (const set of team) {
+				const species = this.dex.species.get(set.species), fusion = this.dex.species.get(set.name);
+				if (fusion.name !== species.name){
+					donors.add(fusion.name);
+				}
+			}
+			for (const [fusionName, number] of donors) {
+				if (number > 1) { return [
+						`You can only fuse with any Pokémon once.`,
+						`(You have ${number} Pokémon fused with ${fusionName}.)`
+					];
+				}
+			}
+		},
+	},
 };

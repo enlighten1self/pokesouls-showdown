@@ -6412,4 +6412,27 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 2,
 		num: -27,
 	},
+	saharastream: {
+		onImmunity(type, pokemon) {
+			if (type === 'sandstorm') return false;
+		},
+		onStart(pokemon) {
+			if (this.field.setWeather('sandstorm')) {
+				this.add('-activate', pokemon, 'Sahara Stream', '[source]');
+			} else if (this.field.isWeather('sandstorm')) {
+				this.add('-activate', pokemon, 'ability: Sahara Stream');
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['sandstorm'].includes(pokemon.effectiveWeather())) {
+				this.debug('Sahara Stream');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		flags: {},
+		name: "Sahara Stream",
+		rating: 4.5,
+		num: -28,
+	},
 };

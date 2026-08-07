@@ -268,10 +268,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "NUBL",
 	},
 	raichumegax: {
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	raichumegay: {
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	sandshrew: {
 		tier: "LC",
@@ -888,12 +888,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	chansey: {
 		tier: "UU",
 		doublesTier: "NFE",
-		natDexTier: "RU",
+		natDexTier: "BU",
 	},
 	blissey: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "BU",
+		natDexTier: "UU",
 	},
 	tangela: {
 		isNonstandard: "Past",
@@ -4004,7 +4004,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	barbaraclemega: {
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	skrelp: {
 		tier: "LC",
@@ -5522,7 +5522,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironmoth: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	ironhands: {
 		tier: "UU",
@@ -5709,7 +5709,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	ironcrown: {
 		tier: "OU",
 		doublesTier: "DUU",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	terapagos: {
 		tier: "Uber",
@@ -6144,11 +6144,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	typhtesla: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	typhteslamega: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BUBL",
 	},
 	flareshroom: {
 		tier: "Illegal",
@@ -6442,7 +6442,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	crescentwing: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	chronovenom: {
 		tier: "Illegal",
@@ -6510,7 +6510,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	feraligatrmega: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "UUBL",
 	},
 	skarmorymega: {
 		tier: "Illegal",
