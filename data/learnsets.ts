@@ -101682,7 +101682,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 			dragonfangs: ["9M"],
 			waterfall: ["9M"],
 			icefang: ["9M"],
-			dragondance: ["9M"],
 			flipturn: ["9M"],
 			aerialace: ["9M", "7M", "6M", "5M", "4M"],
 			aquatail: ["7T", "6T", "5T", "4T"],
@@ -107251,6 +107250,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	titaniumdelta: {
 		learnset: {
+			runwayrush: ["9M"],
 			workup: ["9M"],
 			wish: ["9M"],
 			steelbeam: ["9M"],
@@ -107965,6 +107965,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	crescentwing: {
 		learnset: {
+			dreamcatcher: ["9M"],
 			heartswap: ["9M"],
 			playrough: ["9M"],
 			scaleshot: ["9M"],

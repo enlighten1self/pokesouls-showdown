@@ -26,13 +26,13 @@ export const Formats: FormatList = [
 	{
 		section: "Souls",
 	},
-	{
-		name: "[Gen 9] Random Battle",
-		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
-		mod: 'gen9',
-		team: 'random',
-		ruleset: ["Terastal Clause",'PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-	},
+	//{
+	//	name: "[Gen 9] Random Battle",
+	//	desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
+	//	mod: 'gen9',
+	//	team: 'random',
+	//	ruleset: ["Terastal Clause",'PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
+	//},
 	{
 		name: "[Gen 9] National Dex",
 		mod: "gen9",
@@ -1150,45 +1150,45 @@ export const Formats: FormatList = [
 	//		}
 	//	},
 	//},
-	{
-		name: "[Gen 9] National Dex Potara Mons",
-		desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get their stats buffed by 1/4 of that Pok&eacute;mon's stats, barring HP, and access to one of their abilities.`,
-		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic Fusions Mod', 'Terastal Clause', 'Frantic MovePools'],
-		banlist: [
-			//Pokemon Bans
-			'Alakazam-Mega', 'Arceus', 'Barbaracle-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Baxcalibur', 'Caimanrago-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Cereblaze-Mega', 'Delphox-Mega', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 
-			'Diancie-Mega', 'Espathra', 'Eternatus', 'Forrogue-Mega', 'Frostiken-Mega', 'Floette-Mega', 'Flutter Mane', 'Gengar-Mega', 'Ghoulizard-Mega', 'Giratina', 'Glimmora-Mega', 'Greninja-Mega', 'Groudon', 'Hawlucha-Mega', 'Ho-Oh', 
-			'Kangaskhan-Mega', 'Koraidon', 'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lopunny-Mega', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mawile-Mega', 'Medicham-Mega', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 
-			'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Ogerpon-Cornerstone', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia', 'Pheromosa', 'Pidgeot-Mega', 'Raichu-Mega-Y', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 
-			'Staraptor-Mega', 'Starmie-Mega', 'Swampert-Mega', 'Tempervian-Mega', 'Withorde-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta-Crowned', 'Zapoleon-Mega', 'Zekrom', 'Zygarde-Complete',
-			//Ability Bans
-			'Arena Trap', 'Beads of Ruin', 'Gorilla Tactics', 'Moody', 'Power Construct', 'Shadow Tag', 'Zen Mode',
-			//Move Bans
-			'Assist', 'Baton Pass', 'Bolt Beak', 'Fishious Rend', 'Last Respects', 'Rage Fist', 'Shed Tail', 
-			//Item Bans
-			'Bright Powder', 'King\'s Rock', 'Quick Claw', 'Razor Fang',
-			//Combo Bans:
-			'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Comatose + Sleep Talk',
-		], 
-		restricted: [
-			//Pokemon Restrictions
-			'Abyssal Void', 'Atlascross', 'Basculegion', 'Blacephalon', 'Boomkeldurr', 'Bulking Blade', 'Caimanrago', 'Celesteela', 'Chien-Pao', 'Chrono Venom', 'Cloyster', 'Darkrai', 'Deoxys-Speed', 'Dragapult', 'Dragonite', 'Eeveeon', 
-			'Elysian Dance', 'Enamorus-Base', 'Frostiken', 'Garchomp', 'Genesect', 'Haxorus', 'Hoopa-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Moth', 'Iron Valiant', 'Kartana', 'Klinklang', 'Kommo-o', 'Kyurem', 'Landorus-Base', 'Magearna', 
-			'Manaphy', 'Melmetal', 'Mew', 'Palafin', 'Porygon-Z', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Tapu Koko', 'Tapu Lele', 'Terapagos', 'Ultigigas', 
-			'Ursaluna-Bloodmoon', 'Urshifu', 'Victini', 'Volcarona', 'Walking Wake', 'Weavile', 'Xurkitree', 'Zamazenta', 'Zeranheit', 'Zygarde-Base',
-			//Ability Restrictions
-			'Adaptability', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 'Neuro Drive', 
-			'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush', 'Snow Warning', 
-			'Speed Boost', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble', 'Download',
-			//Move Restrictions
-			'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 'No Retreat', 
-			'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Tail Glow', 'Take Heart', 'Thousand Arrows', 'Thousand Waves', 
-			'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout', 'Dragon Dance',
-			//Test Mons
-			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 'Kiluegon', 'Weavolt'
-		]
-	},
+	//{
+	//	name: "[Gen 9] National Dex Potara Mons",
+	//	desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get their stats buffed by 1/4 of that Pok&eacute;mon's stats, barring HP, and access to one of their abilities.`,
+	//	mod: 'gen9',
+	//	ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Frantic Fusions Mod', 'Terastal Clause', 'Frantic MovePools'],
+	//	banlist: [
+	//		//Pokemon Bans
+	//		'Alakazam-Mega', 'Arceus', 'Barbaracle-Mega', 'Blastoise-Mega', 'Blaziken-Mega', 'Baxcalibur', 'Caimanrago-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Cereblaze-Mega', 'Delphox-Mega', 'Deoxys-Base', 'Deoxys-Attack', 'Dialga', 
+	//		'Diancie-Mega', 'Espathra', 'Eternatus', 'Forrogue-Mega', 'Frostiken-Mega', 'Floette-Mega', 'Flutter Mane', 'Gengar-Mega', 'Ghoulizard-Mega', 'Giratina', 'Glimmora-Mega', 'Greninja-Mega', 'Groudon', 'Hawlucha-Mega', 'Ho-Oh', 
+	//		'Kangaskhan-Mega', 'Koraidon', 'Kyogre',  'Kyurem-Black', 'Kyurem-White', 'Lopunny-Mega', 'Lucario-Mega', 'Lugia', 'Lunala', 'Marshadow', 'Mawile-Mega', 'Medicham-Mega', 'Metagross-Mega', 'Mewtwo', 'Miraidon', 'Naganadel', 
+	//		'Necrozma-Dusk-Mane', 'Necrozma-Dawn-Wings', 'Ogerpon-Cornerstone', 'Ogerpon-Hearthflame', 'Ogerpon-Wellspring', 'Palkia', 'Pheromosa', 'Pidgeot-Mega', 'Raichu-Mega-Y', 'Rayquaza', 'Salamence-Mega', 'Shaymin-Sky', 'Spectrier', 
+	//		'Staraptor-Mega', 'Starmie-Mega', 'Swampert-Mega', 'Tempervian-Mega', 'Withorde-Mega', 'Xerneas', 'Yveltal', 'Zacian', 'Zamazenta-Crowned', 'Zapoleon-Mega', 'Zekrom', 'Zygarde-Complete',
+	//		//Ability Bans
+	//		'Arena Trap', 'Beads of Ruin', 'Gorilla Tactics', 'Moody', 'Power Construct', 'Shadow Tag', 'Zen Mode',
+	//		//Move Bans
+	//		'Assist', 'Baton Pass', 'Bolt Beak', 'Fishious Rend', 'Last Respects', 'Rage Fist', 'Shed Tail', 
+	//		//Item Bans
+	//		'Bright Powder', 'King\'s Rock', 'Quick Claw', 'Razor Fang',
+	//		//Combo Bans:
+	//		'Rising Voltage + Electric Surge', 'Expanding Force + Psychic Surge', 'Comatose + Sleep Talk',
+	//	], 
+	//	restricted: [
+	//		//Pokemon Restrictions
+	//		'Abyssal Void', 'Atlascross', 'Basculegion', 'Blacephalon', 'Boomkeldurr', 'Bulking Blade', 'Caimanrago', 'Celesteela', 'Chien-Pao', 'Chrono Venom', 'Cloyster', 'Darkrai', 'Deoxys-Speed', 'Dragapult', 'Dragonite', 'Eeveeon', 
+	//		'Elysian Dance', 'Enamorus-Base', 'Frostiken', 'Garchomp', 'Genesect', 'Haxorus', 'Hoopa-Unbound', 'Iron Boulder', 'Iron Bundle', 'Iron Moth', 'Iron Valiant', 'Kartana', 'Klinklang', 'Kommo-o', 'Kyurem', 'Landorus-Base', 'Magearna', 
+	//		'Manaphy', 'Melmetal', 'Mew', 'Palafin', 'Porygon-Z', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Serperior', 'Shedinja', 'Slaking', 'Smeargle', 'Sneasler', 'Solgaleo', 'Tapu Koko', 'Tapu Lele', 'Terapagos', 'Ultigigas', 
+	//		'Ursaluna-Bloodmoon', 'Urshifu', 'Victini', 'Volcarona', 'Walking Wake', 'Weavile', 'Xurkitree', 'Zamazenta', 'Zeranheit', 'Zygarde-Base',
+	//		//Ability Restrictions
+	//		'Adaptability', 'Beast Boost', 'Chlorophyll', 'Corrosion', 'Contrary', 'Drizzle', 'Drought', 'Electric Surge', 'Fur Coat', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Imposter', 'Libero', 'Magic Guard', 'Magnet Pull', 'Neuro Drive', 
+	//		'Neutralizing Gas', 'Poison Heal', 'Protean', 'Protomorphosis', 'Protosynthesis', 'Psychic Surge', 'Pure Power', 'Quark Drive', 'Regenerator', 'Sand Rush', 'Sand Stream', 'Serene Grace', 'Sheer Force', 'Simple', 'Slush Rush', 'Snow Warning', 
+	//		'Speed Boost', 'Swift Swim', 'Toxic Debris', 'Triage', 'Water Bubble', 'Download',
+	//		//Move Restrictions
+	//		'Boomburst', 'Ceaseless Edge', 'Celebrate', 'Chloroblast', 'Conversion', 'Electro Shot', 'Eruption', 'Extreme Speed', 'Fillet Away', 'Gear Grind', 'Gigaton Hammer', 'Happy Hour', 'Heal Order', 'Light of Ruin', 'Mystical Power', 'No Retreat', 
+	//		'Population Bomb', 'Power Trip', 'Psycho Boost', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Stainless Slash', 'Stored Power', 'Storm Throw', 'Stone Axe', 'Tail Glow', 'Take Heart', 'Thousand Arrows', 'Thousand Waves', 
+	//		'Torch Song', 'Tricky Reception', 'Triple Arrows', 'Victory Dance', 'Water Spout', 'Dragon Dance',
+	//		//Test Mons
+	//		'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 'Kiluegon', 'Weavolt'
+	//	]
+	//},
 	{
 		name: "[Gen 9] National Dex Trademarked",
 		desc: `Sacrifice your Pok&eacute;mon's ability for a status move that activates on switch-in.`,

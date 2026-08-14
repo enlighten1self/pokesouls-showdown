@@ -7687,4 +7687,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Type is Based on Secondary Type. Electric has a 10% to Paralyze",
 		shortDesc: "Type is Based on Secondary Type. Electric has a 10% to Paralyze",
 	},
+	runwayrush: {
+		name: "Runway Rush",
+		desc: "This move's type effectiveness against Steel is changed to be super effective no matter what this move's type is.",
+		shortDesc: "Super effective on Steel.",
+	},
+	dreamcatcher: {
+		name: "Dreamcatcher",
+		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user.",
+		shortDesc: "Usually goes first. Fails if target is not attacking.",
+	},
 };

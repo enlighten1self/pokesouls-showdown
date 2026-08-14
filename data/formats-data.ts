@@ -4136,12 +4136,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	avalugg: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "PU",
 	},
 	avalugghisui: {
 		tier: "PU",
 		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		natDexTier: "PU",
 	},
 	noibat: {
 		tier: "LC",
@@ -6176,7 +6176,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	caimanrago: {
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	caimanragomega: {
 		tier: "Illegal",
@@ -6442,7 +6442,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	crescentwing: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "OU",
 	},
 	chronovenom: {
 		tier: "Illegal",
