@@ -21598,7 +21598,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Abyssal Void",
 		types: ["Dark","Ghost"],
 		gender: "N",
-		baseStats: {hp: 99, atk: 77, def: 125, spa: 87, spd: 109, spe: 93},
+		baseStats: {hp: 95, atk: 99, def: 99, spa: 107, spd: 101, spe: 89},
 		abilities: {0: "Protomorphosis"},
 		heightm: 1.5,
 		weightkg: 50.5,

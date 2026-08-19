@@ -1289,7 +1289,7 @@ export const Formats: FormatList = [
 			//Ability Restrictions
 			'Fur Coat', 'Ice Scales', 'Magnet Pull', 'Neutralizing Gas', 'Serene Grace', 'Simple', 'Speed Boost', 'Toxic Debris', 'Triage', 'Magic Bounce',
 			//Pokemon
-			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", "Toxapex", 'Porygon-Z', 'Slaking', 'Zamazenta',
+			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", "Toxapex", 'Porygon-Z', 'Slaking', 'Zamazenta', "Titanium Delta",
 			//Test Mons
 			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 
 			'Kiluegon', 'Weavolt'
