@@ -23201,7 +23201,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	endlesstorment: {
 		num: 1011,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 65,
 		category: "Special",
 		name: "Endless Torment",
 		pp: 10,
@@ -23243,7 +23243,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 10,
 		ppOverride: 12,
 		priority: 0,
-		flags: { protect: 1, mirror: 1, dance: 1, metronome: 1 },
+		flags: { protect: 1, mirror: 1, metronome: 1 },
 		onModifyType(move, pokemon) {
 			let type = pokemon.getTypes()[0];
 			if (type === "Bird") type = "???";
@@ -23515,7 +23515,6 @@ export const Moves: { [moveid: string]: MoveData } = {
 					id: toID('faeflame'),
 					name: 'Fae Flame',
 					basePower: 25,
-					smartTarget: true,
 					secondaries: [{
 						chance: 20,
 						status: 'brn',

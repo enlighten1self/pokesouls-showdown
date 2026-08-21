@@ -100579,6 +100579,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	turtaya: {
 		learnset: {
+			dragonpulse: ["9L9"],
+			dracometeor: ["9L9"],
 			scaleshot: ["9L9"],
 			dragondance: ["9L9"],
 			firefang: ["9L9"],
@@ -100674,6 +100676,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	grokura: {
 		learnset: {
+			dragonpulse: ["9L9"],
+			dracometeor: ["9L9"],
 			scaleshot: ["9L9"],
 			dragondance: ["9L9"],
 			firefang: ["9L9"],
@@ -100757,6 +100761,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	drakura: {
 		learnset: {
+			dragonpulse: ["9L9"],
+			dracometeor: ["9L9"],
 			playrough: ["9L9"],
 			scaleshot: ["9L9"],
 			dragondance: ["9L9"],
