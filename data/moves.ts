@@ -2309,6 +2309,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 			let newType = 'Normal';
 			if (this.field.isTerrain('electricterrain')) {
 				newType = 'Electric';
+			} else if (this.field.isTerrain('arcaneterrain')) {
+				newType = 'Ghost';
 			} else if (this.field.isTerrain('grassyterrain')) {
 				newType = 'Grass';
 			} else if (this.field.isTerrain('mistyterrain')) {
@@ -13174,6 +13176,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		onHit(pokemon) {
 			let factor = 0.5;
 			switch (pokemon.effectiveWeather()) {
+				case 'fog':
 				case 'sunnyday':
 				case 'desolateland':
 					factor = 0.667;
@@ -13216,6 +13219,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'desolateland':
 					factor = 0.667;
 					break;
+				case 'fog':
 				case 'raindance':
 				case 'primordialsea':
 				case 'sandstorm':
@@ -13554,6 +13558,8 @@ export const Moves: { [moveid: string]: MoveData } = {
 				move = 'thunderbolt';
 			} else if (this.field.isTerrain('grassyterrain')) {
 				move = 'energyball';
+			} else if (this.field.isTerrain('arcaneterrain')) {
+				move = 'dragonpulse';
 			} else if (this.field.isTerrain('mistyterrain')) {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
@@ -17167,6 +17173,11 @@ export const Moves: { [moveid: string]: MoveData } = {
 					chance: 30,
 					status: 'slp',
 				});
+			} else if (this.field.isTerrain('arcaneterrain')) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'frz',
+				});
 			} else if (this.field.isTerrain('mistyterrain')) {
 				move.secondaries.push({
 					chance: 30,
@@ -20266,6 +20277,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'desolateland':
 					factor = 0.667;
 					break;
+				case 'fog':
 				case 'raindance':
 				case 'primordialsea':
 				case 'sandstorm':
@@ -20841,6 +20853,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'electricterrain':
 					move.type = 'Electric';
 					break;
+				case 'arcaneterrain':
+					move.type = 'Dragon';
+					break;
 				case 'grassyterrain':
 					move.type = 'Grass';
 					break;
@@ -21030,6 +21045,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'primordialsea':
 					move.accuracy = true;
 					break;
+				case 'fog':
 				case 'sunnyday':
 				case 'desolateland':
 					move.accuracy = 50;
@@ -22386,6 +22402,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 				case 'desolateland':
 					move.type = 'Fire';
 					break;
+				case 'fog':
+					move.type = 'Ghost';
+					break;
 				case 'raindance':
 				case 'primordialsea':
 					move.type = 'Water';
@@ -22410,6 +22429,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 					move.basePower *= 2;
 					break;
 				case 'sandstorm':
+					move.basePower *= 2;
+					break;
+				case 'fog':
 					move.basePower *= 2;
 					break;
 				case 'hail':
@@ -23594,5 +23616,163 @@ export const Moves: { [moveid: string]: MoveData } = {
 		target: "normal",
 		type: "Fairy",
 		contestType: "Clever",
+	},
+	arcaneterrain: {
+		num: 1027,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Arcane Terrain",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { nonsky: 1, metronome: 1 },
+		terrain: 'arcaneterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onEffectiveness(typeMod, target, type, move) {
+				if (move.type === 'Fighting' && target?.hasType('Normal')) {
+					return 0;
+				}
+			},
+			onModifyMove(move) {
+				if (move.secondaries) {
+					move.secondaries = null;
+				}
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Dragon' && attacker.isGrounded() && !attacker.isSemiInvulnerable()) {
+					this.debug('arcane terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Arcane Terrain', '[from] ability: ' + effect.name, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Arcane Terrain');
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Arcane Terrain');
+			},
+		},
+		secondary: null,
+		target: "all",
+		type: "Dragon",
+		zMove: { boost: { spe: 1 } },
+		contestType: "Clever",
+	},
+	rupturingdescent: {
+		num: 1028,
+		accuracy: 95,
+		basePower: 100,
+		category: "Physical",
+		name: "Rupturing Descent",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: {
+			chance: 15,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Beautiful",
+	},
+	paleofang: {
+		num: 1029,
+		accuracy: 80,
+		basePower: 110,
+		category: "Physical",
+		name: "Paleofang",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1, contact: 1 },
+		onModifyMove(move, pokemon, target) {
+			switch (target?.effectiveWeather()) {
+				case 'sandstorm':
+					move.accuracy = true;
+					break;
+			}
+		},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "any",
+		type: "Rock",
+		contestType: "Tough",
+	},
+	decrepitscythe: {
+		num: 1030,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		overrideDefensiveStat: 'def',
+		name: "Decrepit Scythe",
+		pp: 10,
+		ppOverride: 12,
+		priority: 0,
+		flags: { protect: 1, mirror: 1, metronome: 1 },
+		secondary: null,
+		target: "normal",
+		type: "Fire",
+		contestType: "Beautiful",
+	},
+	pyroclasticflow: {
+		num: 1031,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Pyroclastic Flow",
+		pp: 5,
+		ppOverride: 8,
+		priority: 0,
+		flags: { snatch: 1, heal: 1, metronome: 1 },
+		onHit(pokemon) {
+			let factor = 0.75;
+			if (!pokemon.volatiles['flashfire']){
+				factor = 0.5
+			}
+			const success = !!this.heal(this.modify(pokemon.maxhp, factor));
+			if (!success) {
+				this.add('-fail', pokemon, 'heal');
+				return this.NOT_FAIL;
+			}
+			return success;
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
+		zMove: { effect: 'clearnegativeboost' },
+		contestType: "Clever",
+	},
+	pumpkinslicer: {
+		num: -1032,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Pumpkin Slicer",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
+		target: "normal",
+		type: "Grass",
+		secondary: {
+			chance: 50,
+			volatileStatus: 'leechseed',
+		},
 	},
 };

@@ -5785,7 +5785,7 @@ export const Items: {[itemid: string]: ItemData} = {
 		onTakeItem: false,
 		zMove: "Guardian of Alola",
 		zMoveFrom: "Nature's Madness",
-		itemUser: ["Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini"],
+		itemUser: ["Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini", "Tapu Mana"],
 		num: 801,
 		gen: 7,
 		isNonstandard: "Past",
@@ -8387,5 +8387,36 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 10056,
 		gen: 9
+	},
+	arcaneseed: {
+		name: "Arcane Seed",
+		spritenum: 666,
+		fling: {
+			basePower: 10,
+		},
+		onStart(pokemon) {
+			if (!pokemon.ignoringItem() && this.field.isTerrain('arcaneterrain')) {
+				pokemon.useItem();
+			}
+		},
+		onTerrainChange(pokemon) {
+			if (this.field.isTerrain('arcaneterrain')) {
+				pokemon.useItem();
+			}
+		},
+		boosts: {
+			def: 1,
+		},
+		num: 10057,
+		gen: 7,
+	},
+	petrifiedrock: {
+		name: "Petrified Rock",
+		spritenum: 453,
+		fling: {
+			basePower: 10,
+		},
+		num: 10058,
+		gen: 4,
 	},
 };

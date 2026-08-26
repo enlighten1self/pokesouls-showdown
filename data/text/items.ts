@@ -2645,4 +2645,12 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Falinksite",
 		desc: "If held by a Falinks, this item allows it to Mega Evolve in battle.",
 	},
+	petrifiedrock: {
+		name: "Petrified Rock",
+		desc: "Holder's use of Fog lasts 8 turns instead of 5.",
+	},
+	arcaneseed: {
+		name: "Arcane Seed",
+		desc: "If the terrain is Arcane Terrain, raises holder's Defense by 1 stage. Single use.",
+	},
 };

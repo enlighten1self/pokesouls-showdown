@@ -269,6 +269,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		upkeep: "  (The sandstorm is raging.)",
 		damage: "  [POKEMON] is buffeted by the sandstorm!",
 	},
+	fog: {
+		weatherName: "Fog",
+		start: "  A Fog creeped in!",
+		end: "  The Fog faded.",
+		upkeep: "  (The Fog is Dense.)",
+	},
 	sunnyday: {
 		weatherName: "Sun",
 		start: "  The sunlight turned harsh!",

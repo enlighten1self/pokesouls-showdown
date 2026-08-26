@@ -2342,20 +2342,20 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	masquerade: {
 		name: "Masquerade",
-		shortDesc: "This Pokemon's type changes to match the type of the move it is about to use.",
+		shortDesc: "This Pokémon's type changes to match the type of the move it is about to use.",
 	},
 	apexpredator: {
 		name: "Apex Predator",
-		desc: "This Pokemon's Attack and Speed is raised by 1 stage if it attacks and knocks out another Pokemon.",
-		shortDesc: "This Pokemon's Attack and Speed is raised by 1 stage if it attacks and KOes another Pokemon.",
+		desc: "This Pokémon's Attack and Speed is raised by 1 stage if it attacks and knocks out another Pokemon.",
+		shortDesc: "This Pokémon's Attack and Speed is raised by 1 stage if it attacks and KOes another Pokemon.",
 	},
 	fromashes: {
 		name: "From Ashes",
-		shortDesc: "When this Pokemon is knocked out it is revived, healed to 50% max hp and receives +1 attack and +1 speed. (Only works once per match)",
+		shortDesc: "When this Pokémon is knocked out it is revived, healed to 50% max hp. (Only works once per match)",
 	},
 	scorn: {
 		name: "Scorn",
-		shortDesc: "On switch-in, this Pokemon lowers the Attack and Special Attack of opponents by 1 stage.",
+		shortDesc: "On switch-in, this Pokémon lowers the Attack and Special Attack of opponents by 1 stage.",
 	},
 	neuroengine: {
 		name: "Neuro Engine",
@@ -2365,15 +2365,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	restorativefilm: {
 		name: "Restorative Film",
-		desc: "This Pokemon gains 1/16 HP per turn.",
+		desc: "This Pokémon gains 1/16 HP per turn.",
 	},
 	revenant: {
 		name: "Revenant",
-		desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Ghost-type attack.",
-		shortDesc: "At 1/3 or less of its max HP, this Pokemon's offensive stat is 1.5x with Ghost attacks.",
+		desc: "When this Pokémon has 1/3 or less of its maximum HP, rounded down, its offensive stat is multiplied by 1.5 while using a Ghost-type attack.",
+		shortDesc: "At 1/3 or less of its max HP, this Pokémon's offensive stat is 1.5x with Ghost attacks.",
 		gen4: {
-			desc: "When this Pokemon has 1/3 or less of its maximum HP, rounded down, its Ghost-type attacks have their power multiplied by 1.5.",
-			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Ghost-type attacks have 1.5x power.",
+			desc: "When this Pokémon has 1/3 or less of its maximum HP, rounded down, its Ghost-type attacks have their power multiplied by 1.5.",
+			shortDesc: "At 1/3 or less of its max HP, this Pokémon's Ghost-type attacks have 1.5x power.",
 		},
 	},
 	seismic: {
@@ -2391,11 +2391,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	dragonize: {
 		name: "Dragonize",
-		desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-		shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.2x power.",
+		desc: "This Pokémon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokémon's Normal-type moves become Dragon type and have 1.2x power.",
 		gen6: {
-			desc: "This Pokemon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
-			shortDesc: "This Pokemon's Normal-type moves become Dragon type and have 1.3x power.",
+			desc: "This Pokémon's Normal-type moves become Dragon-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+			shortDesc: "This Pokémon's Normal-type moves become Dragon type and have 1.3x power.",
 		},
 	},
 	megasol: {
@@ -2413,7 +2413,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	firemane: {
 		name: "Fire Mane",
-		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
+		shortDesc: "This Pokémon's offensive stat is multiplied by 1.5 while using a Fire-type attack.",
 	},
 	mossinfection: {
 		name: "Moss Infection",
@@ -2421,11 +2421,11 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	liquify: {
 		name: "Liquify",
-		shortDesc: "This Pokemon's Normal-type moves become Water type and have 1.2x power.",
+		shortDesc: "This Pokémon's Normal-type moves become Water type and have 1.2x power.",
 	},
 	gloomize: {
 		name: "Gloomize",
-		shortDesc: "This Pokemon's Normal-type moves become Dark type and have 1.2x power.",
+		shortDesc: "This Pokémon's Normal-type moves become Dark type and have 1.2x power.",
 	},
 	battlecry: {
 		name: "Battle Cry",
@@ -2451,5 +2451,42 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] summoned a Sandstorm, sending its ancient stream into a frenzy!",
 		activate: "  [POKEMON] basked in the Sandstorm, sending its ancient stream into a frenzy!",
+	},
+	arcanesurge: {
+		name: "Arcane Surge",
+		shortDesc: "On switch-in, this Pokemon summons Arcane Terrain.",
+	},
+	bloodcurdle: {
+		name: "Blood Curdle",
+		shortDesc: "Heals 1/3 of the opponents HP in Recovery on KO",
+	},
+	flamebearer: {
+		name: "Flamebearer",
+		shortDesc: "If this Pokémon is at full HP, its Fire-type moves have their priority increased by 1.",
+	},
+	alloyed: {
+		name: "Alloyed",
+		shortDesc: "On switch-in, this Pokémon gains the Steel-type.",
+	},
+	thundercall: {
+		name: "Thundercall",
+		shortDesc: "This Pokémon's offensive stat is multiplied by 1.5 while using a Electric-type attack.",
+	},
+	ignitiummight: {
+		name: "Ignitium Might",
+		desc: "This Pokemon ignores other Pokémon's Attack, Special Attack, and accuracy stat stages when taking damage, and ignores other Pokemon's Defense, Special Defense, and evasiveness stat stages when dealing damage.",
+		shortDesc: "This Pokemon ignores other Pokémon's stat stages when taking or doing damage.",
+	},
+	tidaltear: {
+		name: "Tidal Tear",
+		shortDesc: "Uses Attack Stat for Move Calculation. Changes Move Category Based on what Does more Damage. If Special. the Move Loses its Contact Attributes",
+	},
+	cursedflames: {
+		name: "Cursed Flames",
+		shortDesc: "Under Fog. This Pokémon gains Fire-type Stab.",
+	},
+	gravitationalpull: {
+		name: "Gravitational Pull",
+		shortDesc: "On switch-in, this Pokemon summons Gravity.",
 	},
 };

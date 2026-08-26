@@ -6564,54 +6564,106 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	excalibird: {
 		tier: "Illegal",
-		natDexTier: "LC",
+		natDexTier: "Illegal",
 	},
 	excalihawk: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "Illegal",
 	},
 	faeowulf: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "Illegal",
 	},
 	skewrpion: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "Illegal",
 	},
 	emberolith: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Illegal",
 	},
 	galviathan: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "Illegal",
 	},
 	frostirichu: {
 		tier: "Illegal",
-		natDexTier: "NU",
+		natDexTier: "Illegal",
 	},
 	megalanice: {
 		tier: "Illegal",
-		natDexTier: "BU",
+		natDexTier: "Illegal",
 	},
 	lapragon: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Illegal",
 	},
 	residreigon: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "Illegal",
 	},
 	melmortar: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Illegal",
 	},
 	kiluegon: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Illegal",
 	},
 	weavolt: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "Illegal",
+	},
+	tapumana: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	gourdfather: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	thrashanchor: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	thraggoyle: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	plasmonarch: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	endolith: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	volcanerite: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	igknight: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	reanimite: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	grimferno: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	troideath: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	egyptiacrush: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	leviabyss: {
+		tier: "Illegal",
+		natDexTier: "OU",
 	},
 };

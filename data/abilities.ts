@@ -2517,6 +2517,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		onTerrainChange(pokemon) {
 			let types;
 			switch (this.field.terrain) {
+				case 'arcaneterrain':
+					types = ['Dragon'];
+					break;
 				case 'electricterrain':
 					types = ['Electric'];
 					break;
@@ -6434,5 +6437,130 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Sahara Stream",
 		rating: 4.5,
 		num: -28,
+	},
+	arcanesurge: {
+		onStart(source) {
+			this.field.setTerrain('arcaneterrain');
+		},
+		flags: {},
+		name: "Arcane Surge",
+		rating: 4,
+		num: -29,
+	},
+	bloodcurdle: {
+		onAfterMoveSecondarySelf(pokemon, target, move) {
+			if (!target || target.fainted || target.hp <= 0) {
+				this.heal(target.baseMaxhp / 3, pokemon, pokemon)
+			}
+		},
+		flags: {},
+		name: "Blood Curdle",
+		rating: 4,
+		num: -30,
+	},
+	flamebearer: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Fire' && pokemon.hp === pokemon.maxhp) return priority + 1;
+		},
+		flags: {},
+		name: "Flamebearer",
+		rating: 1.5,
+		num: -31,
+	},
+	alloyed: {
+		onStart(pokemon){
+			if (pokemon.hasType('Steel')) return false;
+			if (!pokemon.addType('Steel')) return false;
+			this.add('-start', pokemon, 'typeadd', 'Steel', '[from] ability: Alloyed');
+		},
+		flags: {},
+		name: "Alloyed",
+		rating: 1.5,
+		num: -32,
+	},
+	thundercall: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Thundercall boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Electric') {
+				this.debug('Thundercall boost');
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {},
+		name: "Thundercall",
+		rating: 3.5,
+		num: -33,
+	},
+	ignitiummight: {
+		onAnyModifyBoost(boosts, pokemon) {
+			const unawareUser = this.effectState.target;
+			if (unawareUser === pokemon) return;
+			if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+			if (pokemon === this.activePokemon && unawareUser === this.activeTarget) {
+				boosts['atk'] = 0;
+				boosts['def'] = 0;
+				boosts['spa'] = 0;
+				boosts['accuracy'] = 0;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Ignitium Might",
+		rating: 4,
+		num: -34,
+	},
+	tidaltear: {
+		onModifyMovePriority: 10,
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+
+			if (target.getStat('spd', false, true) < target.getStat('def', false, true)) {
+				move.category = 'Special';
+				move.flags = {...move.flags};
+				delete move.flags.contact;
+			} else {
+				move.category = 'Physical';
+			}
+
+			move.overrideOffensiveStat = 'atk';
+		},
+		flags: {},
+		name: "Tidal Tear",
+		rating: 4,
+		num: -35,
+	},
+	cursedflames: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.field.isWeather('fog')) {
+				if (move.type === 'fire') {
+					this.debug('Cursed Flames boost');
+					return this.chainModify(1.5);
+				}
+			}
+		},
+		flags: {},
+		name: "Cursed Flames",
+		rating: 2,
+		num: -36,
+	},
+	gravitationalpull: {
+		onStart(source) {
+			this.field.addPseudoWeather('Gravity');
+		},
+		flags: {},
+		name: "Gravitational Pull",
+		rating: 4,
+		num: -37,
 	},
 };

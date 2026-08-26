@@ -24,6 +24,7 @@ export const ABILITY_MOVE_TYPE_BONUSES: {[abilityID: string]: {[typeID: string]:
 	refrigerate: {Normal: 1.5 * 1.2},
 	aerilate: {Normal: 1.5 * 1.2},
 	normalize: {Normal: 1.2},
+	dragonize: {Normal: 1.2},
 
 	// weather
 	drizzle: {Water: 1.4, Fire: 0.6},

@@ -874,4 +874,45 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return bp;
 		},
 	},
+	fog: {
+		name: 'Fog',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem('petrifiedrock')) {
+				return 8;
+			}
+			return 5;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.hasItem('utilityumbrella')) return;
+			if (move.type === 'Dark') {
+				this.debug('Fog Dark boost');
+				return this.chainModify(1.2);
+			}
+			if (move.type === 'Fairy') {
+				this.debug('Fog Fairy suppress');
+				return this.chainModify(0.8);
+			}
+		},
+		onFieldStart(battle, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Fog', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Fog');
+			}
+		},
+		onImmunity(type, pokemon) {
+			if (pokemon.hasItem('utilityumbrella')) return;
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Fog', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 };

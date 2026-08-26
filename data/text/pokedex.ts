@@ -4241,4 +4241,43 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	weavolt: {
 		name: "Weavolt",
 	},
+	tapumana: {
+		name: "Tapu Mana",
+	},
+	gourdfather: {
+		name: "Gourdfather",
+	},
+	thrashanchor: {
+		name: "Thrashanchor",
+	},
+	thraggoyle: {
+		name: "Thraggoyle",
+	},
+	plasmonarch: {
+		name: "Plasmonarch",
+	},
+	endolith: {
+		name: "Endolith",
+	},
+	volcanerite: {
+		name: "Volcanerite",
+	},
+	igknight: {
+		name: "Igknight",
+	}, 
+	reanimite: {
+		name: "Reanimite",
+	},
+	grimferno: {
+		name: "Grimferno",
+	},
+	troideath: {
+		name: "Troideath",
+	},
+	egyptiacrush: {
+		name: "Egyptiacrush",
+	},
+	leviabyss: {
+		name: "Leviabyss",
+	},
 };

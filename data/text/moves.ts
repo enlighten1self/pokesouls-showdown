@@ -30,7 +30,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Acid",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the foe(s) Sp. Def by 1.",
-		gen3: {
+		gen3: { 
 			desc: "Has a 10% chance to lower the target's Defense by 1 stage.",
 			shortDesc: "10% chance to lower the foe(s) Defense by 1.",
 		},
@@ -7692,5 +7692,34 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dreamcatcher",
 		desc: "Fails if the target did not select a physical attack, special attack, or Me First for use this turn, or if the target moves before the user.",
 		shortDesc: "Usually goes first. Fails if target is not attacking.",
+	},
+	arcaneterrain: {
+		name: "Arcane Terrain",
+		shortDesc: "5 turns. Grounded: +Dragon power, Makes Fighting Neutral on Normal-type, Removes Secondary Effects.",
+	},
+	rupturingdescent: {
+		name: "Rupturing Descent",
+		desc: "Has a 15% chance to make the target flinch.",
+		shortDesc: "15% chance to make the target flinch.",
+	},
+	paleofang: {
+		name: "Paleofang",
+		desc: "Has a 30% chance to confuse the target. If the weather is Sandstorm, this move does not check accuracy. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 80%.",
+		shortDesc: "30% chance to confuse target. Can't miss in Sandstorm.",
+	},
+	decrepitscythe: {
+		name: "Decrepit Scythe",
+		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
+		shortDesc: "Damages target based on Defense, not Sp. Def.",
+	},
+	pyroclasticflow: {
+		name: "Pyroclastic Flow",
+		desc: "The user restores 1/2 of its maximum HP, rounded half up. If Flash Fire is activated, restores 3/4 of its maximum HP",
+		shortDesc: "Heals the user by 50% of its max HP. If Flash Fire is active restore 75%",
+	},
+	pumpkinslicer: {
+		name: "Pumpkin Slicer",
+		desc: "Has a 50% chance to make the target be leeched.",
+		shortDesc: "Has a 50% chance to make the target be leeched.",
 	},
 };
