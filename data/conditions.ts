@@ -878,6 +878,10 @@ export const Conditions: {[k: string]: ConditionData} = {
 		name: 'Fog',
 		effectType: 'Weather',
 		duration: 5,
+		onWeather(target) {
+			if (!target.hasType('Ghost') && this.field.isWeather('fog')) return;
+			this.heal(target.baseMaxhp / 16, target);
+		},
 		durationCallback(source, effect) {
 			if (source?.hasItem('petrifiedrock')) {
 				return 8;
