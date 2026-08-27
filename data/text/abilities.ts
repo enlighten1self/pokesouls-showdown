@@ -2489,4 +2489,27 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Gravitational Pull",
 		shortDesc: "On switch-in, this Pokemon summons Gravity.",
 	},
+	mysticdrive: {
+		name: "Mystic Drive",
+		desc: "If Fog is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Fog, a held Booster Energy will not activate and the effect ends when Fog is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
+		shortDesc: "Fog active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+
+		activate: "  The Fog activated [POKEMON]'s Protomorphosis!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate Protomorphosis!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Protomorphosis wore off!",
+	},
+	fogbringer: {
+		name: "Fog Bringer",
+		shortDesc: "On switch-in, this Pokemon summons Fog.",
+	},
+	fogrush: {
+		name: "Fog Rush",
+		shortDesc: "If Fog is active, this Pokemon's Speed is doubled.",
+	},
+	etherealcharge: {
+		name: "Ethereal Charge",
+		desc: "If Fog is active, this Pokemon's Special Attack is multiplied by 1.5 and it loses 1/8 of its maximum HP, rounded down, at the end of each turn. These effects are prevented if the Pokemon is holding a Utility Umbrella.",
+		shortDesc: "If Fog is active, this Pokemon's Sp. Atk is 1.5x; loses 1/8 max HP per turn.",
+	},
 };

@@ -6563,4 +6563,111 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		rating: 4,
 		num: -37,
 	},
+	mysticdrive: {
+		onStart(pokemon) {
+			this.singleEvent('TerrainChange', this.effect, this.effectState, pokemon);
+		},
+		onTerrainChange(pokemon) {
+			if (this.field.isTerrain('arcaneterrain')) {
+				pokemon.addVolatile('mysticdrive');
+			} else if (!pokemon.volatiles['mysticdrive']?.fromBooster) {
+				pokemon.removeVolatile('mysticdrive');
+			}
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['mysticdrive'];
+			this.add('-end', pokemon, 'Neuro Drive', '[silent]');
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon, source, effect) {
+				if (effect?.name === 'Booster Energy') {
+					this.effectState.fromBooster = true;
+					this.add('-activate', pokemon, 'ability: Mystic Drive', '[fromitem]');
+				} else {
+					this.add('-activate', pokemon, 'ability: Mystic Drive');
+				}
+				this.effectState.bestStat = pokemon.getBestStat(false, true);
+				this.add('-start', pokemon, 'mysticdrive' + this.effectState.bestStat);
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
+				this.debug('Mystic Drive atk boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+				if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
+				this.debug('Mystic Drive def boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
+				this.debug('Mystic Drive spa boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+				if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
+				this.debug('Mystic Drive spd boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpe(spe, pokemon) {
+				if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
+				this.debug('Mystic Drive spe boost');
+				return this.chainModify(1.5);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Mystic Drive');
+			},
+		},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1 },
+		name: "Mystic Drive",
+		rating: 3,
+		num: -38,
+	},
+	fogbringer: {
+		onStart(source) {
+			for (const action of this.queue) {
+				if (action.choice === 'runPrimal' && action.pokemon === source && source.species.id === 'groudon') return;
+				if (action.choice !== 'runSwitch' && action.choice !== 'runPrimal') break;
+			}
+			this.field.setWeather('fog');
+		},
+		flags: {},
+		name: "Fog Bringer",
+		rating: 4,
+		num: -39,
+	},
+	fogrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather('fog')) {
+				return this.chainModify(2);
+			}
+		},
+		flags: {},
+		name: "Fog Rush",
+		rating: 3,
+		num: -40,
+	},
+	etherealcharge: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+			if (['fog'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
+			}
+		},
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'fog') {
+				this.damage(target.baseMaxhp / 8, target, target);
+			}
+		},
+		flags: {},
+		name: "Ethereal Charge",
+		rating: 2,
+		num: -41,
+	},
 };
