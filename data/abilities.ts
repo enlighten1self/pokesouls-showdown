@@ -5925,7 +5925,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		},
 		onWeatherChange(pokemon) {
 			// Protosynthesis is not affected by Utility Umbrella
-			if (this.field.isWeather('sandstorm')) {
+			if (this.field.isWeather('fog')) {
 				pokemon.addVolatile('protomorphosis');
 			} else if (!pokemon.volatiles['protomorphosis']?.fromBooster) {
 				pokemon.removeVolatile('protomorphosis');

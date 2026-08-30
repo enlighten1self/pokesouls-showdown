@@ -1471,9 +1471,32 @@ export const Rulesets: {[k: string]: FormatData} = {
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
 				const speciesTypes: string[] = [];
 				const moveTypes: string[] = [];
-				if (this.format.name.includes('STABonusMons') || (this.format.name.includes('STAAABonusMons'))) {
+				const isMorphFormat = this.format.name.includes('Morph');
+				if ((this.format.name.includes('STABonusMons') || this.format.name.includes('STAAABonusMons')) && !isMorphFormat) {
 					if (set?.teraType) {
 						speciesTypes.push(set.teraType);
+					}
+				} else if (isMorphFormat && set?.name) {
+					const baseSpecies = this.dex.species.get(set.species);
+					const donor = this.dex.species.get(set.name);
+					if (donor && donor.name !== baseSpecies.name) {
+						const primary = baseSpecies.types[0];
+						let secondary: string | undefined;
+						if (donor.types[1]) {
+							secondary = donor.types[1];
+						}
+						if (!secondary || secondary === primary) {
+							if (donor.types[0] !== primary) {
+								secondary = donor.types[0];
+							}
+						}
+						if ((!secondary || secondary === primary) && baseSpecies.types[1] && baseSpecies.types[1] !== primary) {
+							secondary = baseSpecies.types[1];
+						}
+						speciesTypes.push(primary);
+						if (secondary && secondary !== primary) {
+							speciesTypes.push(secondary);
+						}
 					}
 				}
 				// BDSP can't import Pokemon from Home, so it shouldn't grant moves from archaic species types
