@@ -6408,7 +6408,7 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 	},
 	mossinfection: {
 		onDamagingHit(damage, target, source, move) {
-			target.addVolatile('leechseed');
+			source.addVolatile('leechseed');
 		},
 		flags: {},
 		name: "Moss Infection",

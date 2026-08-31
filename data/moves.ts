@@ -23772,7 +23772,9 @@ export const Moves: { [moveid: string]: MoveData } = {
 		type: "Grass",
 		secondary: {
 			chance: 50,
-			volatileStatus: 'leechseed',
+			onHit(target, source, move) {
+				target.addVolatile('leechseed');
+			},
 		},
 	},
 };
