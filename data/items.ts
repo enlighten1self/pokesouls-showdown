@@ -627,7 +627,10 @@ export const Items: {[itemid: string]: ItemData} = {
 			if (pokemon.hasAbility('quarkdrive') && !this.field.isTerrain('electricterrain') && pokemon.useItem()) {
 				pokemon.addVolatile('quarkdrive');
 			}
-			if (pokemon.hasAbility('protomorphosis') && !this.field.isTerrain('sandstorm') && pokemon.useItem()) {
+			if (pokemon.hasAbility('mysticdrive') && !this.field.isTerrain('arcaneterrain') && pokemon.useItem()) {
+				pokemon.addVolatile('mysticdrive');
+			}
+			if (pokemon.hasAbility('protomorphosis') && !this.field.isTerrain('fog') && pokemon.useItem()) {
 				pokemon.addVolatile('protomorphosis');
 			}
 			if (pokemon.hasAbility('neurodrive') && !this.field.isTerrain('psychicterrain') && pokemon.useItem()) {
