@@ -203,14 +203,6 @@ export const Formats: FormatList = [
 	section: "Other Metagames",
 	},
 	{
-		name: "[Gen 5] Classic Mons",
-		desc: `Classic Gen 5 mechanics using National Dex species, with permanent weather/terrain, no Z-Moves, and no post-Gen 5 items/moves.`,
-		mod: 'classicmons',
-		ruleset: [
-			"Standard NatDex", "Species Clause", "Sleep Clause Mod", "OHKO Clause", "Evasion Clause", "HP Percentage Mod", "Cancel Mod",
-		],
-	},
-	{
 		name: "[Gen 9] National Dex AAA",
 		desc: `Pok&eacute;mon have access to almost any ability.`,
 		mod: 'gen9',
@@ -737,38 +729,29 @@ export const Formats: FormatList = [
 		mod: 'pokebilities',
 		ruleset: ['Standard NatDex', 'Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'AAA Restricted Abilities', 'Evasion Items Clause', 'Sleep Moves Clause', 'Terastal Clause', 'Bonus Type Mod', 'STABmons Move Legality',],
 		banlist: [
-			//Standard
-			"ND Uber", "ND AG", 
-			//Complex
-			'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll', 'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 
-			'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive', 'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 
-			'Snow Warning + Slush Rush', 'Neuro Drive + Psychic Surge', 'Arcane Surge + Mystic Drive', 'Fog Bringer + Protomorphosis', 'Fog Bringer + Fog Rush', 'Fog Bringer + Ethereal Charge',
-			//Abilities
-			"Arena Trap", "Moody", "Power Construct", "Shadow Tag", 
-			//Pokemon
-			'Lokix', 'Atlascross', 'Charizard-Mega-Y', 'Swampert-Mega', 'Shedinja', 'Alakazam', 'Houndoom-Mega', 'Ursaluna', 'Excadrill', 'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 
-			'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta', 'Aerodactyl-Mega', 'Ceruledge', 'Manaphy', 'Ultigigas', 'Scolipede-Mega', 'Kommo-o', 'Leviabyss', 'Garchomp-Mega',
-			//Moves
-			"Assist", 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Shed Tail', 'Stored Power', 'Expanding Force', 'Rising Voltage', 'Power Trip', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 
-			'Tricky Reception', 'Rage Fist', 
-			//Items
-			'King\'s Rock', 'Quick Claw', 'Razor Fang', 
+			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "Assist", 'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 
+			'Drought + Chlorophyll', 'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive', 'Drought + Protosynthesis', 
+			'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Baton Pass', 'Last Respects', 
+			'Revival Blessing', 'Shed Tail', 'Stored Power', 'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage', 'Power Trip', 'Arcane Surge + Mystic Drive', 'Fog Bringer + Protomorphosis', 
+			'Fog Bringer + Fog Rush', 'Fog Bringer + Ethereal Charge',
+
+			'Lokix', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 'Tricky Reception', 'Atlascross', 'Rage Fist', 'Charizard-Mega-Y', 'Swampert-Mega', 'Shedinja', 'Alakazam', 'Houndoom-Mega', 'Ursaluna', 'Excadrill-Mega',
+			'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta', 'Aerodactyl-Mega', 'Ceruledge', 'Manaphy', 'Ultigigas', 'Scolipede-Mega',
+			'Kommo-o'
 		],
 		restricted: [
-			//Abilities
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse', 'Parental Bond', 
 			'Poison Heal', 'Pure Power', 'Quick Draw', 'Sand Veil', 'Simple', 'Snow Cloak', 'Speed Boost', 'Stakeout', 'Stench', 'Tinted Lens', 'Toxic Debris', 'Triage', 'Unburden', 'Water Bubble', 
 			'Wonder Guard', 'Beast Boost', 'Eelevate', 'Mega Sol', 'From Ashes', 'Masquerade', 'Scorn', 'Pure Flux', 'Fire Mane', 'Apex Predator', 'Stampede', 'Spicy Spray', 'Antarctic Power', 'Corrosion',
 			'Gravitational Pull', 'Tidal Tear',
-			//Moves (Damaging)
-			'Astral Barrage', 'Chatter', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Extreme Speed', 'Final Gambit', 'Gigaton Hammer', 'Thousand Arrows', 'Triple Arrows', 'V-create', 'Spectral Tail', 
-			'Photon Haymaker', 'Torch Song', 'Ceaseless Edge', 'Stainless Slash', 'Mountain Gale', 'Aqua Step', 'Soul Anchor', 'Population Bomb', 'Primal Rage', 'Storm Throw', 'Thousand Waves', 'Diamond Storm', 
-			'Pumpkin Mash', 'Spectral Thief', 'Spirit Shackle', 'Gear Grind', 'Blue Flare', 'Eruption', 'Magma Storm', 'Mind Blown', 'Sacred Fire', 'Sulphuric Downpour', 'Hydro Steam', 'Surging Strikes', 
-			'Water Shuriken', 'Water Spout', 'Chloroblast', 'Flower Trick', 'Bolt Strike', 'Electro Shot', 'Thunderclap', 'Esper Wing', 'Lumina Crash', 'Mystical Power', 'Psycho Boost', 'Davy Smash', 'Glacial Lance', 
-			'Glaive Rush', 'Fleur Cannon', 'Light of Ruin', 'Blood Moon', 'Boomburst', 'Jet Punch', 'Dreamcatcher', 'Volcan Thrash',
-			//Moves (Status)
-			'Belly Drum', 'Clangorous Soul', 'Electrify', 'Fillet Away', 'Geomancy', 'No Retreat', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Trick-or-Treat', 'Victory Dance', 'Dragon Dance', 'Quiver Dance', 
-			'Altitude', 'Coil', 'Tail Glow', 'Tidy Up', 'Celebrate', 'Happy Hour', 'Conversion', 'Cotton Guard', 'Transform', 'Glare', 'Magic Guard', 'Serene Grace', 'Hold Hands', 'Purify', 'Sketch', 'Forest\'s Curse'
+
+			'Astral Barrage', 'Belly Drum', 'Chatter', 'Clangorous Soul', 'Dire Claw', 'Double Iron Bash', 'Dragon Energy', 'Electrify', 'Extreme Speed', 'Fillet Away', 'Final Gambit', 'Geomancy', 
+			'Gigaton Hammer', 'No Retreat', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Thousand Arrows', 'Trick-or-Treat', 'Triple Arrows', 'V-create', 'Victory Dance', 'Spectral Tail', 
+			'Photon Haymaker', 'Torch Song', 'Ceaseless Edge', 'Stainless Slash', 'Mountain Gale', 'Aqua Step', 'Soul Anchor', 'Dragon Dance', 'Quiver Dance', 'Population Bomb', 'Primal Rage', 
+			'Storm Throw', 'Altitude', 'Coil', 'Thousand Waves', 'Diamond Storm', 'Tail Glow', 'Pumpkin Mash', 'Spectral Thief', 'Spirit Shackle', 'Gear Grind', 'Blue Flare', 'Eruption', 'Magma Storm', 
+			'Mind Blown', 'Sacred Fire', 'Sulphuric Downpour', 'Hydro Steam', 'Surging Strikes', 'Water Shuriken', 'Water Spout', 'Chloroblast', 'Flower Trick', 'Bolt Strike', 'Electro Shot', 'Thunderclap', 
+			'Esper Wing', 'Lumina Crash', 'Mystical Power', 'Psycho Boost', 'Davy Smash', 'Glacial Lance', 'Glaive Rush', 'Tidy Up', 'Fleur Cannon', 'Light of Ruin', 'Celebrate', 
+			'Happy Hour', 'Conversion', 'Cotton Guard', 'Blood Moon', 'Boomburst', 'Jet Punch', 'Transform', 'Glare', 'Magic Guard', 'Serene Grace', 'Dreamcatcher', 'Volcan Thrash'
 		],
 		unbanlist: ['Dracovish', 'Espathra', 'Urshifu-Base', 'Annihilape', 'Deoxys-Speed', 'Magearna', 'Ogerpon-Hearthflame', 'Walking Wake', 'Greninja-Mega', 'Delphox-Mega', 'Palafin'],
 		onValidateSet(set) {
@@ -798,7 +781,8 @@ export const Formats: FormatList = [
 				'Regenerator + Wimp Out', 'Regenerator + Emergency Exit', 'Drizzle + Swift Swim', 'Primordial Sea + Swift Swim', 'Drought + Chlorophyll',
 				'Desolate Land + Chlorophyll', 'Electric Surge + Surge Surfer', 'Hadron Engine + Surge Surfer', 'Hadron Engine + Quark Drive', 'Electric Surge + Quark Drive',
 				'Drought + Protosynthesis', 'Sand Stream + Sand Rush', 'Sand Stream + Sand Veil', 'Snow Warning + Snow Cloak', 'Snow Warning + Slush Rush',
-				'Neuro Drive + Psychic Surge', 'Arcane Surge + Mystic Drive', 'Fog Bringer + Protomorphosis', 'Fog Bringer + Fog Rush', 'Fog Bringer + Ethereal Charge'
+				'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Arcane Surge + Mystic Drive', 'Fog Bringer + Protomorphosis', 'Fog Bringer + Fog Rush',
+				'Fog Bringer + Ethereal Charge'
 			];
 			for (const banEntry of comboBans) {
 				if (!banEntry.includes('+') && !banEntry.includes('>')) continue;
@@ -1291,17 +1275,7 @@ export const Formats: FormatList = [
 			'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 'Blastoise-Mega',
 		],
 	},
-	{
-		name: "[Gen 9] National Dex Classic Mons",
-		mod: "classicmons",
-		ruleset: [
-			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause",
-		],
-		banlist: [
-			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
-			"Shed Tail", 
-		],
-	},
+
 	
 	//{
 	//	name: "[Gen 9] National Dex Custom Game",
