@@ -4,13 +4,19 @@ export const Scripts: ModdedBattleScriptsData = {
 	init() {
 		const specialTypes = ['Fire', 'Water', 'Grass', 'Ice', 'Electric', 'Dark', 'Psychic', 'Dragon', 'Fairy'];
 		let newCategory = '';
+		let newPP = 0;
 		for (const i in this.data.Moves) {
-			if (!this.data.Moves[i]) console.log(i);
-			if (this.data.Moves[i].category === 'Status') continue;
-			newCategory = specialTypes.includes(this.data.Moves[i].type) ? 'Special' : 'Physical';
-			if (newCategory !== this.data.Moves[i].category) {
+			let Moves = this.data.Moves[i]
+			if (!Moves) console.log(i);
+			if (Moves.category === 'Status') continue;
+			newCategory = specialTypes.includes(Moves.type) ? 'Special' : 'Physical';
+			newPP = (Moves.noPPBoosts || Moves.isZ) ? Moves.pp : Moves.pp * 8 / 5;
+			if (newCategory !== Moves.category) {
 				this.modData('Moves', i).category = newCategory;
 			}
+			if (newPP !== Moves.ppOverride) this.modData('Moves', i).ppOverride = newPP;
+			if (Moves.accuracy) this.modData('Moves', i).accuracy = Moves.accuracy;
+			if (Moves.basePower) this.modData('Moves', i).basePower = Moves.basePower;			
 		}
 	},
 	pokemon: {
