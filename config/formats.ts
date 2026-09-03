@@ -735,9 +735,9 @@ export const Formats: FormatList = [
 			'Revival Blessing', 'Shed Tail', 'Stored Power', 'Neuro Drive + Psychic Surge', 'Neuro Drive + Neuro Engine', 'Expanding Force', 'Rising Voltage', 'Power Trip', 'Arcane Surge + Mystic Drive', 'Fog Bringer + Protomorphosis', 
 			'Fog Bringer + Fog Rush', 'Fog Bringer + Ethereal Charge',
 
-			'Lokix', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 'Tricky Reception', 'Atlascross', 'Rage Fist', 'Charizard-Mega-Y', 'Swampert-Mega', 'Shedinja', 'Alakazam', 'Houndoom-Mega', 'Ursaluna', 'Excadrill-Mega',
+			'Lokix', 'Fishious Rend', 'Bolt Beak', 'Wicked Blow', 'Wicked Torque', 'Tricky Reception', 'Atlascross', 'Rage Fist', 'Charizard-Mega-Y', 'Swampert-Mega', 'Shedinja', 'Alakazam', 'Houndoom-Mega', 'Ursaluna', 'Excadrill',
 			'Raichu-Mega-X', 'Clefable-Mega', 'Froslass-Mega', 'Typhtesla-Mega', 'Sharpedo-Mega', 'Mawile-Mega', 'Medicham-Mega', 'Kartana', 'Zamazenta', 'Aerodactyl-Mega', 'Ceruledge', 'Manaphy', 'Ultigigas', 'Scolipede-Mega',
-			'Kommo-o'
+			'Kommo-o', 'Garchomp-Mega', 'Leviabyss', 'Golurk-Mega'
 		],
 		restricted: [
 			'Comatose', 'Contrary', 'Fur Coat', 'Good as Gold', 'Gorilla Tactics', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter', 'Innards Out', 'Magic Bounce', 'Orichalcum Pulse', 'Parental Bond', 
@@ -1275,7 +1275,17 @@ export const Formats: FormatList = [
 			'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 'Blastoise-Mega',
 		],
 	},
-
+	{
+		name: "[Gen 9] National Dex Retro Mons",
+		mod: "retro",
+		ruleset: [
+			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause",
+		],
+		banlist: [
+			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
+			"Shed Tail",
+		],
+	},
 	
 	//{
 	//	name: "[Gen 9] National Dex Custom Game",
