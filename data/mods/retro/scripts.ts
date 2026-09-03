@@ -11,9 +11,10 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (Moves.category === 'Status') continue;
 			newCategory = specialTypes.includes(Moves.type) ? 'Special' : 'Physical';
 			newPP = (Moves.noPPBoosts || Moves.isZ) ? Moves.pp : Moves.pp * 8 / 5;
-			
+
 			if (newCategory !== Moves.category) this.modData('Moves', i).category = newCategory;
 			if (newPP !== Moves.ppOverride) this.modData('Moves', i).ppOverride = newPP;
+			if (Moves.ppOverride !== undefined) this.modData('Moves', i).ppOverride = newPP;
 			if (Moves.accuracy) this.modData('Moves', i).accuracy = Moves.accuracy;
 			if (Moves.basePower) this.modData('Moves', i).basePower = Moves.basePower;			
 		}

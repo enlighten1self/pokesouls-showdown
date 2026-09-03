@@ -1285,6 +1285,13 @@ export const Formats: FormatList = [
 			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
 			"Shed Tail",
 		],
+		onWeatherChange() {
+			this.field.weatherState.duration = 0;
+		},
+
+		onTerrainChange() {
+			this.field.terrainState.duration = 0;
+		},
 	},
 	
 	//{
