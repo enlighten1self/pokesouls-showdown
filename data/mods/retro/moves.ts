@@ -69,6 +69,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1},
 	},
+	anchorshot: {
+		inherit: true,
+		basePower: 80,
+	},
+	appleacid: {
+		inherit: true,
+		basePower: 80,
+	},
 	aromatherapy: {
 		inherit: true,
 		onHit(target, source) {
@@ -93,6 +101,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (target.volatiles['minimize']) return 60;
 			return 30;
 		},
+	},
+	astralbarrage: {
+		inherit: true,
+		basePower: 120,
 	},
 	aquaring: {
 		inherit: true,
@@ -150,6 +162,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	barrier: {
 		inherit: true,
 		pp: 30,
+	},
+	beakblast: {
+		inherit: true,
+		basePower: 100,
 	},
 	beatup: {
 		inherit: true,
@@ -253,11 +269,16 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	bonerush: {
 		inherit: true,
 		accuracy: 80,
+		basePower: 25,
 	},
 	blizzard: {
 		inherit: true,
 		onModifyMove() { },
 		basePower: 120,
+	},
+	bloodmoon: {
+		inherit: true,
+		basePower: 140,
 	},
 	block: {
 		inherit: true,
@@ -266,6 +287,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	bounce: {
 		inherit: true,
 		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, gravity: 1, distance: 1, metronome: 1, nosleeptalk: 1},
+	},
+	boltbeak: {
+		inherit: true,
+		basePower: 85,
 	},
 	brickbreak: {
 		inherit: true,
@@ -354,6 +379,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 75,
 		pp: 10,
+	},
+	clangoroussoul: {
+		inherit: true,
+		accuracy: 100,
 	},
 	conversion: {
 		inherit: true,
@@ -473,6 +502,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	dragonhammer: {
 		inherit: true,
 		flags: {contact: 1, protect: 1, mirror: 1},
+		basePower: 90,
 	},
 	darkvoid: {
 		noSketch: false,
@@ -538,6 +568,23 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		flags: {contact: 1, charge: 1, protect: 1, mirror: 1, nonsky: 1, metronome: 1, nosleeptalk: 1},
 		basePower: 60,
+	},
+	direclaw: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1},
+		secondary: {
+			chance: 50,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('slp', source);
+				}
+			},
+		},
 	},
 	disable: {
 		inherit: true,
@@ -638,6 +685,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	dracometeor: {
 		inherit: true,
 		basePower: 140,
+	},
+	dragonclaw: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1},
 	},
 	dragonpulse: {
 		inherit: true,
@@ -833,6 +884,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (!target || target.fainted || target.hp <= 0) this.boost({atk: 2}, pokemon, pokemon, move);
 		},
 	},
+	firelash: {
+		inherit: true,
+		basePower: 80,
+	},
 	firespin: {
 		inherit: true,
 		accuracy: 70,
@@ -856,6 +911,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			return 50;
 		},
+	},
+	firstimpression: {
+		inherit: true,
+		basePower: 90,
+	},
+	fishiousrend: {
+		inherit: true,
+		basePower: 85,
 	},
 	flail: {
 		inherit: true,
@@ -970,6 +1033,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		flags: {protect: 1, mirror: 1, bypasssub: 1, metronome: 1},
 		accuracy: 100,
 	},
+	freezedry: {
+		inherit: true,
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+	},
 	freezyfrost: {
 		inherit: true,
 		accuracy: 100,
@@ -1035,6 +1105,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-start', source, 'Future Sight');
 			return null;
 		},
+	},
+	geargrind: {
+		inherit: true,
+		basePower: 50,
 	},
 	gigadrain: {
 		inherit: true,
@@ -1193,6 +1267,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-fieldend', 'move: Gravity');
 			},
 		},
+	},
+	gravapple: {
+		inherit: true,
+		basePower: 80,
 	},
 	growl: {
 		inherit: true,
@@ -1430,6 +1508,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 120,
 	},
+	hyperdrill: {
+		inherit: true,
+		basePower: 100,
+	},
 	hypervoice: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1, metronome: 1},
@@ -1468,6 +1550,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	infernalparade: {
+		inherit: true,
+		basePower: 60,
+	},
 	ingrain: {
 		inherit: true,
 		condition: {
@@ -1487,6 +1573,13 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-activate', pokemon, 'move: Ingrain');
 				return null;
 			},
+		},
+	},
+	ironhead: {
+		inherit: true,
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
 		},
 	},
 	jumpkick: {
@@ -1739,6 +1832,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	makeitrain: {
+		inherit: true,
+		accuracy: 100,
+		self: {
+			boosts: {
+				spa: -1,
+			},
+		},
+	},
 	meanlook: {
 		inherit: true,
 		flags: {protect: 1, reflectable: 1, mirror: 1, metronome: 1},
@@ -1933,6 +2035,15 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	moonblast: {
+		inherit: true,
+		secondary: {
+			chance: 30,
+			boosts: {
+				spa: -1,
+			},
+		},
+	},
 	moonlight: {
 		type: "Normal",
 		inherit: true,
@@ -1957,6 +2068,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.heal(pokemon.baseMaxhp / 2);
 			}
 		},
+	},
+	mountaingale: {
+		inherit: true,
+		basePower: 100,
 	},
 	mudsport: {
 		inherit: true,
@@ -2000,6 +2115,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			if (target.volatiles['minimize']) return 120;
 			return 60;
 		},
+	},
+	nightdaze: {
+		inherit: true,
+		basePower: 85,
 	},
 	nightmare: {
 		inherit: true,
@@ -2226,6 +2345,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 90,
 	},
+	psyshieldbash: {
+		inherit: true,
+		basePower: 70,
+	},
 	psywave: {
 		inherit: true,
 		accuracy: 80,
@@ -2383,6 +2506,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
 	},
+	revelationdance: {
+		inherit: true,
+		basePower: 90,
+	},
 	reversal: {
 		inherit: true,
 		basePowerCallback(pokemon, target) {
@@ -2486,6 +2613,22 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	saltcure: {
+		inherit: true,
+		condition: {
+			noCopy: true,
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Salt Cure');
+			},
+			onResidualOrder: 13,
+			onResidual(pokemon) {
+				this.damage(pokemon.baseMaxhp / (pokemon.hasType(['Water', 'Steel']) ? 4 : 8));
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Salt Cure');
+			},
+		},
+	},
 	sappyseed: {
 		inherit: true,
 		accuracy: 100,
@@ -2515,6 +2658,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			chance: 30,
 			status: 'par',
 		},
+	},
+	shadowclaw: {
+		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
 	},
 	shadowforce: {
 		inherit: true,
@@ -2656,6 +2803,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 20,
 	},
+	snaptrap: {
+		inherit: true,
+		type: "Grass",
+	},
 	snarl: {
 		inherit: true,
 		flags: {protect: 1, mirror: 1, sound: 1},
@@ -2687,6 +2838,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 40,
 		flags: {protect: 1, mirror: 1, sound: 1, metronome: 1},
 	},
+	snipeshot: {
+		inherit: true,
+		basePower: 80,
+	},
 	spikes: {
 		inherit: true,
 		flags: {metronome: 1, mustpressure: 1},
@@ -2708,6 +2863,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 90,
 		pp: 15,
+	},
+	spiritshackle: {
+		inherit: true,
+		basePower: 80,
 	},
 	spite: {
 		inherit: true,
@@ -2936,6 +3095,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 		},
 	},
+	syrupbomb: {
+		inherit: true,
+		accuracy: 85,
+	},
 	tackle: {
 		inherit: true,
 		accuracy: 95,
@@ -3087,6 +3250,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 		},
 	},
+	toxicthread: {
+		inherit: true,
+		boosts: {
+			spe: -1,
+		},
+	},
 	transform: {
 		inherit: true,
 		flags: {bypasssub: 1, metronome: 1, failencore: 1},
@@ -3154,6 +3323,14 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				this.add('-fieldend', 'move: Trick Room');
 			},
 		},
+	},
+	tripledive: {
+		inherit: true,
+		basePower: 30,
+	},
+	tropkick: {
+		inherit: true,
+		basePower: 70,
 	},
 	uproar: {
 		inherit: true,

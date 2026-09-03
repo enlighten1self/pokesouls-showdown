@@ -280,6 +280,17 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		rating: 2.5,
 	},
+	healer: {
+		inherit: true,
+		onResidual(pokemon) {
+			for (const allyActive of pokemon.adjacentAllies()) {
+				if (allyActive.status && this.randomChance(3, 10)) {
+					this.add('-activate', pokemon, 'ability: Healer');
+					allyActive.cureStatus();
+				}
+			}
+		},
+	},
 	heatproof: {
 		inherit: true,
 		onSourceModifyAtk() {},
@@ -922,6 +933,13 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			},
 		},
+	},
+	unseenfist: {
+		inherit: true,
+		onModifyMove(move) {
+			if (move.flags['contact']) delete move.flags['protect'];
+		},
+		onSourceModifyDamage(damage, source, target, move) {},
 	},
 	vitalspirit: {
 		inherit: true,
