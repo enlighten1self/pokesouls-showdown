@@ -11,59 +11,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "Uber",
 	},
-	swampertmega: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
 	manaphy: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	raichualola: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	sandslashalola: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	sandshrewalola: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	sandslash: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	sandshrew: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	drownoir: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	greattusk: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	ragingbolt: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	abyssalvoid: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	quantumsyphon: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	titaniumdelta: {
-		inherit: true,
-		natDexTier: "Uber",
-	},
-	ironvaliant: {
 		inherit: true,
 		natDexTier: "Uber",
 	},

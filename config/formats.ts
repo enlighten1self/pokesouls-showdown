@@ -1283,7 +1283,7 @@ export const Formats: FormatList = [
 		],
 		banlist: [
 			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
-			"Shed Tail", "Sand Rush", "Slush Rush", "Chlorophyll", "Swift Swim", "Expanding Force", "Rising Voltage"
+			"Shed Tail", "Expanding Force", "Rising Voltage"
 		],
 		onWeatherChange() {
 			this.field.weatherState.duration = 0;
