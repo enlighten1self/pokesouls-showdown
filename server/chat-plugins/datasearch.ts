@@ -1344,6 +1344,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			return species.gen <= 4 && species.num >= 1;
 		});
 	}
+	
 
 	if (randomOutput && randomOutput < results.length) {
 		results = Utils.shuffle(results).slice(0, randomOutput);
