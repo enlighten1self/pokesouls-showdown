@@ -6191,7 +6191,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	caimanragomega: {
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	gemix: {
 		tier: "Illegal",
