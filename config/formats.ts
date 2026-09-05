@@ -1277,13 +1277,13 @@ export const Formats: FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex Retro Mons",
-		mod: "gen9retro",
+		mod: "gen8",
 		ruleset: [
-			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause",
+			"Standard NatDex", "Baton Pass Stat Trap Clause", "OHKO Clause", "Evasion Clause", "Species Clause", "Sleep Moves Clause", "Terastal Clause", "!Team Preview",
 		],
 		banlist: [
 			"ND Uber", "ND AG", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Quick Claw", "Razor Fang", "Assist", "Last Respects",
-			"Shed Tail", "Expanding Force", "Rising Voltage"
+			"Shed Tail", "Expanding Force", "Rising Voltage", 'Sand Rush', 'Slush Rush', 'Swift Swim', 'Stored Power'
 		],
 		onWeatherChange() {
 			this.field.weatherState.duration = 0;

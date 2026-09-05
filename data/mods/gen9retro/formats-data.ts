@@ -27,10 +27,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		inherit: true,
 		natDexTier: "OU",
 	},
-	solgaleo: {
-		inherit: true,
-		natDexTier: "OU",
-	},
 	darmanitangalar: {
 		inherit: true,
 		natDexTier: "OU",
@@ -52,10 +48,6 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	roaringmoon: {
-		inherit: true,
-		natDexTier: "OU",
-	},
-	fluttermane: {
 		inherit: true,
 		natDexTier: "OU",
 	},
@@ -86,5 +78,66 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	dragapult: {
 		inherit: true,
 		natDexTier: "OU",
+	},
+	abyssalvoid: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	greattusk: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	ragingbolt: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	ironvaliant: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	espathra: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	titaniumdelta: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	chronovenom: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	aegislash: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	withordemega: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	spiritran: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	charizardmegay: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	//unfortunate Bans
+	sandshrew: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	sandslash: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	sandshrewalola: {
+		inherit: true,
+		natDexTier: "Uber",
+	},
+	sandslashalola: {
+		inherit: true,
+		natDexTier: "Uber",
 	},
 };

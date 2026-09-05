@@ -2046,6 +2046,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	moonlight: {
 		type: "Normal",
+		pp: 10,
 		inherit: true,
 		onHit(pokemon) {
 			if (this.field.isWeather(['sunnyday', 'desolateland'])) {
@@ -2059,6 +2060,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	morningsun: {
 		inherit: true,
+		pp: 10,
 		onHit(pokemon) {
 			if (this.field.isWeather(['sunnyday', 'desolateland'])) {
 				this.heal(pokemon.maxhp * 2 / 3);
@@ -2672,6 +2674,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		ohko: true,
 	},
 	shoreup: {
+		pp: 10,
 		inherit: true,
 		onHit(pokemon) {
 			let factor = 0.5;
@@ -3084,6 +3087,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 	},
 	synthesis: {
+		pp: 10,
 		inherit: true,
 		onHit(pokemon) {
 			if (this.field.isWeather(['sunnyday', 'desolateland'])) {
@@ -3539,5 +3543,21 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 15,
 		willCrit: true,
 		secondary: null,
+	},
+	roost: {
+		inherit: true,
+		pp: 10,
+	},
+	slackoff: {
+		inherit: true,
+		pp: 10,
+	},
+	milkdrink: {
+		inherit: true,
+		pp: 10,
+	},
+	rest: {
+		inherit: true,
+		pp: 10,
 	},
 };

@@ -1,105 +1,56 @@
-/*
-
-Ratings and how they work:
-
--1: Detrimental
-	  An ability that severely harms the user.
-	ex. Defeatist, Slow Start
-
- 0: Useless
-	  An ability with no overall benefit in a singles battle.
-	ex. Color Change, Plus
-
- 1: Ineffective
-	  An ability that has minimal effect or is only useful in niche situations.
-	ex. Light Metal, Suction Cups
-
- 2: Useful
-	  An ability that can be generally useful.
-	ex. Flame Body, Overcoat
-
- 3: Effective
-	  An ability with a strong effect on the user or foe.
-	ex. Chlorophyll, Sturdy
-
- 4: Very useful
-	  One of the more popular abilities. It requires minimal support to be effective.
-	ex. Adaptability, Magic Bounce
-
- 5: Essential
-	  The sort of ability that defines metagames.
-	ex. Imposter, Shadow Tag
-
-*/
-
 export const Abilities: {[k: string]: ModdedAbilityData} = {
-	noability: {
-		inherit: true,
-		rating: 0.1,
-	},
-	adaptability: {
-		inherit: true,
-		rating: 4,
-	},
 	aerilate: {
 		inherit: true,
-		rating: 4,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+		rating: 4.5,
 	},
 	aftermath: {
 		inherit: true,
-		rating: 2.5,
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact'] && !target.hp) {
+				this.damage(source.baseMaxhp / 4, source, target, null, true);
+			}
+		},
 	},
 	airlock: {
 		inherit: true,
-		rating: 2,
-	},
-	analytic: {
-		inherit: true,
-		rating: 2.5,
+		onSwitchIn() {},
+		onStart() {},
 	},
 	angerpoint: {
 		inherit: true,
+		onAfterSubDamage(damage, target, source, move) {
+			if (!target.hp) return;
+			if (move && move.effectType === 'Move' && target.getMoveHitData(move).crit) {
+				target.setBoost({atk: 6});
+				this.add('-setboost', target, 'atk', 12, '[from] ability: Anger Point');
+			}
+		},
 		rating: 1.5,
 	},
 	anticipation: {
 		inherit: true,
-		rating: 0.5,
-	},
-	arenatrap: {
-		inherit: true,
-		rating: 5,
-	},
-	aromaveil: {
-		inherit: true,
-		rating: 2,
-	},
-	asoneglastrier: {
-		inherit: true,
-		rating: 3.5,
-	},
-	asonespectrier: {
-		inherit: true,
-		rating: 3.5,
-	},
-	aurabreak: {
-		inherit: true,
-		rating: 1,
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					if (move.category !== 'Status' && (
+						this.dex.getImmunity(move.type, pokemon) && this.dex.getEffectiveness(move.type, pokemon) > 0 ||
+						move.ohko
+					)) {
+						this.add('-ability', pokemon, 'Anticipation');
+						return;
+					}
+				}
+			}
+		},
 	},
 	baddreams: {
 		inherit: true,
-		rating: 1.5,
-	},
-	ballfetch: {
-		inherit: true,
-		rating: 0,
-	},
-	battery: {
-		inherit: true,
-		rating: 0,
-	},
-	battlearmor: {
-		inherit: true,
-		rating: 1,
+		onResidualOrder: 10,
+		onResidualSubOrder: 10,
 	},
 	battlebond: {
 		inherit: true,
@@ -122,97 +73,57 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 		rating: 4,
 	},
-	beastboost: {
-		inherit: true,
-		rating: 3.5,
-	},
-	berserk: {
-		inherit: true,
-		rating: 2,
-	},
-	bigpecks: {
-		inherit: true,
-		rating: 0.5,
-	},
 	blaze: {
-		inherit: true,
+		onBasePowerPriority: 2,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Fire' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Blaze boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Blaze",
 		rating: 2,
-	},
-	bulletproof: {
-		inherit: true,
-		rating: 3,
-	},
-	cheekpouch: {
-		inherit: true,
-		rating: 2,
-	},
-	chillingneigh: {
-		inherit: true,
-		rating: 3,
-	},
-	chlorophyll: {
-		inherit: true,
-		rating: 3,
-	},
-	clearbody: {
-		inherit: true,
-		rating: 2,
+		num: 66,
 	},
 	cloudnine: {
 		inherit: true,
-		rating: 2,
+		onSwitchIn() {},
+		onStart() {},
 	},
 	colorchange: {
 		inherit: true,
-		rating: 0,
-	},
-	comatose: {
-		inherit: true,
-		rating: 4,
-	},
-	competitive: {
-		inherit: true,
-		rating: 2.5,
+		onDamagingHit(damage, target, source, move) {
+			if (!damage || !target.hp) return;
+			const type = move.type;
+			if (target.isActive && move.category !== 'Status' && type !== '???' && !target.hasType(type)) {
+				if (!target.setType(type)) return false;
+				this.add('-start', target, 'typechange', type, '[from] ability: Color Change');
+			}
+		},
+		onAfterMoveSecondary() {},
 	},
 	compoundeyes: {
+		onSourceModifyAccuracyPriority: 9,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('compoundeyes - enhancing accuracy');
+			return accuracy * 1.3;
+		},
 		inherit: true,
-		rating: 3,
-	},
-	contrary: {
-		inherit: true,
-		rating: 4.5,
-	},
-	corrosion: {
-		inherit: true,
-		rating: 2.5,
-	},
-	cottondown: {
-		inherit: true,
-		rating: 2,
-	},
-	curiousmedicine: {
-		inherit: true,
-		rating: 0,
-	},
-	cursedbody: {
-		inherit: true,
-		rating: 2,
 	},
 	cutecharm: {
 		inherit: true,
-		rating: 0.5,
-	},
-	damp: {
-		inherit: true,
-		rating: 1,
-	},
-	dancer: {
-		inherit: true,
-		rating: 1.5,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact']) {
+				if (this.randomChance(1, 3)) {
+					source.addVolatile('attract', target);
+				}
+			}
+		},
 	},
 	darkaura: {
 		inherit: true,
-		rating: 3,
+		flags: {breakable: 1},
 	},
 	dauntlessshield: {
 		inherit: true,
@@ -221,170 +132,164 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		rating: 3.5,
 	},
-	dazzling: {
-		inherit: true,
-		rating: 2.5,
-	},
-	defeatist: {
-		inherit: true,
-		rating: -1,
-	},
-	defiant: {
-		inherit: true,
-		rating: 2.5,
-	},
-	deltastream: {
-		inherit: true,
-		rating: 4,
-	},
-	desolateland: {
-		inherit: true,
-		rating: 4.5,
-	},
 	disguise: {
 		inherit: true,
-		rating: 3.5,
-	},
-	download: {
-		inherit: true,
-		rating: 3.5,
-	},
-	dragonsmaw: {
-		inherit: true,
-		rating: 3.5,
-	},
-	drizzle: {
-		inherit: true,
-		rating: 4,
-	},
-	drought: {
-		inherit: true,
-		rating: 4,
-	},
-	dryskin: {
-		inherit: true,
-		rating: 3,
-	},
-	earlybird: {
-		inherit: true,
-		rating: 1.5,
+		onDamage(damage, target, source, effect) {
+			if (
+				effect && effect.effectType === 'Move' &&
+				['mimikyu', 'mimikyutotem'].includes(target.species.id) && !target.transformed
+			) {
+				if (["rollout", "iceball"].includes(effect.id)) {
+					source.volatiles[effect.id].contactHitCount--;
+				}
+				this.add("-activate", target, "ability: Disguise");
+				this.effectState.busted = true;
+				return 0;
+			}
+		},
+		onUpdate(pokemon) {
+			if (['mimikyu', 'mimikyutotem'].includes(pokemon.species.id) && this.effectState.busted) {
+				const speciesid = pokemon.species.id === 'mimikyutotem' ? 'Mimikyu-Busted-Totem' : 'Mimikyu-Busted';
+				pokemon.formeChange(speciesid, this.effect, true);
+			}
+		},
 	},
 	effectspore: {
 		inherit: true,
-		rating: 2,
-	},
-	electricsurge: {
-		inherit: true,
-		rating: 4,
-	},
-	emergencyexit: {
-		inherit: true,
-		rating: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact'] && !source.status) {
+				const r = this.random(300);
+				if (r < 10) {
+					source.setStatus('slp', target);
+				} else if (r < 20) {
+					source.setStatus('par', target);
+				} else if (r < 30) {
+					source.setStatus('psn', target);
+				}
+			}
+		},
 	},
 	fairyaura: {
 		inherit: true,
-		rating: 3,
-	},
-	filter: {
-		inherit: true,
-		rating: 3,
+		flags: {breakable: 1},
 	},
 	flamebody: {
 		inherit: true,
-		rating: 2,
-	},
-	flareboost: {
-		inherit: true,
-		rating: 2,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact']) {
+				if (this.randomChance(1, 3)) {
+					source.trySetStatus('brn', target);
+				}
+			}
+		},
 	},
 	flashfire: {
 		inherit: true,
-		rating: 3.5,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (move.id === 'willowisp' && (target.hasType('Fire') || target.status || target.volatiles['substitute'])) {
+					return;
+				}
+				if (target.status === 'frz') {
+					return;
+				}
+				if (!target.addVolatile('flashfire')) {
+					this.add('-immune', target, '[from] ability: Flash Fire');
+				}
+				return null;
+			}
+		},
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(target) {
+				this.add('-start', target, 'ability: Flash Fire');
+			},
+			onModifyDamagePhase1(atk, attacker, defender, move) {
+				if (move.type === 'Fire') {
+					this.debug('Flash Fire boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onEnd(target) {
+				this.add('-end', target, 'ability: Flash Fire', '[silent]');
+			},
+		},
 	},
 	flowergift: {
 		inherit: true,
-		rating: 1,
-	},
-	flowerveil: {
-		inherit: true,
-		rating: 0,
-	},
-	fluffy: {
-		inherit: true,
-		rating: 3.5,
+		onAllyModifyAtk(atk) {
+			if (this.field.isWeather('sunnyday')) {
+				return this.chainModify(1.5);
+			}
+		},
+		onAllyModifySpD(spd) {
+			if (this.field.isWeather('sunnyday')) {
+				return this.chainModify(1.5);
+			}
+		},
+		flags: {breakable: 1},
 	},
 	forecast: {
 		inherit: true,
-		rating: 2,
+		flags: {notrace: 1},
 	},
 	forewarn: {
 		inherit: true,
-		rating: 0.5,
-	},
-	friendguard: {
-		inherit: true,
-		rating: 0,
+		onStart(pokemon) {
+			let warnMoves: Move[] = [];
+			let warnBp = 1;
+			for (const target of pokemon.foes()) {
+				for (const moveSlot of target.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.move);
+					let bp = move.basePower;
+					if (move.ohko) bp = 160;
+					if (move.id === 'counter' || move.id === 'metalburst' || move.id === 'mirrorcoat') bp = 120;
+					if (!bp && move.category !== 'Status') bp = 80;
+					if (bp > warnBp) {
+						warnMoves = [move];
+						warnBp = bp;
+					} else if (bp === warnBp) {
+						warnMoves.push(move);
+					}
+				}
+			}
+			if (!warnMoves.length) return;
+			const warnMove = this.sample(warnMoves);
+			this.add('-activate', pokemon, 'ability: Forewarn', warnMove);
+		},
 	},
 	frisk: {
 		inherit: true,
-		rating: 1.5,
-	},
-	fullmetalbody: {
-		inherit: true,
-		rating: 2,
-	},
-	furcoat: {
-		inherit: true,
-		rating: 4,
+		onStart(pokemon) {
+			for (const target of pokemon.foes()) {
+				if (target.item && !target.itemState.knockedOff) {
+					this.add('-item', target, target.getItem().name, '[from] ability: Frisk', '[of] ' + pokemon, '[identify]');
+				}
+			}
+		},
 	},
 	galewings: {
 		inherit: true,
-		rating: 2.5,
-	},
-	galvanize: {
-		inherit: true,
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move && move.type === 'Flying') return priority + 1;
+		},
 		rating: 4,
-	},
-	gluttony: {
-		inherit: true,
-		rating: 1.5,
-	},
-	gooey: {
-		inherit: true,
-		rating: 2,
-	},
-	gorillatactics: {
-		inherit: true,
-		rating: 4.5,
-	},
-	grasspelt: {
-		inherit: true,
-		rating: 0.5,
-	},
-	grassysurge: {
-		inherit: true,
-		rating: 4,
-	},
-	grimneigh: {
-		inherit: true,
-		rating: 3,
 	},
 	gulpmissile: {
 		inherit: true,
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		rating: 2.5,
 	},
-	guts: {
-		inherit: true,
-		rating: 3,
-	},
-	harvest: {
-		inherit: true,
-		rating: 2.5,
-	},
 	healer: {
 		inherit: true,
-		rating: 0,
+		onResidual(pokemon) {
+			for (const allyActive of pokemon.adjacentAllies()) {
+				if (allyActive.status && this.randomChance(3, 10)) {
+					this.add('-activate', pokemon, 'ability: Healer');
+					allyActive.cureStatus();
+				}
+			}
+		},
 	},
 	heatproof: {
 		inherit: true,
@@ -399,45 +304,25 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		rating: 2,
 	},
-	heavymetal: {
-		inherit: true,
-		rating: 0,
-	},
-	honeygather: {
-		inherit: true,
-		rating: 0,
-	},
-	hugepower: {
-		inherit: true,
-		rating: 5,
-	},
-	hungerswitch: {
-		inherit: true,
-		rating: 1,
-	},
 	hustle: {
 		inherit: true,
-		rating: 3.5,
+		onSourceModifyAccuracyPriority: 7,
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Physical' && typeof accuracy === 'number') {
+				return accuracy * 0.8;
+			}
+		},
 	},
 	hydration: {
-		inherit: true,
+		onWeather(target, source, effect) {
+			if (effect.id === 'raindance' && target.status) {
+				this.add('-activate', target, 'ability: Hydration');
+				target.cureStatus();
+			}
+		},
+		name: "Hydration",
 		rating: 1.5,
-	},
-	hypercutter: {
-		inherit: true,
-		rating: 1.5,
-	},
-	icebody: {
-		inherit: true,
-		rating: 1,
-	},
-	iceface: {
-		inherit: true,
-		rating: 3,
-	},
-	icescales: {
-		inherit: true,
-		rating: 4,
+		num: 93,
 	},
 	illuminate: {
 		inherit: true,
@@ -446,37 +331,43 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		flags: {},
 		rating: 0,
 	},
-	illusion: {
-		inherit: true,
-		rating: 4.5,
-	},
-	immunity: {
-		inherit: true,
-		rating: 2,
-	},
-	imposter: {
-		inherit: true,
-		rating: 5,
-	},
 	infiltrator: {
-		inherit: true,
-		rating: 2.5,
-	},
-	innardsout: {
-		inherit: true,
-		rating: 4,
-	},
-	innerfocus: {
 		inherit: true,
 		rating: 1.5,
 	},
+	innerfocus: {
+		inherit: true,
+		rating: 1,
+		onTryBoost() {},
+	},
 	insomnia: {
 		inherit: true,
-		rating: 2,
+		rating: 2.5,
 	},
 	intimidate: {
 		inherit: true,
-		rating: 3.5,
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!target.volatiles['substitute']) {
+					activated = true;
+					break;
+				}
+			}
+			if (!activated) {
+				this.hint("In Gen 3, Intimidate does not activate if every target has a Substitute.", false, pokemon.side);
+				return;
+			}
+			this.add('-ability', pokemon, 'Intimidate', 'boost');
+			for (const target of pokemon.adjacentFoes()) {
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({atk: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		rating: 4,
 	},
 	intrepidsword: {
 		inherit: true,
@@ -487,31 +378,25 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	ironbarbs: {
 		inherit: true,
-		rating: 2.5,
-	},
-	ironfist: {
-		inherit: true,
-		rating: 3,
-	},
-	justified: {
-		inherit: true,
-		rating: 2.5,
+		onDamagingHit(damage, target, source, move) {
+			if (move.flags['contact']) {
+				this.damage(source.baseMaxhp / 8, source, target, null, true);
+			}
+		},
 	},
 	keeneye: {
 		inherit: true,
-		rating: 0.5,
-	},
-	klutz: {
-		inherit: true,
-		rating: -1,
+		onModifyMove() {},
 	},
 	leafguard: {
 		inherit: true,
-		rating: 0.5,
-	},
-	levitate: {
-		inherit: true,
-		rating: 3.5,
+		onSetStatus(status, target, source, effect) {
+			if (effect && effect.id === 'rest') {
+				return;
+			} else if (this.field.isWeather('sunnyday')) {
+				return false;
+			}
+		},
 	},
 	libero: {
 		inherit: true,
@@ -526,213 +411,183 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onSwitchIn() {},
 		rating: 4.5,
 	},
-	lightmetal: {
-		inherit: true,
-		rating: 1,
-	},
 	lightningrod: {
-		inherit: true,
-		rating: 3,
-	},
-	limber: {
-		inherit: true,
-		rating: 2,
+		onTryHit() {},
+		onFoeRedirectTarget(target, source, source2, move) {
+			if (move.type !== 'Electric') return;
+			if (this.validTarget(this.effectState.target, source, move.target)) {
+				return this.effectState.target;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Lightning Rod",
+		rating: 0,
+		num: 32,
 	},
 	liquidooze: {
 		inherit: true,
-		rating: 1.5,
-	},
-	liquidvoice: {
-		inherit: true,
-		rating: 1.5,
-	},
-	longreach: {
-		inherit: true,
-		rating: 1,
-	},
-	magicbounce: {
-		inherit: true,
-		rating: 4,
+		onSourceTryHeal(damage, target, source, effect) {
+			this.debug("Heal is occurring: " + target + " <- " + source + " :: " + effect.id);
+			const canOoze = ['drain', 'leechseed'];
+			if (canOoze.includes(effect.id) && this.activeMove?.id !== 'dreameater') {
+				this.damage(damage, null, null, null, true);
+				return 0;
+			}
+		},
 	},
 	magicguard: {
 		inherit: true,
-		rating: 4,
-	},
-	magician: {
-		inherit: true,
-		rating: 1.5,
-	},
-	magmaarmor: {
-		inherit: true,
-		rating: 1,
-	},
-	magnetpull: {
-		inherit: true,
-		rating: 4,
-	},
-	marvelscale: {
-		inherit: true,
-		rating: 2.5,
-	},
-	megalauncher: {
-		inherit: true,
-		rating: 3,
-	},
-	merciless: {
-		inherit: true,
-		rating: 1.5,
-	},
-	mimicry: {
-		inherit: true,
-		rating: 0.5,
+		onDamage(damage, target, source, effect) {
+			if (effect.effectType !== 'Move') {
+				return false;
+			}
+		},
+		onSetStatus(status, target, source, effect) {
+			if (effect && effect.id === 'toxicspikes') {
+				return false;
+			}
+		},
 	},
 	minus: {
 		inherit: true,
-		rating: 0,
-	},
-	mirrorarmor: {
-		inherit: true,
-		rating: 2.5,
-	},
-	mistysurge: {
-		inherit: true,
-		rating: 3.5,
-	},
-	moldbreaker: {
-		inherit: true,
-		rating: 3.5,
+		onModifySpA(spa, pokemon) {
+			for (const active of this.getAllActive()) {
+				if (!active.fainted && active.hasAbility('plus')) {
+					return this.chainModify(1.5);
+				}
+			}
+		},
 	},
 	moody: {
 		inherit: true,
-		rating: 5,
-	},
-	motordrive: {
-		inherit: true,
-		rating: 3,
-	},
-	moxie: {
-		inherit: true,
-		rating: 3,
-	},
-	multiscale: {
-		inherit: true,
-		rating: 3.5,
-	},
-	multitype: {
-		inherit: true,
-		rating: 4,
-	},
-	mummy: {
-		inherit: true,
-		rating: 2,
+		onResidual(pokemon) {
+			let stats: BoostID[] = [];
+			const boost: SparseBoostsTable = {};
+			let statPlus: BoostID;
+			for (statPlus in pokemon.boosts) {
+				if (pokemon.boosts[statPlus] < 6) {
+					stats.push(statPlus);
+				}
+			}
+			let randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = 2;
+			stats = [];
+			let statMinus: BoostID;
+			for (statMinus in pokemon.boosts) {
+				if (pokemon.boosts[statMinus] > -6 && statMinus !== randomStat) {
+					stats.push(statMinus);
+				}
+			}
+			randomStat = stats.length ? this.sample(stats) : undefined;
+			if (randomStat) boost[randomStat] = -1;
+			this.boost(boost, pokemon, pokemon);
+		},
 	},
 	naturalcure: {
 		inherit: true,
-		rating: 2.5,
-	},
-	neuroforce: {
-		inherit: true,
-		rating: 2.5,
-	},
-	neutralizinggas: {
-		inherit: true,
-		rating: 4,
-	},
-	noguard: {
-		inherit: true,
-		rating: 4,
+		onCheckShow(pokemon) {},
+		onSwitchOut(pokemon) {
+			if (!pokemon.status || pokemon.status === 'fnt') return;
+			// Because statused/unstatused pokemon are shown after every switch
+			// in gen 3-4, Natural Cure's curing is always known to both players
+			this.add('-curestatus', pokemon, pokemon.status, '[from] ability: Natural Cure');
+			pokemon.clearStatus();
+		},
 	},
 	normalize: {
 		inherit: true,
-		rating: 0,
+		onModifyMovePriority: 1,
+		onModifyMove(move) {
+			if (move.id !== 'struggle') {
+				move.type = 'Normal';
+			}
+		},
+		rating: -1,
 	},
 	oblivious: {
 		inherit: true,
-		rating: 1.5,
+		onUpdate(pokemon) {
+			if (pokemon.volatiles['attract']) {
+				pokemon.removeVolatile('attract');
+				this.add('-end', pokemon, 'move: Attract', '[from] ability: Oblivious');
+			}
+		},
+		onTryHit(pokemon, target, move) {
+			if (move.id === 'captivate') {
+				this.add('-immune', pokemon, '[from] Oblivious');
+				return null;
+			}
+		},
+		rating: 0.5,
 	},
 	overcoat: {
 		inherit: true,
-		rating: 2,
+		onTryHit() {},
+		flags: {},
+		rating: 0.5,
 	},
 	overgrow: {
-		inherit: true,
+		onBasePowerPriority: 2,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Grass' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Overgrow boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Overgrow",
 		rating: 2,
+		num: 65,
 	},
 	owntempo: {
 		inherit: true,
-		rating: 1.5,
+		onTryBoost() {},
 	},
 	parentalbond: {
 		inherit: true,
-		rating: 4.5,
-	},
-	pastelveil: {
-		inherit: true,
-		rating: 2,
-	},
-	perishbody: {
-		inherit: true,
-		rating: 1,
-	},
-	pickpocket: {
-		inherit: true,
-		rating: 1,
+		// Damage modifier implemented in BattleActions#modifyDamage()
+		rating: 5,
 	},
 	pickup: {
-		inherit: true,
-		rating: 0.5,
+		name: "Pickup",
+		rating: 0,
+		num: 53,
 	},
 	pixilate: {
 		inherit: true,
-		rating: 4,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+		rating: 4.5,
 	},
 	plus: {
 		inherit: true,
-		rating: 0,
-	},
-	poisonheal: {
-		inherit: true,
-		rating: 4,
+		onModifySpA(spa, pokemon) {
+			for (const active of this.getAllActive()) {
+				if (!active.fainted && active.hasAbility('minus')) {
+					return this.chainModify(1.5);
+				}
+			}
+		},
 	},
 	poisonpoint: {
 		inherit: true,
-		rating: 1.5,
-	},
-	poisontouch: {
-		inherit: true,
-		rating: 2,
-	},
-	powerconstruct: {
-		inherit: true,
-		rating: 5,
-	},
-	powerofalchemy: {
-		inherit: true,
-		rating: 0,
-	},
-	powerspot: {
-		inherit: true,
-		rating: 1,
-	},
-	prankster: {
-		inherit: true,
-		rating: 4,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact']) {
+				if (this.randomChance(1, 3)) {
+					source.trySetStatus('psn', target);
+				}
+			}
+		},
 	},
 	pressure: {
 		inherit: true,
-		rating: 2.5,
-	},
-	primordialsea: {
-		inherit: true,
-		rating: 4.5,
-	},
-	prismarmor: {
-		inherit: true,
-		rating: 3,
-	},
-	propellertail: {
-		inherit: true,
-		rating: 0,
+		onStart(pokemon) {
+			this.addSplit(pokemon.side.id, ['-ability', pokemon, 'Pressure', '[silent]']);
+		},
+		onDeductPP(target, source) {
+			if (target === source) return;
+			return 1;
+		},
 	},
 	protean: {
 		inherit: true,
@@ -747,169 +602,136 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onSwitchIn() {},
 		rating: 4.5,
 	},
-	psychicsurge: {
-		inherit: true,
-		rating: 4,
-	},
-	punkrock: {
-		inherit: true,
-		rating: 3.5,
-	},
-	purepower: {
-		inherit: true,
-		rating: 5,
-	},
-	queenlymajesty: {
-		inherit: true,
-		rating: 2.5,
-	},
-	quickdraw: {
-		inherit: true,
-		rating: 2.5,
-	},
-	quickfeet: {
-		inherit: true,
-		rating: 2.5,
-	},
 	raindish: {
 		inherit: true,
-		rating: 1.5,
+		onWeather() {},
+		onResidualOrder: 10,
+		onResidualSubOrder: 3,
+		onResidual(pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				this.heal(pokemon.baseMaxhp / 16);
+			}
+		},
 	},
 	rattled: {
-		inherit: true,
+		onDamagingHit(damage, target, source, move) {
+			if (['Dark', 'Bug', 'Ghost'].includes(move.type)) {
+				this.boost({spe: 1});
+			}
+		},
+		name: "Rattled",
 		rating: 1.5,
-	},
-	receiver: {
-		inherit: true,
-		rating: 0,
-	},
-	reckless: {
-		inherit: true,
-		rating: 3,
+		num: 155,
 	},
 	refrigerate: {
 		inherit: true,
-		rating: 4,
-	},
-	regenerator: {
-		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
 		rating: 4.5,
-	},
-	ripen: {
-		inherit: true,
-		rating: 2,
-	},
-	rivalry: {
-		inherit: true,
-		rating: 0,
-	},
-	rkssystem: {
-		inherit: true,
-		rating: 4,
-	},
-	rockhead: {
-		inherit: true,
-		rating: 3,
 	},
 	roughskin: {
 		inherit: true,
-		rating: 2.5,
-	},
-	runaway: {
-		inherit: true,
-		rating: 0,
-	},
-	sandforce: {
-		inherit: true,
-		rating: 2,
-	},
-	sandrush: {
-		inherit: true,
-		rating: 3,
-	},
-	sandspit: {
-		inherit: true,
-		rating: 2,
-	},
-	sandstream: {
-		inherit: true,
-		rating: 4,
-	},
-	sandveil: {
-		inherit: true,
-		rating: 1.5,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact']) {
+				this.damage(source.baseMaxhp / 16, source, target);
+			}
+		},
 	},
 	sapsipper: {
 		inherit: true,
-		rating: 3,
+		onAllyTryHitSide() {},
 	},
-	schooling: {
+	sandveil: {
 		inherit: true,
-		rating: 3,
+		onModifyAccuracyPriority: 8,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather('sandstorm')) {
+				this.debug('Sand Veil - decreasing accuracy');
+				return accuracy * 0.8;
+			}
+		},
 	},
 	scrappy: {
 		inherit: true,
-		rating: 3,
-	},
-	screencleaner: {
-		inherit: true,
-		rating: 2,
+		onTryBoost() {},
 	},
 	serenegrace: {
 		inherit: true,
-		rating: 3.5,
-	},
-	shadowshield: {
-		inherit: true,
-		rating: 3.5,
-	},
-	shadowtag: {
-		inherit: true,
-		rating: 5,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+		},
 	},
 	shedskin: {
 		inherit: true,
-		rating: 3,
+		onResidualOrder: 10,
+		onResidualSubOrder: 3,
 	},
-	sheerforce: {
+	shadowtag: {
 		inherit: true,
-		rating: 3.5,
-	},
-	shellarmor: {
-		inherit: true,
-		rating: 1,
-	},
-	shielddust: {
-		inherit: true,
-		rating: 2,
-	},
-	shieldsdown: {
-		inherit: true,
-		rating: 3,
+		onFoeTrapPokemon(pokemon) {
+			pokemon.trapped = true;
+		},
 	},
 	simple: {
-		inherit: true,
+		onModifyBoost(boosts) {
+			let key: BoostID;
+			for (key in boosts) {
+				boosts[key]! *= 2;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Simple",
 		rating: 4,
-	},
-	skilllink: {
-		inherit: true,
-		rating: 3,
+		num: 86,
 	},
 	slowstart: {
 		inherit: true,
-		rating: -1,
-	},
-	slushrush: {
-		inherit: true,
-		rating: 3,
-	},
-	sniper: {
-		inherit: true,
-		rating: 2,
+		condition: {
+			duration: 5,
+			onResidualOrder: 28,
+			onResidualSubOrder: 2,
+			onStart(target) {
+				this.add('-start', target, 'ability: Slow Start');
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon, target, move) {
+				// This is because the game checks the move's category in data, rather than what it is currently, unlike e.g. Huge Power
+				if (this.dex.moves.get(move.id).category === 'Physical') {
+					return this.chainModify(0.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon, target, move) {
+				// Ordinary Z-moves like Breakneck Blitz will halve the user's Special Attack as well
+				if (this.dex.moves.get(move.id).category === 'Physical') {
+					return this.chainModify(0.5);
+				}
+			},
+			onModifySpe(spe, pokemon) {
+				return this.chainModify(0.5);
+			},
+			onEnd(target) {
+				this.add('-end', target, 'Slow Start');
+			},
+		},
 	},
 	snowcloak: {
 		inherit: true,
-		rating: 1.5,
+		onModifyAccuracyPriority: 8,
+		onModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			if (this.field.isWeather('hail')) {
+				this.debug('Snow Cloak - decreasing accuracy');
+				return accuracy * 0.8;
+			}
+		},
 	},
 	snowwarning: {
 		inherit: true,
@@ -918,161 +740,156 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		rating: 4,
 	},
-	solarpower: {
-		inherit: true,
-		rating: 2,
-	},
-	solidrock: {
-		inherit: true,
-		rating: 3,
-	},
-	soulheart: {
-		inherit: true,
-		rating: 3.5,
-	},
-	soundproof: {
-		inherit: true,
-		rating: 1.5,
-	},
 	speedboost: {
 		inherit: true,
-		rating: 4.5,
-	},
-	stakeout: {
-		inherit: true,
-		rating: 4.5,
-	},
-	stall: {
-		inherit: true,
-		rating: -1,
-	},
-	stalwart: {
-		inherit: true,
-		rating: 0,
-	},
-	stamina: {
-		inherit: true,
-		rating: 3.5,
-	},
-	stancechange: {
-		inherit: true,
-		rating: 4,
+		onResidualOrder: 10,
+		onResidualSubOrder: 3,
 	},
 	static: {
 		inherit: true,
-		rating: 2,
+		onDamagingHit(damage, target, source, move) {
+			if (damage && move.flags['contact']) {
+				if (this.randomChance(1, 3)) {
+					source.trySetStatus('par', target);
+				}
+			}
+		},
 	},
-	steadfast: {
+	stancechange: {
 		inherit: true,
-		rating: 1,
-	},
-	steamengine: {
-		inherit: true,
-		rating: 2,
-	},
-	steelworker: {
-		inherit: true,
-		rating: 3.5,
-	},
-	steelyspirit: {
-		inherit: true,
-		rating: 3.5,
+		onBeforeMovePriority: 11,
+		onBeforeMove(attacker, defender, move) {
+			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
+			if (move.category === 'Status' && move.id !== 'kingsshield') return;
+			const targetForme = (move.id === 'kingsshield' ? 'Aegislash' : 'Aegislash-Blade');
+			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
+		},
+		onModifyMove() {},
 	},
 	stench: {
+		name: "Stench",
+		rating: 0,
+		num: 1,
+	},
+	soundproof: {
 		inherit: true,
-		rating: 0.5,
+		onAllyTryHitSide() {},
+		onTryHit(target, source, move) {
+			if (move.flags['sound']) {
+				this.add('-immune', target, '[from] ability: Soundproof');
+				return null;
+			}
+		},
 	},
 	stickyhold: {
 		inherit: true,
-		rating: 2,
+		onTakeItem(item, pokemon, source) {
+			if ((source && source !== pokemon) || (this.activeMove && this.activeMove.id === 'knockoff')) {
+				this.add('-activate', pokemon, 'ability: Sticky Hold');
+				return false;
+			}
+		},
 	},
 	stormdrain: {
 		inherit: true,
-		rating: 3,
-	},
-	strongjaw: {
-		inherit: true,
-		rating: 3,
+		onTryHit() {},
+		rating: 0,
 	},
 	sturdy: {
 		inherit: true,
-		rating: 3,
-	},
-	suctioncups: {
-		inherit: true,
-		rating: 1,
-	},
-	superluck: {
-		inherit: true,
-		rating: 1.5,
-	},
-	surgesurfer: {
-		inherit: true,
-		rating: 3,
+		onDamage() {},
+		rating: 0,
 	},
 	swarm: {
-		inherit: true,
+		onBasePowerPriority: 2,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Bug' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Swarm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Swarm",
 		rating: 2,
-	},
-	sweetveil: {
-		inherit: true,
-		rating: 2,
-	},
-	swiftswim: {
-		inherit: true,
-		rating: 3,
+		num: 68,
 	},
 	symbiosis: {
 		inherit: true,
-		rating: 0,
+		onAllyAfterUseItem(item, pokemon) {
+			const source = this.effectState.target;
+			const myItem = source.takeItem();
+			if (!myItem) return;
+			if (
+				!this.singleEvent('TakeItem', myItem, source.itemState, pokemon, source, this.effect, myItem) ||
+				!pokemon.setItem(myItem)
+			) {
+				source.item = myItem.id;
+				return;
+			}
+			this.add('-activate', source, 'ability: Symbiosis', myItem, '[of] ' + pokemon);
+		},
 	},
 	synchronize: {
 		inherit: true,
-		rating: 2,
+		onAfterSetStatus(status, target, source, effect) {
+			if (!source || source === target) return;
+			if (effect && effect.id === 'toxicspikes') return;
+			let id: string = status.id;
+			if (id === 'slp' || id === 'frz') return;
+			if (id === 'tox') id = 'psn';
+			source.trySetStatus(id, target);
+		},
 	},
 	tangledfeet: {
 		inherit: true,
-		rating: 1,
-	},
-	tanglinghair: {
-		inherit: true,
-		rating: 2,
+		onModifyAccuracyPriority: 6,
+		onModifyAccuracy(accuracy, target) {
+			if (typeof accuracy !== 'number') return;
+			if (target?.volatiles['confusion']) {
+				this.debug('Tangled Feet - decreasing accuracy');
+				return accuracy * 0.5;
+			}
+		},
 	},
 	technician: {
 		inherit: true,
-		rating: 3.5,
-	},
-	telepathy: {
-		inherit: true,
-		rating: 0,
-	},
-	teravolt: {
-		inherit: true,
-		rating: 3.5,
+		onBasePowerPriority: 19,
 	},
 	thickfat: {
-		inherit: true,
+		onSourceBasePowerPriority: 1,
+		onSourceBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Ice' || move.type === 'Fire') {
+				return this.chainModify(0.5);
+			}
+		},
+		flags: {breakable: 1},
+		name: "Thick Fat",
 		rating: 3.5,
-	},
-	tintedlens: {
-		inherit: true,
-		rating: 4,
+		num: 47,
 	},
 	torrent: {
-		inherit: true,
+		onBasePowerPriority: 2,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Water' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Torrent boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Torrent",
 		rating: 2,
-	},
-	toughclaws: {
-		inherit: true,
-		rating: 3.5,
-	},
-	toxicboost: {
-		inherit: true,
-		rating: 2.5,
+		num: 67,
 	},
 	trace: {
 		inherit: true,
-		rating: 2.5,
+		onUpdate(pokemon) {
+			if (!pokemon.isStarted) return;
+			const target = pokemon.side.randomFoe();
+			if (!target || target.fainted) return;
+			const ability = target.getAbility();
+			if (pokemon.setAbility(ability)) {
+				this.add('-ability', pokemon, ability, '[from] ability: Trace', '[of] ' + target);
+			}
+		},
+		flags: {notrace: 1},
 	},
 	transistor: {
 		inherit: true,
@@ -1090,101 +907,81 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 		rating: 3.5,
 	},
-	triage: {
-		inherit: true,
-		rating: 3.5,
-	},
 	truant: {
 		inherit: true,
-		rating: -1,
-	},
-	turboblaze: {
-		inherit: true,
-		rating: 3.5,
-	},
-	unaware: {
-		inherit: true,
-		rating: 4,
+		onStart() {},
+		onSwitchIn(pokemon) {
+			pokemon.truantTurn = this.turn !== 0;
+		},
+		onBeforeMove(pokemon) {
+			if (pokemon.truantTurn) {
+				this.add('cant', pokemon, 'ability: Truant');
+				return false;
+			}
+		},
+		onResidualOrder: 27,
+		onResidual(pokemon) {
+			pokemon.truantTurn = !pokemon.truantTurn;
+		},
 	},
 	unburden: {
 		inherit: true,
-		rating: 3.5,
-	},
-	unnerve: {
-		inherit: true,
-		rating: 1.5,
+		condition: {
+			onModifySpe(spe, pokemon) {
+				if ((!pokemon.item || pokemon.itemState.knockedOff) && !pokemon.ignoringAbility()) {
+					return this.chainModify(2);
+				}
+			},
+		},
 	},
 	unseenfist: {
 		inherit: true,
-		rating: 2,
-	},
-	victorystar: {
-		inherit: true,
-		rating: 2,
+		onModifyMove(move) {
+			if (move.flags['contact']) delete move.flags['protect'];
+		},
+		onSourceModifyDamage(damage, source, target, move) {},
 	},
 	vitalspirit: {
 		inherit: true,
-		rating: 2,
+		rating: 2.5,
 	},
 	voltabsorb: {
 		inherit: true,
-		rating: 3.5,
-	},
-	wanderingspirit: {
-		inherit: true,
-		rating: 2.5,
-	},
-	waterabsorb: {
-		inherit: true,
-		rating: 3.5,
-	},
-	waterbubble: {
-		inherit: true,
-		rating: 4.5,
-	},
-	watercompaction: {
-		inherit: true,
-		rating: 1.5,
-	},
-	waterveil: {
-		inherit: true,
-		rating: 2,
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Electric' && move.id !== 'thunderwave') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Volt Absorb');
+				}
+				return null;
+			}
+		},
 	},
 	weakarmor: {
 		inherit: true,
-		rating: 1,
-	},
-	whitesmoke: {
-		inherit: true,
-		rating: 2,
-	},
-	wimpout: {
-		inherit: true,
-		rating: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === 'Physical') {
+				this.boost({def: -1, spe: 1}, target, target);
+			}
+		},
+		rating: 0.5,
 	},
 	wonderguard: {
 		inherit: true,
-		flags: {failroleplay: 1, noreceiver: 1, failskillswap: 1, breakable: 1},
-		rating: 5,
-	},
-	wonderskin: {
-		inherit: true,
-		rating: 2,
+		onTryHit(target, source, move) {
+			if (move.id === 'firefang') {
+				this.hint("In Gen 4, Fire Fang is always able to hit through Wonder Guard.");
+				return;
+			}
+			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
+			this.debug('Wonder Guard immunity: ' + move.id);
+			if (target.runEffectiveness(move) <= 0) {
+				this.add('-immune', target, '[from] ability: Wonder Guard');
+				return null;
+			}
+		},
 	},
 	zenmode: {
 		inherit: true,
-		rating: 0,
-	},
-	mountaineer: {
-		inherit: true,
-		rating: 3,
-	},
-	rebound: {
-		inherit: true,
-		rating: 3,
-	},
-	persistent: {
-		inherit: true,
-		rating: 3,
+		flags: {failroleplay: 1, noentrain: 1, notrace: 1},
 	},
 };
