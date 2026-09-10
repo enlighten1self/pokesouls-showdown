@@ -6794,7 +6794,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Absol",
 		forme: "Mega-Z",
 		types: ["Dark", "Ghost"],
-		baseStats: {hp: 65, atk: 154, def: 60, spa: 75, spd: 60, spe: 115},
+		baseStats: {hp: 65, atk: 154, def: 60, spa: 75, spd: 60, spe: 151},
 		abilities: {0: "Sharpness"},
 		heightm: 1.2,
 		weightkg: 49,
