@@ -3862,6 +3862,9 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		num: 24,
 	},
 	runaway: {
+		onTrapPokemon(pokemon) {
+			pokemon.trapped = pokemon.maybeTrapped = false;
+		},
 		flags: {},
 		name: "Run Away",
 		rating: 0,
@@ -6669,5 +6672,14 @@ export const Abilities: { [abilityid: string]: AbilityData } = {
 		name: "Ethereal Charge",
 		rating: 2,
 		num: -41,
+	},
+	auraguard: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['contact']) return this.chainModify(0.5);
+		},
+		flags: { breakable: 1 },
+		name: "Aura Guard",
+		rating: 3.5,
+		num: 218,
 	},
 };

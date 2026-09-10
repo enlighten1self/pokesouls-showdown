@@ -17,6 +17,22 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (Moves.accuracy) this.modData('Moves', i).accuracy = Moves.accuracy;
 			if (Moves.basePower) this.modData('Moves', i).basePower = Moves.basePower;			
 		}
+		for (const i in this.data.Pokedex) {
+			let mon = this.data.Pokedex[i]
+			if (!mon) console.log(i);
+			if (mon.abilities) this.modData('Pokedex', i).abilities = mon.abilities
+			if (mon.types) this.modData('Pokedex', i).types = mon.types
+			if (mon.baseStats) this.modData('Pokedex', i).baseStats = mon.baseStats
+			if (mon.eggGroups) this.modData('Pokedex', i).eggGroups = mon.eggGroups
+			if (mon.evoType) this.modData('Pokedex', i).evoType = mon.evoType
+			if (mon.evoCondition) this.modData('Pokedex', i).evoCondition = mon.evoCondition
+			if (mon.color) this.modData('Pokedex', i).color = mon.color
+			if (mon.requiredItems) this.modData('Pokedex', i).requiredItems = mon.requiredItems
+			if (mon.evos) this.modData('Pokedex', i).evos = mon.evos
+			if (mon.prevo) this.modData('Pokedex', i).prevo = mon.prevo
+			if (mon.evoLevel) this.modData('Pokedex', i).evoLevel = mon.evoLevel
+			if (mon.evoItem) this.modData('Pokedex', i).evoItem = mon.evoItem
+		}
 	},
 	pokemon: {
 		inherit: true,

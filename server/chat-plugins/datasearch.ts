@@ -1331,7 +1331,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		results = results.filter(name => {
 			const species = mod.species.get(name);
 			return (species.num <= 151 || ['Meltan', 'Melmetal'].includes(species.name)) &&
-			(!species.forme || (['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Starter',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(species.forme) &&
+			(!species.forme || (['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Mega-Z', 'Starter',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(species.forme) &&
 				species.name !== 'Pikachu-Alola'));
 		});
 	}

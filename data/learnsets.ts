@@ -12414,6 +12414,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	sirfetchd: {
 		learnset: {
+			aerialace: ["9M"],
 			agility: ["9M"],
 			uturn: ["9M"],
 			irontail: ["9M"],
@@ -40050,6 +40051,8 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	swalot: {
 		learnset: {
+			skittersmack: ["9M"],
+			corrosivegas: ["9M"],
 			acidspray: ["9M", "9L17", "7L17", "6L17", "5L38"],
 			amnesia: ["9M", "9L12", "7L12", "6L12", "5L17", "4L17", "3L17"],
 			attract: ["7M", "6M", "5M", "4M", "3M"],
@@ -84324,6 +84327,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	toxtricitylowkey: {
 		learnset: {
+			paraboliccharge: ["9M"],
 			acid: ["9L1", "8L1"],
 			acidspray: ["9M", "9L1", "8L1"],
 			attract: ["8M"],
@@ -89976,6 +89980,7 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	},
 	baxcalibur: {
 		learnset: {
+			frostbreath: ["9M"],
 			icehammer: ["9M"],
 			psychicfangs: ["9M"],
 			aerialace: ["9M"],

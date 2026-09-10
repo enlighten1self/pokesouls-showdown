@@ -1424,6 +1424,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	absolmega: {
 		name: "Absol-Mega",
 	},
+	absolmegaz: {
+		name: "Absol-Mega-Z",
+	},
 	wynaut: {
 		name: "Wynaut",
 	},
@@ -1736,6 +1739,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	garchompmega: {
 		name: "Garchomp-Mega",
 	},
+	garchompmegaz: {
+		name: "Garchomp-Mega-Z",
+	},
 	munchlax: {
 		name: "Munchlax",
 	},
@@ -1747,6 +1753,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	lucariomega: {
 		name: "Lucario-Mega",
+	},
+	lucariomegaz: {
+		name: "Lucario-Mega-Z",
 	},
 	hippopotas: {
 		name: "Hippopotas",
@@ -2992,6 +3001,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	golisopod: {
 		name: "Golisopod",
+	},
+	golisopodmega: {
+		name: "Golisopod-Mega",
 	},
 	sandygast: {
 		name: "Sandygast",
@@ -4279,5 +4291,8 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	},
 	leviabyss: {
 		name: "Leviabyss",
+	},
+	baxcaliburmega: {
+		name: "Baxcalibur-Mega",
 	},
 };

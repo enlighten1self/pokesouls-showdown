@@ -1562,12 +1562,7 @@ export const Items: {[itemid: string]: ItemData} = {
 				for (const pokemon of this.getAllActive()) {
 					if (pokemon.switchFlag === true) return;
 				}
-				target.switchFlag = true;
-				if (target.useItem()) {
-					source.switchFlag = false;
-				} else {
-					target.switchFlag = false;
-				}
+				target.switchFlag = false;
 			}
 		},
 		num: 547,
@@ -8421,5 +8416,70 @@ export const Items: {[itemid: string]: ItemData} = {
 		},
 		num: 10058,
 		gen: 4,
+	},
+	golisopite: {
+		name: "Golisopite",
+		spritenum: 804,
+		megaStone: "Golisopod-Mega",
+		megaEvolves: "Golisopod",
+		itemUser: ["Golisopod"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10059,
+		gen: 9
+	},
+	baxcalibrite: {
+		name: "Baxcalibrite",
+		spritenum: 804,
+		megaStone: "Baxcalibur-Mega",
+		megaEvolves: "Baxcalibur",
+		itemUser: ["Baxcalibur"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10060,
+		gen: 9
+	},
+	lucarionitez: {
+		name: "Lucarionite Z",
+		spritenum: 594,
+		megaStone: "Lucario-Mega-Z",
+		megaEvolves: "Lucario",
+		itemUser: ["Lucario"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10061,
+		gen: 9
+	},
+	garchompitez: {
+		name: "Garchompite Z",
+		spritenum: 589,
+		megaStone: "Garchomp-Mega-Z",
+		megaEvolves: "Garchomp",
+		itemUser: ["Garchomp"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10062,
+		gen: 9
+	},
+	absolitez: {
+		name: "Absolite-Z",
+		spritenum: 576,
+		megaStone: "Absol-Mega-Z",
+		megaEvolves: "Absol",
+		itemUser: ["Absol"],
+		onTakeItem(item, source) {
+			if (item.megaEvolves === source.baseSpecies.baseSpecies) return false;
+			return true;
+		},
+		num: 10063,
+		gen: 9
 	},
 };

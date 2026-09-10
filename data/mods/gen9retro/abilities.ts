@@ -19,6 +19,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onSwitchIn() {},
 		onStart() {},
 	},
+	runaway: {
+		inherit: true,
+		onTrapPokemon() {},
+	},
 	angerpoint: {
 		inherit: true,
 		onAfterSubDamage(damage, target, source, move) {

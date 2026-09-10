@@ -4239,7 +4239,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		pp: 5,
 		ppOverride: 8,
 		priority: 0,
-		flags: { contact: 1, protect: 1, mirror: 1 },
+		flags: { contact: 1, protect: 1, punch: 1, mirror: 1 },
 		onTryMove(pokemon, target, move) {
 			if (pokemon.hasType('Electric')) return;
 			this.add('-fail', pokemon, 'move: Double Shock');
@@ -12628,7 +12628,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	meteorassault: {
 		num: 794,
 		accuracy: 100,
-		basePower: 150,
+		basePower: 170,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Meteor Assault",
@@ -12747,7 +12747,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		flags: { snatch: 1, heal: 1, metronome: 1 },
 		heal: [1, 2],
 		secondary: null,
-		target: "self",
+		target: "adjacentAllyOrSelf",
 		type: "Normal",
 		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Cute",
@@ -18215,7 +18215,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 	slash: {
 		num: 163,
 		accuracy: 100,
-		basePower: 70,
+		basePower: 80,
 		category: "Physical",
 		name: "Slash",
 		pp: 20,
@@ -19661,7 +19661,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Status",
 		name: "Strength Sap",
 		pp: 10,
-		ppOverride: 12,
+		ppOverride: 8,
 		priority: 0,
 		flags: { protect: 1, reflectable: 1, mirror: 1, heal: 1, metronome: 1 },
 		onHit(target, source) {
@@ -22644,7 +22644,7 @@ export const Moves: { [moveid: string]: MoveData } = {
 		category: "Status",
 		name: "Wish",
 		pp: 10,
-		ppOverride: 12,
+		ppOverride: 8,
 		priority: 0,
 		flags: { snatch: 1, heal: 1, metronome: 1 },
 		slotCondition: 'Wish',

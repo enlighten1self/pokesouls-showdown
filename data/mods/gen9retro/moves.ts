@@ -3555,9 +3555,18 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	milkdrink: {
 		inherit: true,
 		pp: 10,
+		target: "self",
 	},
 	rest: {
 		inherit: true,
 		pp: 10,
+	},
+	meteorassault: {
+		inherit: true,
+		basePower: 150,
+	},
+	slash: {
+		inherit: true,
+		basePower: 70,
 	},
 };

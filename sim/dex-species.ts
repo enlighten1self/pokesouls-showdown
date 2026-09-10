@@ -279,7 +279,7 @@ export class Species extends BasicEffect implements Readonly<BasicEffect & Speci
 		this.unreleasedHidden = data.unreleasedHidden || false;
 		this.maleOnlyHidden = !!data.maleOnlyHidden;
 		this.maxHP = data.maxHP || undefined;
-		this.isMega = !!(this.forme && ['Mega', 'Mega-X', 'Mega-Y',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(this.forme)) || undefined;
+		this.isMega = !!(this.forme && ['Mega', 'Mega-X', 'Mega-Y', 'Mega-Z', "Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(this.forme)) || undefined;
 		this.canGigantamax = data.canGigantamax || undefined;
 		this.gmaxUnreleased = !!data.gmaxUnreleased;
 		this.cannotDynamax = !!data.cannotDynamax;
@@ -487,7 +487,7 @@ export class DexSpecies {
 			if (this.dex.currentMod === 'gen7letsgo' && !species.isNonstandard) {
 				const isLetsGo = (
 					(species.num <= 151 || ['Meltan', 'Melmetal'].includes(species.name)) &&
-					(!species.forme || (['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Starter',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(species.forme) &&
+					(!species.forme || (['Alola', 'Mega', 'Mega-X', 'Mega-Y', 'Mega-Z', 'Starter',"Paldea-Aqua-Mega","Paldea-Blaze-Mega","Paldea-Combat-Mega"].includes(species.forme) &&
 					species.name !== 'Pikachu-Alola'))
 				);
 				if (!isLetsGo) species.isNonstandard = 'Past';

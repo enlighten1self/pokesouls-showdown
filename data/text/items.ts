@@ -2653,4 +2653,24 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Arcane Seed",
 		desc: "If the terrain is Arcane Terrain, raises holder's Defense by 1 stage. Single use.",
 	},
+	golisopite: {
+		name: "Golisopite",
+		desc: "If held by a Golisopod, this item allows it to Mega Evolve in battle.",
+	},
+	baxcalibrite: {
+		name: "Baxcalibrite",
+		desc: "If held by a Baxcalibur, this item allows it to Mega Evolve in battle.",
+	},
+	lucarionitez: {
+		name: "Lucarionite Z",
+		desc: "If held by a Lucario, this item allows it to Mega Evolve in battle.",
+	},
+	garchompitez: {
+		name: "Garchompite Z",
+		desc: "If held by a Garchomp, this item allows it to Mega Evolve in battle.",
+	},
+	absolitez: {
+		name: "Absolite Z",
+		desc: "If held by a Absol, this item allows it to Mega Evolve in battle.",
+	},
 };

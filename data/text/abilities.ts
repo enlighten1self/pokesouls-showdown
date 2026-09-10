@@ -1509,7 +1509,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	runaway: {
 		name: "Run Away",
-		shortDesc: "No competitive use.",
+		desc: "Enables the Pokémon to ignore any effects that would usually prevent it from switching out of battle and being replaced by another party Pokémon.",
+		shortDesc: "This Pokemon's Immune to Trapping Effects."
 	},
 	sandforce: {
 		name: "Sand Force",

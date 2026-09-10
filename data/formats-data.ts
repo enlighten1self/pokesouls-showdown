@@ -6683,4 +6683,24 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "OU",
 	},
+	absolmegaz: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	baxcaliburmega: {
+		tier: "Illegal",
+		natDexTier: "Uber",
+	},
+	golisopodmega: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	lucariomegaz: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
+	garchompmegaz: {
+		tier: "Illegal",
+		natDexTier: "OU",
+	},
 };
