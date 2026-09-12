@@ -2846,12 +2846,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	rotomheat: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "UU",
+		natDexTier: "BU",
 	},
 	rotomwash: {
 		tier: "UU",
 		doublesTier: "(DUU)",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	rotomfrost: {
 		tier: "ZUBL",
@@ -6191,7 +6191,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	caimanragomega: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "(OU)",
 	},
 	gemix: {
 		tier: "Illegal",
@@ -6259,11 +6259,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	zapoleon: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "OU",
 	},
 	zapoleonmega: {
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "(OU)",
 	},
 	frostiken: {
 		tier: "Illegal",
@@ -6641,7 +6641,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	thrashanchor: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	thraggoyle: {
 		tier: "Illegal",
@@ -6649,7 +6649,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	plasmonarch: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	endolith: {
 		tier: "Illegal",
@@ -6669,11 +6669,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	grimferno: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	troideath: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "UU",
 	},
 	egyptiacrush: {
 		tier: "Illegal",
