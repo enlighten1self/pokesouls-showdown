@@ -2208,7 +2208,7 @@ export class Battle {
 
 	randomizer(baseDamage: number) {
 		const tr = this.trunc;
-		return tr(tr(baseDamage * (100 - this.random(16))) / 100);
+		return tr(tr(baseDamage * (100 - this.random(15))) / 100);
 	}
 
 	/**
