@@ -2887,29 +2887,14 @@ export const Rulesets: {[k: string]: FormatData} = {
 				newSpecies.bst += newSpecies.baseStats[stat];
 			}
 			const primary = newSpecies.types[0];
-			let secondary: string | undefined;
+			const secondary =
+				fusionSpecies.types[1] !== primary ? fusionSpecies.types[1] :
+				fusionSpecies.types[0] !== primary ? fusionSpecies.types[0] :
+				newSpecies.types[1] !== primary ? newSpecies.types[1] :
+				undefined;
 					
-			// Try donor secondary first
-			if (fusionSpecies.types[1]) {
-				secondary = fusionSpecies.types[1];
-			}
-			
-			// If missing or duplicates primary, try donor primary
-			if (!secondary || secondary === primary) {
-				if (fusionSpecies.types[0] !== primary) {
-					secondary = fusionSpecies.types[0];
-				}
-			}
-			
-			// If still invalid, try base secondary
-			if ((!secondary || secondary === primary) && newSpecies.types[1] !== primary) {
-				secondary = newSpecies.types[1];
-			}
-			
-			newSpecies.types = secondary && secondary !== primary
-				? [primary, secondary]
-				: [primary];
-			
+			newSpecies.types = secondary ? [primary, secondary] : [primary];
+					
 			return newSpecies;
 		},
 		checkCanLearn(move, species, setSources, set) {

@@ -5364,7 +5364,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cetitan: {
 		tier: "NUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "NUBL",
 	},
 	frigibax: {
 		tier: "LC",
@@ -6493,7 +6493,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	flamingwrath: {
 		tier: "Illegal",
-		natDexTier: "UUBL",
+		natDexTier: "UU",
 	},
 	resurgentjustice: {
 		tier: "Illegal",
@@ -6697,10 +6697,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	lucariomegaz: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 	garchompmegaz: {
 		tier: "Illegal",
-		natDexTier: "OU",
+		natDexTier: "Uber",
 	},
 };

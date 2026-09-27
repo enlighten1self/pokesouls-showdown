@@ -112,7 +112,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex PU",
 		mod: "gen9",
 		ruleset: ["[Gen 9] National Dex NU"],
-		banlist: ["ND NU"],
+		banlist: ["ND NU", "ND PUBL"],
 	},
 	{
 		name: "[Gen 9] National Dex LC",
@@ -139,7 +139,8 @@ export const Formats: FormatList = [
 			"Salamence-Mega", "Shaymin-Sky", "Solgaleo", "Spectrier", "Ursaluna-Bloodmoon", "Urshifu-Base", "Xerneas", "Yveltal", "Zacian", "Zamazenta", "Zekrom",
 			"Zygarde-Base", "Zygarde-Complete", "Moody", "Shadow Tag", "Power Construct", "Booster Energy", "Damp Rock", "Focus Band", "Icy Rock", "King's Rock",
 			"Leppa Berry", "Quick Claw", "Razor Fang", "Smooth Rock", "Terrain Extender", "Acupressure", "Baton Pass", "Last Respects", "Shed Tail",
-			"Tricky Reception", "Caimanrago", "Cereblaze-Mega", "Forrogue-Mega", "Tempervian-Mega", "Wyrmperior-Mega",
+			"Tricky Reception", "Caimanrago", "Cereblaze-Mega", "Forrogue-Mega", "Tempervian-Mega", "Wyrmperior-Mega", 'Delphox-Mega', 'Greninja-Mega', 'Roaring Moon',
+			'Starmie-Mega', 'Swampert-Mega', 'Tempervian-Mega-Ashen', 'Lucario-Mega-Z', 'Garchomp-Mega-Z'
 		],
 	},
 	{
@@ -1244,14 +1245,14 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex Metamorph Mons",
 		desc: ``,
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause', 'Metamorph Mons', 'Terastal Clause'],
+		ruleset: ['Standard NatDex', 'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 1', 'Sleep Moves Clause', 'Metamorph Mons', 'Terastal Clause'],
 		banlist: [
 			//Tiers
 			"ND Uber", "ND AG", 
 			//Abilities
-			"Arena Trap", "Moody", "Power Construct", "Shadow Tag", 'Contrary', 'Huge Power', 'Pure Power', 'Unburden',
+			"Arena Trap", "Moody", "Power Construct", "Shadow Tag", 'Contrary', 'Huge Power', 'Pure Power', 'Unburden', 'Serene Grace',
 			//Items
-			"King's Rock", "Quick Claw", "Razor Fang", "Thick Club",
+			"King's Rock", "Quick Claw", "Razor Fang", "Thick Club", 'Light Ball', 
 			//Moves
 			'Assist', "Last Respects", "Shed Tail", "Rising Voltage", "Expanding Force", "Bolt Beak", "Fishious Rend", "Rage Fist", 'Stored Power', 'Power Trip', 
 			'Tail Glow', 'Shell Smash',
@@ -1261,20 +1262,54 @@ export const Formats: FormatList = [
 		restricted: [
 			//Move Restrictions
 			'Eruption', 'Light of Ruin', 'Population Bomb', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Tricky Reception', 'Victory Dance', 
-			'Belly Drum', 'Dire Claw', 
+			'Belly Drum', 'Dire Claw', 'Dragon Dance',
 			//Ability Restrictions
-			'Fur Coat', 'Ice Scales', 'Magnet Pull', 'Neutralizing Gas', 'Serene Grace', 'Simple', 'Speed Boost', 'Toxic Debris', 'Triage', 'Magic Bounce',
+			'Fur Coat', 'Magnet Pull', 'Neutralizing Gas', 'Simple', 'Speed Boost', 'Magic Bounce', 
 			//Pokemon
-			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", "Toxapex", 'Porygon-Z', 'Slaking', 'Zamazenta', "Titanium Delta",
+			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", 'Porygon-Z', 'Slaking', "Titanium Delta", 'Comfey', 'Frosmoth', 'Glimmora',
+			'Komala',
 			//Test Mons
 			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 
 			'Kiluegon', 'Weavolt'
 		],
 		unbanlist: [
-			'Roaring Moon', 'Dracovish', 'Magearna', 'Raichu-Mega-Y', 'Annihilape', 'Genesect', 'Lopunny-Mega', 'Walking Wake', 'Sneasler', 'Espathra', 'Dragapult', 
-			'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 'Blastoise-Mega',
+			'Dracovish', 'Annihilape', 'Genesect', 'Lopunny-Mega', 'Walking Wake', 'Sneasler', 'Espathra', 'Dragapult', 'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 
+			'Blastoise-Mega', 'Shaymin-Sky'
 		],
 	},
+	//{
+	//	name: "[Gen 9] National Dex Metamorph Mons",
+	//	desc: 
+	//	`After naming a Pokémon, your Pokémon is transformed by averaging its stats with the stats of the Pokémon it was named after. It also inherits the named Pokémon’s moves and gains a secondary type from the Named Pokémon’s Type`,
+	//	mod: 'gen9',
+	//	ruleset: [
+	//		'Standard OMs', '!Nickname Clause', '!Obtainable Abilities', 'Ability Clause = 2', 
+	//		'Sleep Moves Clause', 'Metamorph Mons', 'Terastal Clause'
+	//	],
+	//	banlist: [
+	//		//Tiers
+	//		"Uber", "AG", 
+	//		//Abilities
+	//		"Arena Trap", "Moody", "Shadow Tag", 'Contrary', 'Huge Power', 'Pure Power', 'Unburden',
+	//		//Items
+	//		"King's Rock", "Quick Claw", "Razor Fang", 
+	//		//Moves
+	//		"Last Respects", "Shed Tail", "Expanding Force", "Rage Fist", 'Stored Power'
+	//	],
+	//	restricted: [
+	//		//Move Restrictions
+	//		'Eruption', 'Population Bomb', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 
+	//		'Belly Drum', 'Dragon Dance', 'Power Trip',
+	//		//Ability Restrictions
+	//		'Magnet Pull', 'Serene Grace', 'Speed Boost', 'Magic Bounce', 
+	//		//Pokemon
+	//		"Mew", "Smeargle", "Ditto", 'Porygon-Z', 'Slaking', 'Comfey', 'Frosmoth', 'Lilligant-Hisui', 
+	//		'Persian-Alola', 'Manaphy'
+	//	],
+	//	unbanlist: [
+	//		'Annihilape', 'Espathra', 'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 
+	//	],
+	//},
 	{
 		name: "[Gen 9] National Dex Retro Mons",
 		mod: "gen8",

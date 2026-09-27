@@ -108289,7 +108289,6 @@ export const Learnsets: {[k: string]: LearnsetData} = {
 	flamingwrath: {
 		learnset: {
 			stoneedge: ["9M"],
-			dragondance: ["9M"],
 			knockoff: ["9M"],
 			nightslash : ["9M"],
 			pursuit: ["9M"],
