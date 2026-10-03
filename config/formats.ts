@@ -1256,25 +1256,23 @@ export const Formats: FormatList = [
 			//Moves
 			'Assist', "Last Respects", "Shed Tail", "Rising Voltage", "Expanding Force", "Bolt Beak", "Fishious Rend", "Rage Fist", 'Stored Power', 'Power Trip', 
 			'Tail Glow', 'Shell Smash',
-			//Pokemon
-			'Mawile-Mega', "Staraptor-Mega", 'Medicham-Mega', 'Clefable-Mega', 'Aerodactyl-Mega',
+			//Mega Pokemon
+			'Mawile-Mega', "Staraptor-Mega", 'Medicham-Mega', 'Clefable-Mega', 'Aerodactyl-Mega', 'Sceptile-Mega', 'Ampharos-Mega',
 		],
 		restricted: [
 			//Move Restrictions
-			'Eruption', 'Light of Ruin', 'Population Bomb', 'Quiver Dance', 'Revival Blessing', 'Shell Smash', 'Shift Gear', 'Tricky Reception', 'Victory Dance', 
-			'Belly Drum', 'Dire Claw', 'Dragon Dance',
+			'Eruption', 'Population Bomb', 'Quiver Dance', 'Revival Blessing', 'Shift Gear', 'Tricky Reception', 'Victory Dance', 'Belly Drum', 'Dragon Dance',
 			//Ability Restrictions
-			'Fur Coat', 'Magnet Pull', 'Neutralizing Gas', 'Simple', 'Speed Boost', 'Magic Bounce', 
-			//Pokemon
-			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", 'Porygon-Z', 'Slaking', "Titanium Delta", 'Comfey', 'Frosmoth', 'Glimmora',
-			'Komala',
+			'Fur Coat', 'Magnet Pull', 'Simple', 'Speed Boost', 'Magic Bounce', 
+			//Pokemon Restrictions
+			"Shedinja", "Mew", "Smeargle", "Blacephalon", "Frostiken", "Ditto", 'Porygon-Z', 'Slaking', "Phroggeist-Base", 'Comfey', 'Frosmoth', 'Glimmora',
+			'Komala', 'Floette-Eternal',
 			//Test Mons
 			'Excalibird', 'Excalihawk', 'Faeowulf', 'Skewrpion', 'Emberolith', 'Galviathan', 'Frostirichu', 'Megalanice', 'Lapragon', 'Residreigon', 'Melmortar', 
 			'Kiluegon', 'Weavolt'
 		],
 		unbanlist: [
-			'Dracovish', 'Annihilape', 'Genesect', 'Lopunny-Mega', 'Walking Wake', 'Sneasler', 'Espathra', 'Dragapult', 'Ogerpon-Hearthflame', 'Solgaleo', 'Lugia', 
-			'Blastoise-Mega', 'Shaymin-Sky'
+			'Dracovish', 'Annihilape', 'Genesect', 'Lopunny-Mega', 'Walking Wake', 'Sneasler', 'Espathra', 'Dragapult', 'Ogerpon-Hearthflame', 'Blastoise-Mega', 'Shaymin-Sky'
 		],
 	},
 	//{
